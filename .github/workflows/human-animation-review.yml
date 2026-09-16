@@ -1,0 +1,68 @@
+name: Human animation review
+on:
+  push:
+    branches: ['feat/human-animation-review']
+    paths:
+      - 'assets/pack_v1/source/complete_actors.py'
+      - 'assets/pack_v1/source/record_actors.py'
+      - 'assets/pack_v1/source/package_review.py'
+      - 'assets/pack_v1/source/test_complete_actors.py'
+      - 'integration_review/**'
+      - '.github/workflows/human-animation-review.yml'
+permissions:
+  contents: read
+concurrency:
+  group: human-animation-review
+  cancel-in-progress: false
+jobs:
+  render-and-integrate:
+    if: github.ref == 'refs/heads/feat/human-animation-review'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      LIBGL_ALWAYS_SOFTWARE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - name: Read the exact source revision
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install authoring dependencies
+        run: |
+          python3 -m venv /tmp/human-art-venv
+          /tmp/human-art-venv/bin/python -m pip install --disable-pip-version-check -r assets/pack_v1/source/requirements.txt
+      - name: Render all six coherent actor candidates
+        run: xvfb-run -a /tmp/human-art-venv/bin/python assets/pack_v1/source/complete_actors.py --ss 3
+      - name: Record candidate-only deliveries and validate actual PNG frames
+        run: |
+          /tmp/human-art-venv/bin/python assets/pack_v1/source/record_actors.py
+          /tmp/human-art-venv/bin/python assets/pack_v1/source/test_complete_actors.py
+          /tmp/human-art-venv/bin/python -m unittest discover -s tests -p 'test_artpack*.py' -v
+          /tmp/human-art-venv/bin/python tools/artpack.py audit
+          /tmp/human-art-venv/bin/python assets/pack_v1/source/package_review.py --out integration_review/assets/motion_review
+          /tmp/human-art-venv/bin/python integration_review/make_previews.py
+      - name: Verify the new code with real actor atlases and explicit scenery fixtures
+        run: /tmp/human-art-venv/bin/python integration_review/build_and_verify.py
+      - name: Commit the exact reviewed candidates without approval or merging
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          target='feat/human-animation-review'
+          current=$(git ls-remote origin "refs/heads/$target" | cut -f1)
+          test "$current" = "$GITHUB_SHA" || { echo 'Branch advanced; preserving concurrent edits, no push.'; exit 1; }
+          git add -- assets/pack_v1/SPEC.md assets/pack_v1/pack.json assets/pack_v1/families integration_review/assets integration_review/reviews integration_review/verification
+          if git diff --cached --quiet; then echo 'No generated differences.'; exit 0; fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'art: add human and five alien animation candidates with verified integration'
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" push origin "HEAD:refs/heads/$target"
+          echo "HUMAN_REVIEW_COMMIT=$(git rev-parse HEAD)"
+# No force push, production approval, merge, signed export or store publication.
+# The character PNGs are real; CI scenery fixtures do not establish final scene aesthetics.
