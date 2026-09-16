@@ -4,15 +4,17 @@ on:
     paths:
       - 'assets/pack_v1/**'
       - 'tools/artpack.py'
+      - 'tools/preview_artpack.py'
       - 'tools/requirements-artpack.txt'
-      - 'tests/test_artpack.py'
+      - 'tests/test_artpack*.py'
       - '.github/workflows/asset-pack.yml'
   pull_request:
     paths:
       - 'assets/pack_v1/**'
       - 'tools/artpack.py'
+      - 'tools/preview_artpack.py'
       - 'tools/requirements-artpack.txt'
-      - 'tests/test_artpack.py'
+      - 'tests/test_artpack*.py'
       - '.github/workflows/asset-pack.yml'
 permissions:
   contents: read
@@ -33,8 +35,8 @@ jobs:
         run: |
           python3 -m venv /tmp/asset-pack-venv
           /tmp/asset-pack-venv/bin/python -m pip install --disable-pip-version-check -r tools/requirements-artpack.txt
-      - name: Exercise validation and approved-only export on synthetic fixtures
-        run: /tmp/asset-pack-venv/bin/python -m unittest discover -s tests -p 'test_artpack.py' -v
+      - name: Exercise validation, approved-only export and motion reviews on fixtures
+        run: /tmp/asset-pack-venv/bin/python -m unittest discover -s tests -p 'test_artpack*.py' -v
       - name: Report actual pack completeness separately
         run: /tmp/asset-pack-venv/bin/python tools/artpack.py audit
 # A green contract/tools job is not final art, animation, Godot or device approval.

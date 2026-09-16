@@ -1,6 +1,6 @@
 # Official Asset Pack v1
 
-**Current delivery: the production specification, full inventory, first-batch brief, validator and atlas/Godot resource exporter. New finished animation artwork is not included yet.**
+**Current delivery: the production specification, full inventory, first-batch brief, validator, atlas/Godot resource exporter and offline motion-review tool. New finished animation artwork is not included yet.**
 
 Read [SPEC.md](SPEC.md), [pack.json](pack.json), then [BATCH_001.md](BATCH_001.md).
 
@@ -18,7 +18,7 @@ Python 3.10+ and Pillow are used for image checks and atlas packing. Dependency 
 
 ```sh
 python3 -m pip install -r tools/requirements-artpack.txt
-python3 -m unittest discover -s tests -p 'test_artpack.py' -v
+python3 -m unittest discover -s tests -p 'test_artpack*.py' -v
 python3 tools/artpack.py audit
 ```
 
@@ -49,3 +49,20 @@ PNG pixels and frame regions can be tested with Python. Godot resource import, i
 Use one current `families/<id>/source/` and `frames/` tree, with `delivery.json` as shown in Batch 001. Keep version history in Git rather than parallel final/archive/rejected folders. Approval binds the owner evidence, spec hash, source hashes and frame hashes. Hashes detect changes; they do not prove animation quality or legal ownership.
 
 No font files, paid stock assets, signing files or credentials belong in this initial package.
+
+## Motion review before approval
+
+After producing all directions of one actual clip and its current draft delivery record, generate an offline review page:
+
+```sh
+python3 tools/preview_artpack.py --asset runner --clip move --out art_build/reviews/runner_move.html
+python3 tools/preview_artpack.py --asset player --clip walk --out art_build/reviews/player_walk.html
+```
+
+Open the HTML in a browser. All frame images are embedded; no server, external JavaScript, game project, or online account is required. The viewer provides normal/half-speed playback, pause/step/scrub, direction selection, 1x-4x scale, light/dark/checker backgrounds, the declared ground pivot and muzzle socket when recorded.
+
+The helper reuses the existing contract/delivery validator and does not change the inventory, dimensions, direction rules or source/approval format. A partial family may be reviewed, but the requested clip must contain every declared frame in every declared direction. Missing artwork produces a blocked result, not fabricated frames.
+
+Additional checks reject translated copies of a still presented as a motion cycle, repeated/translated loop endpoints, and the same footage relabelled as different directions. These checks do not detect every kind of false motion or decide visual quality. Inspect foot planting, body/weapon continuity, rear views and loop joins yourself.
+
+A review page is **not** approval or a runtime export. It never modifies the source tree or live game. Use a new output filename for each review; the helper refuses to overwrite an existing page.
