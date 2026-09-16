@@ -1,0 +1,27 @@
+{
+  "idle": {
+    "frames": 4,
+    "fps": 6,
+    "loop": true
+  },
+  "move": {
+    "frames": 6,
+    "fps": 12,
+    "loop": true
+  },
+  "attack": {
+    "frames": 4,
+    "fps": 12,
+    "loop": false
+  },
+  "hit": {
+    "frames": 2,
+    "fps": 12,
+    "loop": false
+  },
+  "death": {
+    "frames": 5,
+    "fps": 10,
+    "loop": false
+  }
+}

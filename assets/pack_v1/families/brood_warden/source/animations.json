@@ -1,0 +1,52 @@
+{
+  "idle": {
+    "frames": 4,
+    "fps": 6,
+    "loop": true
+  },
+  "move": {
+    "frames": 6,
+    "fps": 8,
+    "loop": true
+  },
+  "acid_attack": {
+    "frames": 6,
+    "fps": 10,
+    "loop": false
+  },
+  "charge_windup": {
+    "frames": 8,
+    "fps": 10,
+    "loop": false
+  },
+  "charge": {
+    "frames": 6,
+    "fps": 14,
+    "loop": true
+  },
+  "pulse_attack": {
+    "frames": 8,
+    "fps": 12,
+    "loop": false
+  },
+  "recovery": {
+    "frames": 4,
+    "fps": 8,
+    "loop": false
+  },
+  "hit": {
+    "frames": 2,
+    "fps": 10,
+    "loop": false
+  },
+  "death": {
+    "frames": 10,
+    "fps": 8,
+    "loop": false
+  },
+  "phase_transition": {
+    "frames": 6,
+    "fps": 10,
+    "loop": false
+  }
+}

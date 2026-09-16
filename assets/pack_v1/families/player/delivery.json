@@ -1,269 +1,1613 @@
 {
   "asset_id": "player",
   "status": "review",
-  "spec_sha256": "30ea02170c1ec5bc9a555dba998f9a90e5646cda06c2f39f79464be5c23bb9ea",
+  "spec_sha256": "713e9e609a27438d31ece1098894a5a835d27437ce389da3118df260f8a2e68f",
   "sources": [
     {
       "path": "source/render_motion.py",
       "sha256": "cf0ef91863b5cbfafc677064f95018df6406cf4fb66e87ec02ae8e2dfda7be84",
-      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+      "provenance": "Original Alien Survivor procedural mesh/pose source. Human design selected by the owner; final artwork and rights review not implied. GLB contains the locomotion track; all other actions are reproducible from Python source."
     },
     {
-      "path": "source/record_motion.py",
-      "sha256": "5079984185ede152772591ce7e7cbc66b43e7ed989dc2251a59ecc4e1b941703",
-      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+      "path": "source/complete_actors.py",
+      "sha256": "baa65c5800c7c152721e318750ab1747409fb952b48745ff426d01063cc22e5e",
+      "provenance": "Original Alien Survivor procedural mesh/pose source. Human design selected by the owner; final artwork and rights review not implied. GLB contains the locomotion track; all other actions are reproducible from Python source."
     },
     {
-      "path": "source/requirements.txt",
-      "sha256": "f45538c23287fe64164cf41b93e456b6c1c2fbcf2e9d18a673e8e3ba9c2c0020",
-      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
-    },
-    {
-      "path": "source/README.md",
-      "sha256": "081190f08f7db19fa5b3c93bd2985d8043230c9ec44975657455614077f0109d",
-      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+      "path": "source/record_actors.py",
+      "sha256": "9d0fd2526395389019b2a530da1a603c408660a463f302bc92f24f85775a6b9e",
+      "provenance": "Original Alien Survivor procedural mesh/pose source. Human design selected by the owner; final artwork and rights review not implied. GLB contains the locomotion track; all other actions are reproducible from Python source."
     },
     {
       "path": "families/player/source/rig.json",
-      "sha256": "9ffbd269a74611309b7b3580233ac0966c27454185822182620014da3a5e597b",
-      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+      "sha256": "950901273f1c9863dfcdab6a4ca5915108c504f01d3c6aba8c1c6b8ac149e26e",
+      "provenance": "Original Alien Survivor procedural mesh/pose source. Human design selected by the owner; final artwork and rights review not implied. GLB contains the locomotion track; all other actions are reproducible from Python source."
     },
     {
-      "path": "families/player/source/master.glb",
-      "sha256": "e7b095c6997ecf38679e6f7b24e3be3cd971751f9bd254ec21526774524ce3cb",
-      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+      "path": "families/player/source/animations.json",
+      "sha256": "f70882c53f1ac919ea32125786feb679a76f36ca3fd411bb078acaf462aebb91",
+      "provenance": "Original Alien Survivor procedural mesh/pose source. Human design selected by the owner; final artwork and rights review not implied. GLB contains the locomotion track; all other actions are reproducible from Python source."
     },
     {
       "path": "families/player/source/sockets.json",
-      "sha256": "5048de7fcfdcec27aa22b99a39646f0134ae11625770bc913e1007a00c917cc6",
-      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+      "sha256": "5f9331f16c76502a0f0f54d7cad32a69a2280e0fe9868f5e0607ab6098558499",
+      "provenance": "Original Alien Survivor procedural mesh/pose source. Human design selected by the owner; final artwork and rights review not implied. GLB contains the locomotion track; all other actions are reproducible from Python source."
+    },
+    {
+      "path": "families/player/source/master.glb",
+      "sha256": "be63c0e990a9cf20bdf93616573787b550628cf61dd1aa7f7681f666e4715761",
+      "provenance": "Original Alien Survivor procedural mesh/pose source. Human design selected by the owner; final artwork and rights review not implied. GLB contains the locomotion track; all other actions are reproducible from Python source."
     }
   ],
   "frame_sha256": {
-    "families/player/frames/walk/e/000.png": "e92bd98e6a14eadb08a8aeda58489227b65bb19bdacd11f539aecedf5a15a53e",
-    "families/player/frames/walk/e/001.png": "97419b90dc9960e457c02e90c7570e9e4a6bfa9b98604a551f8cb610e8a43b6d",
-    "families/player/frames/walk/e/002.png": "5b19aaae0e2eca9bcab6ee0281f570de2932a490489697f6bb5bf785ee938f1f",
-    "families/player/frames/walk/e/003.png": "30b9f24790a55bb0e8c2a5d1838f6daeef8151f7a52ce6452f0c0eb0dbc9fbf8",
-    "families/player/frames/walk/e/004.png": "61ddc034c18b240beb5d2a4b6d2dbcc290d5dec387e23c81ab231310c69f6e89",
-    "families/player/frames/walk/e/005.png": "0138c9f14e075fcf74d9f4369a1b08e74395aa7daef52fd1f4a0f07bbd929508",
-    "families/player/frames/walk/e/006.png": "812fe92a4069220ed0328ad8a33d20f3e50a76d2e9927fd4cb4ce67a16f599ca",
-    "families/player/frames/walk/e/007.png": "49637d7a892ee7a763c3dff451dd66a1cb015f9fa0d8290d40f0b6977bc8e632",
-    "families/player/frames/walk/n/000.png": "2418e76ba1e4fcb7a5bd2d33e42b9120e7eb8ecb3baf5cd709f204955d648d27",
-    "families/player/frames/walk/n/001.png": "e7aeb6858d867cf8762bfadda42acbd034b98ad29a7c70b149a7d9031d0c9cf7",
-    "families/player/frames/walk/n/002.png": "c68c5c2ceb17f6e4543317a2a0ee74b3acd78bdc8f0fd3f786791adbb2086013",
-    "families/player/frames/walk/n/003.png": "6c4d5ea99e6f654532efa7c17bf22e3ba3ef1bc88162e68e883a54cc113616c8",
-    "families/player/frames/walk/n/004.png": "0452c5a796475db5aec32d0dbfa05403f6e00ee3d73f249baad70d60fbec89af",
-    "families/player/frames/walk/n/005.png": "3769721de9a691f2527e9c35d23c80e2a855b05191ad9cbf04a1ddf814c6ab3c",
-    "families/player/frames/walk/n/006.png": "4e8122b2470f86f002cbd34a825a65427249dca67f13da92cbee5d41470afcfa",
-    "families/player/frames/walk/n/007.png": "5bf3c4707052c39b89b2a4b930f18a768bd2abd3f16bb48e145e67a0edf82fea",
-    "families/player/frames/walk/s/000.png": "d2f22b690febad3653e4d9b48c21c51afc5d62c7be3b2ff743709daea8953664",
-    "families/player/frames/walk/s/001.png": "23efb25e41e913fe0d413d17dc2ad051db5c3bf31b66c8345871244004511ab9",
-    "families/player/frames/walk/s/002.png": "78b478132a80e3e896d3edc3591a73dffd89aae140b8fd2883c32d6bb7638943",
-    "families/player/frames/walk/s/003.png": "801b4698e575c0e7de1e379638fe009b87ed7a89b164d405ced277cd934ccc61",
-    "families/player/frames/walk/s/004.png": "39dd5d8c9523f9ffba026e463a6dca9033cf9f9521cef1b585b2159c65f4054f",
-    "families/player/frames/walk/s/005.png": "0be0892f961fcef06ad6875bd1b364ad84c0ae201daaec4db82da5b08ece75eb",
-    "families/player/frames/walk/s/006.png": "41a0861b123be530d3bb502799c055cef4b1ea8ab02a14525a9afbf401a9f264",
-    "families/player/frames/walk/s/007.png": "51369f0e6c83e0c517f6f3b6aa14730a7eed745d8b45c172ad8bb82adea5004f",
-    "families/player/frames/walk/w/000.png": "da6a1fe52956ed54900b642b617a048a01e421e124f053a7db2020895c079329",
-    "families/player/frames/walk/w/001.png": "06b02b86e81bffbeb60308f2805722c7d4a30614ecded7ddd6a314ef8713572f",
-    "families/player/frames/walk/w/002.png": "e352ce781ecf061b143382913b89f89bdc3a31dd2be46615d433f3c2bc5ed25d",
-    "families/player/frames/walk/w/003.png": "93fb1d394f89e8b095157191840a7198d2731b8304a585e7df95d2b5e4c00286",
-    "families/player/frames/walk/w/004.png": "1d8274760046adeda63568653d016a17c26cffb5bd4df5959e00b77fa04bd90a",
-    "families/player/frames/walk/w/005.png": "19381111e9f22d1e92c82c1253d3fd9947d52d7239c53ed7309db9bf1ddd914c",
-    "families/player/frames/walk/w/006.png": "9e0872adfceda22959065559e599d8719d913ac420bfe26f514d40fd436be4f3",
-    "families/player/frames/walk/w/007.png": "decdfc5fc3f2975889a01313cc453f757ff69a8a56ca0925dddad3d415bb5f3e"
+    "families/player/frames/death/e/000.png": "9b68ce974a40eda857ff8a06b7a772ae2dcf8099b8392d1fb92fae35a1635486",
+    "families/player/frames/death/e/001.png": "aa4f1c881dfe04d4b947e68a233e841f40e0b8886182fd4e7c7ce1ced3427b10",
+    "families/player/frames/death/e/002.png": "0bc8e1505e9300aec8aa30f121c1e3726f9f470ad562e88fb4bf6b29a338716b",
+    "families/player/frames/death/e/003.png": "a9653590e82add9b6196a40d5cddd39ffda7d95060fd9dd0b12ef5e7fb14c5ac",
+    "families/player/frames/death/e/004.png": "8e0d1a0ccef5ebac523c0e677a5814e4e117bd976d914b26bbb7b4d3238cc296",
+    "families/player/frames/death/e/005.png": "772f89704922043e88c3e28e51450d8176c71b0389b00af1d67d16c09ee3fe01",
+    "families/player/frames/death/n/000.png": "d520b0a95983d6cc1ec84c6340c5271a07fd9f43d26937493bd9a4945f013918",
+    "families/player/frames/death/n/001.png": "d7e58862cc129c8d112d21fd445801111233b707c71668320ad0506c18ad5b01",
+    "families/player/frames/death/n/002.png": "d9305b7e89da4fcce83d65711d439c8e9e4eccdd099808fe2fd6a99ea25f0773",
+    "families/player/frames/death/n/003.png": "d1db88eece586755cf0c8e5663594c432b11bf94b660a53171f79bd64d9a4ceb",
+    "families/player/frames/death/n/004.png": "514084c9687f4224898008ba45f13e214a7dd5f2cbb2ddb80079761dea5d799a",
+    "families/player/frames/death/n/005.png": "035480b0513f19c456755a2a91f2f358834aa1c174afbf52d463b98a251dd10c",
+    "families/player/frames/death/s/000.png": "f30458850e03f736873b341c6339c86d0be29e37343f95e37ee447aa2e108229",
+    "families/player/frames/death/s/001.png": "3b167c0ba8277e1ddae9471824dea1616af7c3b40d3e7ce680d8fa60c579cb2c",
+    "families/player/frames/death/s/002.png": "4c1b3c240d1302d4d77b876ec40d92099e16a637804df03d446709313e9b4252",
+    "families/player/frames/death/s/003.png": "7096b4c8f424e306de63313df98e5fdb33b68eaf010fc299afa82d40e3cc1ca9",
+    "families/player/frames/death/s/004.png": "f6c18940ea861e2a17a8000baddccc471c67c3529fa8d15e78c27b71e6ede5e7",
+    "families/player/frames/death/s/005.png": "7a4b7819aa59a89eeebc03d859442529f1964fcbc0f2ea61c3aec3f1c5b607cf",
+    "families/player/frames/death/w/000.png": "43fce1e0670be6dee89df5b597c2ea651bfbc0aeaa25cb094989ad8f2163e43e",
+    "families/player/frames/death/w/001.png": "12e9e36f53b3377cb740a1581aad2d492e91d7a63adf9ab48dec31945c8f1a44",
+    "families/player/frames/death/w/002.png": "4f50d58816874e6d01937f759889b5d1b318e97b8465b5b4b2f557dab45558ab",
+    "families/player/frames/death/w/003.png": "a246e0ec98b8cfe10848cfd312de9357d24bbd941fc47bfffcad7075ef6021b2",
+    "families/player/frames/death/w/004.png": "5e0980d712fe848b0ed0df179d7310b829c0e44f2367730aed74395439e0e6e2",
+    "families/player/frames/death/w/005.png": "de8870a63155bd79afe65a78e2972e665d1feb31b199f16831c460e176274c05",
+    "families/player/frames/hit/e/000.png": "a8b6f4bf17fb4657645a8f6da1acbe485191c5b1a2a75647e94ba5fda433117a",
+    "families/player/frames/hit/e/001.png": "4968f0024408f92dcddf7a55c501c6afe70820a4e77b970efd6910ac31117e80",
+    "families/player/frames/hit/n/000.png": "da303d932db01b58de4ceff1e1801c80edfe437987e9554f9fdb8b4ec34c88af",
+    "families/player/frames/hit/n/001.png": "eac79ad8395209436a9bda2734420bed14e969bd1fceedcadc9b934c0b4e88e3",
+    "families/player/frames/hit/s/000.png": "410f27ca7b7a47a5432a22a6951bd5771d2cd91126a554375f4fa40183a28b27",
+    "families/player/frames/hit/s/001.png": "afddfb7a8f6d1e6a851c10984e346ba08ef849380041e636ee18babd1df55600",
+    "families/player/frames/hit/w/000.png": "79d34a02ede702706a5ac85313bbf9c135c6a32eb6f5c5a259c84a691436933f",
+    "families/player/frames/hit/w/001.png": "6e278bf4693b5ad7e5771cc3618cd812ab44648d224e905679d238812990191b",
+    "families/player/frames/idle/e/000.png": "9b68ce974a40eda857ff8a06b7a772ae2dcf8099b8392d1fb92fae35a1635486",
+    "families/player/frames/idle/e/001.png": "955aad656bf91dec92114c3c95e85c19f24274ccb091ed7059a8d326c2b01fc5",
+    "families/player/frames/idle/e/002.png": "9b68ce974a40eda857ff8a06b7a772ae2dcf8099b8392d1fb92fae35a1635486",
+    "families/player/frames/idle/e/003.png": "2fe699c95d60012f91be74b073f194e0553bb48344c6a8590481dd6d7c9b3125",
+    "families/player/frames/idle/n/000.png": "d520b0a95983d6cc1ec84c6340c5271a07fd9f43d26937493bd9a4945f013918",
+    "families/player/frames/idle/n/001.png": "94d40ad586b1252a9d379d72953e6436c241bf624eb170a9cd1ee528e71b5a78",
+    "families/player/frames/idle/n/002.png": "d520b0a95983d6cc1ec84c6340c5271a07fd9f43d26937493bd9a4945f013918",
+    "families/player/frames/idle/n/003.png": "7d42f12ff7c361ea9118c44c513933d1a3992d48c741a73439971f357e0db0bf",
+    "families/player/frames/idle/s/000.png": "f30458850e03f736873b341c6339c86d0be29e37343f95e37ee447aa2e108229",
+    "families/player/frames/idle/s/001.png": "8813d929e3652897fa8a1e34973ac52303c1e3eae439725edadeff15438a6e9a",
+    "families/player/frames/idle/s/002.png": "f30458850e03f736873b341c6339c86d0be29e37343f95e37ee447aa2e108229",
+    "families/player/frames/idle/s/003.png": "b71660bf7c30c35d127d13415f43f8c7fbaa8ebd02ffcd0a8e382ba5b974dc85",
+    "families/player/frames/idle/w/000.png": "43fce1e0670be6dee89df5b597c2ea651bfbc0aeaa25cb094989ad8f2163e43e",
+    "families/player/frames/idle/w/001.png": "05208f1185bc74a116f244ba82316011590d7725335ea3fb917cb395d7543f4b",
+    "families/player/frames/idle/w/002.png": "43fce1e0670be6dee89df5b597c2ea651bfbc0aeaa25cb094989ad8f2163e43e",
+    "families/player/frames/idle/w/003.png": "c6fbb69f431c3063d687a5ceb42d7eba6a73ebda0ef05019a6c97ee6c0f23eef",
+    "families/player/frames/shoot/e/000.png": "9b68ce974a40eda857ff8a06b7a772ae2dcf8099b8392d1fb92fae35a1635486",
+    "families/player/frames/shoot/e/001.png": "1d93b543325d77172c76b03ceed5e21b3f6ad31f3158140fec9ac42b6c3b6311",
+    "families/player/frames/shoot/e/002.png": "2e8d8d854af6abfaaa6a82e5a7f0e63191318f58fd71fdb7c3c788082a174488",
+    "families/player/frames/shoot/e/003.png": "c85d907170d41bdfa5fa9a03bbca44d175f7c1fac6522c74b14423091e6226b1",
+    "families/player/frames/shoot/n/000.png": "d520b0a95983d6cc1ec84c6340c5271a07fd9f43d26937493bd9a4945f013918",
+    "families/player/frames/shoot/n/001.png": "61a5458839f5b1f272e3fd7fe5a5fe5dae9ab5ba7c3ec90375b8a80243761958",
+    "families/player/frames/shoot/n/002.png": "94a0aeaad194a73412a0b76911471673ed2202cf9cb9716205dc757ab3adfa6a",
+    "families/player/frames/shoot/n/003.png": "8995ac1846d2f91c7c7cfbe20c0e1814de40d99f3709495d6f7f09fa8bdfba29",
+    "families/player/frames/shoot/s/000.png": "f30458850e03f736873b341c6339c86d0be29e37343f95e37ee447aa2e108229",
+    "families/player/frames/shoot/s/001.png": "27b1fa34dd4be36df21bbd1f1284a7e834cb9a3698a59772167973cfbeb0cf22",
+    "families/player/frames/shoot/s/002.png": "be89e83fb3a579ebab1cde8763c4a89363811a908dd1c286ebe882dc489a6a20",
+    "families/player/frames/shoot/s/003.png": "188f5b0bbe60961dcb236ad63452cc8b4ffef1a2550a22d5ccb124bf6aa804d5",
+    "families/player/frames/shoot/w/000.png": "43fce1e0670be6dee89df5b597c2ea651bfbc0aeaa25cb094989ad8f2163e43e",
+    "families/player/frames/shoot/w/001.png": "6bf73902d356e5ef3eb3b011f5fe92dda397681535b567d0d92fce732ba7a9e5",
+    "families/player/frames/shoot/w/002.png": "577d7ab37040636167e370e3ee4659d438d4fd0e488414faeb7f48d3b34cb127",
+    "families/player/frames/shoot/w/003.png": "07fb9c66528d681a51e9017f6b6bca8924540611595ec1d16e77450567059dad",
+    "families/player/frames/strafe_left/e/000.png": "964dcb4e766f37da8d52ee502a46006f5b9b772f59fd1745928246a51e3433ba",
+    "families/player/frames/strafe_left/e/001.png": "1e2da47372652801892fc64957ce3314202c5730405252d5ae475badcbccdc20",
+    "families/player/frames/strafe_left/e/002.png": "5a37df1560ee19a8eb78bb5aea3180da5a5046f4d696ce89801ab2e221de910f",
+    "families/player/frames/strafe_left/e/003.png": "a328d210c8bdb178266029a7e6e1c406959fee8d7c0c5bfd162fa1aa80da590a",
+    "families/player/frames/strafe_left/e/004.png": "e102f931bb635dd2b31aa9aa59d3dc19ee7587dd0ac8ed7c49c4724c2725d25f",
+    "families/player/frames/strafe_left/e/005.png": "cd9d41fa1bbfbd5c62f0211d814e4540a367e8325c7892540d7c091f41cdcde7",
+    "families/player/frames/strafe_left/e/006.png": "3f3ac1cc32b1d88cafe41ef5eb8da73d72d3696b3e127c730200aa375a394271",
+    "families/player/frames/strafe_left/e/007.png": "2cbda879057e0220bb7dca895a5dd9176f93b8f79a89401616badef7aaa3d872",
+    "families/player/frames/strafe_left/n/000.png": "cc2504c04674a44a5e0abbee15f5f57a30fca29cf4f3497402c3748847f98614",
+    "families/player/frames/strafe_left/n/001.png": "9b203278e8cad0eb04a42be68f54778a49b69c45200705ca5489730aa2503127",
+    "families/player/frames/strafe_left/n/002.png": "f75c5ab2e3ed68f66ca59595659fecf716b33570629efec7f2595d80e9c6e0d1",
+    "families/player/frames/strafe_left/n/003.png": "06cec2f2fe37578ba9530f0d09cadfc70af0fe3b78cd5710cc54aa7c61038309",
+    "families/player/frames/strafe_left/n/004.png": "2279f4a6e44cf089c2687d93270be61ba4b66dd9ff8d29f5c919809ac94a9158",
+    "families/player/frames/strafe_left/n/005.png": "fe6fb1158b6e6c2036789955d46067329f297b3929142fd341b4b1c1d63e77ff",
+    "families/player/frames/strafe_left/n/006.png": "76a51e8ee721a47c9980e7bf8eb763969c2904ffb8a90b2a08985a7048e6f3cb",
+    "families/player/frames/strafe_left/n/007.png": "798b59c35ffd9fa7d317982e449665efb7a8551b3cdc8b34542ade267caf93fe",
+    "families/player/frames/strafe_left/s/000.png": "d081e7847bd6d5297d5f02acebdbdf83175ad096a19a6727e7807384bc03cc11",
+    "families/player/frames/strafe_left/s/001.png": "a34e443709b83ac58b676969f058065679dae2f8da607a75097a8cb876b1b037",
+    "families/player/frames/strafe_left/s/002.png": "d825dc08d1d44c3e7588fae2b6c8b07bb3565304c25abfc4f7ba24c77f2273af",
+    "families/player/frames/strafe_left/s/003.png": "2652dac3b3705b105d73f47b034c256b7521f142dc9fd209bc6716085ada6fb2",
+    "families/player/frames/strafe_left/s/004.png": "17d56e85ac03e6f352a2a3267f3d4bb0cdc1ff1fdc21e72dc684ed4c8dde17a1",
+    "families/player/frames/strafe_left/s/005.png": "a8b885f1dbee4083a13624aa755b9076b4787c7606e2e2400e844644a0fd41e6",
+    "families/player/frames/strafe_left/s/006.png": "f8ab75dbbe3e7e866d3d300449bec3ce94cb2da0b92de1ae9e7afe133419167b",
+    "families/player/frames/strafe_left/s/007.png": "f685d6e3d928c13f81e9d741d9668a0fd20b6264c68828a0e6e73616e70565fe",
+    "families/player/frames/strafe_left/w/000.png": "28fdd8660e28d2fe94ac0f916c8fa874bd2f04344c5ad8d74e7f4ebaa8de503e",
+    "families/player/frames/strafe_left/w/001.png": "78d38581dcc4b5ef0dbd86808ebd5dddf82b4d055ceff086d15bfb3df7967379",
+    "families/player/frames/strafe_left/w/002.png": "3710850309e06107d9219abec28bbcb97580b45457785cf4e2d9eeefc7160f41",
+    "families/player/frames/strafe_left/w/003.png": "ed051fecfc0bf3f8317d6749138ead2fb366cf770a7227270495a24d07c97875",
+    "families/player/frames/strafe_left/w/004.png": "44f525554c22cf1685f4ed8b6810e7b5833e2dd0176f3930eac9a273be22c78c",
+    "families/player/frames/strafe_left/w/005.png": "e800e14c577196bce6094f12ab50f237a68b37d4dce54523ce754d78f659983b",
+    "families/player/frames/strafe_left/w/006.png": "e4748ca3094b7c10bffac3b3782c47d9c9bc7de26dc92414bcae01a6104f1cbc",
+    "families/player/frames/strafe_left/w/007.png": "1b5d89889982c7433b981428544b0a5312aa85a370bacf677f191b3d73fce2cd",
+    "families/player/frames/strafe_right/e/000.png": "0b7f789675cb501aa17a860fab975fdb9f301ef6a4957b11a787f29835d0c57e",
+    "families/player/frames/strafe_right/e/001.png": "17a17ec1296071e9b378c17e87c7c18d8bef175a296a4bd974da9bbffb5bc169",
+    "families/player/frames/strafe_right/e/002.png": "1f7289c3b56fa10c81e4866c2aa1e991a13811467637be0243932a0cba5368ce",
+    "families/player/frames/strafe_right/e/003.png": "de7b5dfcc1e38df19e71a0a7ad48492c7ed93fb6c44cd8f03a4fdb200699e578",
+    "families/player/frames/strafe_right/e/004.png": "45d80c622379487cca42cf3f334ab4dd0fc426eb704ccba2c913c7ca9701372b",
+    "families/player/frames/strafe_right/e/005.png": "b07e51701539c9c7f53f39646115be2c01d185d88bfe9007392b380a1637f9a6",
+    "families/player/frames/strafe_right/e/006.png": "289a25de7c77fe85859e889eaf479507be644b74e30e5fe7e4169648e7c1e9e0",
+    "families/player/frames/strafe_right/e/007.png": "b039db378d6010449ed4f9b26f8f3bf20857210877cc4966322ea6f5c96607b7",
+    "families/player/frames/strafe_right/n/000.png": "b45e65287064c0c33e73ec2a5760363ffe1287999c97503d496e972d417139be",
+    "families/player/frames/strafe_right/n/001.png": "18082be845a34f0f70a2e8fee62befbba300af22e184c6f7f969c037eb1ad5c8",
+    "families/player/frames/strafe_right/n/002.png": "9c8dc9ed09fc05893fbdb0fe88753719536215d86a6ba9cebb0adc668ef7e3e9",
+    "families/player/frames/strafe_right/n/003.png": "1e9f380983f09516ece3a981f64ab803c4b1c1657d5358c963232c1794e01343",
+    "families/player/frames/strafe_right/n/004.png": "e885f81bb368263aa172a89127f0e6be423bf53d860060f393b52743381ee2c3",
+    "families/player/frames/strafe_right/n/005.png": "777f47dffab11de889c323190dd77e35b71905a1147757ba1c0905c0943768a3",
+    "families/player/frames/strafe_right/n/006.png": "3901ee5b79f9ee75da30c3224866d054a22372e3b6d43f550bf4bc10f2fc7fe0",
+    "families/player/frames/strafe_right/n/007.png": "535b146d3cff220b8c5b8792525c3283080a5b292fe20640acd8768b5d50153c",
+    "families/player/frames/strafe_right/s/000.png": "c94ca514eb14c3bf776abb16aed01889854b1bc0d55494db831387dfa187f571",
+    "families/player/frames/strafe_right/s/001.png": "3ce7009921b52df1ae100ac6a8937159ef61f4e1979bb2d3fefc1011c9b73d6f",
+    "families/player/frames/strafe_right/s/002.png": "6e6c8abbe7732623dfee65259e04a98bae6879473975d9dfbdf15d412794b388",
+    "families/player/frames/strafe_right/s/003.png": "a913f6f4f3939243f2f1837ad23b57a24513f74cfc81054c1d483ca591fa4518",
+    "families/player/frames/strafe_right/s/004.png": "35a892cdabe2637666b4b3afaf91c9ed5686712aa3778318f1f3dade6a1b8090",
+    "families/player/frames/strafe_right/s/005.png": "e0808c00f4156586a1ca7124272199559644c73658cb2bd43cde6f34704d53b3",
+    "families/player/frames/strafe_right/s/006.png": "302d8c4016acd5efabc79011b66947a6e6190aa9d76d5133d4a955e89ea2f0eb",
+    "families/player/frames/strafe_right/s/007.png": "049428d64ad5dc76cb1299ee465433b45a813041973d79cd18c53b01ebe666fc",
+    "families/player/frames/strafe_right/w/000.png": "6da91df3b52a172fc189526d8a3cfa149cfe56b87efc69b5244c56b4514219b7",
+    "families/player/frames/strafe_right/w/001.png": "b7aa1a4867e41a5529bf8ca67b02cf3f3a641effd3643f0495655c58793b8933",
+    "families/player/frames/strafe_right/w/002.png": "b0b4b30f9b6dc340959f41749638803da86afaf16dee26a5dc0cb79f6836ced3",
+    "families/player/frames/strafe_right/w/003.png": "64162fb53b21a2854e30a630f6dc1eb35c30b3ca45c6458dd75aaecf63ed2595",
+    "families/player/frames/strafe_right/w/004.png": "583faed4f0dbab8befb8f38dee08861f90311fa8a93d4e7f75a771c09dbcf2a7",
+    "families/player/frames/strafe_right/w/005.png": "cb95ad3fb6486c98486c6d9f22d20807d8a54144e7a7141e7a6bb65981ff74cd",
+    "families/player/frames/strafe_right/w/006.png": "cd640dcc2f43480c78f1d1939ead16bf385d2b3f4ed71e07c27fc3cc0f1685c4",
+    "families/player/frames/strafe_right/w/007.png": "54472b65eca65fa1a014ea3a8236599643c38ea5093ab35f4e80ddf7d290c006",
+    "families/player/frames/walk/e/000.png": "f7d53535ab0c7a0f10d49d3a1f18e535dee6186d674a17463fe8e11e9d631619",
+    "families/player/frames/walk/e/001.png": "b32a3a53a437302f5ab4d185c7f1cc08cad9d43db7b399eccaaad0b30cf3fae5",
+    "families/player/frames/walk/e/002.png": "c21ba0ecabfb46aaf84ea1185d52487c83a360ebd8d49d25fb378256b5125ebd",
+    "families/player/frames/walk/e/003.png": "4307fe1bf25876d4ea391a01d5c5abdba2d75e8b33c3f13d8e672116ae88dc23",
+    "families/player/frames/walk/e/004.png": "c3b7d9169277c4c553b94faadaf0d1fccef5b3c5379e87c12c0c8bca18f292eb",
+    "families/player/frames/walk/e/005.png": "17df344b850884483351593ca134c94f61217abbb4fad01d54070a2c5ff5713b",
+    "families/player/frames/walk/e/006.png": "0946aafc3fd5b2ae057d782f22d539b95d50bfa98f1599f31807c3a39214ac10",
+    "families/player/frames/walk/e/007.png": "422e0421a2928c36060a34bc84f0bae84c8e37402f2874050a6f844766ba2606",
+    "families/player/frames/walk/n/000.png": "9f90dd9eab5e28578c661c364a147bb41d219a0d94cefc23d093d8e897e4237d",
+    "families/player/frames/walk/n/001.png": "8727f9dd063a3db27282f754d0b27bdc3a4ee7bce0b9e883e85f7e9ab298d63c",
+    "families/player/frames/walk/n/002.png": "1322c2fa8a3f0c606bf1d488417a45e25c359decf14d14c4d71b1b9f0a149cbe",
+    "families/player/frames/walk/n/003.png": "3bf621e1f92a4176edf48ca08ded18ca4de306701c7f40de4aa1d9665b985ce6",
+    "families/player/frames/walk/n/004.png": "1a2cb6a139843fbf9614a6613207e0c62b0544bd7f3c5fddf256852cc3bc0b51",
+    "families/player/frames/walk/n/005.png": "ae7c2166be63fcc87927037cb09fc67e76bd77012fc106e8f8db6ef18fb7a599",
+    "families/player/frames/walk/n/006.png": "648fcd1c0ff45cbca2a53e328f349fddd8c1ab79bd3db4fc7bb94dfe7148936b",
+    "families/player/frames/walk/n/007.png": "505a8c82396ababa0b5b72da28f1d38d9f87c999eaa20c1b5660dd10e321a5c0",
+    "families/player/frames/walk/s/000.png": "7d6e96564efcb30f634855b42549875616cb40c0a2e978633119e4b2e90e1e9b",
+    "families/player/frames/walk/s/001.png": "27f2603270fe3f3026767bd7701377113209f38cd343fb61bb3b785979c97339",
+    "families/player/frames/walk/s/002.png": "11d944c9dc390b88231568f989ae21c0ed663bd18c672baf5d7a8bb359629ea6",
+    "families/player/frames/walk/s/003.png": "a524bd14af4ff42d2f1b32dc69c0c51176c9e77776764d636331fdb3b12b3da3",
+    "families/player/frames/walk/s/004.png": "9536fe8f9fc267ae36481faa396ad3376f929ed27eaff27774198abc23909030",
+    "families/player/frames/walk/s/005.png": "b311688296f726485727680ec603a7ad5b95ee56a7a500b029e8c2d0ae5faef7",
+    "families/player/frames/walk/s/006.png": "8613b7c780695f14f5dee59b3fac2e2332403c013286223499c2e05798c1953c",
+    "families/player/frames/walk/s/007.png": "3718dea27a23a713dee4bbd8c02de48c0813db8f5aa71900cbd066ed7a751aaf",
+    "families/player/frames/walk/w/000.png": "e30772e1267b37a9fc652dacd705d96bb8c1fc4dd3a193eb2706f4d1ab904656",
+    "families/player/frames/walk/w/001.png": "467fc15e6839fb1e40a23bccd67d516c7669f641db4b6420f2798f11536fd88b",
+    "families/player/frames/walk/w/002.png": "2f976689f95f10ef2f89923005fb1ec8ee12a6e9cbcc8020d28ea506947616b9",
+    "families/player/frames/walk/w/003.png": "cf35af39a598ce995e07f7c307de14bf2f4381474f6b3864b4f359005264e696",
+    "families/player/frames/walk/w/004.png": "d40833b799e07b87a5f5c1aa0db90b7fe8289b4eebec2dbc649e3d51dde79664",
+    "families/player/frames/walk/w/005.png": "6181f3efa82aeeac64987dee97ed4ce8b5b328aff220547fb6fd6478349f984f",
+    "families/player/frames/walk/w/006.png": "a3825eab8c8cd7e293a6a1ec3facf34bab2314991dff67f0f75d4fc58fd7f041",
+    "families/player/frames/walk/w/007.png": "b63b0a1c27baf99e3d603b3abed43f44f63cdb3ecbf6fdc823dabd84d1f14216",
+    "families/player/frames/walk_back/e/000.png": "854a27057d8be8dda6f638561e42f2fbb2ab96568a4e12a64a27c332165adc4f",
+    "families/player/frames/walk_back/e/001.png": "dc18396d33282c65b47dad3f033d78303ad3f40e5207e9720139398396e6d046",
+    "families/player/frames/walk_back/e/002.png": "611d9d6f0ef74d672785c2c05634e6280d1b863997e8e0c2d2bb6058f464cc48",
+    "families/player/frames/walk_back/e/003.png": "ee2be921592c16552da8c55b6a0729ddb4c51f4981e2c1344475c232bec9e4b0",
+    "families/player/frames/walk_back/e/004.png": "1a112cbacdacfa8367afe514bc94b4df467fc8b4519f21a199f8ad6b9d1273c2",
+    "families/player/frames/walk_back/e/005.png": "009575f5e793575a64df9e984f4e539efc73a23947db35bcf75737e6a5e4f20d",
+    "families/player/frames/walk_back/e/006.png": "fa17b1688bf14025b4b6cd25867b4cd7062016623bdbb3962a5ea35fe08f8934",
+    "families/player/frames/walk_back/e/007.png": "02f4f57cd210963fd6636e0778e3f1184605c2bf0b39823bacf3d23a80442a68",
+    "families/player/frames/walk_back/n/000.png": "f4025be808939644ba2d49479475ccd47af4e083f1b0cdfceab9887b200a6d1f",
+    "families/player/frames/walk_back/n/001.png": "1251f44fa51919cce8fd373c96a0eceb7548b4e39405cfd32873a962787e8de5",
+    "families/player/frames/walk_back/n/002.png": "c8c28c7235b99f68ce67337f93ed865efa2b3b56b24e2e2a71e486c3de2e36f5",
+    "families/player/frames/walk_back/n/003.png": "d245acdfb85e461702e8ebfdbc0142a3ad66bbe77cb61fd1f8df07602fe69447",
+    "families/player/frames/walk_back/n/004.png": "17bde27542cbebfaf970bd0a8ed8a0ab8e2a8559864fcd08fec8eecec093941d",
+    "families/player/frames/walk_back/n/005.png": "4a402a4262dda76cbe1259a747d18c7bb961ceff9554ff7acf426b0e0786cf4c",
+    "families/player/frames/walk_back/n/006.png": "f9d41187c42b7c67f2efe0b3bc5d00b685fbd1a1aeec92fb10334502a73211e0",
+    "families/player/frames/walk_back/n/007.png": "dbbf3df740f0ef3b93f6b02ec7a01058e3b16617895dc78ec5d32c79addb35ae",
+    "families/player/frames/walk_back/s/000.png": "5c4e9304a54145136f165c1c77c86e8fb09c2d28c77e5f5d3c3d2ee20d1df96d",
+    "families/player/frames/walk_back/s/001.png": "d8642583424ea6bf13d4077ec4a42db4350ebc858f174ad8e82df8aa88216546",
+    "families/player/frames/walk_back/s/002.png": "850d623255ace5cc445329f3d64e916ddbaeec260a2d34f67c677003660b046f",
+    "families/player/frames/walk_back/s/003.png": "bd88d897b94e6a9834bd83f7e96344ceff7b156c4a3eaf49982bb49f69a26f72",
+    "families/player/frames/walk_back/s/004.png": "49303745f237c61568bc2da9629f161f8911678abe52ae8b3584cf6e0e5917f6",
+    "families/player/frames/walk_back/s/005.png": "888dad4b4ee1c82991dd6c98af19dfeb3730949cfa6bdb264035079496717650",
+    "families/player/frames/walk_back/s/006.png": "82de8d7564c9fbe6ff2118cda78539ff57046162e87a7c5e5b094882c4323686",
+    "families/player/frames/walk_back/s/007.png": "40fd3dc15d26fba268c44392425e3f2944f7abaca93aac25266da2e5f085fb64",
+    "families/player/frames/walk_back/w/000.png": "e0b31722ca0c7861b8329e03a45d8580a33a80e33ad20de0e8222f9ef2c99fd3",
+    "families/player/frames/walk_back/w/001.png": "b079fcef3627c6d35532c1920f6daa1b650a8a524c1902937d60b0566d64e4d1",
+    "families/player/frames/walk_back/w/002.png": "c10b234d0e8491b0273e97b1da29302ddb0f80ddecb167fdedb7fa8913d88f17",
+    "families/player/frames/walk_back/w/003.png": "0e3bbc6d4823a58f7c09202e80536a6c8abfab19de6a9256853fa4c8c01f37e7",
+    "families/player/frames/walk_back/w/004.png": "1cc17f9cdd4181a54cc409a58fb799a27c372b4887bcba334c0111c78a0f67e1",
+    "families/player/frames/walk_back/w/005.png": "0a83c80ea89910cc9a68b94825927dc727ca7b5315d85041395a2483fddce2a7",
+    "families/player/frames/walk_back/w/006.png": "1ea274668f1850d84ccd77de0ba2ff6c3ade40949dcc8bd4587ffc082a7c3de4",
+    "families/player/frames/walk_back/w/007.png": "70b103e5877d08f85484890b79e7a5ed3a854fb580817d1eb80e26ea1476b2b6",
+    "families/player/frames/walk_fire/e/000.png": "15f039fd05970731de37a721fec8fd4c57b53723cfe2176b2b34465f7db09c0c",
+    "families/player/frames/walk_fire/e/001.png": "12da2ae56b05ef5ba0c9ac18723c8ad5471563816250a267ebb2d82c1d2c0a12",
+    "families/player/frames/walk_fire/e/002.png": "31093c1ac433ea35fb3222dc97cb5c1fec8692cc0c129390c737ce14ea6b1dda",
+    "families/player/frames/walk_fire/e/003.png": "4307fe1bf25876d4ea391a01d5c5abdba2d75e8b33c3f13d8e672116ae88dc23",
+    "families/player/frames/walk_fire/e/004.png": "81bf8e825587d0667fb51aab22422fbcdaaec4e5d6e4cf312ef3ed855979c54c",
+    "families/player/frames/walk_fire/e/005.png": "ec2ad7a87e4683b1a4aea60e0f62c0c131a831cbd3be19ef6684c11a9f2b34a5",
+    "families/player/frames/walk_fire/e/006.png": "29d43f9738a541811202fb17496c6ad5af7e4ed745e079e1062399a40cc9a8e1",
+    "families/player/frames/walk_fire/e/007.png": "422e0421a2928c36060a34bc84f0bae84c8e37402f2874050a6f844766ba2606",
+    "families/player/frames/walk_fire/n/000.png": "7dddaf0d60729c09b642b166a1bd9433f7480db33d6cd4ce67fbfc59675b6ade",
+    "families/player/frames/walk_fire/n/001.png": "0dea37b82788779689cf628903ce0ec5f8f2c9af8add5b211626002288b361c3",
+    "families/player/frames/walk_fire/n/002.png": "0080824790c798f2a08e3d536d1ac1f00a1925b4609ba230ee244daf774d8562",
+    "families/player/frames/walk_fire/n/003.png": "3bf621e1f92a4176edf48ca08ded18ca4de306701c7f40de4aa1d9665b985ce6",
+    "families/player/frames/walk_fire/n/004.png": "71086236ef217e65d17b339ea91ffb5d8b503f15cf035da01f86353cb4a70282",
+    "families/player/frames/walk_fire/n/005.png": "743e896455dc81eaed959d8a732048fca54d7cdb51b948a2c3d12c789cd42e4d",
+    "families/player/frames/walk_fire/n/006.png": "965c344f9d1446ba698e6e7a312bef4ba17f61b41f3767e3e5f01303ba407b1e",
+    "families/player/frames/walk_fire/n/007.png": "505a8c82396ababa0b5b72da28f1d38d9f87c999eaa20c1b5660dd10e321a5c0",
+    "families/player/frames/walk_fire/s/000.png": "2f60e1c7c6771197f5b70b896404ff76dfeb1dc3d7f581db27214d58e6722481",
+    "families/player/frames/walk_fire/s/001.png": "33c7fbbdaed33477494afebf8bb22694400ee34556b257cf8e47a51f41deb1fe",
+    "families/player/frames/walk_fire/s/002.png": "d466b3a03c3d47cbbe0c8bd64af4a6907e23f26263b6a2f442e928c888699945",
+    "families/player/frames/walk_fire/s/003.png": "a524bd14af4ff42d2f1b32dc69c0c51176c9e77776764d636331fdb3b12b3da3",
+    "families/player/frames/walk_fire/s/004.png": "9ba5a5e580b49b81fdc6a82f91e231715f105b29f9da10a8549403b98e947b54",
+    "families/player/frames/walk_fire/s/005.png": "48e6288eaf938615df8166dfe3c6437d43242d83e315657ad611c5858b303dae",
+    "families/player/frames/walk_fire/s/006.png": "03c767ed2c1a1730f3e94d395ab79403f6822c477136e0619eda04ad77aeeddd",
+    "families/player/frames/walk_fire/s/007.png": "3718dea27a23a713dee4bbd8c02de48c0813db8f5aa71900cbd066ed7a751aaf",
+    "families/player/frames/walk_fire/w/000.png": "7d8cabb746858b5ebffadb4a49ff64b31a2e3dbe87127a8f5916221e67e4fdda",
+    "families/player/frames/walk_fire/w/001.png": "d9086ae06af4c86d2cf9ae3d007c429ad8ddf487e125bf8169e176037a650ebd",
+    "families/player/frames/walk_fire/w/002.png": "44c65c13517fb7fc2536d36350ec92561a4c4bcec5a5d33379c874a2f0dbf312",
+    "families/player/frames/walk_fire/w/003.png": "cf35af39a598ce995e07f7c307de14bf2f4381474f6b3864b4f359005264e696",
+    "families/player/frames/walk_fire/w/004.png": "548a0b8eb24de69fecb49d0ccf8f2f20f88968b6d161be59d3696b195c9aa17e",
+    "families/player/frames/walk_fire/w/005.png": "f9c5c66def40aa789119d9ac21c2c28a4811549cb9d2df33a1a1459ebaced487",
+    "families/player/frames/walk_fire/w/006.png": "25a0a8a7c98da51bea972b4c0517eddf55277b16bfd374ac35fe9e17753d3d5e",
+    "families/player/frames/walk_fire/w/007.png": "b63b0a1c27baf99e3d603b3abed43f44f63cdb3ecbf6fdc823dabd84d1f14216"
   },
   "sockets": {
+    "families/player/frames/idle/e/000.png": {
+      "muzzle": [
+        135.3919,
+        47.7378
+      ]
+    },
+    "families/player/frames/idle/e/001.png": {
+      "muzzle": [
+        135.3919,
+        47.3851
+      ]
+    },
+    "families/player/frames/idle/e/002.png": {
+      "muzzle": [
+        135.3919,
+        47.7378
+      ]
+    },
+    "families/player/frames/idle/e/003.png": {
+      "muzzle": [
+        135.3919,
+        48.0906
+      ]
+    },
+    "families/player/frames/idle/s/000.png": {
+      "muzzle": [
+        74.8409,
+        72.8543
+      ]
+    },
+    "families/player/frames/idle/s/001.png": {
+      "muzzle": [
+        74.8409,
+        72.5016
+      ]
+    },
+    "families/player/frames/idle/s/002.png": {
+      "muzzle": [
+        74.8409,
+        72.8543
+      ]
+    },
+    "families/player/frames/idle/s/003.png": {
+      "muzzle": [
+        74.8409,
+        73.207
+      ]
+    },
+    "families/player/frames/idle/w/000.png": {
+      "muzzle": [
+        24.6081,
+        42.5788
+      ]
+    },
+    "families/player/frames/idle/w/001.png": {
+      "muzzle": [
+        24.6081,
+        42.2261
+      ]
+    },
+    "families/player/frames/idle/w/002.png": {
+      "muzzle": [
+        24.6081,
+        42.5788
+      ]
+    },
+    "families/player/frames/idle/w/003.png": {
+      "muzzle": [
+        24.6081,
+        42.9315
+      ]
+    },
+    "families/player/frames/idle/n/000.png": {
+      "muzzle": [
+        85.1591,
+        17.4624
+      ]
+    },
+    "families/player/frames/idle/n/001.png": {
+      "muzzle": [
+        85.1591,
+        17.1096
+      ]
+    },
+    "families/player/frames/idle/n/002.png": {
+      "muzzle": [
+        85.1591,
+        17.4624
+      ]
+    },
+    "families/player/frames/idle/n/003.png": {
+      "muzzle": [
+        85.1591,
+        17.8151
+      ]
+    },
     "families/player/frames/walk/e/000.png": {
       "muzzle": [
-        119.3919,
-        45.7378
+        135.3919,
+        47.7378
       ]
     },
     "families/player/frames/walk/e/001.png": {
       "muzzle": [
-        119.475,
-        45.81
+        135.475,
+        47.81
       ]
     },
     "families/player/frames/walk/e/002.png": {
       "muzzle": [
-        119.5047,
-        46.1496
+        135.5047,
+        48.1496
       ]
     },
     "families/player/frames/walk/e/003.png": {
       "muzzle": [
-        119.475,
-        45.81
+        135.475,
+        47.81
       ]
     },
     "families/player/frames/walk/e/004.png": {
       "muzzle": [
-        119.3919,
-        45.7378
+        135.3919,
+        47.7378
       ]
     },
     "families/player/frames/walk/e/005.png": {
       "muzzle": [
-        119.2927,
-        46.7231
+        135.2927,
+        48.7231
       ]
     },
     "families/player/frames/walk/e/006.png": {
       "muzzle": [
-        119.2468,
-        47.4409
+        135.2468,
+        49.4409
       ]
     },
     "families/player/frames/walk/e/007.png": {
       "muzzle": [
-        119.2927,
-        46.7231
+        135.2927,
+        48.7231
       ]
     },
     "families/player/frames/walk/s/000.png": {
       "muzzle": [
-        58.8409,
-        70.8543
+        74.8409,
+        72.8543
       ]
     },
     "families/player/frames/walk/s/001.png": {
       "muzzle": [
-        59.7549,
-        71.4249
+        75.7549,
+        73.4249
       ]
     },
     "families/player/frames/walk/s/002.png": {
       "muzzle": [
-        60.1339,
-        71.9689
+        76.1339,
+        73.9689
       ]
     },
     "families/player/frames/walk/s/003.png": {
       "muzzle": [
-        59.7549,
-        71.4249
+        75.7549,
+        73.4249
       ]
     },
     "families/player/frames/walk/s/004.png": {
       "muzzle": [
-        58.8409,
-        70.8543
+        74.8409,
+        72.8543
       ]
     },
     "families/player/frames/walk/s/005.png": {
       "muzzle": [
-        57.9286,
-        71.3337
+        73.9286,
+        73.3337
       ]
     },
     "families/player/frames/walk/s/006.png": {
       "muzzle": [
-        57.5512,
-        71.8399
+        73.5512,
+        73.8399
       ]
     },
     "families/player/frames/walk/s/007.png": {
       "muzzle": [
-        57.9286,
-        71.3337
+        73.9286,
+        73.3337
       ]
     },
     "families/player/frames/walk/w/000.png": {
       "muzzle": [
-        8.6081,
-        40.5788
+        24.6081,
+        42.5788
       ]
     },
     "families/player/frames/walk/w/001.png": {
       "muzzle": [
-        8.525,
-        41.5649
+        24.525,
+        43.5649
       ]
     },
     "families/player/frames/walk/w/002.png": {
       "muzzle": [
-        8.4953,
-        42.2834
+        24.4953,
+        44.2834
       ]
     },
     "families/player/frames/walk/w/003.png": {
       "muzzle": [
-        8.525,
-        41.5649
+        24.525,
+        43.5649
       ]
     },
     "families/player/frames/walk/w/004.png": {
       "muzzle": [
-        8.6081,
-        40.5788
+        24.6081,
+        42.5788
       ]
     },
     "families/player/frames/walk/w/005.png": {
       "muzzle": [
-        8.7073,
-        40.6517
+        24.7073,
+        42.6517
       ]
     },
     "families/player/frames/walk/w/006.png": {
       "muzzle": [
-        8.7532,
-        40.9921
+        24.7532,
+        42.9921
       ]
     },
     "families/player/frames/walk/w/007.png": {
       "muzzle": [
-        8.7073,
-        40.6517
+        24.7073,
+        42.6517
       ]
     },
     "families/player/frames/walk/n/000.png": {
       "muzzle": [
-        69.1591,
-        15.4624
+        85.1591,
+        17.4624
       ]
     },
     "families/player/frames/walk/n/001.png": {
       "muzzle": [
-        68.2451,
-        15.9499
+        84.2451,
+        17.9499
       ]
     },
     "families/player/frames/walk/n/002.png": {
       "muzzle": [
-        67.8661,
-        16.4641
+        83.8661,
+        18.4641
       ]
     },
     "families/player/frames/walk/n/003.png": {
       "muzzle": [
-        68.2451,
-        15.9499
+        84.2451,
+        17.9499
       ]
     },
     "families/player/frames/walk/n/004.png": {
       "muzzle": [
-        69.1591,
-        15.4624
+        85.1591,
+        17.4624
       ]
     },
     "families/player/frames/walk/n/005.png": {
       "muzzle": [
-        70.0714,
-        16.0411
+        86.0714,
+        18.0411
       ]
     },
     "families/player/frames/walk/n/006.png": {
       "muzzle": [
-        70.4488,
-        16.5931
+        86.4488,
+        18.5931
       ]
     },
     "families/player/frames/walk/n/007.png": {
       "muzzle": [
-        70.0714,
-        16.0411
+        86.0714,
+        18.0411
+      ]
+    },
+    "families/player/frames/walk_back/e/000.png": {
+      "muzzle": [
+        135.3919,
+        47.7378
+      ]
+    },
+    "families/player/frames/walk_back/e/001.png": {
+      "muzzle": [
+        135.475,
+        47.81
+      ]
+    },
+    "families/player/frames/walk_back/e/002.png": {
+      "muzzle": [
+        135.5047,
+        48.1496
+      ]
+    },
+    "families/player/frames/walk_back/e/003.png": {
+      "muzzle": [
+        135.475,
+        47.81
+      ]
+    },
+    "families/player/frames/walk_back/e/004.png": {
+      "muzzle": [
+        135.3919,
+        47.7378
+      ]
+    },
+    "families/player/frames/walk_back/e/005.png": {
+      "muzzle": [
+        135.2927,
+        48.7231
+      ]
+    },
+    "families/player/frames/walk_back/e/006.png": {
+      "muzzle": [
+        135.2468,
+        49.4409
+      ]
+    },
+    "families/player/frames/walk_back/e/007.png": {
+      "muzzle": [
+        135.2927,
+        48.7231
+      ]
+    },
+    "families/player/frames/walk_back/s/000.png": {
+      "muzzle": [
+        74.8409,
+        72.8543
+      ]
+    },
+    "families/player/frames/walk_back/s/001.png": {
+      "muzzle": [
+        75.7549,
+        73.4249
+      ]
+    },
+    "families/player/frames/walk_back/s/002.png": {
+      "muzzle": [
+        76.1339,
+        73.9689
+      ]
+    },
+    "families/player/frames/walk_back/s/003.png": {
+      "muzzle": [
+        75.7549,
+        73.4249
+      ]
+    },
+    "families/player/frames/walk_back/s/004.png": {
+      "muzzle": [
+        74.8409,
+        72.8543
+      ]
+    },
+    "families/player/frames/walk_back/s/005.png": {
+      "muzzle": [
+        73.9286,
+        73.3337
+      ]
+    },
+    "families/player/frames/walk_back/s/006.png": {
+      "muzzle": [
+        73.5512,
+        73.8399
+      ]
+    },
+    "families/player/frames/walk_back/s/007.png": {
+      "muzzle": [
+        73.9286,
+        73.3337
+      ]
+    },
+    "families/player/frames/walk_back/w/000.png": {
+      "muzzle": [
+        24.6081,
+        42.5788
+      ]
+    },
+    "families/player/frames/walk_back/w/001.png": {
+      "muzzle": [
+        24.525,
+        43.5649
+      ]
+    },
+    "families/player/frames/walk_back/w/002.png": {
+      "muzzle": [
+        24.4953,
+        44.2834
+      ]
+    },
+    "families/player/frames/walk_back/w/003.png": {
+      "muzzle": [
+        24.525,
+        43.5649
+      ]
+    },
+    "families/player/frames/walk_back/w/004.png": {
+      "muzzle": [
+        24.6081,
+        42.5788
+      ]
+    },
+    "families/player/frames/walk_back/w/005.png": {
+      "muzzle": [
+        24.7073,
+        42.6517
+      ]
+    },
+    "families/player/frames/walk_back/w/006.png": {
+      "muzzle": [
+        24.7532,
+        42.9921
+      ]
+    },
+    "families/player/frames/walk_back/w/007.png": {
+      "muzzle": [
+        24.7073,
+        42.6517
+      ]
+    },
+    "families/player/frames/walk_back/n/000.png": {
+      "muzzle": [
+        85.1591,
+        17.4624
+      ]
+    },
+    "families/player/frames/walk_back/n/001.png": {
+      "muzzle": [
+        84.2451,
+        17.9499
+      ]
+    },
+    "families/player/frames/walk_back/n/002.png": {
+      "muzzle": [
+        83.8661,
+        18.4641
+      ]
+    },
+    "families/player/frames/walk_back/n/003.png": {
+      "muzzle": [
+        84.2451,
+        17.9499
+      ]
+    },
+    "families/player/frames/walk_back/n/004.png": {
+      "muzzle": [
+        85.1591,
+        17.4624
+      ]
+    },
+    "families/player/frames/walk_back/n/005.png": {
+      "muzzle": [
+        86.0714,
+        18.0411
+      ]
+    },
+    "families/player/frames/walk_back/n/006.png": {
+      "muzzle": [
+        86.4488,
+        18.5931
+      ]
+    },
+    "families/player/frames/walk_back/n/007.png": {
+      "muzzle": [
+        86.0714,
+        18.0411
+      ]
+    },
+    "families/player/frames/strafe_left/e/000.png": {
+      "muzzle": [
+        135.3919,
+        47.7378
+      ]
+    },
+    "families/player/frames/strafe_left/e/001.png": {
+      "muzzle": [
+        135.475,
+        47.81
+      ]
+    },
+    "families/player/frames/strafe_left/e/002.png": {
+      "muzzle": [
+        135.5047,
+        48.1496
+      ]
+    },
+    "families/player/frames/strafe_left/e/003.png": {
+      "muzzle": [
+        135.475,
+        47.81
+      ]
+    },
+    "families/player/frames/strafe_left/e/004.png": {
+      "muzzle": [
+        135.3919,
+        47.7378
+      ]
+    },
+    "families/player/frames/strafe_left/e/005.png": {
+      "muzzle": [
+        135.2927,
+        48.7231
+      ]
+    },
+    "families/player/frames/strafe_left/e/006.png": {
+      "muzzle": [
+        135.2468,
+        49.4409
+      ]
+    },
+    "families/player/frames/strafe_left/e/007.png": {
+      "muzzle": [
+        135.2927,
+        48.7231
+      ]
+    },
+    "families/player/frames/strafe_left/s/000.png": {
+      "muzzle": [
+        74.8409,
+        72.8543
+      ]
+    },
+    "families/player/frames/strafe_left/s/001.png": {
+      "muzzle": [
+        75.7549,
+        73.4249
+      ]
+    },
+    "families/player/frames/strafe_left/s/002.png": {
+      "muzzle": [
+        76.1339,
+        73.9689
+      ]
+    },
+    "families/player/frames/strafe_left/s/003.png": {
+      "muzzle": [
+        75.7549,
+        73.4249
+      ]
+    },
+    "families/player/frames/strafe_left/s/004.png": {
+      "muzzle": [
+        74.8409,
+        72.8543
+      ]
+    },
+    "families/player/frames/strafe_left/s/005.png": {
+      "muzzle": [
+        73.9286,
+        73.3337
+      ]
+    },
+    "families/player/frames/strafe_left/s/006.png": {
+      "muzzle": [
+        73.5512,
+        73.8399
+      ]
+    },
+    "families/player/frames/strafe_left/s/007.png": {
+      "muzzle": [
+        73.9286,
+        73.3337
+      ]
+    },
+    "families/player/frames/strafe_left/w/000.png": {
+      "muzzle": [
+        24.6081,
+        42.5788
+      ]
+    },
+    "families/player/frames/strafe_left/w/001.png": {
+      "muzzle": [
+        24.525,
+        43.5649
+      ]
+    },
+    "families/player/frames/strafe_left/w/002.png": {
+      "muzzle": [
+        24.4953,
+        44.2834
+      ]
+    },
+    "families/player/frames/strafe_left/w/003.png": {
+      "muzzle": [
+        24.525,
+        43.5649
+      ]
+    },
+    "families/player/frames/strafe_left/w/004.png": {
+      "muzzle": [
+        24.6081,
+        42.5788
+      ]
+    },
+    "families/player/frames/strafe_left/w/005.png": {
+      "muzzle": [
+        24.7073,
+        42.6517
+      ]
+    },
+    "families/player/frames/strafe_left/w/006.png": {
+      "muzzle": [
+        24.7532,
+        42.9921
+      ]
+    },
+    "families/player/frames/strafe_left/w/007.png": {
+      "muzzle": [
+        24.7073,
+        42.6517
+      ]
+    },
+    "families/player/frames/strafe_left/n/000.png": {
+      "muzzle": [
+        85.1591,
+        17.4624
+      ]
+    },
+    "families/player/frames/strafe_left/n/001.png": {
+      "muzzle": [
+        84.2451,
+        17.9499
+      ]
+    },
+    "families/player/frames/strafe_left/n/002.png": {
+      "muzzle": [
+        83.8661,
+        18.4641
+      ]
+    },
+    "families/player/frames/strafe_left/n/003.png": {
+      "muzzle": [
+        84.2451,
+        17.9499
+      ]
+    },
+    "families/player/frames/strafe_left/n/004.png": {
+      "muzzle": [
+        85.1591,
+        17.4624
+      ]
+    },
+    "families/player/frames/strafe_left/n/005.png": {
+      "muzzle": [
+        86.0714,
+        18.0411
+      ]
+    },
+    "families/player/frames/strafe_left/n/006.png": {
+      "muzzle": [
+        86.4488,
+        18.5931
+      ]
+    },
+    "families/player/frames/strafe_left/n/007.png": {
+      "muzzle": [
+        86.0714,
+        18.0411
+      ]
+    },
+    "families/player/frames/strafe_right/e/000.png": {
+      "muzzle": [
+        135.3919,
+        47.7378
+      ]
+    },
+    "families/player/frames/strafe_right/e/001.png": {
+      "muzzle": [
+        135.475,
+        47.81
+      ]
+    },
+    "families/player/frames/strafe_right/e/002.png": {
+      "muzzle": [
+        135.5047,
+        48.1496
+      ]
+    },
+    "families/player/frames/strafe_right/e/003.png": {
+      "muzzle": [
+        135.475,
+        47.81
+      ]
+    },
+    "families/player/frames/strafe_right/e/004.png": {
+      "muzzle": [
+        135.3919,
+        47.7378
+      ]
+    },
+    "families/player/frames/strafe_right/e/005.png": {
+      "muzzle": [
+        135.2927,
+        48.7231
+      ]
+    },
+    "families/player/frames/strafe_right/e/006.png": {
+      "muzzle": [
+        135.2468,
+        49.4409
+      ]
+    },
+    "families/player/frames/strafe_right/e/007.png": {
+      "muzzle": [
+        135.2927,
+        48.7231
+      ]
+    },
+    "families/player/frames/strafe_right/s/000.png": {
+      "muzzle": [
+        74.8409,
+        72.8543
+      ]
+    },
+    "families/player/frames/strafe_right/s/001.png": {
+      "muzzle": [
+        75.7549,
+        73.4249
+      ]
+    },
+    "families/player/frames/strafe_right/s/002.png": {
+      "muzzle": [
+        76.1339,
+        73.9689
+      ]
+    },
+    "families/player/frames/strafe_right/s/003.png": {
+      "muzzle": [
+        75.7549,
+        73.4249
+      ]
+    },
+    "families/player/frames/strafe_right/s/004.png": {
+      "muzzle": [
+        74.8409,
+        72.8543
+      ]
+    },
+    "families/player/frames/strafe_right/s/005.png": {
+      "muzzle": [
+        73.9286,
+        73.3337
+      ]
+    },
+    "families/player/frames/strafe_right/s/006.png": {
+      "muzzle": [
+        73.5512,
+        73.8399
+      ]
+    },
+    "families/player/frames/strafe_right/s/007.png": {
+      "muzzle": [
+        73.9286,
+        73.3337
+      ]
+    },
+    "families/player/frames/strafe_right/w/000.png": {
+      "muzzle": [
+        24.6081,
+        42.5788
+      ]
+    },
+    "families/player/frames/strafe_right/w/001.png": {
+      "muzzle": [
+        24.525,
+        43.5649
+      ]
+    },
+    "families/player/frames/strafe_right/w/002.png": {
+      "muzzle": [
+        24.4953,
+        44.2834
+      ]
+    },
+    "families/player/frames/strafe_right/w/003.png": {
+      "muzzle": [
+        24.525,
+        43.5649
+      ]
+    },
+    "families/player/frames/strafe_right/w/004.png": {
+      "muzzle": [
+        24.6081,
+        42.5788
+      ]
+    },
+    "families/player/frames/strafe_right/w/005.png": {
+      "muzzle": [
+        24.7073,
+        42.6517
+      ]
+    },
+    "families/player/frames/strafe_right/w/006.png": {
+      "muzzle": [
+        24.7532,
+        42.9921
+      ]
+    },
+    "families/player/frames/strafe_right/w/007.png": {
+      "muzzle": [
+        24.7073,
+        42.6517
+      ]
+    },
+    "families/player/frames/strafe_right/n/000.png": {
+      "muzzle": [
+        85.1591,
+        17.4624
+      ]
+    },
+    "families/player/frames/strafe_right/n/001.png": {
+      "muzzle": [
+        84.2451,
+        17.9499
+      ]
+    },
+    "families/player/frames/strafe_right/n/002.png": {
+      "muzzle": [
+        83.8661,
+        18.4641
+      ]
+    },
+    "families/player/frames/strafe_right/n/003.png": {
+      "muzzle": [
+        84.2451,
+        17.9499
+      ]
+    },
+    "families/player/frames/strafe_right/n/004.png": {
+      "muzzle": [
+        85.1591,
+        17.4624
+      ]
+    },
+    "families/player/frames/strafe_right/n/005.png": {
+      "muzzle": [
+        86.0714,
+        18.0411
+      ]
+    },
+    "families/player/frames/strafe_right/n/006.png": {
+      "muzzle": [
+        86.4488,
+        18.5931
+      ]
+    },
+    "families/player/frames/strafe_right/n/007.png": {
+      "muzzle": [
+        86.0714,
+        18.0411
+      ]
+    },
+    "families/player/frames/shoot/e/000.png": {
+      "muzzle": [
+        135.3919,
+        47.7378
+      ]
+    },
+    "families/player/frames/shoot/e/001.png": {
+      "muzzle": [
+        133.6544,
+        46.7043
+      ]
+    },
+    "families/player/frames/shoot/e/002.png": {
+      "muzzle": [
+        134.466,
+        47.1847
+      ]
+    },
+    "families/player/frames/shoot/e/003.png": {
+      "muzzle": [
+        135.272,
+        47.6659
+      ]
+    },
+    "families/player/frames/shoot/s/000.png": {
+      "muzzle": [
+        74.8409,
+        72.8543
+      ]
+    },
+    "families/player/frames/shoot/s/001.png": {
+      "muzzle": [
+        74.8409,
+        70.952
+      ]
+    },
+    "families/player/frames/shoot/s/002.png": {
+      "muzzle": [
+        74.8409,
+        71.8382
+      ]
+    },
+    "families/player/frames/shoot/s/003.png": {
+      "muzzle": [
+        74.8409,
+        72.7224
+      ]
+    },
+    "families/player/frames/shoot/w/000.png": {
+      "muzzle": [
+        24.6081,
+        42.5788
+      ]
+    },
+    "families/player/frames/shoot/w/001.png": {
+      "muzzle": [
+        26.3456,
+        41.5453
+      ]
+    },
+    "families/player/frames/shoot/w/002.png": {
+      "muzzle": [
+        25.534,
+        42.0256
+      ]
+    },
+    "families/player/frames/shoot/w/003.png": {
+      "muzzle": [
+        24.728,
+        42.5069
+      ]
+    },
+    "families/player/frames/shoot/n/000.png": {
+      "muzzle": [
+        85.1591,
+        17.4624
+      ]
+    },
+    "families/player/frames/shoot/n/001.png": {
+      "muzzle": [
+        85.1591,
+        17.2976
+      ]
+    },
+    "families/player/frames/shoot/n/002.png": {
+      "muzzle": [
+        85.1591,
+        17.3722
+      ]
+    },
+    "families/player/frames/shoot/n/003.png": {
+      "muzzle": [
+        85.1591,
+        17.4504
+      ]
+    },
+    "families/player/frames/walk_fire/e/000.png": {
+      "muzzle": [
+        134.3889,
+        47.1389
+      ]
+    },
+    "families/player/frames/walk_fire/e/001.png": {
+      "muzzle": [
+        133.4756,
+        46.6114
+      ]
+    },
+    "families/player/frames/walk_fire/e/002.png": {
+      "muzzle": [
+        134.517,
+        47.5493
+      ]
+    },
+    "families/player/frames/walk_fire/e/003.png": {
+      "muzzle": [
+        135.475,
+        47.81
+      ]
+    },
+    "families/player/frames/walk_fire/e/004.png": {
+      "muzzle": [
+        134.3889,
+        47.1389
+      ]
+    },
+    "families/player/frames/walk_fire/e/005.png": {
+      "muzzle": [
+        133.2932,
+        47.5285
+      ]
+    },
+    "families/player/frames/walk_fire/e/006.png": {
+      "muzzle": [
+        134.2591,
+        48.8434
+      ]
+    },
+    "families/player/frames/walk_fire/e/007.png": {
+      "muzzle": [
+        135.2927,
+        48.7231
+      ]
+    },
+    "families/player/frames/walk_fire/s/000.png": {
+      "muzzle": [
+        74.8409,
+        71.7538
+      ]
+    },
+    "families/player/frames/walk_fire/s/001.png": {
+      "muzzle": [
+        75.7549,
+        71.2266
+      ]
+    },
+    "families/player/frames/walk_fire/s/002.png": {
+      "muzzle": [
+        76.1339,
+        72.8747
+      ]
+    },
+    "families/player/frames/walk_fire/s/003.png": {
+      "muzzle": [
+        75.7549,
+        73.4249
+      ]
+    },
+    "families/player/frames/walk_fire/s/004.png": {
+      "muzzle": [
+        74.8409,
+        71.7538
+      ]
+    },
+    "families/player/frames/walk_fire/s/005.png": {
+      "muzzle": [
+        73.9286,
+        71.1394
+      ]
+    },
+    "families/player/frames/walk_fire/s/006.png": {
+      "muzzle": [
+        73.5512,
+        72.7485
+      ]
+    },
+    "families/player/frames/walk_fire/s/007.png": {
+      "muzzle": [
+        73.9286,
+        73.3337
+      ]
+    },
+    "families/player/frames/walk_fire/w/000.png": {
+      "muzzle": [
+        25.6111,
+        41.9798
+      ]
+    },
+    "families/player/frames/walk_fire/w/001.png": {
+      "muzzle": [
+        26.5244,
+        42.3663
+      ]
+    },
+    "families/player/frames/walk_fire/w/002.png": {
+      "muzzle": [
+        25.483,
+        43.6832
+      ]
+    },
+    "families/player/frames/walk_fire/w/003.png": {
+      "muzzle": [
+        24.525,
+        43.5649
+      ]
+    },
+    "families/player/frames/walk_fire/w/004.png": {
+      "muzzle": [
+        25.6111,
+        41.9798
+      ]
+    },
+    "families/player/frames/walk_fire/w/005.png": {
+      "muzzle": [
+        26.7068,
+        41.4571
+      ]
+    },
+    "families/player/frames/walk_fire/w/006.png": {
+      "muzzle": [
+        25.7409,
+        42.3946
+      ]
+    },
+    "families/player/frames/walk_fire/w/007.png": {
+      "muzzle": [
+        24.7073,
+        42.6517
+      ]
+    },
+    "families/player/frames/walk_fire/n/000.png": {
+      "muzzle": [
+        85.1591,
+        17.3649
+      ]
+    },
+    "families/player/frames/walk_fire/n/001.png": {
+      "muzzle": [
+        84.2451,
+        17.751
+      ]
+    },
+    "families/player/frames/walk_fire/n/002.png": {
+      "muzzle": [
+        83.8661,
+        18.3577
+      ]
+    },
+    "families/player/frames/walk_fire/n/003.png": {
+      "muzzle": [
+        84.2451,
+        17.9499
+      ]
+    },
+    "families/player/frames/walk_fire/n/004.png": {
+      "muzzle": [
+        85.1591,
+        17.3649
+      ]
+    },
+    "families/player/frames/walk_fire/n/005.png": {
+      "muzzle": [
+        86.0714,
+        17.8462
+      ]
+    },
+    "families/player/frames/walk_fire/n/006.png": {
+      "muzzle": [
+        86.4488,
+        18.4895
+      ]
+    },
+    "families/player/frames/walk_fire/n/007.png": {
+      "muzzle": [
+        86.0714,
+        18.0411
+      ]
+    },
+    "families/player/frames/hit/e/000.png": {
+      "muzzle": [
+        134.1122,
+        42.7545
+      ]
+    },
+    "families/player/frames/hit/e/001.png": {
+      "muzzle": [
+        135.1421,
+        46.5412
+      ]
+    },
+    "families/player/frames/hit/s/000.png": {
+      "muzzle": [
+        74.8409,
+        67.2311
+      ]
+    },
+    "families/player/frames/hit/s/001.png": {
+      "muzzle": [
+        74.8409,
+        71.5328
+      ]
+    },
+    "families/player/frames/hit/w/000.png": {
+      "muzzle": [
+        25.8878,
+        37.5955
+      ]
+    },
+    "families/player/frames/hit/w/001.png": {
+      "muzzle": [
+        24.8579,
+        41.3822
+      ]
+    },
+    "families/player/frames/hit/n/000.png": {
+      "muzzle": [
+        85.1591,
+        13.1189
+      ]
+    },
+    "families/player/frames/hit/n/001.png": {
+      "muzzle": [
+        85.1591,
+        16.3906
+      ]
+    },
+    "families/player/frames/death/e/000.png": {
+      "muzzle": [
+        135.3919,
+        47.7378
+      ]
+    },
+    "families/player/frames/death/e/001.png": {
+      "muzzle": [
+        135.3919,
+        54.5109
+      ]
+    },
+    "families/player/frames/death/e/002.png": {
+      "muzzle": [
+        135.3919,
+        72.095
+      ]
+    },
+    "families/player/frames/death/e/003.png": {
+      "muzzle": [
+        135.3919,
+        94.3867
+      ]
+    },
+    "families/player/frames/death/e/004.png": {
+      "muzzle": [
+        135.3919,
+        112.6643
+      ]
+    },
+    "families/player/frames/death/e/005.png": {
+      "muzzle": [
+        135.3919,
+        119.8958
+      ]
+    },
+    "families/player/frames/death/s/000.png": {
+      "muzzle": [
+        74.8409,
+        72.8543
+      ]
+    },
+    "families/player/frames/death/s/001.png": {
+      "muzzle": [
+        71.0329,
+        77.7234
+      ]
+    },
+    "families/player/frames/death/s/002.png": {
+      "muzzle": [
+        62.9923,
+        91.2871
+      ]
+    },
+    "families/player/frames/death/s/003.png": {
+      "muzzle": [
+        56.5138,
+        110.3396
+      ]
+    },
+    "families/player/frames/death/s/004.png": {
+      "muzzle": [
+        54.5651,
+        127.6428
+      ]
+    },
+    "families/player/frames/death/s/005.png": {
+      "muzzle": [
+        54.7847,
+        134.9841
+      ]
+    },
+    "families/player/frames/death/w/000.png": {
+      "muzzle": [
+        24.6081,
+        42.5788
+      ]
+    },
+    "families/player/frames/death/w/001.png": {
+      "muzzle": [
+        24.6081,
+        45.5439
+      ]
+    },
+    "families/player/frames/death/w/002.png": {
+      "muzzle": [
+        24.6081,
+        55.0873
+      ]
+    },
+    "families/player/frames/death/w/003.png": {
+      "muzzle": [
+        24.6081,
+        70.9005
+      ]
+    },
+    "families/player/frames/death/w/004.png": {
+      "muzzle": [
+        24.6081,
+        87.2294
+      ]
+    },
+    "families/player/frames/death/w/005.png": {
+      "muzzle": [
+        24.6081,
+        94.6804
+      ]
+    },
+    "families/player/frames/death/n/000.png": {
+      "muzzle": [
+        85.1591,
+        17.4624
+      ]
+    },
+    "families/player/frames/death/n/001.png": {
+      "muzzle": [
+        88.9671,
+        22.3314
+      ]
+    },
+    "families/player/frames/death/n/002.png": {
+      "muzzle": [
+        97.0077,
+        35.8952
+      ]
+    },
+    "families/player/frames/death/n/003.png": {
+      "muzzle": [
+        103.4862,
+        54.9477
+      ]
+    },
+    "families/player/frames/death/n/004.png": {
+      "muzzle": [
+        105.4349,
+        72.2509
+      ]
+    },
+    "families/player/frames/death/n/005.png": {
+      "muzzle": [
+        105.2153,
+        79.5921
       ]
     }
   },
@@ -278,15 +1622,9 @@
   },
   "public_source_permission": false,
   "owner_approval": null,
-  "delivery_scope": "8 articulated walk frames per direction, four directions; incomplete family, NOT approved for runtime",
-  "remaining": [
-    "remaining base actions",
-    "full family validation and owner review",
-    "reverse and strafe/aim coverage"
-  ],
-  "technical_notes": [
-    "fixed cell/pivot and protected borders checked",
-    "genuine model-rotation views; not mirrored",
-    "image/rig checks do not constitute aesthetic approval"
+  "notes": [
+    "Declared actor coverage is not final-art approval.",
+    "Review-only integration was requested; approved-only production export is unchanged.",
+    "Four facings approximate continuous aim visually; gameplay aiming is not quantized."
   ]
 }

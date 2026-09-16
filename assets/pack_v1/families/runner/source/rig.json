@@ -1,16 +1,113 @@
 {
-  "asset_id":"runner", "clip":"move", "frames":6, "fps":12,
-  "cell":[96,96], "pivot":[48,78], "physical_scale":0.91,
-  "gait":{"stride":0.22,"lift":0.075},
-  "materials":{
-    "flesh":{"hex":"794033","wear":0.19,"specular":0.14,"shine":22},
-    "muscle":{"hex":"A5634B","wear":0.16,"specular":0.18,"shine":28},
-    "dark_flesh":{"hex":"4D2727","wear":0.22,"specular":0.14},
-    "tendon":{"hex":"A07B60","wear":0.13,"specular":0.08},
-    "ridge":{"hex":"876250","wear":0.20,"specular":0.09},
-    "ivory":{"hex":"C8B494","wear":0.16,"specular":0.10,"shine":28},
-    "claw":{"hex":"B6A07F","wear":0.18,"specular":0.19},
-    "mouth":{"hex":"271516","wear":0.13,"specular":0.03},
-    "eye":{"hex":"DFA54B","wear":0.0,"specular":0.22,"emissive":true}
-  }
+  "asset_id": "runner",
+  "cell": [
+    128,
+    128
+  ],
+  "pivot": [
+    64,
+    80
+  ],
+  "physical_scale": 1.0,
+  "gait": {
+    "stride": 0.255,
+    "lift": 0.068
+  },
+  "materials": {
+    "flesh": {
+      "hex": "804737",
+      "wear": 0.14,
+      "specular": 0.1
+    },
+    "muscle": {
+      "hex": "975542",
+      "wear": 0.14,
+      "specular": 0.13
+    },
+    "dark_flesh": {
+      "hex": "432629",
+      "wear": 0.13,
+      "specular": 0.08
+    },
+    "tendon": {
+      "hex": "9A7862",
+      "wear": 0.14,
+      "specular": 0.1
+    },
+    "ivory": {
+      "hex": "C2AD8B",
+      "wear": 0.1,
+      "specular": 0.12
+    },
+    "ridge": {
+      "hex": "9F866D",
+      "wear": 0.15,
+      "specular": 0.1
+    },
+    "mouth": {
+      "hex": "1D1216",
+      "wear": 0.06,
+      "specular": 0.05
+    },
+    "eye": {
+      "hex": "D6A75E",
+      "wear": 0.05,
+      "specular": 0.24
+    },
+    "claw": {
+      "hex": "B6A48B",
+      "wear": 0.1,
+      "specular": 0.16
+    },
+    "acid": {
+      "hex": "839D2F",
+      "wear": 0.14,
+      "specular": 0.25
+    },
+    "acid_light": {
+      "hex": "B1C949",
+      "wear": 0.1,
+      "specular": 0.25
+    },
+    "shell": {
+      "hex": "353C3C",
+      "wear": 0.17,
+      "specular": 0.15
+    },
+    "shell_edge": {
+      "hex": "727569",
+      "wear": 0.17,
+      "specular": 0.12
+    }
+  },
+  "clips": {
+    "idle": [
+      4,
+      6,
+      true
+    ],
+    "move": [
+      6,
+      12,
+      true
+    ],
+    "attack": [
+      4,
+      12,
+      false
+    ],
+    "hit": [
+      2,
+      12,
+      false
+    ],
+    "death": [
+      5,
+      10,
+      false
+    ]
+  },
+  "camera": "pack_v1 dimetric 30-degree elevation, fixed scale and light",
+  "source_kind": "original procedural mesh with named articulated node transforms",
+  "review": "candidate; no owner approval asserted"
 }

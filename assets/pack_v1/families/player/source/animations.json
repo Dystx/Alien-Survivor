@@ -1,0 +1,47 @@
+{
+  "idle": {
+    "frames": 4,
+    "fps": 6,
+    "loop": true
+  },
+  "walk": {
+    "frames": 8,
+    "fps": 12,
+    "loop": true
+  },
+  "walk_back": {
+    "frames": 8,
+    "fps": 12,
+    "loop": true
+  },
+  "strafe_left": {
+    "frames": 8,
+    "fps": 12,
+    "loop": true
+  },
+  "strafe_right": {
+    "frames": 8,
+    "fps": 12,
+    "loop": true
+  },
+  "shoot": {
+    "frames": 4,
+    "fps": 16,
+    "loop": false
+  },
+  "walk_fire": {
+    "frames": 8,
+    "fps": 12,
+    "loop": true
+  },
+  "hit": {
+    "frames": 2,
+    "fps": 12,
+    "loop": false
+  },
+  "death": {
+    "frames": 6,
+    "fps": 10,
+    "loop": false
+  }
+}

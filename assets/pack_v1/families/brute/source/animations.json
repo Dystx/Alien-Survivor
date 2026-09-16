@@ -1,0 +1,37 @@
+{
+  "idle": {
+    "frames": 4,
+    "fps": 6,
+    "loop": true
+  },
+  "move": {
+    "frames": 6,
+    "fps": 8,
+    "loop": true
+  },
+  "windup": {
+    "frames": 4,
+    "fps": 8,
+    "loop": false
+  },
+  "attack": {
+    "frames": 4,
+    "fps": 10,
+    "loop": false
+  },
+  "recovery": {
+    "frames": 2,
+    "fps": 8,
+    "loop": false
+  },
+  "hit": {
+    "frames": 2,
+    "fps": 10,
+    "loop": false
+  },
+  "death": {
+    "frames": 6,
+    "fps": 8,
+    "loop": false
+  }
+}

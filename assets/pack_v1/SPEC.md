@@ -1,6 +1,6 @@
 # Alien Survivor — Official Asset Pack v1
 
-Specification baseline 0.1.0 · 2026-09-16
+Specification baseline 0.2.0 · 2026-09-16
 
 **Specification established; final artwork is not approved or complete.** This document and `pack.json` define the one current pack. The game build and earlier generated sheets remain prototypes. A working image import is not evidence of good animation.
 
@@ -8,7 +8,7 @@ Specification baseline 0.1.0 · 2026-09-16
 
 Gritty, detailed, pre-rendered-looking 2.5D. The runtime stays 2D. No chunky pixel-art restyle, clean cartoon outlines, glossy modern 3D presentation, giant emissive outlines, or promotional text baked into sprites.
 
-Muted concrete and graphite metal; amber player accents; rust-red organic enemies; ivory structural ridges; acid green reserved for acid; blue-white reserved for electrical effects. The palette in `pack.json` contains material anchors, not a requirement to quantize all shading to sixteen colours.
+Muted concrete and graphite metal; olive cloth and exposed human skin; rust-red organic enemies; ivory structural ridges; acid green reserved for acid; blue-white reserved for electrical effects. The palette in `pack.json` contains material anchors, not a requirement to quantize all shading to sixteen colours.
 
 Keep one camera, physical scale and light rig across the whole pack. Key light appears upper-left. Rotate the actor, not the lighting. Ground shadows are separate cosmetic elements. No painted floor behind actors, baked muzzle flash in a body frame, or neighboring object accidentally included in a crop.
 
@@ -20,11 +20,12 @@ A floor tile contains only its flush top surface. Walls, slab lips and raised ed
 
 | Family | Cell | Ground pivot |
 |---|---|---|
-| Player | 128 x 128 | 64, 110 |
-| Runner | 96 x 96 | 48, 78 |
-| Spitter / charger | 128 x 128 | 64, 104 |
-| Brute | 160 x 160 | 80, 136 |
-| Brood Warden | 256 x 256 | 128, 204 |
+| Player | 160 x 160 | 80, 112 |
+| Runner | 128 x 128 | 64, 80 |
+| Spitter | 160 x 160 | 80, 108 |
+| Charger | 160 x 160 | 80, 104 |
+| Brute | 192 x 192 | 96, 136 |
+| Brood Warden | 288 x 288 | 144, 204 |
 
 These are canvas dimensions, not a command to stretch anatomy. Leave two transparent pixels at every actor/effect frame edge. Each family keeps its declared pivot for every action; use in-place locomotion with real limb movement, not whole-image sliding or bouncing. Floor and nine-slice UI pieces have their own edge rules.
 
@@ -87,3 +88,8 @@ Godot supports both separate animation images and sprite sheets; SpriteFrames st
 - https://docs.godotengine.org/en/stable/classes/class_spriteframes.html
 - https://docs.godotengine.org/en/stable/classes/class_animatedsprite2d.html
 - https://docs.blender.org/manual/en/latest/render/cameras.html
+
+
+## Active human-design revision 0.2.0
+
+The owner selected a human rather than enclosed armour. The player has short hair, a visible face, exposed forearms, a fitted dark shirt, a light vest and olive trousers. The actor cells and pivots were enlarged once to contain death and attack bounds without changing physical scale; the table and pack.json are updated together. No per-frame stretching is permitted. All six families are review candidates, not owner-approved production. The separate integration preview is explicitly labelled as such; the production exporter still refuses unapproved art.

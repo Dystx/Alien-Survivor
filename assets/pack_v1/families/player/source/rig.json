@@ -1,15 +1,143 @@
 {
-  "asset_id":"player", "clip":"walk", "frames":8, "fps":12,
-  "cell":[128,128], "pivot":[64,110], "physical_scale":1.0,
-  "gait":{"stride":0.39,"lift":0.105},
-  "materials":{
-    "cloth":{"hex":"383E36","wear":0.12,"specular":0.04},
-    "steel":{"hex":"485157","wear":0.19,"specular":0.23,"shine":28,"metallic":0.5},
-    "plate":{"hex":"68706F","wear":0.13,"specular":0.27,"shine":32,"metallic":0.5},
-    "edge":{"hex":"89928F","wear":0.17,"specular":0.29,"shine":36,"metallic":0.6},
-    "black":{"hex":"1C2326","wear":0.12,"specular":0.09},
-    "pouch":{"hex":"494A3B","wear":0.14,"specular":0.04},
-    "amber":{"hex":"D9A24A","wear":0.09,"specular":0.08},
-    "visor":{"hex":"E6A932","wear":0.05,"specular":0.38,"shine":40,"emissive":true}
-  }
+  "asset_id": "player",
+  "cell": [
+    160,
+    160
+  ],
+  "pivot": [
+    80,
+    112
+  ],
+  "physical_scale": 1.0,
+  "gait": {
+    "stride": 0.33,
+    "lift": 0.1
+  },
+  "materials": {
+    "cloth": {
+      "hex": "303735",
+      "wear": 0.13,
+      "specular": 0.05
+    },
+    "trousers": {
+      "hex": "4E5140",
+      "wear": 0.18,
+      "specular": 0.05
+    },
+    "vest": {
+      "hex": "41463D",
+      "wear": 0.19,
+      "specular": 0.05
+    },
+    "webbing": {
+      "hex": "252D28",
+      "wear": 0.16,
+      "specular": 0.05
+    },
+    "pouch": {
+      "hex": "53543F",
+      "wear": 0.13,
+      "specular": 0.05
+    },
+    "skin": {
+      "hex": "BA8969",
+      "wear": 0.045,
+      "specular": 0.1
+    },
+    "skin_shadow": {
+      "hex": "956A51",
+      "wear": 0.04,
+      "specular": 0.05
+    },
+    "hair": {
+      "hex": "2D241F",
+      "wear": 0.15,
+      "specular": 0.05
+    },
+    "stubble": {
+      "hex": "574033",
+      "wear": 0.1,
+      "specular": 0.05
+    },
+    "white": {
+      "hex": "B7B7A7",
+      "wear": 0.03,
+      "specular": 0.05
+    },
+    "black": {
+      "hex": "1B2223",
+      "wear": 0.13,
+      "specular": 0.05
+    },
+    "steel": {
+      "hex": "414A4D",
+      "wear": 0.12,
+      "specular": 0.16
+    },
+    "plate": {
+      "hex": "566162",
+      "wear": 0.1,
+      "specular": 0.19
+    },
+    "edge": {
+      "hex": "7A8583",
+      "wear": 0.1,
+      "specular": 0.17
+    },
+    "amber": {
+      "hex": "B59C67",
+      "wear": 0.09,
+      "specular": 0.05
+    }
+  },
+  "clips": {
+    "idle": [
+      4,
+      6,
+      true
+    ],
+    "walk": [
+      8,
+      12,
+      true
+    ],
+    "walk_back": [
+      8,
+      12,
+      true
+    ],
+    "strafe_left": [
+      8,
+      12,
+      true
+    ],
+    "strafe_right": [
+      8,
+      12,
+      true
+    ],
+    "shoot": [
+      4,
+      16,
+      false
+    ],
+    "walk_fire": [
+      8,
+      12,
+      true
+    ],
+    "hit": [
+      2,
+      12,
+      false
+    ],
+    "death": [
+      6,
+      10,
+      false
+    ]
+  },
+  "camera": "pack_v1 dimetric 30-degree elevation, fixed scale and light",
+  "source_kind": "original procedural mesh with named articulated node transforms",
+  "review": "candidate; no owner approval asserted"
 }

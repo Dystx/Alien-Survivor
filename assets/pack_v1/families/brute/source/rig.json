@@ -1,0 +1,123 @@
+{
+  "asset_id": "brute",
+  "cell": [
+    192,
+    192
+  ],
+  "pivot": [
+    96,
+    136
+  ],
+  "physical_scale": 1.65,
+  "gait": {
+    "stride": 0.255,
+    "lift": 0.068
+  },
+  "materials": {
+    "flesh": {
+      "hex": "804737",
+      "wear": 0.14,
+      "specular": 0.1
+    },
+    "muscle": {
+      "hex": "975542",
+      "wear": 0.14,
+      "specular": 0.13
+    },
+    "dark_flesh": {
+      "hex": "432629",
+      "wear": 0.13,
+      "specular": 0.08
+    },
+    "tendon": {
+      "hex": "9A7862",
+      "wear": 0.14,
+      "specular": 0.1
+    },
+    "ivory": {
+      "hex": "C2AD8B",
+      "wear": 0.1,
+      "specular": 0.12
+    },
+    "ridge": {
+      "hex": "9F866D",
+      "wear": 0.15,
+      "specular": 0.1
+    },
+    "mouth": {
+      "hex": "1D1216",
+      "wear": 0.06,
+      "specular": 0.05
+    },
+    "eye": {
+      "hex": "D6A75E",
+      "wear": 0.05,
+      "specular": 0.24
+    },
+    "claw": {
+      "hex": "B6A48B",
+      "wear": 0.1,
+      "specular": 0.16
+    },
+    "acid": {
+      "hex": "839D2F",
+      "wear": 0.14,
+      "specular": 0.25
+    },
+    "acid_light": {
+      "hex": "B1C949",
+      "wear": 0.1,
+      "specular": 0.25
+    },
+    "shell": {
+      "hex": "353C3C",
+      "wear": 0.17,
+      "specular": 0.15
+    },
+    "shell_edge": {
+      "hex": "727569",
+      "wear": 0.17,
+      "specular": 0.12
+    }
+  },
+  "clips": {
+    "idle": [
+      4,
+      6,
+      true
+    ],
+    "move": [
+      6,
+      8,
+      true
+    ],
+    "windup": [
+      4,
+      8,
+      false
+    ],
+    "attack": [
+      4,
+      10,
+      false
+    ],
+    "recovery": [
+      2,
+      8,
+      false
+    ],
+    "hit": [
+      2,
+      10,
+      false
+    ],
+    "death": [
+      6,
+      8,
+      false
+    ]
+  },
+  "camera": "pack_v1 dimetric 30-degree elevation, fixed scale and light",
+  "source_kind": "original procedural mesh with named articulated node transforms",
+  "review": "candidate; no owner approval asserted"
+}

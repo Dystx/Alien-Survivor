@@ -1,194 +1,1346 @@
 {
+  "families/player/frames/idle/e/000.png": {
+    "muzzle": [
+      135.3919,
+      47.7378
+    ]
+  },
+  "families/player/frames/idle/e/001.png": {
+    "muzzle": [
+      135.3919,
+      47.3851
+    ]
+  },
+  "families/player/frames/idle/e/002.png": {
+    "muzzle": [
+      135.3919,
+      47.7378
+    ]
+  },
+  "families/player/frames/idle/e/003.png": {
+    "muzzle": [
+      135.3919,
+      48.0906
+    ]
+  },
+  "families/player/frames/idle/s/000.png": {
+    "muzzle": [
+      74.8409,
+      72.8543
+    ]
+  },
+  "families/player/frames/idle/s/001.png": {
+    "muzzle": [
+      74.8409,
+      72.5016
+    ]
+  },
+  "families/player/frames/idle/s/002.png": {
+    "muzzle": [
+      74.8409,
+      72.8543
+    ]
+  },
+  "families/player/frames/idle/s/003.png": {
+    "muzzle": [
+      74.8409,
+      73.207
+    ]
+  },
+  "families/player/frames/idle/w/000.png": {
+    "muzzle": [
+      24.6081,
+      42.5788
+    ]
+  },
+  "families/player/frames/idle/w/001.png": {
+    "muzzle": [
+      24.6081,
+      42.2261
+    ]
+  },
+  "families/player/frames/idle/w/002.png": {
+    "muzzle": [
+      24.6081,
+      42.5788
+    ]
+  },
+  "families/player/frames/idle/w/003.png": {
+    "muzzle": [
+      24.6081,
+      42.9315
+    ]
+  },
+  "families/player/frames/idle/n/000.png": {
+    "muzzle": [
+      85.1591,
+      17.4624
+    ]
+  },
+  "families/player/frames/idle/n/001.png": {
+    "muzzle": [
+      85.1591,
+      17.1096
+    ]
+  },
+  "families/player/frames/idle/n/002.png": {
+    "muzzle": [
+      85.1591,
+      17.4624
+    ]
+  },
+  "families/player/frames/idle/n/003.png": {
+    "muzzle": [
+      85.1591,
+      17.8151
+    ]
+  },
   "families/player/frames/walk/e/000.png": {
     "muzzle": [
-      119.3919,
-      45.7378
+      135.3919,
+      47.7378
     ]
   },
   "families/player/frames/walk/e/001.png": {
     "muzzle": [
-      119.475,
-      45.81
+      135.475,
+      47.81
     ]
   },
   "families/player/frames/walk/e/002.png": {
     "muzzle": [
-      119.5047,
-      46.1496
+      135.5047,
+      48.1496
     ]
   },
   "families/player/frames/walk/e/003.png": {
     "muzzle": [
-      119.475,
-      45.81
+      135.475,
+      47.81
     ]
   },
   "families/player/frames/walk/e/004.png": {
     "muzzle": [
-      119.3919,
-      45.7378
+      135.3919,
+      47.7378
     ]
   },
   "families/player/frames/walk/e/005.png": {
     "muzzle": [
-      119.2927,
-      46.7231
+      135.2927,
+      48.7231
     ]
   },
   "families/player/frames/walk/e/006.png": {
     "muzzle": [
-      119.2468,
-      47.4409
+      135.2468,
+      49.4409
     ]
   },
   "families/player/frames/walk/e/007.png": {
     "muzzle": [
-      119.2927,
-      46.7231
+      135.2927,
+      48.7231
     ]
   },
   "families/player/frames/walk/s/000.png": {
     "muzzle": [
-      58.8409,
-      70.8543
+      74.8409,
+      72.8543
     ]
   },
   "families/player/frames/walk/s/001.png": {
     "muzzle": [
-      59.7549,
-      71.4249
+      75.7549,
+      73.4249
     ]
   },
   "families/player/frames/walk/s/002.png": {
     "muzzle": [
-      60.1339,
-      71.9689
+      76.1339,
+      73.9689
     ]
   },
   "families/player/frames/walk/s/003.png": {
     "muzzle": [
-      59.7549,
-      71.4249
+      75.7549,
+      73.4249
     ]
   },
   "families/player/frames/walk/s/004.png": {
     "muzzle": [
-      58.8409,
-      70.8543
+      74.8409,
+      72.8543
     ]
   },
   "families/player/frames/walk/s/005.png": {
     "muzzle": [
-      57.9286,
-      71.3337
+      73.9286,
+      73.3337
     ]
   },
   "families/player/frames/walk/s/006.png": {
     "muzzle": [
-      57.5512,
-      71.8399
+      73.5512,
+      73.8399
     ]
   },
   "families/player/frames/walk/s/007.png": {
     "muzzle": [
-      57.9286,
-      71.3337
+      73.9286,
+      73.3337
     ]
   },
   "families/player/frames/walk/w/000.png": {
     "muzzle": [
-      8.6081,
-      40.5788
+      24.6081,
+      42.5788
     ]
   },
   "families/player/frames/walk/w/001.png": {
     "muzzle": [
-      8.525,
-      41.5649
+      24.525,
+      43.5649
     ]
   },
   "families/player/frames/walk/w/002.png": {
     "muzzle": [
-      8.4953,
-      42.2834
+      24.4953,
+      44.2834
     ]
   },
   "families/player/frames/walk/w/003.png": {
     "muzzle": [
-      8.525,
-      41.5649
+      24.525,
+      43.5649
     ]
   },
   "families/player/frames/walk/w/004.png": {
     "muzzle": [
-      8.6081,
-      40.5788
+      24.6081,
+      42.5788
     ]
   },
   "families/player/frames/walk/w/005.png": {
     "muzzle": [
-      8.7073,
-      40.6517
+      24.7073,
+      42.6517
     ]
   },
   "families/player/frames/walk/w/006.png": {
     "muzzle": [
-      8.7532,
-      40.9921
+      24.7532,
+      42.9921
     ]
   },
   "families/player/frames/walk/w/007.png": {
     "muzzle": [
-      8.7073,
-      40.6517
+      24.7073,
+      42.6517
     ]
   },
   "families/player/frames/walk/n/000.png": {
     "muzzle": [
-      69.1591,
-      15.4624
+      85.1591,
+      17.4624
     ]
   },
   "families/player/frames/walk/n/001.png": {
     "muzzle": [
-      68.2451,
-      15.9499
+      84.2451,
+      17.9499
     ]
   },
   "families/player/frames/walk/n/002.png": {
     "muzzle": [
-      67.8661,
-      16.4641
+      83.8661,
+      18.4641
     ]
   },
   "families/player/frames/walk/n/003.png": {
     "muzzle": [
-      68.2451,
-      15.9499
+      84.2451,
+      17.9499
     ]
   },
   "families/player/frames/walk/n/004.png": {
     "muzzle": [
-      69.1591,
-      15.4624
+      85.1591,
+      17.4624
     ]
   },
   "families/player/frames/walk/n/005.png": {
     "muzzle": [
-      70.0714,
-      16.0411
+      86.0714,
+      18.0411
     ]
   },
   "families/player/frames/walk/n/006.png": {
     "muzzle": [
-      70.4488,
-      16.5931
+      86.4488,
+      18.5931
     ]
   },
   "families/player/frames/walk/n/007.png": {
     "muzzle": [
-      70.0714,
-      16.0411
+      86.0714,
+      18.0411
+    ]
+  },
+  "families/player/frames/walk_back/e/000.png": {
+    "muzzle": [
+      135.3919,
+      47.7378
+    ]
+  },
+  "families/player/frames/walk_back/e/001.png": {
+    "muzzle": [
+      135.475,
+      47.81
+    ]
+  },
+  "families/player/frames/walk_back/e/002.png": {
+    "muzzle": [
+      135.5047,
+      48.1496
+    ]
+  },
+  "families/player/frames/walk_back/e/003.png": {
+    "muzzle": [
+      135.475,
+      47.81
+    ]
+  },
+  "families/player/frames/walk_back/e/004.png": {
+    "muzzle": [
+      135.3919,
+      47.7378
+    ]
+  },
+  "families/player/frames/walk_back/e/005.png": {
+    "muzzle": [
+      135.2927,
+      48.7231
+    ]
+  },
+  "families/player/frames/walk_back/e/006.png": {
+    "muzzle": [
+      135.2468,
+      49.4409
+    ]
+  },
+  "families/player/frames/walk_back/e/007.png": {
+    "muzzle": [
+      135.2927,
+      48.7231
+    ]
+  },
+  "families/player/frames/walk_back/s/000.png": {
+    "muzzle": [
+      74.8409,
+      72.8543
+    ]
+  },
+  "families/player/frames/walk_back/s/001.png": {
+    "muzzle": [
+      75.7549,
+      73.4249
+    ]
+  },
+  "families/player/frames/walk_back/s/002.png": {
+    "muzzle": [
+      76.1339,
+      73.9689
+    ]
+  },
+  "families/player/frames/walk_back/s/003.png": {
+    "muzzle": [
+      75.7549,
+      73.4249
+    ]
+  },
+  "families/player/frames/walk_back/s/004.png": {
+    "muzzle": [
+      74.8409,
+      72.8543
+    ]
+  },
+  "families/player/frames/walk_back/s/005.png": {
+    "muzzle": [
+      73.9286,
+      73.3337
+    ]
+  },
+  "families/player/frames/walk_back/s/006.png": {
+    "muzzle": [
+      73.5512,
+      73.8399
+    ]
+  },
+  "families/player/frames/walk_back/s/007.png": {
+    "muzzle": [
+      73.9286,
+      73.3337
+    ]
+  },
+  "families/player/frames/walk_back/w/000.png": {
+    "muzzle": [
+      24.6081,
+      42.5788
+    ]
+  },
+  "families/player/frames/walk_back/w/001.png": {
+    "muzzle": [
+      24.525,
+      43.5649
+    ]
+  },
+  "families/player/frames/walk_back/w/002.png": {
+    "muzzle": [
+      24.4953,
+      44.2834
+    ]
+  },
+  "families/player/frames/walk_back/w/003.png": {
+    "muzzle": [
+      24.525,
+      43.5649
+    ]
+  },
+  "families/player/frames/walk_back/w/004.png": {
+    "muzzle": [
+      24.6081,
+      42.5788
+    ]
+  },
+  "families/player/frames/walk_back/w/005.png": {
+    "muzzle": [
+      24.7073,
+      42.6517
+    ]
+  },
+  "families/player/frames/walk_back/w/006.png": {
+    "muzzle": [
+      24.7532,
+      42.9921
+    ]
+  },
+  "families/player/frames/walk_back/w/007.png": {
+    "muzzle": [
+      24.7073,
+      42.6517
+    ]
+  },
+  "families/player/frames/walk_back/n/000.png": {
+    "muzzle": [
+      85.1591,
+      17.4624
+    ]
+  },
+  "families/player/frames/walk_back/n/001.png": {
+    "muzzle": [
+      84.2451,
+      17.9499
+    ]
+  },
+  "families/player/frames/walk_back/n/002.png": {
+    "muzzle": [
+      83.8661,
+      18.4641
+    ]
+  },
+  "families/player/frames/walk_back/n/003.png": {
+    "muzzle": [
+      84.2451,
+      17.9499
+    ]
+  },
+  "families/player/frames/walk_back/n/004.png": {
+    "muzzle": [
+      85.1591,
+      17.4624
+    ]
+  },
+  "families/player/frames/walk_back/n/005.png": {
+    "muzzle": [
+      86.0714,
+      18.0411
+    ]
+  },
+  "families/player/frames/walk_back/n/006.png": {
+    "muzzle": [
+      86.4488,
+      18.5931
+    ]
+  },
+  "families/player/frames/walk_back/n/007.png": {
+    "muzzle": [
+      86.0714,
+      18.0411
+    ]
+  },
+  "families/player/frames/strafe_left/e/000.png": {
+    "muzzle": [
+      135.3919,
+      47.7378
+    ]
+  },
+  "families/player/frames/strafe_left/e/001.png": {
+    "muzzle": [
+      135.475,
+      47.81
+    ]
+  },
+  "families/player/frames/strafe_left/e/002.png": {
+    "muzzle": [
+      135.5047,
+      48.1496
+    ]
+  },
+  "families/player/frames/strafe_left/e/003.png": {
+    "muzzle": [
+      135.475,
+      47.81
+    ]
+  },
+  "families/player/frames/strafe_left/e/004.png": {
+    "muzzle": [
+      135.3919,
+      47.7378
+    ]
+  },
+  "families/player/frames/strafe_left/e/005.png": {
+    "muzzle": [
+      135.2927,
+      48.7231
+    ]
+  },
+  "families/player/frames/strafe_left/e/006.png": {
+    "muzzle": [
+      135.2468,
+      49.4409
+    ]
+  },
+  "families/player/frames/strafe_left/e/007.png": {
+    "muzzle": [
+      135.2927,
+      48.7231
+    ]
+  },
+  "families/player/frames/strafe_left/s/000.png": {
+    "muzzle": [
+      74.8409,
+      72.8543
+    ]
+  },
+  "families/player/frames/strafe_left/s/001.png": {
+    "muzzle": [
+      75.7549,
+      73.4249
+    ]
+  },
+  "families/player/frames/strafe_left/s/002.png": {
+    "muzzle": [
+      76.1339,
+      73.9689
+    ]
+  },
+  "families/player/frames/strafe_left/s/003.png": {
+    "muzzle": [
+      75.7549,
+      73.4249
+    ]
+  },
+  "families/player/frames/strafe_left/s/004.png": {
+    "muzzle": [
+      74.8409,
+      72.8543
+    ]
+  },
+  "families/player/frames/strafe_left/s/005.png": {
+    "muzzle": [
+      73.9286,
+      73.3337
+    ]
+  },
+  "families/player/frames/strafe_left/s/006.png": {
+    "muzzle": [
+      73.5512,
+      73.8399
+    ]
+  },
+  "families/player/frames/strafe_left/s/007.png": {
+    "muzzle": [
+      73.9286,
+      73.3337
+    ]
+  },
+  "families/player/frames/strafe_left/w/000.png": {
+    "muzzle": [
+      24.6081,
+      42.5788
+    ]
+  },
+  "families/player/frames/strafe_left/w/001.png": {
+    "muzzle": [
+      24.525,
+      43.5649
+    ]
+  },
+  "families/player/frames/strafe_left/w/002.png": {
+    "muzzle": [
+      24.4953,
+      44.2834
+    ]
+  },
+  "families/player/frames/strafe_left/w/003.png": {
+    "muzzle": [
+      24.525,
+      43.5649
+    ]
+  },
+  "families/player/frames/strafe_left/w/004.png": {
+    "muzzle": [
+      24.6081,
+      42.5788
+    ]
+  },
+  "families/player/frames/strafe_left/w/005.png": {
+    "muzzle": [
+      24.7073,
+      42.6517
+    ]
+  },
+  "families/player/frames/strafe_left/w/006.png": {
+    "muzzle": [
+      24.7532,
+      42.9921
+    ]
+  },
+  "families/player/frames/strafe_left/w/007.png": {
+    "muzzle": [
+      24.7073,
+      42.6517
+    ]
+  },
+  "families/player/frames/strafe_left/n/000.png": {
+    "muzzle": [
+      85.1591,
+      17.4624
+    ]
+  },
+  "families/player/frames/strafe_left/n/001.png": {
+    "muzzle": [
+      84.2451,
+      17.9499
+    ]
+  },
+  "families/player/frames/strafe_left/n/002.png": {
+    "muzzle": [
+      83.8661,
+      18.4641
+    ]
+  },
+  "families/player/frames/strafe_left/n/003.png": {
+    "muzzle": [
+      84.2451,
+      17.9499
+    ]
+  },
+  "families/player/frames/strafe_left/n/004.png": {
+    "muzzle": [
+      85.1591,
+      17.4624
+    ]
+  },
+  "families/player/frames/strafe_left/n/005.png": {
+    "muzzle": [
+      86.0714,
+      18.0411
+    ]
+  },
+  "families/player/frames/strafe_left/n/006.png": {
+    "muzzle": [
+      86.4488,
+      18.5931
+    ]
+  },
+  "families/player/frames/strafe_left/n/007.png": {
+    "muzzle": [
+      86.0714,
+      18.0411
+    ]
+  },
+  "families/player/frames/strafe_right/e/000.png": {
+    "muzzle": [
+      135.3919,
+      47.7378
+    ]
+  },
+  "families/player/frames/strafe_right/e/001.png": {
+    "muzzle": [
+      135.475,
+      47.81
+    ]
+  },
+  "families/player/frames/strafe_right/e/002.png": {
+    "muzzle": [
+      135.5047,
+      48.1496
+    ]
+  },
+  "families/player/frames/strafe_right/e/003.png": {
+    "muzzle": [
+      135.475,
+      47.81
+    ]
+  },
+  "families/player/frames/strafe_right/e/004.png": {
+    "muzzle": [
+      135.3919,
+      47.7378
+    ]
+  },
+  "families/player/frames/strafe_right/e/005.png": {
+    "muzzle": [
+      135.2927,
+      48.7231
+    ]
+  },
+  "families/player/frames/strafe_right/e/006.png": {
+    "muzzle": [
+      135.2468,
+      49.4409
+    ]
+  },
+  "families/player/frames/strafe_right/e/007.png": {
+    "muzzle": [
+      135.2927,
+      48.7231
+    ]
+  },
+  "families/player/frames/strafe_right/s/000.png": {
+    "muzzle": [
+      74.8409,
+      72.8543
+    ]
+  },
+  "families/player/frames/strafe_right/s/001.png": {
+    "muzzle": [
+      75.7549,
+      73.4249
+    ]
+  },
+  "families/player/frames/strafe_right/s/002.png": {
+    "muzzle": [
+      76.1339,
+      73.9689
+    ]
+  },
+  "families/player/frames/strafe_right/s/003.png": {
+    "muzzle": [
+      75.7549,
+      73.4249
+    ]
+  },
+  "families/player/frames/strafe_right/s/004.png": {
+    "muzzle": [
+      74.8409,
+      72.8543
+    ]
+  },
+  "families/player/frames/strafe_right/s/005.png": {
+    "muzzle": [
+      73.9286,
+      73.3337
+    ]
+  },
+  "families/player/frames/strafe_right/s/006.png": {
+    "muzzle": [
+      73.5512,
+      73.8399
+    ]
+  },
+  "families/player/frames/strafe_right/s/007.png": {
+    "muzzle": [
+      73.9286,
+      73.3337
+    ]
+  },
+  "families/player/frames/strafe_right/w/000.png": {
+    "muzzle": [
+      24.6081,
+      42.5788
+    ]
+  },
+  "families/player/frames/strafe_right/w/001.png": {
+    "muzzle": [
+      24.525,
+      43.5649
+    ]
+  },
+  "families/player/frames/strafe_right/w/002.png": {
+    "muzzle": [
+      24.4953,
+      44.2834
+    ]
+  },
+  "families/player/frames/strafe_right/w/003.png": {
+    "muzzle": [
+      24.525,
+      43.5649
+    ]
+  },
+  "families/player/frames/strafe_right/w/004.png": {
+    "muzzle": [
+      24.6081,
+      42.5788
+    ]
+  },
+  "families/player/frames/strafe_right/w/005.png": {
+    "muzzle": [
+      24.7073,
+      42.6517
+    ]
+  },
+  "families/player/frames/strafe_right/w/006.png": {
+    "muzzle": [
+      24.7532,
+      42.9921
+    ]
+  },
+  "families/player/frames/strafe_right/w/007.png": {
+    "muzzle": [
+      24.7073,
+      42.6517
+    ]
+  },
+  "families/player/frames/strafe_right/n/000.png": {
+    "muzzle": [
+      85.1591,
+      17.4624
+    ]
+  },
+  "families/player/frames/strafe_right/n/001.png": {
+    "muzzle": [
+      84.2451,
+      17.9499
+    ]
+  },
+  "families/player/frames/strafe_right/n/002.png": {
+    "muzzle": [
+      83.8661,
+      18.4641
+    ]
+  },
+  "families/player/frames/strafe_right/n/003.png": {
+    "muzzle": [
+      84.2451,
+      17.9499
+    ]
+  },
+  "families/player/frames/strafe_right/n/004.png": {
+    "muzzle": [
+      85.1591,
+      17.4624
+    ]
+  },
+  "families/player/frames/strafe_right/n/005.png": {
+    "muzzle": [
+      86.0714,
+      18.0411
+    ]
+  },
+  "families/player/frames/strafe_right/n/006.png": {
+    "muzzle": [
+      86.4488,
+      18.5931
+    ]
+  },
+  "families/player/frames/strafe_right/n/007.png": {
+    "muzzle": [
+      86.0714,
+      18.0411
+    ]
+  },
+  "families/player/frames/shoot/e/000.png": {
+    "muzzle": [
+      135.3919,
+      47.7378
+    ]
+  },
+  "families/player/frames/shoot/e/001.png": {
+    "muzzle": [
+      133.6544,
+      46.7043
+    ]
+  },
+  "families/player/frames/shoot/e/002.png": {
+    "muzzle": [
+      134.466,
+      47.1847
+    ]
+  },
+  "families/player/frames/shoot/e/003.png": {
+    "muzzle": [
+      135.272,
+      47.6659
+    ]
+  },
+  "families/player/frames/shoot/s/000.png": {
+    "muzzle": [
+      74.8409,
+      72.8543
+    ]
+  },
+  "families/player/frames/shoot/s/001.png": {
+    "muzzle": [
+      74.8409,
+      70.952
+    ]
+  },
+  "families/player/frames/shoot/s/002.png": {
+    "muzzle": [
+      74.8409,
+      71.8382
+    ]
+  },
+  "families/player/frames/shoot/s/003.png": {
+    "muzzle": [
+      74.8409,
+      72.7224
+    ]
+  },
+  "families/player/frames/shoot/w/000.png": {
+    "muzzle": [
+      24.6081,
+      42.5788
+    ]
+  },
+  "families/player/frames/shoot/w/001.png": {
+    "muzzle": [
+      26.3456,
+      41.5453
+    ]
+  },
+  "families/player/frames/shoot/w/002.png": {
+    "muzzle": [
+      25.534,
+      42.0256
+    ]
+  },
+  "families/player/frames/shoot/w/003.png": {
+    "muzzle": [
+      24.728,
+      42.5069
+    ]
+  },
+  "families/player/frames/shoot/n/000.png": {
+    "muzzle": [
+      85.1591,
+      17.4624
+    ]
+  },
+  "families/player/frames/shoot/n/001.png": {
+    "muzzle": [
+      85.1591,
+      17.2976
+    ]
+  },
+  "families/player/frames/shoot/n/002.png": {
+    "muzzle": [
+      85.1591,
+      17.3722
+    ]
+  },
+  "families/player/frames/shoot/n/003.png": {
+    "muzzle": [
+      85.1591,
+      17.4504
+    ]
+  },
+  "families/player/frames/walk_fire/e/000.png": {
+    "muzzle": [
+      134.3889,
+      47.1389
+    ]
+  },
+  "families/player/frames/walk_fire/e/001.png": {
+    "muzzle": [
+      133.4756,
+      46.6114
+    ]
+  },
+  "families/player/frames/walk_fire/e/002.png": {
+    "muzzle": [
+      134.517,
+      47.5493
+    ]
+  },
+  "families/player/frames/walk_fire/e/003.png": {
+    "muzzle": [
+      135.475,
+      47.81
+    ]
+  },
+  "families/player/frames/walk_fire/e/004.png": {
+    "muzzle": [
+      134.3889,
+      47.1389
+    ]
+  },
+  "families/player/frames/walk_fire/e/005.png": {
+    "muzzle": [
+      133.2932,
+      47.5285
+    ]
+  },
+  "families/player/frames/walk_fire/e/006.png": {
+    "muzzle": [
+      134.2591,
+      48.8434
+    ]
+  },
+  "families/player/frames/walk_fire/e/007.png": {
+    "muzzle": [
+      135.2927,
+      48.7231
+    ]
+  },
+  "families/player/frames/walk_fire/s/000.png": {
+    "muzzle": [
+      74.8409,
+      71.7538
+    ]
+  },
+  "families/player/frames/walk_fire/s/001.png": {
+    "muzzle": [
+      75.7549,
+      71.2266
+    ]
+  },
+  "families/player/frames/walk_fire/s/002.png": {
+    "muzzle": [
+      76.1339,
+      72.8747
+    ]
+  },
+  "families/player/frames/walk_fire/s/003.png": {
+    "muzzle": [
+      75.7549,
+      73.4249
+    ]
+  },
+  "families/player/frames/walk_fire/s/004.png": {
+    "muzzle": [
+      74.8409,
+      71.7538
+    ]
+  },
+  "families/player/frames/walk_fire/s/005.png": {
+    "muzzle": [
+      73.9286,
+      71.1394
+    ]
+  },
+  "families/player/frames/walk_fire/s/006.png": {
+    "muzzle": [
+      73.5512,
+      72.7485
+    ]
+  },
+  "families/player/frames/walk_fire/s/007.png": {
+    "muzzle": [
+      73.9286,
+      73.3337
+    ]
+  },
+  "families/player/frames/walk_fire/w/000.png": {
+    "muzzle": [
+      25.6111,
+      41.9798
+    ]
+  },
+  "families/player/frames/walk_fire/w/001.png": {
+    "muzzle": [
+      26.5244,
+      42.3663
+    ]
+  },
+  "families/player/frames/walk_fire/w/002.png": {
+    "muzzle": [
+      25.483,
+      43.6832
+    ]
+  },
+  "families/player/frames/walk_fire/w/003.png": {
+    "muzzle": [
+      24.525,
+      43.5649
+    ]
+  },
+  "families/player/frames/walk_fire/w/004.png": {
+    "muzzle": [
+      25.6111,
+      41.9798
+    ]
+  },
+  "families/player/frames/walk_fire/w/005.png": {
+    "muzzle": [
+      26.7068,
+      41.4571
+    ]
+  },
+  "families/player/frames/walk_fire/w/006.png": {
+    "muzzle": [
+      25.7409,
+      42.3946
+    ]
+  },
+  "families/player/frames/walk_fire/w/007.png": {
+    "muzzle": [
+      24.7073,
+      42.6517
+    ]
+  },
+  "families/player/frames/walk_fire/n/000.png": {
+    "muzzle": [
+      85.1591,
+      17.3649
+    ]
+  },
+  "families/player/frames/walk_fire/n/001.png": {
+    "muzzle": [
+      84.2451,
+      17.751
+    ]
+  },
+  "families/player/frames/walk_fire/n/002.png": {
+    "muzzle": [
+      83.8661,
+      18.3577
+    ]
+  },
+  "families/player/frames/walk_fire/n/003.png": {
+    "muzzle": [
+      84.2451,
+      17.9499
+    ]
+  },
+  "families/player/frames/walk_fire/n/004.png": {
+    "muzzle": [
+      85.1591,
+      17.3649
+    ]
+  },
+  "families/player/frames/walk_fire/n/005.png": {
+    "muzzle": [
+      86.0714,
+      17.8462
+    ]
+  },
+  "families/player/frames/walk_fire/n/006.png": {
+    "muzzle": [
+      86.4488,
+      18.4895
+    ]
+  },
+  "families/player/frames/walk_fire/n/007.png": {
+    "muzzle": [
+      86.0714,
+      18.0411
+    ]
+  },
+  "families/player/frames/hit/e/000.png": {
+    "muzzle": [
+      134.1122,
+      42.7545
+    ]
+  },
+  "families/player/frames/hit/e/001.png": {
+    "muzzle": [
+      135.1421,
+      46.5412
+    ]
+  },
+  "families/player/frames/hit/s/000.png": {
+    "muzzle": [
+      74.8409,
+      67.2311
+    ]
+  },
+  "families/player/frames/hit/s/001.png": {
+    "muzzle": [
+      74.8409,
+      71.5328
+    ]
+  },
+  "families/player/frames/hit/w/000.png": {
+    "muzzle": [
+      25.8878,
+      37.5955
+    ]
+  },
+  "families/player/frames/hit/w/001.png": {
+    "muzzle": [
+      24.8579,
+      41.3822
+    ]
+  },
+  "families/player/frames/hit/n/000.png": {
+    "muzzle": [
+      85.1591,
+      13.1189
+    ]
+  },
+  "families/player/frames/hit/n/001.png": {
+    "muzzle": [
+      85.1591,
+      16.3906
+    ]
+  },
+  "families/player/frames/death/e/000.png": {
+    "muzzle": [
+      135.3919,
+      47.7378
+    ]
+  },
+  "families/player/frames/death/e/001.png": {
+    "muzzle": [
+      135.3919,
+      54.5109
+    ]
+  },
+  "families/player/frames/death/e/002.png": {
+    "muzzle": [
+      135.3919,
+      72.095
+    ]
+  },
+  "families/player/frames/death/e/003.png": {
+    "muzzle": [
+      135.3919,
+      94.3867
+    ]
+  },
+  "families/player/frames/death/e/004.png": {
+    "muzzle": [
+      135.3919,
+      112.6643
+    ]
+  },
+  "families/player/frames/death/e/005.png": {
+    "muzzle": [
+      135.3919,
+      119.8958
+    ]
+  },
+  "families/player/frames/death/s/000.png": {
+    "muzzle": [
+      74.8409,
+      72.8543
+    ]
+  },
+  "families/player/frames/death/s/001.png": {
+    "muzzle": [
+      71.0329,
+      77.7234
+    ]
+  },
+  "families/player/frames/death/s/002.png": {
+    "muzzle": [
+      62.9923,
+      91.2871
+    ]
+  },
+  "families/player/frames/death/s/003.png": {
+    "muzzle": [
+      56.5138,
+      110.3396
+    ]
+  },
+  "families/player/frames/death/s/004.png": {
+    "muzzle": [
+      54.5651,
+      127.6428
+    ]
+  },
+  "families/player/frames/death/s/005.png": {
+    "muzzle": [
+      54.7847,
+      134.9841
+    ]
+  },
+  "families/player/frames/death/w/000.png": {
+    "muzzle": [
+      24.6081,
+      42.5788
+    ]
+  },
+  "families/player/frames/death/w/001.png": {
+    "muzzle": [
+      24.6081,
+      45.5439
+    ]
+  },
+  "families/player/frames/death/w/002.png": {
+    "muzzle": [
+      24.6081,
+      55.0873
+    ]
+  },
+  "families/player/frames/death/w/003.png": {
+    "muzzle": [
+      24.6081,
+      70.9005
+    ]
+  },
+  "families/player/frames/death/w/004.png": {
+    "muzzle": [
+      24.6081,
+      87.2294
+    ]
+  },
+  "families/player/frames/death/w/005.png": {
+    "muzzle": [
+      24.6081,
+      94.6804
+    ]
+  },
+  "families/player/frames/death/n/000.png": {
+    "muzzle": [
+      85.1591,
+      17.4624
+    ]
+  },
+  "families/player/frames/death/n/001.png": {
+    "muzzle": [
+      88.9671,
+      22.3314
+    ]
+  },
+  "families/player/frames/death/n/002.png": {
+    "muzzle": [
+      97.0077,
+      35.8952
+    ]
+  },
+  "families/player/frames/death/n/003.png": {
+    "muzzle": [
+      103.4862,
+      54.9477
+    ]
+  },
+  "families/player/frames/death/n/004.png": {
+    "muzzle": [
+      105.4349,
+      72.2509
+    ]
+  },
+  "families/player/frames/death/n/005.png": {
+    "muzzle": [
+      105.2153,
+      79.5921
     ]
   }
 }

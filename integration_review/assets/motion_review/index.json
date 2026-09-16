@@ -1,0 +1,36 @@
+{
+  "status": "review_only",
+  "release_approved": false,
+  "families": {
+    "player": {
+      "manifest": "player/animations.json",
+      "sha256": "472ac7ac043b60384e0a88d580b29fc7a3c8503feb7f3a595055372341cc8b66",
+      "frames": 224
+    },
+    "runner": {
+      "manifest": "runner/animations.json",
+      "sha256": "da78794f01d70c7990cca8095d5e674553e12cf23f66646b7569078c74287d62",
+      "frames": 84
+    },
+    "spitter": {
+      "manifest": "spitter/animations.json",
+      "sha256": "338f7c242bfd6b77fa297289db0b5e7906c3af820f735cb7f93d7ac80d25d437",
+      "frames": 108
+    },
+    "charger": {
+      "manifest": "charger/animations.json",
+      "sha256": "63381be86b185cda052c8b7bc4523b7638a299e045fd1d083641d9b7220d8cac",
+      "frames": 124
+    },
+    "brute": {
+      "manifest": "brute/animations.json",
+      "sha256": "aea96b2fb0c52b38adf17b3bdaa55d0fc8c794e182d5973f0161d910bff1488a",
+      "frames": 112
+    },
+    "brood_warden": {
+      "manifest": "brood_warden/animations.json",
+      "sha256": "8476fa81bd798ad826a6d219b7a8c596e8ca40d6d0d35307d1f12d982ffa7071",
+      "frames": 240
+    }
+  }
+}
