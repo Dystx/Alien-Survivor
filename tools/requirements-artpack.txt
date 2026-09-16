@@ -1,0 +1,2 @@
+# Development-only image validation and atlas packing.
+Pillow==12.3.0
