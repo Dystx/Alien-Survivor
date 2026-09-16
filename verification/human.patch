@@ -1,0 +1,201 @@
+--- a/scripts/main.gd
++++ b/scripts/main.gd
+@@ -47,6 +47,7 @@
+ 	sim.phase = Simulation.Phase.MENU
+ 	controls.set_enabled(false)
+ 	view.reset()
++	hud.waiting_for_death = false
+ 	hud.screen_override = ""
+ 	hud.refresh(true)
+ func _start_run(count: int = -1) -> void:
+@@ -57,6 +58,7 @@
+ 		sim.reset(1709)
+ 		sim.finale_enabled = true
+ 	view.reset()
++	hud.waiting_for_death = false
+ 	sound.stop_all()
+ 	controls.clear()
+ 	controls.set_enabled(true)
+@@ -67,14 +69,18 @@
+ 	controls.set_enabled(playable)
+ 	var intent := controls.sample(view.screen_to_world(get_viewport().get_mouse_position()), sim.player, IsoProjection.input_basis())
+ 	last_manual = intent.aim != Vector2.ZERO
++	var before_position: Vector2 = sim.player
+ 	var start := Time.get_ticks_usec()
+ 	sim.step(dt, intent.move, intent.aim)
+ 	step_ms = float(Time.get_ticks_usec() - start) / 1000.0
+ 	if playable:
+-		view.advance(dt, intent.move != Vector2.ZERO, sim.events)
++		view.advance(dt, sim.player.distance_squared_to(before_position) > 0.001, sim.events)
+ 		sound.consume(dt, sim.events)
+ 	else:
+ 		sound.stop_all()
++		if sim.phase == Simulation.Phase.RESULTS and sim.health <= 0.0:
++			view.advance_death(dt)
++	hud.waiting_for_death = sim.phase == Simulation.Phase.RESULTS and sim.health <= 0.0 and not view.human.death_finished()
+ 	if sim.phase != Simulation.Phase.RUNNING:
+ 		controls.set_enabled(false)
+ 	if smoke_mode:
+@@ -126,9 +132,12 @@
+ 	match action:
+ 		"start":
+ 			_start_run()
++		"animation_review":
++			get_tree().change_scene_to_file("res://scenes/animation_review.tscn")
+ 		"boss_test":
+ 			sim.start_boss_preview()
+ 			view.reset()
++			hud.waiting_for_death = false
+ 			sound.stop_all()
+ 			controls.clear()
+ 			controls.set_enabled(true)
+--- a/scripts/arena_view.gd
++++ b/scripts/arena_view.gd
+@@ -3,6 +3,10 @@
+ const Sprites = preload("res://scripts/sprite_factory.gd")
+ const IsoProjection = preload("res://scripts/projection.gd")
+ const CENTER := Vector2(480, 290)
++const Human = preload("res://scripts/human_animation.gd")
++const HUMAN_SCALE: float = 0.96
++var human := Human.new()
++var bullet_offsets: Dictionary = {}
+ var sim: Simulation
+ var sprites: Sprites
+ var camera := Vector2.ZERO
+@@ -21,6 +25,8 @@
+ 	sprites = Sprites.new()
+ 	cosmetic_rng.seed = 777
+ func reset() -> void:
++	human.reset()
++	bullet_offsets.clear()
+ 	fx.clear()
+ 	corpses.clear()
+ 	shake = 0.0
+@@ -35,6 +41,12 @@
+ 	return IsoProjection.project(point) - camera + CENTER + offset
+ func advance(dt: float, moving: bool, events: Array[Dictionary]) -> void:
+ 	moving_now = moving
++	var hurt: bool = false
++	var fired: bool = false
++	for event in events:
++		hurt = hurt or event.type == "hurt"
++		fired = fired or event.type == "shot"
++	human.advance(dt, moving, IsoProjection.project(sim.facing), hurt, fired, sim.health > 0.0)
+ 	if moving:
+ 		player_animation += dt
+ 	camera = IsoProjection.project(sim.player)
+@@ -64,7 +76,7 @@
+ func _add_fx(type: String, point: Vector2, direction: Vector2, duration: float) -> void:
+ 	if fx.size() >= 96:
+ 		fx.pop_front()
+-	fx.append({"type": type, "position": point, "direction": direction, "life": duration, "duration": duration})
++	fx.append({"type": type, "position": point, "direction": direction, "life": duration, "duration": duration, "muzzle": human.muzzle_offset() * HUMAN_SCALE})
+ func _draw() -> void:
+ 	if sim == null or sprites == null:
+ 		return
+@@ -110,14 +122,25 @@
+ 		else:
+ 			var p := screen(sim.player)
+ 			_ground_circle(sim.player, 15.0, Color(0.64, 0.85, 0.97, 0.65), false)
+-			var recoil := -IsoProjection.project(sim.facing).normalized() * (2.0 if last_shot > 0.0 else 0.0)
+-			var tint := Color(1.0, 0.55, 0.45) if sim.hurt_timer > 0.5 else Color.WHITE
+-			_foot(sprites.player_frame(IsoProjection.project(sim.facing)), p + recoil, 0.88, tint)
++			var recoil := -IsoProjection.project(sim.facing).normalized() * (1.1 if human.shot_remaining > 0.0 else 0.0)
++			var tint := Color(1.0, 0.72, 0.62) if sim.hurt_timer > 0.5 and not human.dead else Color.WHITE
++			var pos := p + recoil - Human.PIVOT * HUMAN_SCALE
++			draw_texture_rect(human.texture(), Rect2(pos, Vector2(128, 128) * HUMAN_SCALE), false, tint)
++	var live_bullets: Dictionary = {}
+ 	for bullet in sim.bullets:
+-		var p := screen(bullet.position) + Vector2(0, -18)
++		var id: int = bullet.get_instance_id()
++		live_bullets[id] = true
++		if not bullet_offsets.has(id):
++			bullet_offsets[id] = human.muzzle_offset() * HUMAN_SCALE
++		var travelled: float = sim.balance.rifle_range - bullet.remaining
++		var elevation: Vector2 = (bullet_offsets[id] as Vector2).lerp(Vector2(0, -18), clampf(travelled / 110.0, 0.0, 1.0))
++		var p := screen(bullet.position) + elevation
+ 		var direction := IsoProjection.project(bullet.velocity).normalized()
+ 		draw_line(p - direction * 13.0, p, Color("bca56e"), 1.5)
+ 		draw_line(p - direction * 5.0, p, Color("fff1b2"), 2.0)
++	for id in bullet_offsets.keys():
++		if not live_bullets.has(id):
++			bullet_offsets.erase(id)
+ 	for shot in sim.enemy_projectiles:
+ 		var p := screen(shot.position) + Vector2(0, -15)
+ 		var angle := IsoProjection.project(shot.velocity).angle() + PI
+@@ -129,7 +152,7 @@
+ 		match String(effect.type):
+ 			"shot":
+ 				var direction := IsoProjection.project(effect.direction).normalized()
+-				p += direction * 25.0 + Vector2(0, -7)
++				p = screen(effect.position) + (effect.muzzle as Vector2)
+ 				_rotated(sprites.tex("fx/muzzle_1"), p, Vector2(34, 24), direction.angle())
+ 			"hit":
+ 				_center(sprites.tex("fx/blood_0" if gore else "fx/spark"), p, Vector2(27, 28))
+@@ -247,3 +270,6 @@
+ 	draw_set_transform(point, angle)
+ 	draw_texture_rect(texture, Rect2(-size*0.5,size), false)
+ 	draw_set_transform(Vector2.ZERO)
++func advance_death(dt: float) -> void:
++	human.advance(dt, false, Vector2.ZERO, false, false, false)
++	queue_redraw()
+--- a/scripts/hud.gd
++++ b/scripts/hud.gd
+@@ -28,6 +28,7 @@
+ var debug_visible: bool = false
+ var screen_override: String = ""
+ var signature: String = ""
++var waiting_for_death: bool = false
+ class TouchOverlay extends Control:
+ 	var router
+ 	func _process(_dt: float) -> void:
+@@ -167,11 +168,11 @@
+ 		button.grab_focus.call_deferred()
+ 	return button
+ func refresh(force: bool = false) -> void:
+-	var current := "%s/%s/%s" % [sim.phase, sim.level, screen_override]
++	var current := "%s/%s/%s/%s" % [sim.phase, sim.level, screen_override, waiting_for_death]
+ 	if current == signature and not force:
+ 		return
+ 	signature = current
+-	overlay.visible = sim.phase != Simulation.Phase.RUNNING or not screen_override.is_empty()
++	overlay.visible = (sim.phase != Simulation.Phase.RUNNING or not screen_override.is_empty()) and not waiting_for_death
+ 	pause_button.visible = sim.phase == Simulation.Phase.RUNNING
+ 	if not overlay.visible:
+ 		return
+@@ -211,6 +212,7 @@
+ 			_text(box, "Survive the swarm. Break the Warden.", 20)
+ 			_text(box, "Five minutes of escalating swarms, then a two-phase boss.\nAuto-fire. Collect green XP. Move out of marked attacks.", 15, MUTED)
+ 			_add_button(box, "DEPLOY  /  SURVIVAL + BOSS", "start", true)
++			_add_button(box, "HUMAN ANIMATION REVIEW", "animation_review")
+ 			var row := HBoxContainer.new()
+ 			row.add_theme_constant_override("separation", 10)
+ 			box.add_child(row)
+@@ -218,7 +220,7 @@
+ 				var button := _button(item[0], item[1])
+ 				button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+ 				row.add_child(button)
+-			_text(box, "NATIVE GODOT PROTOTYPE  /  2.5D ART  /  FINALE PROTOTYPE", 10, MUTED)
++			_text(box, "HUMAN SPRITE REVIEW  /  FINALE PROTOTYPE  /  NOT FINAL ART", 10, MUTED)
+ 		Simulation.Phase.PAUSED:
+ 			_text(box, "TRANSMISSION PAUSED", 29)
+ 			_text(box, "The run clock and combat are stopped.", 15, MUTED)
+--- a/scripts/sprite_factory.gd
++++ b/scripts/sprite_factory.gd
+@@ -7,7 +7,6 @@
+ 	if fixture_mode:
+ 		print("ART_FIXTURES: temporary solid textures; rendered artwork is NOT tested")
+ 	for i in range(8):
+-		_register("player/facing_%d" % i, Vector2i(96, 112))
+ 		for kind: String in ["runner", "spitter", "charger", "brute"]:
+ 			_register("enemies/%s/facing_%d" % [kind, i], Vector2i(112, 104))
+ 	_register("boss/warden", Vector2i(224, 208))
+@@ -46,8 +45,6 @@
+ 	return textures.get(id) as Texture2D
+ func facing(direction: Vector2) -> int:
+ 	return posmod(roundi(direction.angle() / (TAU / 8.0)), 8)
+-func player_frame(screen_direction: Vector2) -> Texture2D:
+-	return tex("player/facing_%d" % facing(screen_direction))
+ func enemy_frame(kind: String, screen_direction: Vector2) -> Texture2D:
+ 	if kind == "boss":
+ 		return tex("boss/warden")
