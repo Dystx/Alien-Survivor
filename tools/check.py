@@ -75,7 +75,7 @@ def main() -> int:
         run(prefix + ["--script", "res://tests/run_tests.gd"], "ALIEN_SURVIVOR_TESTS:")
         run(prefix + ["--script", "res://tests/run_tests.gd", "--", "--self-test-failure"],
             "[FAIL] intentional runner self-check", expected_code=1)
-        run(prefix + ["--fixed-fps", "60", "--", "--smoke"], "SCENE_SMOKE_PASS")
+        run(prefix + ["--verbose", "--fixed-fps", "60", "--", "--smoke"], "SCENE_SMOKE_PASS")
         print("ENGINE CHECKS PASS. Graphics, sound listening, controller and physical phones still need manual testing.")
         return 0
     except (RuntimeError, OSError, subprocess.SubprocessError) as error:
