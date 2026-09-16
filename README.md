@@ -12,9 +12,13 @@ This is a bounded first playable plus a small XP/upgrade loop, not the full plan
 
 ## Validation status
 
-The authoring environment does not have Godot installed and its engine download is blocked. Local structural checks can run here, but they do **not** prove GDScript compilation or playability. The included GitHub workflow runs the real pinned engine and fails on import, test, scene-smoke or negative-control problems. Check the actual workflow result; merely having the workflow does not mean it passed.
+**Verified in GitHub Actions on 2026-09-16:** official Godot 4.7.2 imported the project successfully; all **46 automated gameplay/settings checks passed**; the deliberate failure test returned the expected failure; and the complete main-scene headless smoke test finished with `SCENE_SMOKE_PASS kills=1 shots=2`.
 
-Interactive graphical, audio listening, controller, Steam Deck, Windows-export and physical Android/iOS tests remain outstanding. No measured FPS or enemy-capacity claim is made.
+Evidence: [successful workflow run 35132537964](https://github.com/Dystx/Alien-Survivor/actions/runs/35132537964), testing code commit `514a03cb3b50a18bb6054b4deb49616155c6daa3`. The earlier sprite type-inference errors have been fixed. The final headless run reported no ObjectDB leak warning. Audio resources are constructed in the test, but playback is explicitly disabled without a display/audio test environment.
+
+Local resource-reference checks and Python compilation also passed. The local authoring container itself has no Godot executable; the real engine checks ran on GitHub's Ubuntu runner, not on a developer's Windows machine or a phone.
+
+**Still NOT tested:** graphical appearance, a full human-played run, sound listening, physical controller/touch input, Steam Deck, Windows/Linux executable exports, Android/iOS exports, thermal behavior, or device performance. No measured FPS or enemy-capacity claim is made. The package is source code, not an executable or a store-ready build.
 
 ## Open and run
 
@@ -80,4 +84,4 @@ The placeholder images are generated in `sprite_factory.gd`; sounds in `sound.gd
 
 ## Next bounded step
 
-Make the real engine checks green, play the complete run, fix control/visibility/balance problems, then replace one player/alien/floor set with an approved retro art sample. Do not expand the content catalogue before the first loop works on a desktop and a representative phone.
+Play the complete run, fix control/visibility/balance problems, then replace one player/alien/floor set with an approved retro art sample. Do not expand the content catalogue before the first loop works on a desktop and a representative phone.
