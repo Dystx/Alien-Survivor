@@ -1,0 +1,43 @@
+# Godot-generated caches. Keep source scenes, resources, .import settings and .uid files.
+.godot/
+
+# Generated build output
+/build/
+/dist/
+/game/build/
+/game/dist/
+*.pck
+*.apk
+*.aab
+*.ipa
+
+# Machine-local/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tmp
+*.bak
+*.log
+
+# Local environment and export credentials
+.env
+.env.*
+!.env.example
+export_credentials.cfg
+**/export_credentials.cfg
+*.keystore
+*.jks
+*.p12
+*.p8
+*.mobileprovision
+
+# Private production materials; gitignore is not access control.
+/private_assets/
+/licensed_assets/
+/purchased_assets/
+/private_documents/
+/local_saves/
+
+# Keep sanitized export_presets.cfg under version control.
+# Do not add restricted raw assets through LFS in a public repository.
