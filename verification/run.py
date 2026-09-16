@@ -10,6 +10,9 @@ engine = sys.argv[1]
 subprocess.run(['git','apply','verification/ui.patch'],cwd=root,check=True)
 for src,dst in [('finale.gd','simulation.gd'),('arena_view.gd','arena_view.gd'),('sprite_factory.gd','sprite_factory.gd')]:
     shutil.copyfile(root/'verification'/src,game/'scripts'/dst)
+for name in ['main.gd','arena_view.gd']:
+    file=game/'scripts'/name
+    file.write_text(file.read_text().replace('Projection','IsoProjection'))
 (game/'scripts/projection.gd').write_text('''extends RefCounted
 const BASIS := Transform2D(Vector2(0.75, 0.375), Vector2(-0.75, 0.375), Vector2.ZERO)
 static func project(point: Vector2) -> Vector2:
