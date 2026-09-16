@@ -1,0 +1,115 @@
+{
+  "asset_id": "runner",
+  "status": "review",
+  "spec_sha256": "30ea02170c1ec5bc9a555dba998f9a90e5646cda06c2f39f79464be5c23bb9ea",
+  "sources": [
+    {
+      "path": "source/render_motion.py",
+      "sha256": "cf0ef91863b5cbfafc677064f95018df6406cf4fb66e87ec02ae8e2dfda7be84",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "source/record_motion.py",
+      "sha256": "5079984185ede152772591ce7e7cbc66b43e7ed989dc2251a59ecc4e1b941703",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "source/requirements.txt",
+      "sha256": "f45538c23287fe64164cf41b93e456b6c1c2fbcf2e9d18a673e8e3ba9c2c0020",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "source/README.md",
+      "sha256": "081190f08f7db19fa5b3c93bd2985d8043230c9ec44975657455614077f0109d",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "families/runner/source/rig.json",
+      "sha256": "a5e1249ec3b24ac24e567222936a12668731a184e11fd55b256bb2067e501761",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "families/runner/source/master.glb",
+      "sha256": "cd3980b7b94e5ae5d3c3ee4ad8fba33a7a6a60ec51bc9dfa704df7eeb553396c",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "families/runner/source/sockets.json",
+      "sha256": "b9a5e5cfc41266b6b22fe244e67171044034cbaceb114f215b1a825649249768",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    }
+  ],
+  "frame_sha256": {
+    "families/runner/frames/move/e/000.png": "71f67046ab1b7061105d4e13b5409717375effddceffbf903c1efaa548308273",
+    "families/runner/frames/move/e/001.png": "20e084c5718b8999d22bd07d06f13831bfb7a107cb6861171858b8d5df0c60e4",
+    "families/runner/frames/move/e/002.png": "a52444f54f7b234ea51a54b43ccec6842816fe59e75b2e60da70aaeb772c0dfe",
+    "families/runner/frames/move/e/003.png": "e89399f68e289f879ee1f20887793f46e415c3eb11a7870523fba32ab21bfc89",
+    "families/runner/frames/move/e/004.png": "68243b730c1e5e6539feeef3d44a0c0576e21dbb62019eeee6c39d1481036809",
+    "families/runner/frames/move/e/005.png": "6b02ecf7e09b69da3d829c6f362ac47f5c7c062d00be027f5f86e7b1ba7594cc",
+    "families/runner/frames/move/n/000.png": "6bc1a0ee2d4f23820b80ede3ddfe788909b09b0c8433cd9d035f7240a85396ca",
+    "families/runner/frames/move/n/001.png": "5a84535b737f848e409bd63708ac3ea6e3103f06edc3908d2d1c436ee03f471c",
+    "families/runner/frames/move/n/002.png": "56fd2ecf49d1f00b0c1490553eba46e9ac6530fbebe69fd65dfa04a4369b59a5",
+    "families/runner/frames/move/n/003.png": "6655e116756b3ef966a40026dbc602f7fc3b8f7afcce26205ef61419edcd5fae",
+    "families/runner/frames/move/n/004.png": "e58a4684e3e8e56781cf99ca64cf1e4479e78adfb6b83a8b95a3bb8e6edacd36",
+    "families/runner/frames/move/n/005.png": "dd3d5fe75827b94261dc14beab17aeb0108542ec1abc21f7070b152a083c6c1a",
+    "families/runner/frames/move/s/000.png": "7f55fb7ee48da7d83842e39d55acee410f3410ff81fd76a067a7ffd984b6cf99",
+    "families/runner/frames/move/s/001.png": "93c0307299e21b16ad987e4b8dd25eb8e79b92108273226d5cb85e3cdefb874c",
+    "families/runner/frames/move/s/002.png": "83a78f45c931c083d121493f227b1837c2a97381488fb65ea48e5e76a7c4fde6",
+    "families/runner/frames/move/s/003.png": "2fb198937070a95899160c784ea2f018bdd9dd04f5360067b368e249a20d03bc",
+    "families/runner/frames/move/s/004.png": "7d562bc3e0f0cba9522a5d33fe1f6cfb9f2e47efe69aa33e47df7b41d634ace6",
+    "families/runner/frames/move/s/005.png": "bede71635143f619dc7d98f97f4a634ccf5d3f9236badd91a531191f344aa7c2",
+    "families/runner/frames/move/w/000.png": "5976fe1fffd81ded3243fef5bd01983ea18d5d80b40c0272e78a283f148ff327",
+    "families/runner/frames/move/w/001.png": "837dc05540c4c18fd380add375c52a649e970105f39cbf3908d4da483303eca0",
+    "families/runner/frames/move/w/002.png": "27f23bacc61c235277d648c138c36120cf2ab1d945239e36caa5ddeb68dbe5ed",
+    "families/runner/frames/move/w/003.png": "0380e1b8ec523624be17b6468121571b4a99f1a58006589bdf96d39ae7f25253",
+    "families/runner/frames/move/w/004.png": "c1b7eb6f7113733a44051da0fb334ce90b6f6b3f1a5552a9a976ac7b0faadf7c",
+    "families/runner/frames/move/w/005.png": "cb5cc314781f8a5b958995761d4d212e96b63d2fcb9d69a96aaec76d0f8e7ee0"
+  },
+  "sockets": {
+    "families/runner/frames/move/e/000.png": {},
+    "families/runner/frames/move/e/001.png": {},
+    "families/runner/frames/move/e/002.png": {},
+    "families/runner/frames/move/e/003.png": {},
+    "families/runner/frames/move/e/004.png": {},
+    "families/runner/frames/move/e/005.png": {},
+    "families/runner/frames/move/s/000.png": {},
+    "families/runner/frames/move/s/001.png": {},
+    "families/runner/frames/move/s/002.png": {},
+    "families/runner/frames/move/s/003.png": {},
+    "families/runner/frames/move/s/004.png": {},
+    "families/runner/frames/move/s/005.png": {},
+    "families/runner/frames/move/w/000.png": {},
+    "families/runner/frames/move/w/001.png": {},
+    "families/runner/frames/move/w/002.png": {},
+    "families/runner/frames/move/w/003.png": {},
+    "families/runner/frames/move/w/004.png": {},
+    "families/runner/frames/move/w/005.png": {},
+    "families/runner/frames/move/n/000.png": {},
+    "families/runner/frames/move/n/001.png": {},
+    "families/runner/frames/move/n/002.png": {},
+    "families/runner/frames/move/n/003.png": {},
+    "families/runner/frames/move/n/004.png": {},
+    "families/runner/frames/move/n/005.png": {}
+  },
+  "review": {
+    "style": false,
+    "motion": false,
+    "alpha_edges": false,
+    "pivot_and_scale": false,
+    "direction_coverage": false,
+    "source_rights": false,
+    "aim_and_strafe": false
+  },
+  "public_source_permission": false,
+  "owner_approval": null,
+  "delivery_scope": "6 articulated move frames per direction, four directions; incomplete family, NOT approved for runtime",
+  "remaining": [
+    "remaining base actions",
+    "full family validation and owner review"
+  ],
+  "technical_notes": [
+    "fixed cell/pivot and protected borders checked",
+    "genuine model-rotation views; not mirrored",
+    "image/rig checks do not constitute aesthetic approval"
+  ]
+}
