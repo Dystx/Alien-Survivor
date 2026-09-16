@@ -43,7 +43,7 @@ func _actor(direction: int, frame: int, soldier: bool) -> Texture2D:
 	var ink := Color("111916")
 	_ellipse(image, base + Vector2(1, 2), Vector2(16, 6), Color(0, 0, 0, 0.36))
 	if soldier:
-		for sign_value in [-1.0, 1.0]:
+		for sign_value: float in [-1.0, 1.0]:
 			var foot := base + sideways * sign_value * 6.0 + projected * stride * sign_value * 3.0
 			_line(image, body + sideways * sign_value * 4.0 + Vector2(0, 5), foot, 3.0, ink)
 			_line(image, body + sideways * sign_value * 4.0 + Vector2(0, 5), foot - Vector2(0, 2), 2.0, Color("596353"))
@@ -67,7 +67,7 @@ func _actor(direction: int, frame: int, soldier: bool) -> Texture2D:
 	else:
 		body += Vector2(0, 4)
 		for pair in range(3):
-			for sign_value in [-1.0, 1.0]:
+			for sign_value: float in [-1.0, 1.0]:
 				var root := body + projected * (float(pair) * 7.0 - 7.0)
 				var swing := sin(float(frame) * PI / 2.0 + float(pair) * 1.8) * sign_value
 				var knee := root + sideways * sign_value * 13.0 - projected * (2.0 + swing * 3.0)
@@ -84,7 +84,7 @@ func _actor(direction: int, frame: int, soldier: bool) -> Texture2D:
 			_ellipse(image, center + Vector2(-2, -2), Vector2(width - 3, 2), Color("869158"))
 		var head := body + projected * 12.0 + Vector2(0, -3)
 		_ellipse(image, head, Vector2(5, 4), Color("27392a"))
-		for sign_value in [-1.0, 1.0]:
+		for sign_value: float in [-1.0, 1.0]:
 			var eye := head + sideways * sign_value * 3.0 + projected * 2.0
 			_ellipse(image, eye, Vector2(1, 1), Color("efba62"))
 			_line(image, head + sideways * sign_value * 3.0, head + projected * 6.0 + sideways * sign_value * 3.0, 1, Color("beb184"))
@@ -105,7 +105,7 @@ func _floor(index: int) -> Texture2D:
 			if index == 3 and x > 9 and x < 55 and y > 9 and y < 55 and y % 5 <= 1:
 				c = Color("131c1a")
 			image.set_pixel(x, y, c)
-	for corner in [Vector2(5, 5), Vector2(58, 5), Vector2(5, 58), Vector2(58, 58)]:
+	for corner: Vector2 in [Vector2(5, 5), Vector2(58, 5), Vector2(5, 58), Vector2(58, 58)]:
 		_ellipse(image, corner, Vector2(1, 1), Color("566052"))
 	return ImageTexture.create_from_image(image)
 
