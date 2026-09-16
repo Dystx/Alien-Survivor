@@ -1,0 +1,288 @@
+--- a/scripts/main.gd
++++ b/scripts/main.gd
+@@ -1,4 +1,5 @@
+ extends Node2D
++const AnimationLab = preload("res://scripts/animation_lab.gd")
+ const Simulation = preload("res://scripts/simulation.gd")
+ const IsoProjection = preload("res://scripts/projection.gd")
+ const View = preload("res://scripts/arena_view.gd")
+@@ -6,6 +7,8 @@
+ const HUD = preload("res://scripts/hud.gd")
+ const Settings = preload("res://scripts/settings.gd")
+ const Sound = preload("res://scripts/sound.gd")
++var lab: AnimationLab
++var lab_layer: CanvasLayer
+ var sim := Simulation.new()
+ var controls := Controls.new()
+ var settings := Settings.new()
+@@ -18,6 +21,7 @@
+ var last_manual: bool = false
+ var smoke_mode: bool = false
+ var smoke_ticks: int = 0
++var result_delay: float = 0.0
+ func _ready() -> void:
+ 	view = View.new()
+ 	view.sim = sim
+@@ -50,6 +54,8 @@
+ 	hud.screen_override = ""
+ 	hud.refresh(true)
+ func _start_run(count: int = -1) -> void:
++	result_delay = 0.0
++	hud.defer_results = false
+ 	if count >= 0:
+ 		sim.seed_benchmark(count)
+ 		hud.debug_visible = true
+@@ -63,6 +69,7 @@
+ 	hud.screen_override = ""
+ 	hud.refresh(true)
+ func _physics_process(dt: float) -> void:
++	var phase_before: int = sim.phase
+ 	var playable := sim.phase == Simulation.Phase.RUNNING and hud.screen_override.is_empty()
+ 	controls.set_enabled(playable)
+ 	var intent := controls.sample(view.screen_to_world(get_viewport().get_mouse_position()), sim.player, IsoProjection.input_basis())
+@@ -70,11 +77,17 @@
+ 	var start := Time.get_ticks_usec()
+ 	sim.step(dt, intent.move, intent.aim)
+ 	step_ms = float(Time.get_ticks_usec() - start) / 1000.0
++	if phase_before != Simulation.Phase.RESULTS and sim.phase == Simulation.Phase.RESULTS:
++		result_delay = 0.8 if sim.health <= 0.0 else 0.0
++	result_delay = maxf(0.0, result_delay - dt)
++	hud.defer_results = result_delay > 0.0
+ 	if playable:
+ 		view.advance(dt, intent.move != Vector2.ZERO, sim.events)
+ 		sound.consume(dt, sim.events)
+ 	else:
+ 		sound.stop_all()
++		if sim.phase == Simulation.Phase.RESULTS:
++			view.advance_result(dt)
+ 	if sim.phase != Simulation.Phase.RUNNING:
+ 		controls.set_enabled(false)
+ 	if smoke_mode:
+@@ -94,6 +107,11 @@
+ func _input(event: InputEvent) -> void:
+ 	controls.release_event(event)
+ func _unhandled_input(event: InputEvent) -> void:
++	if lab != null and is_instance_valid(lab):
++		if event.is_action_pressed("pause_run"):
++			_close_lab()
++		get_viewport().set_input_as_handled()
++		return
+ 	if event.is_action_pressed("pause_run"):
+ 		if not hud.screen_override.is_empty():
+ 			_on_action("back")
+@@ -124,6 +142,18 @@
+ 		_start_run(int(action.trim_prefix("benchmark_")))
+ 		return
+ 	match action:
++		"animations":
++			sim.pause()
++			controls.set_enabled(false)
++			hud.visible = false
++			lab_layer = CanvasLayer.new()
++			lab_layer.layer = 40
++			add_child(lab_layer)
++			lab = AnimationLab.new()
++			lab.bank = view.bank
++			lab.closed.connect(_close_lab)
++			lab_layer.add_child(lab)
++			return
+ 		"start":
+ 			_start_run()
+ 		"boss_test":
+@@ -172,3 +202,10 @@
+ 		sound.stop_all()
+ 	controls.touch_visible = bool(settings.values.touch) or OS.has_feature("mobile")
+ 	controls.touch_radius = float(settings.values.touch_radius)
++func _close_lab() -> void:
++	if lab_layer != null and is_instance_valid(lab_layer):
++		lab_layer.queue_free()
++	lab = null
++	lab_layer = null
++	hud.visible = true
++	hud.refresh(true)
+--- a/scripts/hud.gd
++++ b/scripts/hud.gd
+@@ -28,6 +28,7 @@
+ var debug_visible: bool = false
+ var screen_override: String = ""
+ var signature: String = ""
++var defer_results: bool = false
+ class TouchOverlay extends Control:
+ 	var router
+ 	func _process(_dt: float) -> void:
+@@ -167,12 +168,15 @@
+ 		button.grab_focus.call_deferred()
+ 	return button
+ func refresh(force: bool = false) -> void:
+-	var current := "%s/%s/%s" % [sim.phase, sim.level, screen_override]
++	var current := "%s/%s/%s/%s" % [sim.phase, sim.level, screen_override, defer_results]
+ 	if current == signature and not force:
+ 		return
+ 	signature = current
+ 	overlay.visible = sim.phase != Simulation.Phase.RUNNING or not screen_override.is_empty()
+ 	pause_button.visible = sim.phase == Simulation.Phase.RUNNING
++	if sim.phase == Simulation.Phase.RESULTS and defer_results:
++		overlay.visible = false
++		return
+ 	if not overlay.visible:
+ 		return
+ 	var box := _container()
+@@ -211,6 +215,7 @@
+ 			_text(box, "Survive the swarm. Break the Warden.", 20)
+ 			_text(box, "Five minutes of escalating swarms, then a two-phase boss.\nAuto-fire. Collect green XP. Move out of marked attacks.", 15, MUTED)
+ 			_add_button(box, "DEPLOY  /  SURVIVAL + BOSS", "start", true)
++			_add_button(box, "ANIMATION LAB  /  SIX ACTORS", "animations")
+ 			var row := HBoxContainer.new()
+ 			row.add_theme_constant_override("separation", 10)
+ 			box.add_child(row)
+@@ -218,7 +223,7 @@
+ 				var button := _button(item[0], item[1])
+ 				button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+ 				row.add_child(button)
+-			_text(box, "NATIVE GODOT PROTOTYPE  /  2.5D ART  /  FINALE PROTOTYPE", 10, MUTED)
++			_text(box, "HUMAN ANIMATION REVIEW  /  ART NOT FINAL", 10, MUTED)
+ 		Simulation.Phase.PAUSED:
+ 			_text(box, "TRANSMISSION PAUSED", 29)
+ 			_text(box, "The run clock and combat are stopped.", 15, MUTED)
+--- a/scripts/arena_view.gd
++++ b/scripts/arena_view.gd
+@@ -1,8 +1,12 @@
+ extends Node2D
+ const Simulation = preload("res://scripts/simulation.gd")
++const MotionBank = preload("res://scripts/motion_bank.gd")
++const ActorMotion = preload("res://scripts/actor_motion.gd")
+ const Sprites = preload("res://scripts/sprite_factory.gd")
+ const IsoProjection = preload("res://scripts/projection.gd")
+ const CENTER := Vector2(480, 290)
++var bank := MotionBank.new()
++var motion := ActorMotion.new()
+ var sim: Simulation
+ var sprites: Sprites
+ var camera := Vector2.ZERO
+@@ -23,6 +27,7 @@
+ func reset() -> void:
+ 	fx.clear()
+ 	corpses.clear()
++	motion.reset(sim.player)
+ 	shake = 0.0
+ 	last_shot = 0.0
+ 	player_animation = 0.0
+@@ -35,6 +40,14 @@
+ 	return IsoProjection.project(point) - camera + CENTER + offset
+ func advance(dt: float, moving: bool, events: Array[Dictionary]) -> void:
+ 	moving_now = moving
++	motion.advance_player(dt, sim.player, sim.facing, sim.health, sim.rifle_interval(), events)
++	var alive: Dictionary = {}
++	for enemy in sim.enemies:
++		motion.advance_enemy(enemy, dt, sim.player)
++		alive[enemy.id] = true
++	motion.prune(alive)
++	for corpse in corpses:
++		corpse.age = float(corpse.age) + dt
+ 	if moving:
+ 		player_animation += dt
+ 	camera = IsoProjection.project(sim.player)
+@@ -42,10 +55,9 @@
+ 	for event in events:
+ 		var type: String = event.type
+ 		if type == "death":
+-			if gore:
+-				corpses.append({"position": event.position, "variant": cosmetic_rng.randi_range(0, 2), "boss": event.get("kind", "") == "boss"})
+-				if corpses.size() > 70:
+-					corpses.pop_front()
++			corpses.append({"position": event.position, "kind": event.get("kind", "runner"), "direction": event.get("direction", Vector2.RIGHT), "age": 0.0})
++			if corpses.size() > 70:
++				corpses.pop_front()
+ 			if event.get("kind", "") == "boss":
+ 				_add_fx("blast", event.position, Vector2.RIGHT, 0.7)
+ 		elif type in ["shot", "hit", "spark", "spit", "acid_hit", "blast", "boss_phase"]:
+@@ -73,9 +85,11 @@
+ 	_draw_boundary()
+ 	for corpse in corpses:
+ 		var p := screen(corpse.position)
+-		_center(sprites.tex("fx/blood_pool"), p, Vector2(52, 28), Color(0.8, 0.75, 0.75, 0.7))
+-		var scale := 1.4 if bool(corpse.boss) else 0.62
+-		_center(sprites.tex("fx/corpse_%d" % int(corpse.variant)), p, Vector2(104, 64) * scale)
++		if gore:
++			_center(sprites.tex("fx/blood_pool"), p, Vector2(52, 28), Color(0.8, 0.75, 0.75, 0.7))
++		if gore or float(corpse.age) < 1.4:
++			var dead: Dictionary = bank.sample(corpse.kind, "death", IsoProjection.project(corpse.direction), float(corpse.age))
++			_draw_motion(dead, p, Color(0.82, 0.79, 0.77, 1.0))
+ 	for h in sim.hazards:
+ 		var color := Color(0.45, 0.95, 0.18, 0.38) if h.kind == "acid" else Color(1, 0.47, 0.16, 0.30)
+ 		_ground_circle(h.position, float(h.radius), color, true)
+@@ -112,7 +126,7 @@
+ 			_ground_circle(sim.player, 15.0, Color(0.64, 0.85, 0.97, 0.65), false)
+ 			var recoil := -IsoProjection.project(sim.facing).normalized() * (2.0 if last_shot > 0.0 else 0.0)
+ 			var tint := Color(1.0, 0.55, 0.45) if sim.hurt_timer > 0.5 else Color.WHITE
+-			_foot(sprites.player_frame(IsoProjection.project(sim.facing)), p + recoil, 0.88, tint)
++			_draw_motion(bank.sample("player", motion.player_clip, IsoProjection.project(sim.facing), motion.player_time, motion.player_progress), p, tint)
+ 	for bullet in sim.bullets:
+ 		var p := screen(bullet.position) + Vector2(0, -18)
+ 		var direction := IsoProjection.project(bullet.velocity).normalized()
+@@ -129,7 +143,9 @@
+ 		match String(effect.type):
+ 			"shot":
+ 				var direction := IsoProjection.project(effect.direction).normalized()
+-				p += direction * 25.0 + Vector2(0, -7)
++				var actor_frame := bank.sample("player", motion.player_clip, IsoProjection.project(sim.facing), motion.player_time, motion.player_progress)
++				var muzzle: Array = actor_frame.get("muzzle", [0.0, -55.0])
++				p = screen(sim.player) + Vector2(float(muzzle[0]), float(muzzle[1])) * ActorMotion.SCALE
+ 				_rotated(sprites.tex("fx/muzzle_1"), p, Vector2(34, 24), direction.angle())
+ 			"hit":
+ 				_center(sprites.tex("fx/blood_0" if gore else "fx/spark"), p, Vector2(27, 28))
+@@ -183,11 +199,11 @@
+ func _draw_enemy(enemy: Simulation.Enemy) -> void:
+ 	var p := screen(enemy.position)
+ 	_ground_circle(enemy.position, enemy.radius + 3.0, Color(0, 0, 0, 0.32), true)
+-	var scale: float = {"runner": 0.64, "spitter": 0.70, "charger": 0.75, "brute": 0.82, "boss": 0.86}.get(enemy.kind, 0.64)
++	var state: Dictionary = motion.states.get(enemy.id, {"clip": "idle", "time": 0.0, "progress": -1.0})
+ 	var tint := Color(1.40, 1.22, 0.96) if enemy.flash > 0.0 else Color.WHITE
+ 	if enemy.warning > 0.0:
+ 		tint.a = 0.5
+-	_foot(sprites.enemy_frame(enemy.kind, IsoProjection.project(enemy.direction)), p, scale, tint)
++	_draw_motion(bank.sample(enemy.kind, state.clip, IsoProjection.project(enemy.direction), float(state.time), float(state.progress)), p, tint)
+ 	if enemy.kind == "spitter":
+ 		draw_circle(p + Vector2(0, -60), 3.0, Color("a9e770"))
+ 	elif enemy.kind == "charger":
+@@ -247,3 +263,14 @@
+ 	draw_set_transform(point, angle)
+ 	draw_texture_rect(texture, Rect2(-size*0.5,size), false)
+ 	draw_set_transform(Vector2.ZERO)
++func _draw_motion(frame: Dictionary, point: Vector2, tint: Color = Color.WHITE) -> void:
++	if frame.is_empty():
++		return
++	var off: Array = frame.offset
++	var texture: Texture2D = frame.texture
++	draw_texture_rect(texture, Rect2(point + Vector2(float(off[0]), float(off[1])) * ActorMotion.SCALE, texture.get_size() * ActorMotion.SCALE), false, tint)
++func advance_result(dt: float) -> void:
++	motion.advance_result(dt)
++	for corpse in corpses:
++		corpse.age = float(corpse.age) + dt
++	queue_redraw()
+--- a/scripts/sprite_factory.gd
++++ b/scripts/sprite_factory.gd
+@@ -6,11 +6,6 @@
+ func _init() -> void:
+ 	if fixture_mode:
+ 		print("ART_FIXTURES: temporary solid textures; rendered artwork is NOT tested")
+-	for i in range(8):
+-		_register("player/facing_%d" % i, Vector2i(96, 112))
+-		for kind: String in ["runner", "spitter", "charger", "brute"]:
+-			_register("enemies/%s/facing_%d" % [kind, i], Vector2i(112, 104))
+-	_register("boss/warden", Vector2i(224, 208))
+ 	for i in range(6):
+ 		_register("environment/floor/tile_%d" % i, Vector2i(128, 64))
+ 	for name: String in ["wall_light", "wall_pipe", "wall_plain", "corner", "barrier", "fence", "crate_green", "crate_steel", "crate_hazard", "door_red", "door_green", "terminal", "console", "grate", "vent", "infestation_0", "infestation_1"]:
+@@ -44,11 +39,3 @@
+ 	textures[id] = texture
+ func tex(id: String) -> Texture2D:
+ 	return textures.get(id) as Texture2D
+-func facing(direction: Vector2) -> int:
+-	return posmod(roundi(direction.angle() / (TAU / 8.0)), 8)
+-func player_frame(screen_direction: Vector2) -> Texture2D:
+-	return tex("player/facing_%d" % facing(screen_direction))
+-func enemy_frame(kind: String, screen_direction: Vector2) -> Texture2D:
+-	if kind == "boss":
+-		return tex("boss/warden")
+-	return tex("enemies/%s/facing_%d" % [kind, facing(screen_direction)])
