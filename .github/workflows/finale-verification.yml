@@ -1,0 +1,26 @@
+name: Finale logic verification
+on:
+  push:
+    branches: [verify/finale-logic]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: finale-verification
+  cancel-in-progress: true
+jobs:
+  logic:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Read exact test commit
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install verified pinned engine
+        run: python3 tools/install_ci_godot.py /tmp/finale-godot
+      - name: Run existing regression checks and new finale checks
+        run: python3 verification/run.py /tmp/finale-godot/godot
