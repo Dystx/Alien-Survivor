@@ -1,0 +1,16 @@
+{
+  "asset_id":"runner", "clip":"move", "frames":6, "fps":12,
+  "cell":[96,96], "pivot":[48,78], "physical_scale":0.91,
+  "gait":{"stride":0.22,"lift":0.075},
+  "materials":{
+    "flesh":{"hex":"794033","wear":0.19,"specular":0.14,"shine":22},
+    "muscle":{"hex":"A5634B","wear":0.16,"specular":0.18,"shine":28},
+    "dark_flesh":{"hex":"4D2727","wear":0.22,"specular":0.14},
+    "tendon":{"hex":"A07B60","wear":0.13,"specular":0.08},
+    "ridge":{"hex":"876250","wear":0.20,"specular":0.09},
+    "ivory":{"hex":"C8B494","wear":0.16,"specular":0.10,"shine":28},
+    "claw":{"hex":"B6A07F","wear":0.18,"specular":0.19},
+    "mouth":{"hex":"271516","wear":0.13,"specular":0.03},
+    "eye":{"hex":"DFA54B","wear":0.0,"specular":0.22,"emissive":true}
+  }
+}
