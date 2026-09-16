@@ -6,8 +6,14 @@ var sounds: Dictionary = {}
 var clock: float = 0.0
 var last_pickup: float = -1.0
 var muted: bool = false
+var audio_output_available: bool = true
 
 func _ready() -> void:
+	# Dummy/headless playback cannot validate sound and may leave unmixed voices at exit.
+	# Still build the PCM resources below to validate their construction.
+	audio_output_available = DisplayServer.get_name() != "headless"
+	if not audio_output_available:
+		print("AUDIO_OUTPUT_NOT_TESTED: headless run; synthesis resources only")
 	for index in range(6):
 		var voice := AudioStreamPlayer.new()
 		voice.volume_db = -16.0
@@ -42,7 +48,7 @@ func _make_sound(duration: float, frequency: float, noise: float, seed_value: in
 
 func consume(dt: float, events: Array[Dictionary]) -> void:
 	clock += dt
-	if muted:
+	if muted or not audio_output_available:
 		return
 	for event in events:
 		var id: String = event.type
@@ -61,3 +67,8 @@ func consume(dt: float, events: Array[Dictionary]) -> void:
 func stop_all() -> void:
 	for voice in voices:
 		voice.stop()
+		voice.stream = null
+
+func _exit_tree() -> void:
+	stop_all()
+	sounds.clear()
