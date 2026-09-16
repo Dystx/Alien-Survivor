@@ -1,0 +1,217 @@
+--- a/game/scripts/hud.gd
++++ b/game/scripts/hud.gd
+@@ -5,10 +5,14 @@
+ signal upgrade_requested(id: String)
+ signal setting_requested(key: String, value: Variant)
+ const Simulation = preload("res://scripts/simulation.gd")
+-const PAPER := Color("dadcc7")
+-const MUTED := Color("8c9b8e")
+-const ACCENT := Color("b5c994")
+-const PANEL := Color("18221f")
++const PAPER := Color("e4e3dc")
++const MUTED := Color("929da5")
++const ACCENT := Color("daa762")
++const PANEL := Color("20272c")
++var sprites
++var boss_bar: ProgressBar
++var boss_label: Label
++var phase_label: Label
+ var sim: Simulation
+ var settings
+ var controls
+@@ -59,16 +63,16 @@
+ 	theme.set_stylebox("focus", "Button", _style(Color.TRANSPARENT, ACCENT, 2))
+ 	root.theme = theme
+ 	var band := ColorRect.new()
+-	band.color = Color(0.035, 0.065, 0.052, 0.94)
++	band.color = Color(0.04, 0.05, 0.06, 0.95)
+ 	band.position = Vector2.ZERO
+ 	band.size = Vector2(960, 78)
+ 	band.mouse_filter = Control.MOUSE_FILTER_IGNORE
+ 	root.add_child(band)
+ 	_label_at("VITALS / 01", Vector2(20, 10), 12, MUTED)
+ 	health_label = _label_at("100 / 100", Vector2(20, 28), 19, PAPER)
+-	health_bar = _bar(Vector2(20, 57), Vector2(180, 5), Color("adbb8a"))
++	health_bar = _bar(Vector2(20, 57), Vector2(180, 5), Color("cd7568"))
+ 	clock_label = _label_at("05:00", Vector2(425, 10), 29, PAPER)
+-	_label_at("UNTIL EXTRACTION", Vector2(425, 47), 10, MUTED)
++	phase_label = _label_at("UNTIL FINALE", Vector2(425, 47), 10, MUTED)
+ 	kills_label = _label_at("0 NEUTRALIZED", Vector2(680, 23), 16, PAPER)
+ 	pause_button = _button("II", "pause")
+ 	root.add_child(pause_button)
+@@ -80,6 +84,12 @@
+ 	bottom_label = _label_at("LV 01    MOVE: WASD / LEFT STICK    HOLD AIM: MOUSE / RIGHT STICK", Vector2(243, 513), 11, MUTED)
+ 	debug_label = _label_at("", Vector2(20, 98), 12, ACCENT)
+ 	debug_label.visible = false
++	boss_label = _label_at("", Vector2(260, 85), 13, PAPER)
++	boss_label.size = Vector2(440, 19)
++	boss_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
++	boss_bar = _bar(Vector2(260, 109), Vector2(440, 7), Color("c28a46"))
++	boss_bar.visible = false
++	boss_label.visible = false
+ 	var touch := TouchOverlay.new()
+ 	touch.router = controls
+ 	touch.mouse_filter = Control.MOUSE_FILTER_IGNORE
+@@ -116,8 +126,15 @@
+ 	bar.size = dimensions
+ 	bar.show_percentage = false
+ 	bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
+-	bar.add_theme_stylebox_override("background", _style(Color("2a352b"), Color.TRANSPARENT, 0))
+-	bar.add_theme_stylebox_override("fill", _style(color, Color.TRANSPARENT, 0))
++	var background := _style(Color("292f34"), Color.TRANSPARENT, 0)
++	var fill := _style(color, Color.TRANSPARENT, 0)
++	for style: StyleBoxFlat in [background, fill]:
++		style.content_margin_top = 0.0
++		style.content_margin_bottom = 0.0
++		style.content_margin_left = 0.0
++		style.content_margin_right = 0.0
++	bar.add_theme_stylebox_override("background", background)
++	bar.add_theme_stylebox_override("fill", fill)
+ 	root.add_child(bar)
+ 	return bar
+ 
+@@ -142,7 +159,7 @@
+ 		overlay.remove_child(child)
+ 		child.queue_free()
+ 	var dark := ColorRect.new()
+-	dark.color = Color(0.025, 0.045, 0.035, 0.92)
++	dark.color = Color(0.035, 0.045, 0.05, 0.85)
+ 	overlay.add_child(dark)
+ 	dark.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+ 	var center := CenterContainer.new()
+@@ -196,15 +213,16 @@
+ 		_text(box, "Fixed seed 1709. Real live actors, not an FPS promise.\nNo new spawns. F3 toggles live diagnostic counters.", 14, MUTED)
+ 		for count in [25, 50, 100]:
+ 			_add_button(box, "START WITH %d ALIENS" % count, "benchmark_%d" % count, count == 25)
++		_add_button(box, "BOSS TEST  /  UPGRADED LOADOUT", "boss_test")
+ 		_add_button(box, "BACK", "back")
+ 		return
+ 	match sim.phase:
+ 		Simulation.Phase.MENU:
+ 			_text(box, "SECTOR 07  /  QUARANTINE BREACH", 13, ACCENT)
+ 			_text(box, "ALIEN SURVIVOR", 48)
+-			_text(box, "Five minutes. One rifle. No way back.", 20)
+-			_text(box, "Keep moving. Fire automatically. Collect blue XP.\nChoose upgrades. Survive until extraction.", 15, MUTED)
+-			_add_button(box, "DEPLOY  /  FIVE-MINUTE RUN", "start", true)
++			_text(box, "Survive the swarm. Break the Warden.", 20)
++			_text(box, "Five minutes of escalating swarms, then a two-phase boss.\nAuto-fire. Collect green XP. Move out of marked attacks.", 15, MUTED)
++			_add_button(box, "DEPLOY  /  SURVIVAL + BOSS", "start", true)
+ 			var row := HBoxContainer.new()
+ 			row.add_theme_constant_override("separation", 10)
+ 			box.add_child(row)
+@@ -212,7 +230,7 @@
+ 				var button := _button(item[0], item[1])
+ 				button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+ 				row.add_child(button)
+-			_text(box, "NATIVE GODOT PROTOTYPE  /  ORIGINAL PLACEHOLDER ART", 10, MUTED)
++			_text(box, "NATIVE GODOT PROTOTYPE  /  2.5D ART  /  FINALE PROTOTYPE", 10, MUTED)
+ 		Simulation.Phase.PAUSED:
+ 			_text(box, "TRANSMISSION PAUSED", 29)
+ 			_text(box, "The run clock and combat are stopped.", 15, MUTED)
+@@ -230,6 +248,10 @@
+ 				button.text = "%s  //  %s\n%s" % [data.tag, data.name, data.detail]
+ 				button.custom_minimum_size = Vector2(548, 73)
+ 				button.add_theme_font_size_override("font_size", 16)
++				if sprites != null:
++					button.icon = sprites.tex("fx/icon_" + id) if id != "supply" else sprites.tex("fx/health")
++					button.expand_icon = true
++					button.add_theme_constant_override("icon_max_width", 40)
+ 				button.pressed.connect(func() -> void: upgrade_requested.emit(id))
+ 				box.add_child(button)
+ 				if index == 0:
+@@ -252,7 +274,14 @@
+ 	health_bar.value = sim.health
+ 	xp_bar.max_value = sim.xp_needed()
+ 	xp_bar.value = sim.xp
+-	clock_label.text = _time(sim.time_limit - sim.elapsed)
++	clock_label.text = "FINALE" if sim.finale_started else _time(sim.time_limit - sim.elapsed)
++	phase_label.text = "DEFEAT THE WARDEN" if sim.finale_started else "UNTIL FINALE"
++	boss_bar.visible = sim.finale_started and sim.boss != null and sim.phase != Simulation.Phase.MENU
++	boss_label.visible = boss_bar.visible
++	if boss_bar.visible:
++		boss_bar.max_value = sim.boss.max_health
++		boss_bar.value = sim.boss.health
++		boss_label.text = "BROOD WARDEN  /  " + ("ENRAGED" if sim.boss.enraged else "PHASE I")
+ 	kills_label.text = "%d NEUTRALIZED" % sim.kills
+ 	weapon_label.text = "RIFLE / %s" % ("MANUAL AIM" if manual else "AUTO TARGET")
+ 	bottom_label.text = "LV %02d    XP %d/%d    DAMAGE %d    FIRE %.1f/s    F3 DIAGNOSTICS" % [sim.level, sim.xp, sim.xp_needed(), int(sim.rifle_damage()), 1.0 / sim.rifle_interval()]
+--- a/game/scripts/main.gd
++++ b/game/scripts/main.gd
+@@ -2,6 +2,7 @@
+ ## Composition root: fixed-step simulation plus replaceable input/view/UI/audio.
+ 
+ const Simulation = preload("res://scripts/simulation.gd")
++const Projection = preload("res://scripts/projection.gd")
+ const View = preload("res://scripts/arena_view.gd")
+ const Controls = preload("res://scripts/input_router.gd")
+ const HUD = preload("res://scripts/hud.gd")
+@@ -30,6 +31,7 @@
+ 	hud.sim = sim
+ 	hud.settings = settings
+ 	hud.controls = controls
++	hud.sprites = view.sprites
+ 	add_child(hud)
+ 	hud.action_requested.connect(_on_action)
+ 	hud.upgrade_requested.connect(_on_upgrade)
+@@ -40,6 +42,7 @@
+ 		smoke_mode = true
+ 		_start_run()
+ 		sim.time_limit = 3.0
++		sim.finale_enabled = false
+ 		sim.spawning_enabled = false
+ 		sim.add_enemy(sim.player + Vector2(180, 0))
+ 
+@@ -57,6 +60,7 @@
+ 		hud.debug_visible = true
+ 	else:
+ 		sim.reset(1709)
++		sim.finale_enabled = true
+ 	view.reset()
+ 	sound.stop_all()
+ 	controls.clear()
+@@ -67,7 +71,7 @@
+ func _physics_process(dt: float) -> void:
+ 	var playable := sim.phase == Simulation.Phase.RUNNING and hud.screen_override.is_empty()
+ 	controls.set_enabled(playable)
+-	var intent := controls.sample(view.screen_to_world(get_viewport().get_mouse_position()), sim.player)
++	var intent := controls.sample(view.screen_to_world(get_viewport().get_mouse_position()), sim.player, Projection.input_basis())
+ 	last_manual = intent.aim != Vector2.ZERO
+ 	var start := Time.get_ticks_usec()
+ 	sim.step(dt, intent.move, intent.aim)
+@@ -133,6 +137,13 @@
+ 	match action:
+ 		"start":
+ 			_start_run()
++		"boss_test":
++			sim.start_boss_preview()
++			view.reset()
++			sound.stop_all()
++			controls.clear()
++			controls.set_enabled(true)
++			hud.screen_override = ""
+ 		"menu":
+ 			_show_title()
+ 		"pause":
+--- a/game/scripts/input_router.gd
++++ b/game/scripts/input_router.gd
+@@ -98,7 +98,7 @@
+ 			return true
+ 	return false
+ 
+-func sample(mouse_world: Vector2, player: Vector2) -> Dictionary:
++func sample(mouse_world: Vector2, player: Vector2, basis: Transform2D = Transform2D.IDENTITY) -> Dictionary:
+ 	var move := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+ 	var aim := Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
+ 	var mouse_down := Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
+@@ -114,5 +114,9 @@
+ 	if aim_id >= 0:
+ 		aim = aim_touch if aim_touch.length() > 0.2 else Vector2.ZERO
+ 	elif mouse_down:
+-		aim = player.direction_to(mouse_world)
+-	return {"move": move.limit_length(), "aim": aim.normalized() if aim.length_squared() > 0.04 else Vector2.ZERO}
++		# Mouse world point has already been unprojected by the view.
++		move = (basis * move).normalized() * minf(1.0, move.length())
++		return {"move": move, "aim": player.direction_to(mouse_world)}
++	move = (basis * move).normalized() * minf(1.0, move.length())
++	aim = basis * aim
++	return {"move": move, "aim": aim.normalized() if aim.length_squared() > 0.04 else Vector2.ZERO}
