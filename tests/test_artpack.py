@@ -17,9 +17,12 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(sum(len(list(a.slots(v))) for v in assets.values()),1134)
         self.assertEqual(sum(len(list(a.slots(assets[k],set(contract['batch_001']['stages'])))) for k in contract['batch_001']['assets']),212)
     def test_empty_pack_is_not_ready(self):
-        report=a.audit()
-        self.assertEqual(sum(r['present'] for r in report),0)
-        self.assertFalse(any(r['status']=='approved' for r in report))
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            (root/'pack.json').write_bytes((a.PACK/'pack.json').read_bytes())
+            report=a.audit(root)
+            self.assertEqual(sum(r['present'] for r in report),0)
+            self.assertFalse(any(r['status']=='approved' for r in report))
 
 class DeliveryTests(unittest.TestCase):
     def setUp(self):
