@@ -1,10 +1,23 @@
 # Official Asset Pack v1
 
-**Current delivery: the production specification, full inventory, first-batch brief, validator, atlas/Godot resource exporter and offline motion-review tool. New finished animation artwork is not included yet.**
+**Current artwork: 56 actual locomotion PNG frames, two editable articulated masters, and moving reviews. These are review drafts, not approved runtime families.** The specification, catalogue, validator and approved-only exporter remain the authority.
 
 Read [SPEC.md](SPEC.md), [pack.json](pack.json), then [BATCH_001.md](BATCH_001.md).
 
 The previous generated sheets and prototype ZIP artwork are not the final pack. They are not automatically approved, copied into this tree, or counted as completed frames. The playable project remains unchanged.
+
+## First real motion delivery
+
+- Player: `families/player/frames/walk/{e,s,w,n}/` — 8 frames per direction, 32 total, 128x128 cells, pivot 64,110.
+- Runner: `families/runner/frames/move/{e,s,w,n}/` — 6 frames per direction, 24 total, 96x96 cells, pivot 48,78.
+- Editable source: family `source/rig.json` plus shared [source/render_motion.py](source/render_motion.py). Each family includes a generated `source/master.glb` with meshes and articulated transform animation, not a skinned armature.
+- [Player moving GIF](../../art_reviews/player_walk.gif) and [runner moving GIF](../../art_reviews/runner_move.gif).
+- Offline review pages: `art_reviews/player_walk.html` and `art_reviews/runner_move.html` at repository root. Open a local copy in a browser; GitHub displays HTML source rather than executing it.
+- [Source and rebuild notes](source/README.md).
+
+The character models are constructed once and genuinely articulated; lighting/camera stay fixed across actual model rotations. These are initial geometry-based motion studies. Armour, creature anatomy/surface detail, weight, foot contact and the four-direction aiming compromise need visual review before final art lock. No approval was fabricated, and no game integration was performed.
+
+The actual first render passed 12 motion/mesh checks plus the 36 existing asset-tool tests in workflow run 35150051887. The official audit reported **56 present / 1,134 required; 0 approved families**. Rendered files were committed at `83a0fff9c8421ccebc938f525330e35078dbbab5`. Passing these checks does not establish final animation quality, Godot runtime behavior, Blender editing or mobile performance.
 
 ## Scope
 
@@ -22,7 +35,7 @@ python3 -m unittest discover -s tests -p 'test_artpack*.py' -v
 python3 tools/artpack.py audit
 ```
 
-A successful audit means the contract and existing deliveries are structurally valid. It can still print **ART INCOMPLETE / NOT RELEASE-READY**. A valid empty catalogue is not a completed art pack.
+A successful audit means the contract and existing deliveries are structurally valid. It can still print **ART INCOMPLETE / NOT RELEASE-READY**. A valid incomplete catalogue is not a completed art pack.
 
 After a complete family is delivered:
 
