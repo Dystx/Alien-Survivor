@@ -1,0 +1,25 @@
+name: Human sprite integration verification
+on:
+  push:
+    branches: ['verify/human-review']
+    paths: ['verification/human*', 'verification/animation_review.gd', '.github/workflows/human-review.yml']
+permissions:
+  contents: read
+jobs:
+  engine-and-fixtures:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Read this exact commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install and checksum the pinned engine
+        run: python3 tools/install_ci_godot.py /tmp/human-review-godot
+      - name: Test source and draw paths with explicitly synthetic art
+        run: python3 verification/human_run.py /tmp/human-review-godot/godot
+# No production-art approval, binary publication, force push or merge.
