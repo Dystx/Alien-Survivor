@@ -15,9 +15,11 @@ The game is genuinely 2D at runtime. Optional 3D modeling is an asset-production
 1. [Game design](docs/GAME_DESIGN.md): experience, controls, runs, weapons, enemies, progression, scope, and competing games.
 2. [Technical plan](docs/TECHNICAL_PLAN.md): engine, architecture, rendering, performance, saves, mobile, testing, and proposed project layout.
 3. [Art and asset plan](docs/ART_AND_ASSETS.md): the flat-retro art contract, production alternatives, asset list, licensing, and memory budgets.
-4. [Production plan](docs/PRODUCTION_PLAN.md): milestones, acceptance gates, delivery backlog, costs, release preparation, and open decisions.
+4. Production roadmap: supplied in the companion planning pack from the project conversation. Its GitHub write did not complete, so `docs/PRODUCTION_PLAN.md` is not currently committed. It covers milestones, acceptance gates, backlog, costs, release preparation, and open decisions.
 5. [Agent instructions](AGENTS.md): boundaries and implementation workflow.
 6. [First implementation brief](prompts/FIRST_BUILD.md): the next bounded coding task.
+
+The missing roadmap upload does not block M0: the first implementation brief is self-contained and the core plans above are available here. Do not assume the roadmap is already a repository file.
 
 ## User-established constraints
 
