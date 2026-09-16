@@ -1,0 +1,31 @@
+name: Prototype engine checks
+on:
+  push:
+    branches: [feat/first-playable]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: prototype-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  godot:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Fetch this exact public-repository commit
+        # No third-party action or persistent checkout credential is needed.
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Check source and install the pinned engine
+        run: |
+          python3 tools/check.py --static-only
+          python3 tools/install_ci_godot.py /tmp/alien-survivor-godot
+      - name: Import, unit tests, negative control and full-scene smoke test
+        run: python3 tools/check.py --godot /tmp/alien-survivor-godot/godot
