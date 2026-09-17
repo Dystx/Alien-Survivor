@@ -30,16 +30,42 @@ jobs:
           git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
           git fetch --depth=1 origin "${GITHUB_SHA}"
           git checkout --detach FETCH_HEAD
-          git ls-tree -r HEAD -- assets/pack_v1/families/player assets/pack_v1/player_visual_lock.json > /tmp/human-before
-          git apply --check assets/pack_v1/source/surface_renderer.patch
-          git apply assets/pack_v1/source/surface_renderer.patch
+          git ls-tree -r HEAD -- assets/pack_v1/player_visual_lock.json > /tmp/human-lock-before
+          if test -f assets/pack_v1/source/surface_renderer.patch; then
+            git apply --check assets/pack_v1/source/surface_renderer.patch
+            git apply assets/pack_v1/source/surface_renderer.patch
+          fi
+      - name: Retire only the exact rejected robot candidate, not the approved human
+        run: |
+          python3 - <<'PY'
+          import json,shutil,subprocess
+          from pathlib import Path
+          family=Path('assets/pack_v1/families/player')
+          lock=json.loads(Path('assets/pack_v1/player_visual_lock.json').read_text())
+          assert lock['baseline']['atlas']['sha256']=='e77d10fbeda8fa5ee3532e3e1b5618ce4f0e3084458af4c4745ed1f49ed9ba2c'
+          if (family/'selected_baseline').exists():
+              raise RuntimeError('Selected human now present; stop and reconcile instead of touching it.')
+          if (family/'delivery.json').exists():
+              expected={'frames':'b0aced86a7e1d64bc23d339bef1a0d7ab032b987','source':'25cda45a97263a4ad104d47e64271e169fdd20bf','delivery.json':'220f8376b6778282dfc6c64a9e21906c0eb90eae'}
+              assert {p.name for p in family.iterdir()}==set(expected)
+              for name,sha in expected.items():
+                  actual=subprocess.check_output(['git','rev-parse','HEAD:'+str(family/name)],text=True).strip()
+                  if actual!=sha:raise RuntimeError('Legacy player changed; refusing removal: '+name)
+              data=json.loads((family/'delivery.json').read_text())
+              if data.get('owner_approval') or data.get('status')=='approved':raise RuntimeError('Refusing approved artwork')
+              shutil.rmtree(family)
+              for old in Path('art_reviews').glob('player_*'):
+                  if old.is_file():old.unlink()
+          family.mkdir(parents=True,exist_ok=True)
+          (family/'README.md').write_text('# Selected human — appearance locked\n\nThe exact 43-cell HumanReview person is identified by `../../player_visual_lock.json`. Its atlas is e77d10fbeda8fa5ee3532e3e1b5618ce4f0e3084458af4c4745ed1f49ed9ba2c. Those bytes are preserved in the complete conversation-delivered game; bulk publication remains pending.\n\nThe explicitly rejected 32-frame procedural robot and its stale delivery record have been removed from this review branch, not from Git history. They are not the approved human and must not count as completed player artwork. No replacement pixels or fabricated approval are supplied here.\n\nThe complete player family remains missing in the production audit. Do not weaken that audit or redraw the human to fill it. This is consistent with the already consolidated game, which retains the selected baseline separately.\n')
+          PY
       - name: Install the existing pinned authoring requirements
         run: |
           python3 -m venv /tmp/surface-venv
           /tmp/surface-venv/bin/python -m pip install -r assets/pack_v1/source/requirements.txt
       - name: Rebake all five creature candidates with exact alpha and socket checks
         run: xvfb-run -a /tmp/surface-venv/bin/python assets/pack_v1/source/refine_creatures.py --work /tmp/creature-surfaces --install
-      - name: Validate the asset contract without claiming visual approval
+      - name: Validate the complete contract without claiming visual approval
         run: |
           /tmp/surface-venv/bin/python tools/artpack.py audit
           for name in runner spitter charger brute brood_warden; do /tmp/surface-venv/bin/python tools/artpack.py check-family "$name"; done
@@ -55,7 +81,7 @@ jobs:
               report[name]={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(root.rglob('*')) if p.is_file() and (p.suffix=='.png' or p.name=='animation_index.json')}
           Path('/tmp/surface-evidence/file_hashes.json').write_text(json.dumps(report,indent=2))
           PY
-      - name: Publish actual candidate PNGs without touching human or main
+      - name: Publish actual candidate PNGs without changing the human lock or main
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
@@ -63,12 +89,12 @@ jobs:
           set -euo pipefail
           target='polish/creature-surfaces'
           test "$(git ls-remote origin "refs/heads/$target" | cut -f1)" = "$GITHUB_SHA" || { echo 'Concurrent edit; refusing push.'; exit 1; }
-          git diff --exit-code -- assets/pack_v1/families/player assets/pack_v1/player_visual_lock.json
-          git add -- assets/pack_v1/source/render_motion.py assets/pack_v1/families/runner assets/pack_v1/families/spitter assets/pack_v1/families/charger assets/pack_v1/families/brute assets/pack_v1/families/brood_warden art_reviews
-          git rm -- assets/pack_v1/source/surface_renderer.patch
-          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'art: publish 668 mesh-textured creature frames with unchanged silhouettes'
-          git ls-tree -r HEAD -- assets/pack_v1/families/player assets/pack_v1/player_visual_lock.json > /tmp/human-after
-          cmp /tmp/human-before /tmp/human-after
+          git diff --exit-code -- assets/pack_v1/player_visual_lock.json
+          git add -A -- assets/pack_v1/source/render_motion.py assets/pack_v1/families/player assets/pack_v1/families/runner assets/pack_v1/families/spitter assets/pack_v1/families/charger assets/pack_v1/families/brute assets/pack_v1/families/brood_warden art_reviews
+          if test -f assets/pack_v1/source/surface_renderer.patch; then git rm -- assets/pack_v1/source/surface_renderer.patch; fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'art: publish 668 textured creature frames and retire the rejected robot candidate'
+          git ls-tree -r HEAD -- assets/pack_v1/player_visual_lock.json > /tmp/human-lock-after
+          cmp /tmp/human-lock-before /tmp/human-lock-after
           auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
           git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" push origin "HEAD:refs/heads/$target"
           git rev-parse HEAD > /tmp/surface-evidence/ASSET_COMMIT.txt
@@ -79,4 +105,5 @@ jobs:
           path: /tmp/surface-evidence/
           if-no-files-found: error
           retention-days: 14
-# No force push, main merge, player rendering, store upload or artwork approval.
+# Full audit remains mandatory. No force push, main merge, player rendering,
+# selected-human pixel changes, store upload or fabricated artwork approval.
