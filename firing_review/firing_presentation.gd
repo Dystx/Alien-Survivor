@@ -73,7 +73,7 @@ func flash_scale() -> float:
 	# Short, stable flare. Never scale the actor or move its feet for recoil.
 	return 0.22 * (1.0 if shot_serial % 2 == 0 else 0.90)
 
-func trace_points(bullet: RefCounted) -> PackedVector2Array:
+func trace_points(bullet) -> PackedVector2Array:
 	var id: int = bullet.get_instance_id()
 	if not traces.has(id):
 		return PackedVector2Array()
