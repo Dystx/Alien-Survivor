@@ -1,0 +1,82 @@
+name: Creature surface candidates
+on:
+  push:
+    branches: ['polish/creature-surfaces']
+    paths:
+      - 'assets/pack_v1/source/creature_surface.py'
+      - 'assets/pack_v1/source/refine_creatures.py'
+      - 'assets/pack_v1/source/surface_renderer.patch'
+      - '.github/workflows/creature-surfaces.yml'
+permissions:
+  contents: read
+concurrency:
+  group: creature-surfaces-review
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      LIBGL_ALWAYS_SOFTWARE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - name: Fetch exact public review source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+          git ls-tree -r HEAD -- assets/pack_v1/families/player assets/pack_v1/player_visual_lock.json > /tmp/human-before
+          git apply --check assets/pack_v1/source/surface_renderer.patch
+          git apply assets/pack_v1/source/surface_renderer.patch
+      - name: Install the existing pinned authoring requirements
+        run: |
+          python3 -m venv /tmp/surface-venv
+          /tmp/surface-venv/bin/python -m pip install -r assets/pack_v1/source/requirements.txt
+      - name: Rebake all five creature candidates with exact alpha and socket checks
+        run: xvfb-run -a /tmp/surface-venv/bin/python assets/pack_v1/source/refine_creatures.py --work /tmp/creature-surfaces --install
+      - name: Validate the asset contract without claiming visual approval
+        run: |
+          /tmp/surface-venv/bin/python tools/artpack.py audit
+          for name in runner spitter charger brute brood_warden; do /tmp/surface-venv/bin/python tools/artpack.py check-family "$name"; done
+          /tmp/surface-venv/bin/python -m unittest discover -s tests -p 'test_artpack*.py' -v
+          mkdir -p /tmp/surface-evidence
+          cp /tmp/creature-surfaces/surface_report.json /tmp/surface-evidence/
+          python3 - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          pack=Path('assets/pack_v1');report={}
+          for name in ['runner','spitter','charger','brute','brood_warden']:
+              root=pack/'families'/name
+              report[name]={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(root.rglob('*')) if p.is_file() and (p.suffix=='.png' or p.name=='animation_index.json')}
+          Path('/tmp/surface-evidence/file_hashes.json').write_text(json.dumps(report,indent=2))
+          PY
+      - name: Publish actual candidate PNGs without touching human or main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          target='polish/creature-surfaces'
+          test "$(git ls-remote origin "refs/heads/$target" | cut -f1)" = "$GITHUB_SHA" || { echo 'Concurrent edit; refusing push.'; exit 1; }
+          git diff --exit-code -- assets/pack_v1/families/player assets/pack_v1/player_visual_lock.json
+          git add -- assets/pack_v1/source/render_motion.py assets/pack_v1/families/runner assets/pack_v1/families/spitter assets/pack_v1/families/charger assets/pack_v1/families/brute assets/pack_v1/families/brood_warden art_reviews
+          git rm -- assets/pack_v1/source/surface_renderer.patch
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'art: publish 668 mesh-textured creature frames with unchanged silhouettes'
+          git ls-tree -r HEAD -- assets/pack_v1/families/player assets/pack_v1/player_visual_lock.json > /tmp/human-after
+          cmp /tmp/human-before /tmp/human-after
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" push origin "HEAD:refs/heads/$target"
+          git rev-parse HEAD > /tmp/surface-evidence/ASSET_COMMIT.txt
+      - name: Attach exact candidate hashes and preservation evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: creature-surface-evidence
+          path: /tmp/surface-evidence/
+          if-no-files-found: error
+          retention-days: 14
+# No force push, main merge, player rendering, store upload or artwork approval.
