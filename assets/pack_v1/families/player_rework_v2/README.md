@@ -1,24 +1,29 @@
-# Player Rework v2 — source review
+# Player Rework v2 — first modeled motion draft
 
-Status: **review source / not integrated / not owner-approved**.
+The owner authorized a stronger whole-character rebuild, not another rifle cutout. The original selected human remains the current game's fallback. This new candidate is not visually approved.
 
-This branch keeps the existing selected human intact while developing a stronger combat-ready replacement candidate. The current source is `assets/pack_v1/source/player_rework_v2.py`.
+## What is implemented
 
-## Current source scope
+One parametric human master with short dark hair, visible face, fabric shirt, tactical vest, cargo trousers and boots. Rifle stock/shoulder and both hand grips share one kinematic setup. The rifle is mounted at shoulder height; recoil moves the upper body while both feet remain planted. All eight views rotate actual geometry with a fixed camera and lights.
 
-- Same product role and visual language as the selected survivor: exposed human head, cropped dark hair, fabric shirt/vest, olive trousers, boots and a compact rifle.
-- Eight authored camera views: `e, se, s, sw, w, nw, n, ne`.
-- Initial clips: `ready` (4), `walk` (8) and `fire` (4) per direction.
-- Rifle butt is placed at the upper-shoulder pocket and the trigger/support hands are solved against the same rifle rig.
-- Muzzle, stock, trigger grip, support grip, shoulder and eye are explicit sockets.
-- The current model intentionally does **not** claim finished hit, death, strafe or reverse coverage.
+128 RGBA frames: ready 4 × 8, walk 8 × 8, fire/recoil 4 × 8. Fixed 128 × 128 cells and pivot (64,110). Every frame records muzzle, stock, shoulder, eye and hand-grip sockets. Atlas and individual frames share exact pixels.
 
-## Important boundaries
+This is newly modeled geometry, not a repaint of the old sprites or eight angle labels on the same cutout. **Facial likeness, surface finish and animation weight still need visual review.** The model is smoother and leaner than the original detailed sprite; those differences are visible rather than called final.
 
-The selected HumanReview player remains the gameplay fallback and its locked pixels are not modified by this source. This source file is a new parametric character model, not a repaint or transformed copy of the selected PNG frames. Rendering it successfully does not approve the result or replace the player in the runnable game.
+## Review
 
-Before integration, review the actual rendered PNGs at native and enlarged size for face identity, shoulder/hand anatomy, rifle height, diagonal perspective, walking weight and muzzle alignment. Then connect it to the existing straight-shot tests without changing damage, targeting, collision or aim freedom.
+Open this directory's `project.godot` in Godot 4.7.2 and run. Select Ready/Walk/Fire. Pause, half speed, exact frame scrubbing, background and socket markers are available. Native-size views appear on the left; the selected direction appears at 3× on the right.
 
-## Next bounded step
+This is an isolated actor viewer, **not an updated survival game**. Existing game input, straight projectiles, damage, enemy logic and original player files are not changed or tested by this viewer.
 
-Render the complete current source into a fresh candidate directory, record exact source/frame hashes, build a review atlas, and run the player-specific visual/trajectory checks. Do not add more actions until the ready/walk/fire foundation is accepted.
+## Source
+
+`assets/pack_v1/source/player_rework_v2.py` is the one current shape/pose source. It uses the existing `render_motion.py` camera and mesh export library. This directory's `source/master.glb` contains editable rigid meshes/node transforms and its walk animation. Ready/fire source remains in Python; this is not a skinned production armature.
+
+The readonly image/model checker is `assets/pack_v1/source/check_player_v2.py`. `tools/verify_player_v2.py` stages a fresh render, verifies actual PNGs, imports them into Godot, runs viewer checks, captures the actual viewport, and builds a standalone ZIP. Source scripts are included in that ZIP for offline rebuilds, but are not a second repository master.
+
+## Boundaries and next steps
+
+This first batch does not contain hit/death, strafing, reverse walking or independent moving recoil. It does not change the full v1 release inventory or bypass its approval gates. Once posture, likeness and finish are acceptable, expand this same master rather than swap unrelated images.
+
+The original baseline hashes in `player_visual_lock.json` remain the fallback identity record. Its newer authorization permits this candidate to differ; original pixels are not overwritten. No new owner-art approval, main-branch merge, exported executable or store submission is implied.

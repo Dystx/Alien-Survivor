@@ -46,5 +46,19 @@
   "publication": {
     "record": "This file freezes the exact conversation-delivered HumanReview baseline; it does not claim its PNGs have been uploaded into every repository branch.",
     "alternate_procedural_models": "Not promoted by this approval. Do not select an older robot or another human model because it fills more planned frame slots."
+  },
+  "latest_owner_authorization": {
+    "date": "2026-09-17",
+    "status": "full_character_rework_authorized_not_approved",
+    "evidence": ["option 2", "ok all 3", "yes start and push with github plugin"],
+    "scope": "Rebuild body, head posture, shoulders, hands and rifle together. Preserve recognisable identity, short dark hair, outfit language, palette and game scale; authored eight-way body views.",
+    "supersedes": "The earlier prohibition on changing body pixels applies to the retained original, not to the newly authorised separate rework candidate.",
+    "candidate_path": "assets/pack_v1/families/player_rework_v2",
+    "constraints": [
+      "Original selected baseline remains unchanged and available as fallback.",
+      "No final visual approval or default-gameplay replacement is implied.",
+      "Do not alter free aiming, straight projectile flight or combat balance.",
+      "No old cutout study or rejected robot is promoted as the new model."
+    ]
   }
 }
