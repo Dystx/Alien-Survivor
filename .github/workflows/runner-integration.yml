@@ -1,0 +1,28 @@
+name: Runner integration checks
+on:
+  push:
+    branches: ['feat/runner-animation']
+    paths:
+      - 'runner_review/**'
+      - '.github/workflows/runner-integration.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Fetch exact source commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install pinned engine using the existing checksum-verified installer
+        run: python3 tools/install_ci_godot.py /tmp/runner-godot
+      - name: Import runner pixels and run all regression and scene checks
+        run: python3 runner_review/verify.py /tmp/runner-godot/godot
+# Read-only validation. Runner PNGs are real; inherited human/scenery fixtures
+# only validate execution. No art approval, gameplay merge or release publication.
