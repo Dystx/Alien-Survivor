@@ -1,0 +1,90 @@
+{
+  "asset_id": "spitter",
+  "clip": "move",
+  "frames": 6,
+  "fps": 10,
+  "cell": [
+    128,
+    128
+  ],
+  "pivot": [
+    64,
+    104
+  ],
+  "physical_scale": 1.06,
+  "gait": {
+    "stride": 0.22,
+    "lift": 0.055
+  },
+  "materials": {
+    "flesh": {
+      "hex": "66423A",
+      "wear": 0.32,
+      "specular": 0.04
+    },
+    "muscle": {
+      "hex": "895442",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "dark_flesh": {
+      "hex": "322126",
+      "wear": 0.24,
+      "specular": 0.03
+    },
+    "tendon": {
+      "hex": "8A6E56",
+      "wear": 0.2,
+      "specular": 0.07
+    },
+    "ridge": {
+      "hex": "664D3C",
+      "wear": 0.28,
+      "specular": 0.04
+    },
+    "ivory": {
+      "hex": "AF9C7C",
+      "wear": 0.25,
+      "specular": 0.07
+    },
+    "claw": {
+      "hex": "AA967A",
+      "wear": 0.2,
+      "specular": 0.11
+    },
+    "mouth": {
+      "hex": "180F15",
+      "wear": 0.1,
+      "specular": 0.03
+    },
+    "eye": {
+      "hex": "C69651",
+      "wear": 0.04,
+      "specular": 0.15
+    },
+    "acid": {
+      "hex": "70823B",
+      "wear": 0.28,
+      "specular": 0.1
+    },
+    "acid_rim": {
+      "hex": "454A2A",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "acid_core": {
+      "hex": "A0AD50",
+      "wear": 0.23,
+      "specular": 0.1
+    },
+    "vein": {
+      "hex": "494C2B",
+      "wear": 0.24,
+      "specular": 0.03
+    }
+  },
+  "source": "spitter_family.py using runner_family.py and render_motion.py",
+  "source_lineage": "Same four-limbed organism; squat thorax, paired acid glands and articulated throat",
+  "approval": "review_pending",
+  "move_distance_per_cycle_game_units": 24.07225806451613
+}
