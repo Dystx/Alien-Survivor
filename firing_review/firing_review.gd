@@ -25,7 +25,7 @@ func _ready() -> void:
 		guns.append(Firing.new())
 		_label(["EAST", "SOUTH", "WEST", "NORTH"][i], Vector2(85 + i * 224, 86), 16)
 	_label("GAME SCALE", Vector2(25, 228), 13)
-	_label("2x INSPECTION", Vector2(25, 389), 13)
+	_label("ENLARGED", Vector2(25, 389), 13)
 	var row := HBoxContainer.new()
 	row.position = Vector2(25, 420)
 	row.add_theme_constant_override("separation", 8)
