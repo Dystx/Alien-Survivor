@@ -1,0 +1,106 @@
+--- a/scripts/arena_view.gd
++++ b/scripts/arena_view.gd
+@@ -8,6 +8,8 @@
+ var human := Human.new()
+ const Firing = preload("res://scripts/firing_presentation.gd")
+ var firing := Firing.new()
++const Runner = preload("res://scripts/runner_animation.gd")
++var runners := Runner.new()
+ var sim: Simulation
+ var sprites: Sprites
+ var camera := Vector2.ZERO
+@@ -28,6 +30,7 @@
+ func reset() -> void:
+ 	human.reset()
+ 	firing.reset()
++	runners.reset()
+ 	fx.clear()
+ 	corpses.clear()
+ 	shake = 0.0
+@@ -42,6 +45,7 @@
+ 	return IsoProjection.project(point) - camera + CENTER + offset
+ func advance(dt: float, moving: bool, events: Array[Dictionary]) -> void:
+ 	moving_now = moving
++	runners.advance(dt, sim.enemies, events, sim.player, gore)
+ 	var hurt: bool = false
+ 	var fired: bool = false
+ 	for event in events:
+@@ -56,7 +60,7 @@
+ 	for event in events:
+ 		var type: String = event.type
+ 		if type == "death":
+-			if gore:
++			if gore and event.get("kind", "") != "runner":
+ 				corpses.append({"position": event.position, "variant": cosmetic_rng.randi_range(0, 2), "boss": event.get("kind", "") == "boss"})
+ 				if corpses.size() > 70:
+ 					corpses.pop_front()
+@@ -88,6 +92,9 @@
+ 		_center(sprites.tex("fx/blood_pool"), p, Vector2(52, 28), Color(0.8, 0.75, 0.75, 0.7))
+ 		var scale := 1.4 if bool(corpse.boss) else 0.62
+ 		_center(sprites.tex("fx/corpse_%d" % int(corpse.variant)), p, Vector2(104, 64) * scale)
++	for body in runners.deaths:
++		if float(body.age) >= Runner.DEATH_DURATION:
++			_draw_runner_body(body)
+ 	for h in sim.hazards:
+ 		var color := Color(0.45, 0.95, 0.18, 0.38) if h.kind == "acid" else Color(1, 0.47, 0.16, 0.30)
+ 		_ground_circle(h.position, float(h.radius), color, true)
+@@ -112,11 +119,16 @@
+ 				continue
+ 		_draw_telegraph(enemy)
+ 		actors.append({"depth": IsoProjection.project(enemy.position).y, "enemy": enemy})
++	for body in runners.deaths:
++		if float(body.age) < Runner.DEATH_DURATION:
++			actors.append({"depth": IsoProjection.project(body.position).y, "runner_body": body})
+ 	actors.append({"depth": IsoProjection.project(sim.player).y, "player": true})
+ 	actors.sort_custom(func(a: Dictionary, b: Dictionary) -> bool: return float(a.depth) < float(b.depth))
+ 	for actor in actors:
+ 		if actor.has("rect"):
+ 			_draw_blocker(actor.rect, int(actor.index))
++		elif actor.has("runner_body"):
++			_draw_runner_body(actor.runner_body)
+ 		elif actor.has("enemy"):
+ 			_draw_enemy(actor.enemy)
+ 		else:
+@@ -200,7 +212,10 @@
+ 	var tint := Color(1.40, 1.22, 0.96) if enemy.flash > 0.0 else Color.WHITE
+ 	if enemy.warning > 0.0:
+ 		tint.a = 0.5
+-	_foot(sprites.enemy_frame(enemy.kind, IsoProjection.project(enemy.direction)), p, scale, tint)
++	if enemy.kind == "runner":
++		draw_texture_rect(runners.for_enemy(enemy), Rect2(p - Runner.PIVOT, Runner.CELL), false, tint)
++	else:
++		_foot(sprites.enemy_frame(enemy.kind, IsoProjection.project(enemy.direction)), p, scale, tint)
+ 	if enemy.kind == "spitter":
+ 		draw_circle(p + Vector2(0, -60), 3.0, Color("a9e770"))
+ 	elif enemy.kind == "charger":
+@@ -264,3 +279,9 @@
+ 	human.advance(dt, false, Vector2.ZERO, false, false, false)
+ 	firing.reset()
+ 	queue_redraw()
++func _draw_runner_body(body: Dictionary) -> void:
++	var p := screen(body.position)
++	if not Rect2(-100, -140, 1160, 820).has_point(p):
++		return
++	var tint := Color(0.77, 0.73, 0.70) if float(body.age) >= Runner.DEATH_DURATION else Color.WHITE
++	draw_texture_rect(Runner.texture("death", body.direction, float(body.age)), Rect2(p - Runner.PIVOT, Runner.CELL), false, tint)
+--- a/scripts/hud.gd
++++ b/scripts/hud.gd
+@@ -214,6 +214,7 @@
+ 			_add_button(box, "DEPLOY  /  SURVIVAL + BOSS", "start", true)
+ 			_add_button(box, "HUMAN ANIMATION REVIEW", "animation_review")
+ 			_add_button(box, "FIRING ATTACHMENT REVIEW", "firing_review")
++			_add_button(box, "RUNNER ANIMATION REVIEW", "runner_review")
+ 			var row := HBoxContainer.new()
+ 			row.add_theme_constant_override("separation", 10)
+ 			box.add_child(row)
+--- a/scripts/main.gd
++++ b/scripts/main.gd
+@@ -132,6 +132,8 @@
+ 	match action:
+ 		"start":
+ 			_start_run()
++		"runner_review":
++			get_tree().change_scene_to_file("res://scenes/runner_review.tscn")
+ 		"firing_review":
+ 			get_tree().change_scene_to_file("res://scenes/firing_review.tscn")
+ 		"animation_review":
