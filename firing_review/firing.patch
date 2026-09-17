@@ -1,0 +1,124 @@
+--- a/scripts/arena_view.gd
++++ b/scripts/arena_view.gd
+@@ -6,7 +6,8 @@
+ const Human = preload("res://scripts/human_animation.gd")
+ const HUMAN_SCALE: float = 0.96
+ var human := Human.new()
+-var bullet_offsets: Dictionary = {}
++const Firing = preload("res://scripts/firing_presentation.gd")
++var firing := Firing.new()
+ var sim: Simulation
+ var sprites: Sprites
+ var camera := Vector2.ZERO
+@@ -26,7 +27,7 @@
+ 	cosmetic_rng.seed = 777
+ func reset() -> void:
+ 	human.reset()
+-	bullet_offsets.clear()
++	firing.reset()
+ 	fx.clear()
+ 	corpses.clear()
+ 	shake = 0.0
+@@ -47,6 +48,7 @@
+ 		hurt = hurt or event.type == "hurt"
+ 		fired = fired or event.type == "shot"
+ 	human.advance(dt, moving, IsoProjection.project(sim.facing), hurt, fired, sim.health > 0.0)
++	firing.advance(dt, human, fired, sim.bullets, sim.balance.rifle_range, HUMAN_SCALE)
+ 	if moving:
+ 		player_animation += dt
+ 	camera = IsoProjection.project(sim.player)
+@@ -60,10 +62,8 @@
+ 					corpses.pop_front()
+ 			if event.get("kind", "") == "boss":
+ 				_add_fx("blast", event.position, Vector2.RIGHT, 0.7)
+-		elif type in ["shot", "hit", "spark", "spit", "acid_hit", "blast", "boss_phase"]:
++		elif type in ["hit", "spark", "spit", "acid_hit", "blast", "boss_phase"]:
+ 			_add_fx(type, event.position, event.get("direction", Vector2.RIGHT), 0.46 if type in ["blast", "boss_phase"] else 0.16)
+-			if type == "shot":
+-				last_shot = 0.08
+ 		if type == "hurt" and shake_enabled:
+ 			shake = 2.5
+ 	for i in range(fx.size() - 1, -1, -1):
+@@ -76,7 +76,7 @@
+ func _add_fx(type: String, point: Vector2, direction: Vector2, duration: float) -> void:
+ 	if fx.size() >= 96:
+ 		fx.pop_front()
+-	fx.append({"type": type, "position": point, "direction": direction, "life": duration, "duration": duration, "muzzle": human.muzzle_offset() * HUMAN_SCALE})
++	fx.append({"type": type, "position": point, "direction": direction, "life": duration, "duration": duration})
+ func _draw() -> void:
+ 	if sim == null or sprites == null:
+ 		return
+@@ -122,25 +122,19 @@
+ 		else:
+ 			var p := screen(sim.player)
+ 			_ground_circle(sim.player, 15.0, Color(0.64, 0.85, 0.97, 0.65), false)
+-			var recoil := -IsoProjection.project(sim.facing).normalized() * (1.1 if human.shot_remaining > 0.0 else 0.0)
+ 			var tint := Color(1.0, 0.72, 0.62) if sim.hurt_timer > 0.5 and not human.dead else Color.WHITE
+-			var pos := p + recoil - Human.PIVOT * HUMAN_SCALE
++			var pos := p - Human.PIVOT * HUMAN_SCALE
++			firing.draw_flash(self, human, p, HUMAN_SCALE, sprites.tex("fx/muzzle_0"), true)
+ 			draw_texture_rect(human.texture(), Rect2(pos, Vector2(128, 128) * HUMAN_SCALE), false, tint)
+-	var live_bullets: Dictionary = {}
++			firing.draw_flash(self, human, p, HUMAN_SCALE, sprites.tex("fx/muzzle_0"), false)
+ 	for bullet in sim.bullets:
+-		var id: int = bullet.get_instance_id()
+-		live_bullets[id] = true
+-		if not bullet_offsets.has(id):
+-			bullet_offsets[id] = human.muzzle_offset() * HUMAN_SCALE
+-		var travelled: float = sim.balance.rifle_range - bullet.remaining
+-		var elevation: Vector2 = (bullet_offsets[id] as Vector2).lerp(Vector2(0, -18), clampf(travelled / 110.0, 0.0, 1.0))
+-		var p := screen(bullet.position) + elevation
+-		var direction := IsoProjection.project(bullet.velocity).normalized()
+-		draw_line(p - direction * 13.0, p, Color("bca56e"), 1.5)
+-		draw_line(p - direction * 5.0, p, Color("fff1b2"), 2.0)
+-	for id in bullet_offsets.keys():
+-		if not live_bullets.has(id):
+-			bullet_offsets.erase(id)
++		var points := firing.trace_points(bullet)
++		if points.size() != 2:
++			continue
++		var tail := points[0] - camera + CENTER + offset
++		var head := points[1] - camera + CENTER + offset
++		draw_line(tail, head, Color("bca56e"), 1.3)
++		draw_line(tail.lerp(head, 0.64), head, Color("fff1b2"), 1.6)
+ 	for shot in sim.enemy_projectiles:
+ 		var p := screen(shot.position) + Vector2(0, -15)
+ 		var angle := IsoProjection.project(shot.velocity).angle() + PI
+@@ -150,10 +144,6 @@
+ 		var p := screen(effect.position) + Vector2(0, -18)
+ 		var t := 1.0 - float(effect.life) / float(effect.duration)
+ 		match String(effect.type):
+-			"shot":
+-				var direction := IsoProjection.project(effect.direction).normalized()
+-				p = screen(effect.position) + (effect.muzzle as Vector2)
+-				_rotated(sprites.tex("fx/muzzle_1"), p, Vector2(34, 24), direction.angle())
+ 			"hit":
+ 				_center(sprites.tex("fx/blood_0" if gore else "fx/spark"), p, Vector2(27, 28))
+ 			"spark":
+@@ -272,4 +262,5 @@
+ 	draw_set_transform(Vector2.ZERO)
+ func advance_death(dt: float) -> void:
+ 	human.advance(dt, false, Vector2.ZERO, false, false, false)
++	firing.reset()
+ 	queue_redraw()
+--- a/scripts/main.gd
++++ b/scripts/main.gd
+@@ -132,6 +132,8 @@
+ 	match action:
+ 		"start":
+ 			_start_run()
++		"firing_review":
++			get_tree().change_scene_to_file("res://scenes/firing_review.tscn")
+ 		"animation_review":
+ 			get_tree().change_scene_to_file("res://scenes/animation_review.tscn")
+ 		"boss_test":
+--- a/scripts/hud.gd
++++ b/scripts/hud.gd
+@@ -213,6 +213,7 @@
+ 			_text(box, "Five minutes of escalating swarms, then a two-phase boss.\nAuto-fire. Collect green XP. Move out of marked attacks.", 15, MUTED)
+ 			_add_button(box, "DEPLOY  /  SURVIVAL + BOSS", "start", true)
+ 			_add_button(box, "HUMAN ANIMATION REVIEW", "animation_review")
++			_add_button(box, "FIRING ATTACHMENT REVIEW", "firing_review")
+ 			var row := HBoxContainer.new()
+ 			row.add_theme_constant_override("separation", 10)
+ 			box.add_child(row)

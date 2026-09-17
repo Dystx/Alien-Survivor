@@ -1,0 +1,28 @@
+name: Locked human firing checks
+on:
+  push:
+    branches: ['fix/locked-human-firing']
+    paths:
+      - 'firing_review/**'
+      - '.github/workflows/firing-review.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Fetch the exact public source commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install the existing pinned and checksum-verified engine
+        run: python3 tools/install_ci_godot.py /tmp/firing-godot
+      - name: Run firing, human, gameplay and scene regression tests
+        run: python3 firing_review/verify.py /tmp/firing-godot/godot
+# Read-only CI. No repository pushes, secrets, release publishing or approval changes.
+# This suite uses explicit image fixtures; it does not approve the actual artwork.
