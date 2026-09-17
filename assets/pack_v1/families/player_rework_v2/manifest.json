@@ -1,0 +1,5044 @@
+{
+  "asset_id": "player_rework_v2",
+  "status": "review",
+  "owner_approval": null,
+  "cell": [
+    128,
+    128
+  ],
+  "pivot": [
+    64,
+    110
+  ],
+  "directions": [
+    "e",
+    "se",
+    "s",
+    "sw",
+    "w",
+    "nw",
+    "n",
+    "ne"
+  ],
+  "clips": {
+    "ready": {
+      "frames": 4,
+      "fps": 6,
+      "loop": true
+    },
+    "walk": {
+      "frames": 8,
+      "fps": 12,
+      "loop": true
+    },
+    "fire": {
+      "frames": 4,
+      "fps": 18,
+      "loop": false
+    }
+  },
+  "frames": [
+    {
+      "clip": "ready",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/ready/e/000.png",
+      "sha256": "f84c12482bc74e1266e835c76acda43f9d238eada5452d412dfe51a4048c0d2c",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.2848
+        ],
+        "stock": [
+          69.577,
+          45.7645
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.2007
+        ],
+        "support_grip": [
+          86.4546,
+          47.9305
+        ],
+        "shoulder": [
+          69.577,
+          45.7645
+        ],
+        "eye": [
+          72.8034,
+          33.8898
+        ]
+      },
+      "region": [
+        2,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/ready/e/001.png",
+      "sha256": "cdb8c0f47ec03dfb20b7273bf3b50f222ef14d844b7f1fd2e4291f7c7e2a39b6",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.196
+        ],
+        "stock": [
+          69.577,
+          45.6756
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.1118
+        ],
+        "support_grip": [
+          86.4546,
+          47.8416
+        ],
+        "shoulder": [
+          69.577,
+          45.6756
+        ],
+        "eye": [
+          72.8034,
+          33.8009
+        ]
+      },
+      "region": [
+        134,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/ready/e/002.png",
+      "sha256": "f84c12482bc74e1266e835c76acda43f9d238eada5452d412dfe51a4048c0d2c",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.2848
+        ],
+        "stock": [
+          69.577,
+          45.7645
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.2007
+        ],
+        "support_grip": [
+          86.4546,
+          47.9305
+        ],
+        "shoulder": [
+          69.577,
+          45.7645
+        ],
+        "eye": [
+          72.8034,
+          33.8898
+        ]
+      },
+      "region": [
+        266,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/ready/e/003.png",
+      "sha256": "eb0508647f8c477ea087170e1c3422b0dab0165eeac3516b8ec936c7b1b03508",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.3737
+        ],
+        "stock": [
+          69.577,
+          45.8534
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.2896
+        ],
+        "support_grip": [
+          86.4546,
+          48.0194
+        ],
+        "shoulder": [
+          69.577,
+          45.8534
+        ],
+        "eye": [
+          72.8034,
+          33.9787
+        ]
+      },
+      "region": [
+        398,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "se",
+      "frame": 0,
+      "path": "frames/ready/se/000.png",
+      "sha256": "e4861414ba2533049850e4c7867da785c78fffddd2c5e4d1b6f1a72f876a88bd",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          65.026
+        ],
+        "stock": [
+          57.5689,
+          45.5006
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.3263
+        ],
+        "support_grip": [
+          65.7798,
+          55.4193
+        ],
+        "shoulder": [
+          57.5689,
+          45.5006
+        ],
+        "eye": [
+          63.1939,
+          36.3611
+        ]
+      },
+      "region": [
+        530,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "se",
+      "frame": 1,
+      "path": "frames/ready/se/001.png",
+      "sha256": "b09079d9b5efe1871b145cd939fbd8fc45526c091a59ca276c0065401442124d",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          64.9371
+        ],
+        "stock": [
+          57.5689,
+          45.4117
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.2374
+        ],
+        "support_grip": [
+          65.7798,
+          55.3304
+        ],
+        "shoulder": [
+          57.5689,
+          45.4117
+        ],
+        "eye": [
+          63.1939,
+          36.2722
+        ]
+      },
+      "region": [
+        662,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "se",
+      "frame": 2,
+      "path": "frames/ready/se/002.png",
+      "sha256": "e4861414ba2533049850e4c7867da785c78fffddd2c5e4d1b6f1a72f876a88bd",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          65.026
+        ],
+        "stock": [
+          57.5689,
+          45.5006
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.3263
+        ],
+        "support_grip": [
+          65.7798,
+          55.4193
+        ],
+        "shoulder": [
+          57.5689,
+          45.5006
+        ],
+        "eye": [
+          63.1939,
+          36.3611
+        ]
+      },
+      "region": [
+        794,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "se",
+      "frame": 3,
+      "path": "frames/ready/se/003.png",
+      "sha256": "b6844c4fcca2a6f1723e4b9308de94c7f317183e4fb3eb341a19450ed39e36c7",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          65.1149
+        ],
+        "stock": [
+          57.5689,
+          45.5895
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.4152
+        ],
+        "support_grip": [
+          65.7798,
+          55.5082
+        ],
+        "shoulder": [
+          57.5689,
+          45.5895
+        ],
+        "eye": [
+          63.1939,
+          36.4499
+        ]
+      },
+      "region": [
+        926,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/ready/s/000.png",
+      "sha256": "eec4f4d83b3344e0e35071a3facf3b7c771c461d149b0e69ab2b711f2fab0d9e",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.3324
+        ],
+        "stock": [
+          54.0213,
+          43.5637
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.9075
+        ],
+        "support_grip": [
+          54.7626,
+          54.5391
+        ],
+        "shoulder": [
+          54.0213,
+          43.5637
+        ],
+        "eye": [
+          58.697,
+          35.64
+        ]
+      },
+      "region": [
+        1058,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/ready/s/001.png",
+      "sha256": "32691695b064face518c41dd9ccb1599c8fb0414d15fb57f283dcb20f65960d9",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.2435
+        ],
+        "stock": [
+          54.0213,
+          43.4748
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.8186
+        ],
+        "support_grip": [
+          54.7626,
+          54.4502
+        ],
+        "shoulder": [
+          54.0213,
+          43.4748
+        ],
+        "eye": [
+          58.697,
+          35.5511
+        ]
+      },
+      "region": [
+        1190,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/ready/s/002.png",
+      "sha256": "eec4f4d83b3344e0e35071a3facf3b7c771c461d149b0e69ab2b711f2fab0d9e",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.3324
+        ],
+        "stock": [
+          54.0213,
+          43.5637
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.9075
+        ],
+        "support_grip": [
+          54.7626,
+          54.5391
+        ],
+        "shoulder": [
+          54.0213,
+          43.5637
+        ],
+        "eye": [
+          58.697,
+          35.64
+        ]
+      },
+      "region": [
+        1322,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/ready/s/003.png",
+      "sha256": "6e767277956b6b714a1670863dfd2c086ae5c36a2c9253aa030a70b668057e4b",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.4213
+        ],
+        "stock": [
+          54.0213,
+          43.6526
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.9964
+        ],
+        "support_grip": [
+          54.7626,
+          54.628
+        ],
+        "shoulder": [
+          54.0213,
+          43.6526
+        ],
+        "eye": [
+          58.697,
+          35.7289
+        ]
+      },
+      "region": [
+        1454,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "sw",
+      "frame": 0,
+      "path": "frames/ready/sw/000.png",
+      "sha256": "5a1bd48062cb5868eb3acdf23d66cc960ae2743d97a3c8ff7de12ac80c94ed01",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.5634
+        ],
+        "stock": [
+          52.5807,
+          41.038
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.8637
+        ],
+        "support_grip": [
+          45.6958,
+          51.2882
+        ],
+        "shoulder": [
+          52.5807,
+          41.038
+        ],
+        "eye": [
+          55.3199,
+          33.9895
+        ]
+      },
+      "region": [
+        2,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "sw",
+      "frame": 1,
+      "path": "frames/ready/sw/001.png",
+      "sha256": "437b437826352da7c8d42859024991eda1ea9feefadbc41a10bc46ab6a30ef65",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.4745
+        ],
+        "stock": [
+          52.5807,
+          40.9491
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.7748
+        ],
+        "support_grip": [
+          45.6958,
+          51.1993
+        ],
+        "shoulder": [
+          52.5807,
+          40.9491
+        ],
+        "eye": [
+          55.3199,
+          33.9006
+        ]
+      },
+      "region": [
+        134,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "sw",
+      "frame": 2,
+      "path": "frames/ready/sw/002.png",
+      "sha256": "5a1bd48062cb5868eb3acdf23d66cc960ae2743d97a3c8ff7de12ac80c94ed01",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.5634
+        ],
+        "stock": [
+          52.5807,
+          41.038
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.8637
+        ],
+        "support_grip": [
+          45.6958,
+          51.2882
+        ],
+        "shoulder": [
+          52.5807,
+          41.038
+        ],
+        "eye": [
+          55.3199,
+          33.9895
+        ]
+      },
+      "region": [
+        266,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "sw",
+      "frame": 3,
+      "path": "frames/ready/sw/003.png",
+      "sha256": "53c0a4f945d1a7925dc69a30632383789f3a50c36ecce285c2df5634e7f5fa18",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.6523
+        ],
+        "stock": [
+          52.5807,
+          41.1269
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.9525
+        ],
+        "support_grip": [
+          45.6958,
+          51.3771
+        ],
+        "shoulder": [
+          52.5807,
+          41.1269
+        ],
+        "eye": [
+          55.3199,
+          34.0784
+        ]
+      },
+      "region": [
+        398,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/ready/w/000.png",
+      "sha256": "5253b2e9315ce81d28304375c33349f757b3f2846795417094e32480e8bf8b2e",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.3062
+        ],
+        "stock": [
+          58.423,
+          35.7858
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.222
+        ],
+        "support_grip": [
+          41.5454,
+          38.6931
+        ],
+        "shoulder": [
+          58.423,
+          35.7858
+        ],
+        "eye": [
+          55.1966,
+          28.5868
+        ]
+      },
+      "region": [
+        530,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/ready/w/001.png",
+      "sha256": "ce6228c5dfd5170aff290e55a0eaff27ad761685d9b22f9f5817423beeea5482",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.2173
+        ],
+        "stock": [
+          58.423,
+          35.6969
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.1331
+        ],
+        "support_grip": [
+          41.5454,
+          38.6042
+        ],
+        "shoulder": [
+          58.423,
+          35.6969
+        ],
+        "eye": [
+          55.1966,
+          28.4979
+        ]
+      },
+      "region": [
+        662,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/ready/w/002.png",
+      "sha256": "5253b2e9315ce81d28304375c33349f757b3f2846795417094e32480e8bf8b2e",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.3062
+        ],
+        "stock": [
+          58.423,
+          35.7858
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.222
+        ],
+        "support_grip": [
+          41.5454,
+          38.6931
+        ],
+        "shoulder": [
+          58.423,
+          35.7858
+        ],
+        "eye": [
+          55.1966,
+          28.5868
+        ]
+      },
+      "region": [
+        794,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/ready/w/003.png",
+      "sha256": "8d626fc45ecaddc448718afeee097f3aaf0056561ba248644a01ab6e4b265347",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.395
+        ],
+        "stock": [
+          58.423,
+          35.8747
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.3109
+        ],
+        "support_grip": [
+          41.5454,
+          38.7819
+        ],
+        "shoulder": [
+          58.423,
+          35.8747
+        ],
+        "eye": [
+          55.1966,
+          28.6757
+        ]
+      },
+      "region": [
+        926,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "nw",
+      "frame": 0,
+      "path": "frames/ready/nw/000.png",
+      "sha256": "d2cead4f1ad0ca1d3813c7fa60e328a95e2bb90f17a6e9ec90655ea2f11ec3e9",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.565
+        ],
+        "stock": [
+          70.4311,
+          36.0497
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.0964
+        ],
+        "support_grip": [
+          62.2202,
+          31.2042
+        ],
+        "shoulder": [
+          70.4311,
+          36.0497
+        ],
+        "eye": [
+          64.8061,
+          26.1155
+        ]
+      },
+      "region": [
+        1058,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "nw",
+      "frame": 1,
+      "path": "frames/ready/nw/001.png",
+      "sha256": "6eae3101fe83fd9f1a318e78d998384e71208f3c338772b1b34bd109bb42f08c",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.4761
+        ],
+        "stock": [
+          70.4311,
+          35.9609
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.0075
+        ],
+        "support_grip": [
+          62.2202,
+          31.1153
+        ],
+        "shoulder": [
+          70.4311,
+          35.9609
+        ],
+        "eye": [
+          64.8061,
+          26.0266
+        ]
+      },
+      "region": [
+        1190,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "nw",
+      "frame": 2,
+      "path": "frames/ready/nw/002.png",
+      "sha256": "d2cead4f1ad0ca1d3813c7fa60e328a95e2bb90f17a6e9ec90655ea2f11ec3e9",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.565
+        ],
+        "stock": [
+          70.4311,
+          36.0497
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.0964
+        ],
+        "support_grip": [
+          62.2202,
+          31.2042
+        ],
+        "shoulder": [
+          70.4311,
+          36.0497
+        ],
+        "eye": [
+          64.8061,
+          26.1155
+        ]
+      },
+      "region": [
+        1322,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "nw",
+      "frame": 3,
+      "path": "frames/ready/nw/003.png",
+      "sha256": "c38dcaea894deb03c073ae44e24068ff97c640c1676a560fd5d2a05c2a4ecd93",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.6539
+        ],
+        "stock": [
+          70.4311,
+          36.1386
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.1853
+        ],
+        "support_grip": [
+          62.2202,
+          31.2931
+        ],
+        "shoulder": [
+          70.4311,
+          36.1386
+        ],
+        "eye": [
+          64.8061,
+          26.2044
+        ]
+      },
+      "region": [
+        1454,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/ready/n/000.png",
+      "sha256": "41f0e2659e3bccb104cbd8a3d5c532a25b88fc58be31a51feaf282564deda030",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.2586
+        ],
+        "stock": [
+          73.9787,
+          37.9867
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.5152
+        ],
+        "support_grip": [
+          73.2374,
+          32.0844
+        ],
+        "shoulder": [
+          73.9787,
+          37.9867
+        ],
+        "eye": [
+          69.303,
+          26.8366
+        ]
+      },
+      "region": [
+        2,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/ready/n/001.png",
+      "sha256": "dffb28e7a87dfa9ef02a7a1e235022dfd8fa901354e19f03c8e4420f7feebf20",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.1697
+        ],
+        "stock": [
+          73.9787,
+          37.8978
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.4263
+        ],
+        "support_grip": [
+          73.2374,
+          31.9955
+        ],
+        "shoulder": [
+          73.9787,
+          37.8978
+        ],
+        "eye": [
+          69.303,
+          26.7477
+        ]
+      },
+      "region": [
+        134,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/ready/n/002.png",
+      "sha256": "41f0e2659e3bccb104cbd8a3d5c532a25b88fc58be31a51feaf282564deda030",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.2586
+        ],
+        "stock": [
+          73.9787,
+          37.9867
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.5152
+        ],
+        "support_grip": [
+          73.2374,
+          32.0844
+        ],
+        "shoulder": [
+          73.9787,
+          37.9867
+        ],
+        "eye": [
+          69.303,
+          26.8366
+        ]
+      },
+      "region": [
+        266,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/ready/n/003.png",
+      "sha256": "c6598db8a9b617532efe48fec2d263a4380e5bd7642746fd254a279a1164f070",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.3475
+        ],
+        "stock": [
+          73.9787,
+          38.0755
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.6041
+        ],
+        "support_grip": [
+          73.2374,
+          32.1733
+        ],
+        "shoulder": [
+          73.9787,
+          38.0755
+        ],
+        "eye": [
+          69.303,
+          26.9255
+        ]
+      },
+      "region": [
+        398,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "ne",
+      "frame": 0,
+      "path": "frames/ready/ne/000.png",
+      "sha256": "dbc7e5aaded5f08714e6d854e9c435f067233623be677f603ad326d2b837af9d",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          22.0276
+        ],
+        "stock": [
+          75.4193,
+          40.5123
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.559
+        ],
+        "support_grip": [
+          82.3042,
+          35.3353
+        ],
+        "shoulder": [
+          75.4193,
+          40.5123
+        ],
+        "eye": [
+          72.6801,
+          28.4871
+        ]
+      },
+      "region": [
+        530,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "ne",
+      "frame": 1,
+      "path": "frames/ready/ne/001.png",
+      "sha256": "e1126578c1add82b05d42c24e20e0370eec81664399821926feee3d5505dd2df",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          21.9387
+        ],
+        "stock": [
+          75.4193,
+          40.4235
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.4701
+        ],
+        "support_grip": [
+          82.3042,
+          35.2464
+        ],
+        "shoulder": [
+          75.4193,
+          40.4235
+        ],
+        "eye": [
+          72.6801,
+          28.3982
+        ]
+      },
+      "region": [
+        662,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "ne",
+      "frame": 2,
+      "path": "frames/ready/ne/002.png",
+      "sha256": "dbc7e5aaded5f08714e6d854e9c435f067233623be677f603ad326d2b837af9d",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          22.0276
+        ],
+        "stock": [
+          75.4193,
+          40.5123
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.559
+        ],
+        "support_grip": [
+          82.3042,
+          35.3353
+        ],
+        "shoulder": [
+          75.4193,
+          40.5123
+        ],
+        "eye": [
+          72.6801,
+          28.4871
+        ]
+      },
+      "region": [
+        794,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "ready",
+      "direction": "ne",
+      "frame": 3,
+      "path": "frames/ready/ne/003.png",
+      "sha256": "7cfd5c5f37e39890ce7409c5371031a401e0f9361fb31faec755ffd2f1170097",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          22.1165
+        ],
+        "stock": [
+          75.4193,
+          40.6012
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.6479
+        ],
+        "support_grip": [
+          82.3042,
+          35.4242
+        ],
+        "shoulder": [
+          75.4193,
+          40.6012
+        ],
+        "eye": [
+          72.6801,
+          28.576
+        ]
+      },
+      "region": [
+        926,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/walk/e/000.png",
+      "sha256": "4781a5ad30b2623d5397a4f2d1433cab1144a4d76960769b03f2c8cec94f675f",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.112
+        ],
+        "stock": [
+          69.577,
+          45.5917
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.0278
+        ],
+        "support_grip": [
+          86.4546,
+          47.7576
+        ],
+        "shoulder": [
+          69.577,
+          45.5917
+        ],
+        "eye": [
+          72.8034,
+          33.7169
+        ]
+      },
+      "region": [
+        1058,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/walk/e/001.png",
+      "sha256": "f2fd34f468fc941a91bd6d16220115334cc965ad0d34a8a1111b7e1f518288b7",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.2848
+        ],
+        "stock": [
+          69.577,
+          45.7645
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.2007
+        ],
+        "support_grip": [
+          86.4546,
+          47.9305
+        ],
+        "shoulder": [
+          69.577,
+          45.7645
+        ],
+        "eye": [
+          72.8034,
+          33.8898
+        ]
+      },
+      "region": [
+        1190,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/walk/e/002.png",
+      "sha256": "7ce4936c1f382e7dd6c93c60b937a31785da3c0e2e7876de5c7d4e3135dfadb0",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.4577
+        ],
+        "stock": [
+          69.577,
+          45.9373
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.3735
+        ],
+        "support_grip": [
+          86.4546,
+          48.1033
+        ],
+        "shoulder": [
+          69.577,
+          45.9373
+        ],
+        "eye": [
+          72.8034,
+          34.0626
+        ]
+      },
+      "region": [
+        1322,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/walk/e/003.png",
+      "sha256": "8283653c92f886480f248edfbe916c68be2b92283870fe197a7fb9606c3ae958",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.2848
+        ],
+        "stock": [
+          69.577,
+          45.7645
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.2007
+        ],
+        "support_grip": [
+          86.4546,
+          47.9305
+        ],
+        "shoulder": [
+          69.577,
+          45.7645
+        ],
+        "eye": [
+          72.8034,
+          33.8898
+        ]
+      },
+      "region": [
+        1454,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "e",
+      "frame": 4,
+      "path": "frames/walk/e/004.png",
+      "sha256": "8ec4156fb2c9963b0ea58ae8ef6aeea526301892c664cb222284060bd3fb093b",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.112
+        ],
+        "stock": [
+          69.577,
+          45.5917
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.0278
+        ],
+        "support_grip": [
+          86.4546,
+          47.7576
+        ],
+        "shoulder": [
+          69.577,
+          45.5917
+        ],
+        "eye": [
+          72.8034,
+          33.7169
+        ]
+      },
+      "region": [
+        2,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "e",
+      "frame": 5,
+      "path": "frames/walk/e/005.png",
+      "sha256": "46313c5f687ea2608c643738dc9b836e8b4c9ebbb969fd96dee362296bbd6180",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.2848
+        ],
+        "stock": [
+          69.577,
+          45.7645
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.2007
+        ],
+        "support_grip": [
+          86.4546,
+          47.9305
+        ],
+        "shoulder": [
+          69.577,
+          45.7645
+        ],
+        "eye": [
+          72.8034,
+          33.8898
+        ]
+      },
+      "region": [
+        134,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "e",
+      "frame": 6,
+      "path": "frames/walk/e/006.png",
+      "sha256": "459cafd7d641ae2fc4f8e5a852d601bce1750d002b945715eeb593ac337dac86",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.4577
+        ],
+        "stock": [
+          69.577,
+          45.9373
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.3735
+        ],
+        "support_grip": [
+          86.4546,
+          48.1033
+        ],
+        "shoulder": [
+          69.577,
+          45.9373
+        ],
+        "eye": [
+          72.8034,
+          34.0626
+        ]
+      },
+      "region": [
+        266,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "e",
+      "frame": 7,
+      "path": "frames/walk/e/007.png",
+      "sha256": "da22d9b4be6bfdd6294d63786b302a5eb19993ebf6f5f511ccd08c19f48ebc6b",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.2848
+        ],
+        "stock": [
+          69.577,
+          45.7645
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.2007
+        ],
+        "support_grip": [
+          86.4546,
+          47.9305
+        ],
+        "shoulder": [
+          69.577,
+          45.7645
+        ],
+        "eye": [
+          72.8034,
+          33.8898
+        ]
+      },
+      "region": [
+        398,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "se",
+      "frame": 0,
+      "path": "frames/walk/se/000.png",
+      "sha256": "0894d023c03c2cc2727d2338552085102722c73e06dde063044a385e924178f9",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          64.8532
+        ],
+        "stock": [
+          57.5689,
+          45.3278
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.1534
+        ],
+        "support_grip": [
+          65.7798,
+          55.2465
+        ],
+        "shoulder": [
+          57.5689,
+          45.3278
+        ],
+        "eye": [
+          63.1939,
+          36.1882
+        ]
+      },
+      "region": [
+        530,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "se",
+      "frame": 1,
+      "path": "frames/walk/se/001.png",
+      "sha256": "5351ef875332b8c1e0633a21150a1a8e84c22dd19b34bbba19257b8ec02396cb",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          65.026
+        ],
+        "stock": [
+          57.5689,
+          45.5006
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.3263
+        ],
+        "support_grip": [
+          65.7798,
+          55.4193
+        ],
+        "shoulder": [
+          57.5689,
+          45.5006
+        ],
+        "eye": [
+          63.1939,
+          36.3611
+        ]
+      },
+      "region": [
+        662,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "se",
+      "frame": 2,
+      "path": "frames/walk/se/002.png",
+      "sha256": "4a34e3f7adf37794e6884443530c18691d1e8ec96d5d04d4f6538e40236f47f7",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          65.1989
+        ],
+        "stock": [
+          57.5689,
+          45.6734
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.4991
+        ],
+        "support_grip": [
+          65.7798,
+          55.5922
+        ],
+        "shoulder": [
+          57.5689,
+          45.6734
+        ],
+        "eye": [
+          63.1939,
+          36.5339
+        ]
+      },
+      "region": [
+        794,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "se",
+      "frame": 3,
+      "path": "frames/walk/se/003.png",
+      "sha256": "777d62fe03ec9505d37bfb736111b48786b827fd466a87e743c739c94a3a0e2b",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          65.026
+        ],
+        "stock": [
+          57.5689,
+          45.5006
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.3263
+        ],
+        "support_grip": [
+          65.7798,
+          55.4193
+        ],
+        "shoulder": [
+          57.5689,
+          45.5006
+        ],
+        "eye": [
+          63.1939,
+          36.3611
+        ]
+      },
+      "region": [
+        926,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "se",
+      "frame": 4,
+      "path": "frames/walk/se/004.png",
+      "sha256": "1e383e151ba4dbdc920a1b3282edaf47337a1e24d378f6968121ad5f64103e2c",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          64.8532
+        ],
+        "stock": [
+          57.5689,
+          45.3278
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.1534
+        ],
+        "support_grip": [
+          65.7798,
+          55.2465
+        ],
+        "shoulder": [
+          57.5689,
+          45.3278
+        ],
+        "eye": [
+          63.1939,
+          36.1882
+        ]
+      },
+      "region": [
+        1058,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "se",
+      "frame": 5,
+      "path": "frames/walk/se/005.png",
+      "sha256": "665c9f06c203b526eca7315941577894d2907c0a93aa5c83d36b026122924931",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          65.026
+        ],
+        "stock": [
+          57.5689,
+          45.5006
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.3263
+        ],
+        "support_grip": [
+          65.7798,
+          55.4193
+        ],
+        "shoulder": [
+          57.5689,
+          45.5006
+        ],
+        "eye": [
+          63.1939,
+          36.3611
+        ]
+      },
+      "region": [
+        1190,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "se",
+      "frame": 6,
+      "path": "frames/walk/se/006.png",
+      "sha256": "56b325095b5df106208e679669a40ddee0c9e46004247d0870c901d614b2311c",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          65.1989
+        ],
+        "stock": [
+          57.5689,
+          45.6734
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.4991
+        ],
+        "support_grip": [
+          65.7798,
+          55.5922
+        ],
+        "shoulder": [
+          57.5689,
+          45.6734
+        ],
+        "eye": [
+          63.1939,
+          36.5339
+        ]
+      },
+      "region": [
+        1322,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "se",
+      "frame": 7,
+      "path": "frames/walk/se/007.png",
+      "sha256": "2962e3a0bd531cd5845e0e07067e1f36297b66e1ea672d5e60e81aeca00ac10c",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          65.026
+        ],
+        "stock": [
+          57.5689,
+          45.5006
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.3263
+        ],
+        "support_grip": [
+          65.7798,
+          55.4193
+        ],
+        "shoulder": [
+          57.5689,
+          45.5006
+        ],
+        "eye": [
+          63.1939,
+          36.3611
+        ]
+      },
+      "region": [
+        1454,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/walk/s/000.png",
+      "sha256": "328777002520fd583aac8e863cc8a8836facecac9a3c2f1d522c150d7546222f",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.1595
+        ],
+        "stock": [
+          54.0213,
+          43.3908
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.7346
+        ],
+        "support_grip": [
+          54.7626,
+          54.3662
+        ],
+        "shoulder": [
+          54.0213,
+          43.3908
+        ],
+        "eye": [
+          58.697,
+          35.4671
+        ]
+      },
+      "region": [
+        2,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/walk/s/001.png",
+      "sha256": "35ad06efd93f718b926b1b19d19f7e55f0ccb49846253baff0d53b905b577273",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.3324
+        ],
+        "stock": [
+          54.0213,
+          43.5637
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.9075
+        ],
+        "support_grip": [
+          54.7626,
+          54.5391
+        ],
+        "shoulder": [
+          54.0213,
+          43.5637
+        ],
+        "eye": [
+          58.697,
+          35.64
+        ]
+      },
+      "region": [
+        134,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/walk/s/002.png",
+      "sha256": "cf5a96e2f018ea51269d6b15fda9594a7a145b841e4c79568345d6c7664ec49d",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.5052
+        ],
+        "stock": [
+          54.0213,
+          43.7365
+        ],
+        "trigger_grip": [
+          54.0213,
+          53.0803
+        ],
+        "support_grip": [
+          54.7626,
+          54.7119
+        ],
+        "shoulder": [
+          54.0213,
+          43.7365
+        ],
+        "eye": [
+          58.697,
+          35.8128
+        ]
+      },
+      "region": [
+        266,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/walk/s/003.png",
+      "sha256": "3f87c05046421e92e042b96a2011034d51ac8c9f5962918684baa9bb2f3bf46d",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.3324
+        ],
+        "stock": [
+          54.0213,
+          43.5637
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.9075
+        ],
+        "support_grip": [
+          54.7626,
+          54.5391
+        ],
+        "shoulder": [
+          54.0213,
+          43.5637
+        ],
+        "eye": [
+          58.697,
+          35.64
+        ]
+      },
+      "region": [
+        398,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "s",
+      "frame": 4,
+      "path": "frames/walk/s/004.png",
+      "sha256": "2732427ec1b8d7cfcf61c131feaf8830a60067fbbc1f358ecdab645cd79d7fbe",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.1595
+        ],
+        "stock": [
+          54.0213,
+          43.3908
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.7346
+        ],
+        "support_grip": [
+          54.7626,
+          54.3662
+        ],
+        "shoulder": [
+          54.0213,
+          43.3908
+        ],
+        "eye": [
+          58.697,
+          35.4671
+        ]
+      },
+      "region": [
+        530,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "s",
+      "frame": 5,
+      "path": "frames/walk/s/005.png",
+      "sha256": "3ea1194b682c6831399e0ebcc3e1bb7aae65ea6e130a0100442a0799d84702b0",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.3324
+        ],
+        "stock": [
+          54.0213,
+          43.5637
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.9075
+        ],
+        "support_grip": [
+          54.7626,
+          54.5391
+        ],
+        "shoulder": [
+          54.0213,
+          43.5637
+        ],
+        "eye": [
+          58.697,
+          35.64
+        ]
+      },
+      "region": [
+        662,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "s",
+      "frame": 6,
+      "path": "frames/walk/s/006.png",
+      "sha256": "5d04c5648a307b692f555b157a32b890e2dc1304c35f5cebca91f0d7bcdbd082",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.5052
+        ],
+        "stock": [
+          54.0213,
+          43.7365
+        ],
+        "trigger_grip": [
+          54.0213,
+          53.0803
+        ],
+        "support_grip": [
+          54.7626,
+          54.7119
+        ],
+        "shoulder": [
+          54.0213,
+          43.7365
+        ],
+        "eye": [
+          58.697,
+          35.8128
+        ]
+      },
+      "region": [
+        794,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "s",
+      "frame": 7,
+      "path": "frames/walk/s/007.png",
+      "sha256": "bdc22d3eea6639033ba143eb02ddf792213404c735c29eb324e5b15cf9532718",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.3324
+        ],
+        "stock": [
+          54.0213,
+          43.5637
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.9075
+        ],
+        "support_grip": [
+          54.7626,
+          54.5391
+        ],
+        "shoulder": [
+          54.0213,
+          43.5637
+        ],
+        "eye": [
+          58.697,
+          35.64
+        ]
+      },
+      "region": [
+        926,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "sw",
+      "frame": 0,
+      "path": "frames/walk/sw/000.png",
+      "sha256": "c4bb6fd3857dc6129eee8d4ab60e84cfaa230d21c5d54148132e3cdeb606301c",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.3906
+        ],
+        "stock": [
+          52.5807,
+          40.8652
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.6908
+        ],
+        "support_grip": [
+          45.6958,
+          51.1154
+        ],
+        "shoulder": [
+          52.5807,
+          40.8652
+        ],
+        "eye": [
+          55.3199,
+          33.8167
+        ]
+      },
+      "region": [
+        1058,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "sw",
+      "frame": 1,
+      "path": "frames/walk/sw/001.png",
+      "sha256": "ffc2800a7172ade8c99cf29dbeef080bec783ec1cc3aa508255b98c275bd9e5c",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.5634
+        ],
+        "stock": [
+          52.5807,
+          41.038
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.8637
+        ],
+        "support_grip": [
+          45.6958,
+          51.2882
+        ],
+        "shoulder": [
+          52.5807,
+          41.038
+        ],
+        "eye": [
+          55.3199,
+          33.9895
+        ]
+      },
+      "region": [
+        1190,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "sw",
+      "frame": 2,
+      "path": "frames/walk/sw/002.png",
+      "sha256": "2c9500029f59a4dd62d026718c44061fb3f4aa1e557b83649148825ac58d4a7b",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.7363
+        ],
+        "stock": [
+          52.5807,
+          41.2108
+        ],
+        "trigger_grip": [
+          48.1912,
+          50.0365
+        ],
+        "support_grip": [
+          45.6958,
+          51.4611
+        ],
+        "shoulder": [
+          52.5807,
+          41.2108
+        ],
+        "eye": [
+          55.3199,
+          34.1623
+        ]
+      },
+      "region": [
+        1322,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "sw",
+      "frame": 3,
+      "path": "frames/walk/sw/003.png",
+      "sha256": "47c83feb1252ed170216a4cbfa33e8ac19d1a1996f52a0ebfbde416974dbf6c7",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.5634
+        ],
+        "stock": [
+          52.5807,
+          41.038
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.8637
+        ],
+        "support_grip": [
+          45.6958,
+          51.2882
+        ],
+        "shoulder": [
+          52.5807,
+          41.038
+        ],
+        "eye": [
+          55.3199,
+          33.9895
+        ]
+      },
+      "region": [
+        1454,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "sw",
+      "frame": 4,
+      "path": "frames/walk/sw/004.png",
+      "sha256": "49ed990b22adaef61b77e6a3dbff41f216d7b0512d92c46d6e1955c464635b25",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.3906
+        ],
+        "stock": [
+          52.5807,
+          40.8652
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.6908
+        ],
+        "support_grip": [
+          45.6958,
+          51.1154
+        ],
+        "shoulder": [
+          52.5807,
+          40.8652
+        ],
+        "eye": [
+          55.3199,
+          33.8167
+        ]
+      },
+      "region": [
+        2,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "sw",
+      "frame": 5,
+      "path": "frames/walk/sw/005.png",
+      "sha256": "1f88d76c92d10ed7c7f843e9f7351cf80c75c3919c2f9bfe0487ac0e6565e6cd",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.5634
+        ],
+        "stock": [
+          52.5807,
+          41.038
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.8637
+        ],
+        "support_grip": [
+          45.6958,
+          51.2882
+        ],
+        "shoulder": [
+          52.5807,
+          41.038
+        ],
+        "eye": [
+          55.3199,
+          33.9895
+        ]
+      },
+      "region": [
+        134,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "sw",
+      "frame": 6,
+      "path": "frames/walk/sw/006.png",
+      "sha256": "752e82ef1dd3a72756d29dee364ed6667634ce058de26e2b3d82e6a3fd051809",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.7363
+        ],
+        "stock": [
+          52.5807,
+          41.2108
+        ],
+        "trigger_grip": [
+          48.1912,
+          50.0365
+        ],
+        "support_grip": [
+          45.6958,
+          51.4611
+        ],
+        "shoulder": [
+          52.5807,
+          41.2108
+        ],
+        "eye": [
+          55.3199,
+          34.1623
+        ]
+      },
+      "region": [
+        266,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "sw",
+      "frame": 7,
+      "path": "frames/walk/sw/007.png",
+      "sha256": "72ba2f1628f46ae6ddc0a0cfb8771f6aea954dbd65383231633d1cc9d1869b3b",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.5634
+        ],
+        "stock": [
+          52.5807,
+          41.038
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.8637
+        ],
+        "support_grip": [
+          45.6958,
+          51.2882
+        ],
+        "shoulder": [
+          52.5807,
+          41.038
+        ],
+        "eye": [
+          55.3199,
+          33.9895
+        ]
+      },
+      "region": [
+        398,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/walk/w/000.png",
+      "sha256": "729d4c7be4b7f39469c3d6b5a2aa1df7f490cdb2e1920e338ae5228ea5b85099",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.1333
+        ],
+        "stock": [
+          58.423,
+          35.613
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.0492
+        ],
+        "support_grip": [
+          41.5454,
+          38.5202
+        ],
+        "shoulder": [
+          58.423,
+          35.613
+        ],
+        "eye": [
+          55.1966,
+          28.414
+        ]
+      },
+      "region": [
+        530,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/walk/w/001.png",
+      "sha256": "764cf8fd966910e7d24d15754ec7d21c0faaa32d456845ae4cb6b64af7978613",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.3062
+        ],
+        "stock": [
+          58.423,
+          35.7858
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.222
+        ],
+        "support_grip": [
+          41.5454,
+          38.6931
+        ],
+        "shoulder": [
+          58.423,
+          35.7858
+        ],
+        "eye": [
+          55.1966,
+          28.5868
+        ]
+      },
+      "region": [
+        662,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/walk/w/002.png",
+      "sha256": "54e0991c308c4191ee6aa1a82b10d9c674df7b523ab5757dc7e93ba21aab7a45",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.479
+        ],
+        "stock": [
+          58.423,
+          35.9587
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.3948
+        ],
+        "support_grip": [
+          41.5454,
+          38.8659
+        ],
+        "shoulder": [
+          58.423,
+          35.9587
+        ],
+        "eye": [
+          55.1966,
+          28.7596
+        ]
+      },
+      "region": [
+        794,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/walk/w/003.png",
+      "sha256": "154a6375d187adcf98612164e6260a4b0b6901f4da74d69aa365cb4bd4b6b9e7",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.3062
+        ],
+        "stock": [
+          58.423,
+          35.7858
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.222
+        ],
+        "support_grip": [
+          41.5454,
+          38.6931
+        ],
+        "shoulder": [
+          58.423,
+          35.7858
+        ],
+        "eye": [
+          55.1966,
+          28.5868
+        ]
+      },
+      "region": [
+        926,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "w",
+      "frame": 4,
+      "path": "frames/walk/w/004.png",
+      "sha256": "fb34f149fae2307d3669c95c8187dd697b678a4bfe1d37b09e4998b40dc213fe",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.1333
+        ],
+        "stock": [
+          58.423,
+          35.613
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.0492
+        ],
+        "support_grip": [
+          41.5454,
+          38.5202
+        ],
+        "shoulder": [
+          58.423,
+          35.613
+        ],
+        "eye": [
+          55.1966,
+          28.414
+        ]
+      },
+      "region": [
+        1058,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "w",
+      "frame": 5,
+      "path": "frames/walk/w/005.png",
+      "sha256": "bf43b04bb371586ca244e405014125b98dc990146b8b71f7a9561d0b0cd18fb4",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.3062
+        ],
+        "stock": [
+          58.423,
+          35.7858
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.222
+        ],
+        "support_grip": [
+          41.5454,
+          38.6931
+        ],
+        "shoulder": [
+          58.423,
+          35.7858
+        ],
+        "eye": [
+          55.1966,
+          28.5868
+        ]
+      },
+      "region": [
+        1190,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "w",
+      "frame": 6,
+      "path": "frames/walk/w/006.png",
+      "sha256": "64227287ab29578bf8d8a0ebf352528b043a7e352b99eed9883fcf566261b427",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.479
+        ],
+        "stock": [
+          58.423,
+          35.9587
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.3948
+        ],
+        "support_grip": [
+          41.5454,
+          38.8659
+        ],
+        "shoulder": [
+          58.423,
+          35.9587
+        ],
+        "eye": [
+          55.1966,
+          28.7596
+        ]
+      },
+      "region": [
+        1322,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "w",
+      "frame": 7,
+      "path": "frames/walk/w/007.png",
+      "sha256": "91f7b684bf922223dbee29c44b5686a4ca4b84493dc0bf6b5714f00b90ea8bd5",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.3062
+        ],
+        "stock": [
+          58.423,
+          35.7858
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.222
+        ],
+        "support_grip": [
+          41.5454,
+          38.6931
+        ],
+        "shoulder": [
+          58.423,
+          35.7858
+        ],
+        "eye": [
+          55.1966,
+          28.5868
+        ]
+      },
+      "region": [
+        1454,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "nw",
+      "frame": 0,
+      "path": "frames/walk/nw/000.png",
+      "sha256": "a5984c6de5460c8ce7eb0b80ea894cddce1eb7908f978cde7829380ff2ef808f",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.3921
+        ],
+        "stock": [
+          70.4311,
+          35.8769
+        ],
+        "trigger_grip": [
+          66.0416,
+          35.9236
+        ],
+        "support_grip": [
+          62.2202,
+          31.0314
+        ],
+        "shoulder": [
+          70.4311,
+          35.8769
+        ],
+        "eye": [
+          64.8061,
+          25.9427
+        ]
+      },
+      "region": [
+        2,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "nw",
+      "frame": 1,
+      "path": "frames/walk/nw/001.png",
+      "sha256": "2429e8441769a069d18b5cba8390baccd8a6b6b1020eb9765c6e5ffa64364ee9",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.565
+        ],
+        "stock": [
+          70.4311,
+          36.0497
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.0964
+        ],
+        "support_grip": [
+          62.2202,
+          31.2042
+        ],
+        "shoulder": [
+          70.4311,
+          36.0497
+        ],
+        "eye": [
+          64.8061,
+          26.1155
+        ]
+      },
+      "region": [
+        134,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "nw",
+      "frame": 2,
+      "path": "frames/walk/nw/002.png",
+      "sha256": "5a8b543f3c722d13309f364b4d5b38f7ab1df2c766ebdf3bc2c365fdce036c4f",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.7378
+        ],
+        "stock": [
+          70.4311,
+          36.2226
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.2692
+        ],
+        "support_grip": [
+          62.2202,
+          31.377
+        ],
+        "shoulder": [
+          70.4311,
+          36.2226
+        ],
+        "eye": [
+          64.8061,
+          26.2884
+        ]
+      },
+      "region": [
+        266,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "nw",
+      "frame": 3,
+      "path": "frames/walk/nw/003.png",
+      "sha256": "27c31faf41a69aec098cb47ce9ce46a910357724d9472de5bb520ff34baf3561",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.565
+        ],
+        "stock": [
+          70.4311,
+          36.0497
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.0964
+        ],
+        "support_grip": [
+          62.2202,
+          31.2042
+        ],
+        "shoulder": [
+          70.4311,
+          36.0497
+        ],
+        "eye": [
+          64.8061,
+          26.1155
+        ]
+      },
+      "region": [
+        398,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "nw",
+      "frame": 4,
+      "path": "frames/walk/nw/004.png",
+      "sha256": "896d2ff8cc64369c2986e2f22f3a13dc28c7d891188196b59bc23f366d5c67f4",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.3921
+        ],
+        "stock": [
+          70.4311,
+          35.8769
+        ],
+        "trigger_grip": [
+          66.0416,
+          35.9236
+        ],
+        "support_grip": [
+          62.2202,
+          31.0314
+        ],
+        "shoulder": [
+          70.4311,
+          35.8769
+        ],
+        "eye": [
+          64.8061,
+          25.9427
+        ]
+      },
+      "region": [
+        530,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "nw",
+      "frame": 5,
+      "path": "frames/walk/nw/005.png",
+      "sha256": "ac81a94950ad1518357824302b3401219ec12b510e2e2217d9813e92d30ea083",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.565
+        ],
+        "stock": [
+          70.4311,
+          36.0497
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.0964
+        ],
+        "support_grip": [
+          62.2202,
+          31.2042
+        ],
+        "shoulder": [
+          70.4311,
+          36.0497
+        ],
+        "eye": [
+          64.8061,
+          26.1155
+        ]
+      },
+      "region": [
+        662,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "nw",
+      "frame": 6,
+      "path": "frames/walk/nw/006.png",
+      "sha256": "5d8b6f56a1c7e3886679c90ce46548ef4ab3f019bea9559ef38c510485e890eb",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.7378
+        ],
+        "stock": [
+          70.4311,
+          36.2226
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.2692
+        ],
+        "support_grip": [
+          62.2202,
+          31.377
+        ],
+        "shoulder": [
+          70.4311,
+          36.2226
+        ],
+        "eye": [
+          64.8061,
+          26.2884
+        ]
+      },
+      "region": [
+        794,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "nw",
+      "frame": 7,
+      "path": "frames/walk/nw/007.png",
+      "sha256": "aba1fc6ac1d30cd93a73cb07f4cb96e5d2f59a88eb8a7acd96862ac2432bc299",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.565
+        ],
+        "stock": [
+          70.4311,
+          36.0497
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.0964
+        ],
+        "support_grip": [
+          62.2202,
+          31.2042
+        ],
+        "shoulder": [
+          70.4311,
+          36.0497
+        ],
+        "eye": [
+          64.8061,
+          26.1155
+        ]
+      },
+      "region": [
+        926,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/walk/n/000.png",
+      "sha256": "1005aff61b3f2dc5b35fdd73059c2d5ef7ccb107e2c54f7c41c8831834b891f0",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.0858
+        ],
+        "stock": [
+          73.9787,
+          37.8138
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.3424
+        ],
+        "support_grip": [
+          73.2374,
+          31.9116
+        ],
+        "shoulder": [
+          73.9787,
+          37.8138
+        ],
+        "eye": [
+          69.303,
+          26.6638
+        ]
+      },
+      "region": [
+        1058,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/walk/n/001.png",
+      "sha256": "a83c130bb5579e1ad4d0cfc5d23efbeb2b14c6d6c54037730972f4262799303d",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.2586
+        ],
+        "stock": [
+          73.9787,
+          37.9867
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.5152
+        ],
+        "support_grip": [
+          73.2374,
+          32.0844
+        ],
+        "shoulder": [
+          73.9787,
+          37.9867
+        ],
+        "eye": [
+          69.303,
+          26.8366
+        ]
+      },
+      "region": [
+        1190,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/walk/n/002.png",
+      "sha256": "ca18558aa51cc761c301479446c978f2156448c0be0db4d4fb16f42a30ddbd2d",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.4315
+        ],
+        "stock": [
+          73.9787,
+          38.1595
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.6881
+        ],
+        "support_grip": [
+          73.2374,
+          32.2573
+        ],
+        "shoulder": [
+          73.9787,
+          38.1595
+        ],
+        "eye": [
+          69.303,
+          27.0095
+        ]
+      },
+      "region": [
+        1322,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/walk/n/003.png",
+      "sha256": "7540481ad2a72585a33378eefaaf07da063dbd80e9a9f52c9464a1854a4960de",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.2586
+        ],
+        "stock": [
+          73.9787,
+          37.9867
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.5152
+        ],
+        "support_grip": [
+          73.2374,
+          32.0844
+        ],
+        "shoulder": [
+          73.9787,
+          37.9867
+        ],
+        "eye": [
+          69.303,
+          26.8366
+        ]
+      },
+      "region": [
+        1454,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "n",
+      "frame": 4,
+      "path": "frames/walk/n/004.png",
+      "sha256": "25754ad8c8dc43f6e08f393e8df2320c6594b2bf98b67b2bc92ec54b255140cc",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.0858
+        ],
+        "stock": [
+          73.9787,
+          37.8138
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.3424
+        ],
+        "support_grip": [
+          73.2374,
+          31.9116
+        ],
+        "shoulder": [
+          73.9787,
+          37.8138
+        ],
+        "eye": [
+          69.303,
+          26.6638
+        ]
+      },
+      "region": [
+        2,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "n",
+      "frame": 5,
+      "path": "frames/walk/n/005.png",
+      "sha256": "294bd17f3263053c676f5e4eaa26a12f457d347634cf75bd7b8face894f458b6",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.2586
+        ],
+        "stock": [
+          73.9787,
+          37.9867
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.5152
+        ],
+        "support_grip": [
+          73.2374,
+          32.0844
+        ],
+        "shoulder": [
+          73.9787,
+          37.9867
+        ],
+        "eye": [
+          69.303,
+          26.8366
+        ]
+      },
+      "region": [
+        134,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "n",
+      "frame": 6,
+      "path": "frames/walk/n/006.png",
+      "sha256": "9721e7ba2196d53ec894f995bb8f76196f6171a8b8f9964970217af2c8bf121b",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.4315
+        ],
+        "stock": [
+          73.9787,
+          38.1595
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.6881
+        ],
+        "support_grip": [
+          73.2374,
+          32.2573
+        ],
+        "shoulder": [
+          73.9787,
+          38.1595
+        ],
+        "eye": [
+          69.303,
+          27.0095
+        ]
+      },
+      "region": [
+        266,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "n",
+      "frame": 7,
+      "path": "frames/walk/n/007.png",
+      "sha256": "6415c66ca7ee73ed18031673f3f72208addffa27f7a6f04fe4e9f1e64ebc633c",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.2586
+        ],
+        "stock": [
+          73.9787,
+          37.9867
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.5152
+        ],
+        "support_grip": [
+          73.2374,
+          32.0844
+        ],
+        "shoulder": [
+          73.9787,
+          37.9867
+        ],
+        "eye": [
+          69.303,
+          26.8366
+        ]
+      },
+      "region": [
+        398,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "ne",
+      "frame": 0,
+      "path": "frames/walk/ne/000.png",
+      "sha256": "b37d30a87a43110d8ecbef05d650d47dc9a6e11902966ea01dc191aeb16c04ad",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          21.8547
+        ],
+        "stock": [
+          75.4193,
+          40.3395
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.3862
+        ],
+        "support_grip": [
+          82.3042,
+          35.1624
+        ],
+        "shoulder": [
+          75.4193,
+          40.3395
+        ],
+        "eye": [
+          72.6801,
+          28.3143
+        ]
+      },
+      "region": [
+        530,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "ne",
+      "frame": 1,
+      "path": "frames/walk/ne/001.png",
+      "sha256": "68862717a29d5c7ab41fa452ac23f67a82187d775d0cc84d0c7bf48d55b72442",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          22.0276
+        ],
+        "stock": [
+          75.4193,
+          40.5123
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.559
+        ],
+        "support_grip": [
+          82.3042,
+          35.3353
+        ],
+        "shoulder": [
+          75.4193,
+          40.5123
+        ],
+        "eye": [
+          72.6801,
+          28.4871
+        ]
+      },
+      "region": [
+        662,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "ne",
+      "frame": 2,
+      "path": "frames/walk/ne/002.png",
+      "sha256": "032007e2a9cad068685527a55049a300f03be0183b7cc4075efcedfb408e7237",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          22.2004
+        ],
+        "stock": [
+          75.4193,
+          40.6852
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.7319
+        ],
+        "support_grip": [
+          82.3042,
+          35.5081
+        ],
+        "shoulder": [
+          75.4193,
+          40.6852
+        ],
+        "eye": [
+          72.6801,
+          28.6599
+        ]
+      },
+      "region": [
+        794,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "ne",
+      "frame": 3,
+      "path": "frames/walk/ne/003.png",
+      "sha256": "1b596b5ab7f78fde0a37a503ddc7dfd9eb2e8a93252978820402faed7a3b46bd",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          22.0276
+        ],
+        "stock": [
+          75.4193,
+          40.5123
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.559
+        ],
+        "support_grip": [
+          82.3042,
+          35.3353
+        ],
+        "shoulder": [
+          75.4193,
+          40.5123
+        ],
+        "eye": [
+          72.6801,
+          28.4871
+        ]
+      },
+      "region": [
+        926,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "ne",
+      "frame": 4,
+      "path": "frames/walk/ne/004.png",
+      "sha256": "7eace190b9da40bd067a7d5ca1a971b3047a5d9648406ea6efdca9eaefea10db",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          21.8547
+        ],
+        "stock": [
+          75.4193,
+          40.3395
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.3862
+        ],
+        "support_grip": [
+          82.3042,
+          35.1624
+        ],
+        "shoulder": [
+          75.4193,
+          40.3395
+        ],
+        "eye": [
+          72.6801,
+          28.3143
+        ]
+      },
+      "region": [
+        1058,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "ne",
+      "frame": 5,
+      "path": "frames/walk/ne/005.png",
+      "sha256": "fd42841a06d726af8aa05e828591b0a3f187d12af796710717aba381740be151",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          22.0276
+        ],
+        "stock": [
+          75.4193,
+          40.5123
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.559
+        ],
+        "support_grip": [
+          82.3042,
+          35.3353
+        ],
+        "shoulder": [
+          75.4193,
+          40.5123
+        ],
+        "eye": [
+          72.6801,
+          28.4871
+        ]
+      },
+      "region": [
+        1190,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "ne",
+      "frame": 6,
+      "path": "frames/walk/ne/006.png",
+      "sha256": "e1b7679bbea7bb2301a34be99f5c0d28b1eac83b28abd797ca5047eecd940a4a",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          22.2004
+        ],
+        "stock": [
+          75.4193,
+          40.6852
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.7319
+        ],
+        "support_grip": [
+          82.3042,
+          35.5081
+        ],
+        "shoulder": [
+          75.4193,
+          40.6852
+        ],
+        "eye": [
+          72.6801,
+          28.6599
+        ]
+      },
+      "region": [
+        1322,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "walk",
+      "direction": "ne",
+      "frame": 7,
+      "path": "frames/walk/ne/007.png",
+      "sha256": "b232c8b178598a38c9a3e0bfda241b4f870dded512c4ae38465c86755411399d",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          22.0276
+        ],
+        "stock": [
+          75.4193,
+          40.5123
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.559
+        ],
+        "support_grip": [
+          82.3042,
+          35.3353
+        ],
+        "shoulder": [
+          75.4193,
+          40.5123
+        ],
+        "eye": [
+          72.6801,
+          28.4871
+        ]
+      },
+      "region": [
+        1454,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/fire/e/000.png",
+      "sha256": "f84c12482bc74e1266e835c76acda43f9d238eada5452d412dfe51a4048c0d2c",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.2848
+        ],
+        "stock": [
+          69.577,
+          45.7645
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.2007
+        ],
+        "support_grip": [
+          86.4546,
+          47.9305
+        ],
+        "shoulder": [
+          69.577,
+          45.7645
+        ],
+        "eye": [
+          72.8034,
+          33.8898
+        ]
+      },
+      "region": [
+        2,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/fire/e/001.png",
+      "sha256": "551fe88fcc5f9cc515417069477307633e7ae4e47a7b17a9a481b868f3524e54",
+      "sockets": {
+        "muzzle": [
+          111.8231,
+          45.7978
+        ],
+        "stock": [
+          69.3223,
+          45.7191
+        ],
+        "trigger_grip": [
+          79.1983,
+          50.053
+        ],
+        "support_grip": [
+          86.2338,
+          47.7095
+        ],
+        "shoulder": [
+          69.3223,
+          45.7191
+        ],
+        "eye": [
+          72.4162,
+          33.8116
+        ]
+      },
+      "region": [
+        134,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/fire/e/002.png",
+      "sha256": "1a92b4e6b557e4d4452a1b8c69695e6f36ee72b87bcb60d945bdb9734ab3f3d2",
+      "sockets": {
+        "muzzle": [
+          111.9868,
+          46.1141
+        ],
+        "stock": [
+          69.4879,
+          45.7483
+        ],
+        "trigger_grip": [
+          79.3246,
+          50.1488
+        ],
+        "support_grip": [
+          86.3777,
+          47.8529
+        ],
+        "shoulder": [
+          69.4879,
+          45.7483
+        ],
+        "eye": [
+          72.668,
+          33.8619
+        ]
+      },
+      "region": [
+        266,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/fire/e/003.png",
+      "sha256": "f84c12482bc74e1266e835c76acda43f9d238eada5452d412dfe51a4048c0d2c",
+      "sockets": {
+        "muzzle": [
+          112.0737,
+          46.2848
+        ],
+        "stock": [
+          69.577,
+          45.7645
+        ],
+        "trigger_grip": [
+          79.3923,
+          50.2007
+        ],
+        "support_grip": [
+          86.4546,
+          47.9305
+        ],
+        "shoulder": [
+          69.577,
+          45.7645
+        ],
+        "eye": [
+          72.8034,
+          33.8898
+        ]
+      },
+      "region": [
+        398,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "se",
+      "frame": 0,
+      "path": "frames/fire/se/000.png",
+      "sha256": "e4861414ba2533049850e4c7867da785c78fffddd2c5e4d1b6f1a72f876a88bd",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          65.026
+        ],
+        "stock": [
+          57.5689,
+          45.5006
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.3263
+        ],
+        "support_grip": [
+          65.7798,
+          55.4193
+        ],
+        "shoulder": [
+          57.5689,
+          45.5006
+        ],
+        "eye": [
+          63.1939,
+          36.3611
+        ]
+      },
+      "region": [
+        530,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "se",
+      "frame": 1,
+      "path": "frames/fire/se/001.png",
+      "sha256": "113762775685f92d424f40e68cf6da7402a2a969e435eedfd3ebb453798cf2b6",
+      "sockets": {
+        "muzzle": [
+          76.4619,
+          64.4269
+        ],
+        "stock": [
+          57.455,
+          45.3413
+        ],
+        "trigger_grip": [
+          61.8717,
+          54.0918
+        ],
+        "support_grip": [
+          65.6811,
+          55.0996
+        ],
+        "shoulder": [
+          57.455,
+          45.3413
+        ],
+        "eye": [
+          63.0207,
+          36.1097
+        ]
+      },
+      "region": [
+        662,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "se",
+      "frame": 2,
+      "path": "frames/fire/se/002.png",
+      "sha256": "af28c34f0b028fa60aa2f6e434caddf4186f570f5a724d4a2abe33ebcb0aae03",
+      "sockets": {
+        "muzzle": [
+          76.5351,
+          64.8164
+        ],
+        "stock": [
+          57.5291,
+          45.4446
+        ],
+        "trigger_grip": [
+          61.9282,
+          54.2441
+        ],
+        "support_grip": [
+          65.7454,
+          55.3073
+        ],
+        "shoulder": [
+          57.5291,
+          45.4446
+        ],
+        "eye": [
+          63.1333,
+          36.2727
+        ]
+      },
+      "region": [
+        794,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "se",
+      "frame": 3,
+      "path": "frames/fire/se/003.png",
+      "sha256": "e4861414ba2533049850e4c7867da785c78fffddd2c5e4d1b6f1a72f876a88bd",
+      "sockets": {
+        "muzzle": [
+          76.574,
+          65.026
+        ],
+        "stock": [
+          57.5689,
+          45.5006
+        ],
+        "trigger_grip": [
+          61.9584,
+          54.3263
+        ],
+        "support_grip": [
+          65.7798,
+          55.4193
+        ],
+        "shoulder": [
+          57.5689,
+          45.5006
+        ],
+        "eye": [
+          63.1939,
+          36.3611
+        ]
+      },
+      "region": [
+        926,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/fire/s/000.png",
+      "sha256": "eec4f4d83b3344e0e35071a3facf3b7c771c461d149b0e69ab2b711f2fab0d9e",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.3324
+        ],
+        "stock": [
+          54.0213,
+          43.5637
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.9075
+        ],
+        "support_grip": [
+          54.7626,
+          54.5391
+        ],
+        "shoulder": [
+          54.0213,
+          43.5637
+        ],
+        "eye": [
+          58.697,
+          35.64
+        ]
+      },
+      "region": [
+        1058,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/fire/s/001.png",
+      "sha256": "4ad3ec42e51ab79b5af578f43d479ec92c6cded5dc14b6ec6908b47c4e78dade",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          64.72
+        ],
+        "stock": [
+          54.0213,
+          43.3909
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.6628
+        ],
+        "support_grip": [
+          54.7626,
+          54.2077
+        ],
+        "shoulder": [
+          54.0213,
+          43.3909
+        ],
+        "eye": [
+          58.697,
+          35.3682
+        ]
+      },
+      "region": [
+        1190,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/fire/s/002.png",
+      "sha256": "3a66cd29803907bbc9140c40d6f316926713e40b0391f89c5526d166d6e6ddfb",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.1181
+        ],
+        "stock": [
+          54.0213,
+          43.503
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.8217
+        ],
+        "support_grip": [
+          54.7626,
+          54.423
+        ],
+        "shoulder": [
+          54.0213,
+          43.503
+        ],
+        "eye": [
+          58.697,
+          35.5445
+        ]
+      },
+      "region": [
+        1322,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/fire/s/003.png",
+      "sha256": "eec4f4d83b3344e0e35071a3facf3b7c771c461d149b0e69ab2b711f2fab0d9e",
+      "sockets": {
+        "muzzle": [
+          54.0213,
+          65.3324
+        ],
+        "stock": [
+          54.0213,
+          43.5637
+        ],
+        "trigger_grip": [
+          54.0213,
+          52.9075
+        ],
+        "support_grip": [
+          54.7626,
+          54.5391
+        ],
+        "shoulder": [
+          54.0213,
+          43.5637
+        ],
+        "eye": [
+          58.697,
+          35.64
+        ]
+      },
+      "region": [
+        1454,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "sw",
+      "frame": 0,
+      "path": "frames/fire/sw/000.png",
+      "sha256": "5a1bd48062cb5868eb3acdf23d66cc960ae2743d97a3c8ff7de12ac80c94ed01",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.5634
+        ],
+        "stock": [
+          52.5807,
+          41.038
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.8637
+        ],
+        "support_grip": [
+          45.6958,
+          51.2882
+        ],
+        "shoulder": [
+          52.5807,
+          41.038
+        ],
+        "eye": [
+          55.3199,
+          33.9895
+        ]
+      },
+      "region": [
+        2,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "sw",
+      "frame": 1,
+      "path": "frames/fire/sw/001.png",
+      "sha256": "f19444f8d82f11eec4f6f414ebe390eb565e4fdaf36baa36b961d4a039d7d9cc",
+      "sockets": {
+        "muzzle": [
+          33.6876,
+          59.9643
+        ],
+        "stock": [
+          52.6946,
+          40.8787
+        ],
+        "trigger_grip": [
+          48.2779,
+          49.6292
+        ],
+        "support_grip": [
+          45.7945,
+          50.9685
+        ],
+        "shoulder": [
+          52.6946,
+          40.8787
+        ],
+        "eye": [
+          55.493,
+          33.7382
+        ]
+      },
+      "region": [
+        134,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "sw",
+      "frame": 2,
+      "path": "frames/fire/sw/002.png",
+      "sha256": "c2c52bdf29145bf5210fb233beabab8ed4201ade541643b6ae7763b1fe9b862a",
+      "sockets": {
+        "muzzle": [
+          33.6144,
+          60.3538
+        ],
+        "stock": [
+          52.6205,
+          40.982
+        ],
+        "trigger_grip": [
+          48.2214,
+          49.7815
+        ],
+        "support_grip": [
+          45.7302,
+          51.1762
+        ],
+        "shoulder": [
+          52.6205,
+          40.982
+        ],
+        "eye": [
+          55.3804,
+          33.9011
+        ]
+      },
+      "region": [
+        266,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "sw",
+      "frame": 3,
+      "path": "frames/fire/sw/003.png",
+      "sha256": "5a1bd48062cb5868eb3acdf23d66cc960ae2743d97a3c8ff7de12ac80c94ed01",
+      "sockets": {
+        "muzzle": [
+          33.5756,
+          60.5634
+        ],
+        "stock": [
+          52.5807,
+          41.038
+        ],
+        "trigger_grip": [
+          48.1912,
+          49.8637
+        ],
+        "support_grip": [
+          45.6958,
+          51.2882
+        ],
+        "shoulder": [
+          52.5807,
+          41.038
+        ],
+        "eye": [
+          55.3199,
+          33.9895
+        ]
+      },
+      "region": [
+        398,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/fire/w/000.png",
+      "sha256": "5253b2e9315ce81d28304375c33349f757b3f2846795417094e32480e8bf8b2e",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.3062
+        ],
+        "stock": [
+          58.423,
+          35.7858
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.222
+        ],
+        "support_grip": [
+          41.5454,
+          38.6931
+        ],
+        "shoulder": [
+          58.423,
+          35.7858
+        ],
+        "eye": [
+          55.1966,
+          28.5868
+        ]
+      },
+      "region": [
+        530,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/fire/w/001.png",
+      "sha256": "a713d6c29c1a42f154bcfa6c2835dd8f6a5bef93ac9b6784e5fa5bb678e0f153",
+      "sockets": {
+        "muzzle": [
+          16.1769,
+          35.8191
+        ],
+        "stock": [
+          58.6777,
+          35.7404
+        ],
+        "trigger_grip": [
+          48.8017,
+          40.0743
+        ],
+        "support_grip": [
+          41.7662,
+          38.4721
+        ],
+        "shoulder": [
+          58.6777,
+          35.7404
+        ],
+        "eye": [
+          55.5838,
+          28.5086
+        ]
+      },
+      "region": [
+        662,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/fire/w/002.png",
+      "sha256": "417ed5bfb49e2c34e74b0b9d4a0d607c9a352d7bbd8aefd50396f6a5ae6a7614",
+      "sockets": {
+        "muzzle": [
+          16.0132,
+          36.1354
+        ],
+        "stock": [
+          58.5121,
+          35.7696
+        ],
+        "trigger_grip": [
+          48.6754,
+          40.1701
+        ],
+        "support_grip": [
+          41.6223,
+          38.6155
+        ],
+        "shoulder": [
+          58.5121,
+          35.7696
+        ],
+        "eye": [
+          55.332,
+          28.559
+        ]
+      },
+      "region": [
+        794,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/fire/w/003.png",
+      "sha256": "5253b2e9315ce81d28304375c33349f757b3f2846795417094e32480e8bf8b2e",
+      "sockets": {
+        "muzzle": [
+          15.9263,
+          36.3062
+        ],
+        "stock": [
+          58.423,
+          35.7858
+        ],
+        "trigger_grip": [
+          48.6077,
+          40.222
+        ],
+        "support_grip": [
+          41.5454,
+          38.6931
+        ],
+        "shoulder": [
+          58.423,
+          35.7858
+        ],
+        "eye": [
+          55.1966,
+          28.5868
+        ]
+      },
+      "region": [
+        926,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "nw",
+      "frame": 0,
+      "path": "frames/fire/nw/000.png",
+      "sha256": "d2cead4f1ad0ca1d3813c7fa60e328a95e2bb90f17a6e9ec90655ea2f11ec3e9",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.565
+        ],
+        "stock": [
+          70.4311,
+          36.0497
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.0964
+        ],
+        "support_grip": [
+          62.2202,
+          31.2042
+        ],
+        "shoulder": [
+          70.4311,
+          36.0497
+        ],
+        "eye": [
+          64.8061,
+          26.1155
+        ]
+      },
+      "region": [
+        1058,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "nw",
+      "frame": 1,
+      "path": "frames/fire/nw/001.png",
+      "sha256": "5951ea21e9c95021a2ae7a3f74374e32561496a3b3da46786bda97a10b0a639c",
+      "sockets": {
+        "muzzle": [
+          51.5381,
+          17.19
+        ],
+        "stock": [
+          70.545,
+          36.1183
+        ],
+        "trigger_grip": [
+          66.1283,
+          36.0355
+        ],
+        "support_grip": [
+          62.3189,
+          31.082
+        ],
+        "shoulder": [
+          70.545,
+          36.1183
+        ],
+        "eye": [
+          64.9793,
+          26.2104
+        ]
+      },
+      "region": [
+        1190,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "nw",
+      "frame": 2,
+      "path": "frames/fire/nw/002.png",
+      "sha256": "22fb07982f264ab59d127097d8550ea4b16fb9b3b4b81d77a8a2c6cbc623ae57",
+      "sockets": {
+        "muzzle": [
+          51.4649,
+          17.4331
+        ],
+        "stock": [
+          70.4709,
+          36.0734
+        ],
+        "trigger_grip": [
+          66.0718,
+          36.0747
+        ],
+        "support_grip": [
+          62.2546,
+          31.161
+        ],
+        "shoulder": [
+          70.4709,
+          36.0734
+        ],
+        "eye": [
+          64.8667,
+          26.1482
+        ]
+      },
+      "region": [
+        1322,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "nw",
+      "frame": 3,
+      "path": "frames/fire/nw/003.png",
+      "sha256": "d2cead4f1ad0ca1d3813c7fa60e328a95e2bb90f17a6e9ec90655ea2f11ec3e9",
+      "sockets": {
+        "muzzle": [
+          51.426,
+          17.565
+        ],
+        "stock": [
+          70.4311,
+          36.0497
+        ],
+        "trigger_grip": [
+          66.0416,
+          36.0964
+        ],
+        "support_grip": [
+          62.2202,
+          31.2042
+        ],
+        "shoulder": [
+          70.4311,
+          36.0497
+        ],
+        "eye": [
+          64.8061,
+          26.1155
+        ]
+      },
+      "region": [
+        1454,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/fire/n/000.png",
+      "sha256": "41f0e2659e3bccb104cbd8a3d5c532a25b88fc58be31a51feaf282564deda030",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.2586
+        ],
+        "stock": [
+          73.9787,
+          37.9867
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.5152
+        ],
+        "support_grip": [
+          73.2374,
+          32.0844
+        ],
+        "shoulder": [
+          73.9787,
+          37.9867
+        ],
+        "eye": [
+          69.303,
+          26.8366
+        ]
+      },
+      "region": [
+        2,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/fire/n/001.png",
+      "sha256": "f28e7a85ce7b17e6a7674111c82e976df5c6e97caae9efd5655282f525fe532b",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          16.8969
+        ],
+        "stock": [
+          73.9787,
+          38.0686
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.4645
+        ],
+        "support_grip": [
+          73.2374,
+          31.9739
+        ],
+        "shoulder": [
+          73.9787,
+          38.0686
+        ],
+        "eye": [
+          69.303,
+          26.952
+        ]
+      },
+      "region": [
+        134,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/fire/n/002.png",
+      "sha256": "a22abf82d549ca35c467882a12c1b5f58649aaf701f730534c24f46bd21266ec",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.1313
+        ],
+        "stock": [
+          73.9787,
+          38.015
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.4971
+        ],
+        "support_grip": [
+          73.2374,
+          32.0453
+        ],
+        "shoulder": [
+          73.9787,
+          38.015
+        ],
+        "eye": [
+          69.303,
+          26.8765
+        ]
+      },
+      "region": [
+        266,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/fire/n/003.png",
+      "sha256": "41f0e2659e3bccb104cbd8a3d5c532a25b88fc58be31a51feaf282564deda030",
+      "sockets": {
+        "muzzle": [
+          73.9787,
+          17.2586
+        ],
+        "stock": [
+          73.9787,
+          37.9867
+        ],
+        "trigger_grip": [
+          73.9787,
+          37.5152
+        ],
+        "support_grip": [
+          73.2374,
+          32.0844
+        ],
+        "shoulder": [
+          73.9787,
+          37.9867
+        ],
+        "eye": [
+          69.303,
+          26.8366
+        ]
+      },
+      "region": [
+        398,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "ne",
+      "frame": 0,
+      "path": "frames/fire/ne/000.png",
+      "sha256": "dbc7e5aaded5f08714e6d854e9c435f067233623be677f603ad326d2b837af9d",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          22.0276
+        ],
+        "stock": [
+          75.4193,
+          40.5123
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.559
+        ],
+        "support_grip": [
+          82.3042,
+          35.3353
+        ],
+        "shoulder": [
+          75.4193,
+          40.5123
+        ],
+        "eye": [
+          72.6801,
+          28.4871
+        ]
+      },
+      "region": [
+        530,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "ne",
+      "frame": 1,
+      "path": "frames/fire/ne/001.png",
+      "sha256": "c92ada1d5f9379420ccbaa35844c180728b004b05237b3012e8aa938060c97ad",
+      "sockets": {
+        "muzzle": [
+          94.3124,
+          21.6526
+        ],
+        "stock": [
+          75.3054,
+          40.5809
+        ],
+        "trigger_grip": [
+          79.7221,
+          40.4981
+        ],
+        "support_grip": [
+          82.2055,
+          35.2131
+        ],
+        "shoulder": [
+          75.3054,
+          40.5809
+        ],
+        "eye": [
+          72.507,
+          28.582
+        ]
+      },
+      "region": [
+        662,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "ne",
+      "frame": 2,
+      "path": "frames/fire/ne/002.png",
+      "sha256": "44ddd2dd3ba98ae4f20850339194706aa9bdbc895bcecfa5830dbdf4811cf6f9",
+      "sockets": {
+        "muzzle": [
+          94.3856,
+          21.8957
+        ],
+        "stock": [
+          75.3795,
+          40.536
+        ],
+        "trigger_grip": [
+          79.7786,
+          40.5374
+        ],
+        "support_grip": [
+          82.2698,
+          35.2921
+        ],
+        "shoulder": [
+          75.3795,
+          40.536
+        ],
+        "eye": [
+          72.6196,
+          28.5198
+        ]
+      },
+      "region": [
+        794,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "fire",
+      "direction": "ne",
+      "frame": 3,
+      "path": "frames/fire/ne/003.png",
+      "sha256": "dbc7e5aaded5f08714e6d854e9c435f067233623be677f603ad326d2b837af9d",
+      "sockets": {
+        "muzzle": [
+          94.4244,
+          22.0276
+        ],
+        "stock": [
+          75.4193,
+          40.5123
+        ],
+        "trigger_grip": [
+          79.8088,
+          40.559
+        ],
+        "support_grip": [
+          82.3042,
+          35.3353
+        ],
+        "shoulder": [
+          75.4193,
+          40.5123
+        ],
+        "eye": [
+          72.6801,
+          28.4871
+        ]
+      },
+      "region": [
+        926,
+        1322,
+        128,
+        128
+      ]
+    }
+  ],
+  "source_sha256": "3b3d1d737f35e8393a2f8b77840fa5db5ddbbb76fcb4552206b55b68b987e6a9",
+  "renderer_sha256": "cf0ef91863b5cbfafc677064f95018df6406cf4fb66e87ec02ae8e2dfda7be84",
+  "missing": [
+    "hit",
+    "death",
+    "strafe",
+    "reverse",
+    "independent moving recoil"
+  ],
+  "authorship": "New parametric human, not transformed old frame art. Face likeness and finish need owner review."
+}

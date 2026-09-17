@@ -1,0 +1,68 @@
+name: Player v2 actual-art build
+on:
+  push:
+    branches: ['art/player-rework-v2']
+    paths:
+      - 'assets/pack_v1/source/player_rework_v2.py'
+      - 'assets/pack_v1/source/check_player_v2.py'
+      - 'tools/verify_player_v2.py'
+      - 'assets/pack_v1/families/player_rework_v2/*.gd'
+      - 'assets/pack_v1/families/player_rework_v2/project.godot'
+      - '.github/workflows/player-rework-v2.yml'
+permissions:
+  contents: read
+concurrency:
+  group: player-v2-candidate
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.ref == 'refs/heads/art/player-rework-v2'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    env:
+      LIBGL_ALWAYS_SOFTWARE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - name: Fetch exact public source revision
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install the existing authoring dependencies and pinned engine
+        run: |
+          python3 -m venv /tmp/player-v2-venv
+          /tmp/player-v2-venv/bin/python -m pip install -r assets/pack_v1/source/requirements.txt
+          python3 tools/install_ci_godot.py /tmp/player-v2-godot
+      - name: Render one coherent shouldered human master
+        run: xvfb-run -a /tmp/player-v2-venv/bin/python assets/pack_v1/source/player_rework_v2.py --out /tmp/player-v2-candidate
+      - name: Verify actual sprite pixels and native Godot review
+        run: /tmp/player-v2-venv/bin/python tools/verify_player_v2.py --candidate /tmp/player-v2-candidate --engine /tmp/player-v2-godot/godot
+      - name: Publish candidate binaries on this branch only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          target='art/player-rework-v2'
+          family='assets/pack_v1/families/player_rework_v2'
+          test "$(git ls-remote origin "refs/heads/$target" | cut -f1)" = "$GITHUB_SHA" || { echo 'Concurrent edit: refusing push'; exit 1; }
+          git diff --exit-code -- . ":(exclude)$family/**"
+          git add -- "$family/frames" "$family/runtime" "$family/source" "$family/manifest.json" "$family/delivery.json" "$family/source_status.json" "$family/reviews"
+          git diff --cached --name-only | python3 -c 'import sys; p="assets/pack_v1/families/player_rework_v2/"; lines=sys.stdin.read().splitlines(); assert lines and all(x.startswith(p) for x in lines)'
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'art: publish 128 player v2 candidate frames, editable master and actual engine previews'
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" push origin "HEAD:refs/heads/$target"
+          echo "PLAYER_V2_PUBLISHED_COMMIT=$(git rev-parse HEAD)"
+      - name: Attach the tested standalone reviewer
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: player-rework-v2
+          path: player_v2_artifact/
+          retention-days: 14
+          if-no-files-found: error
+# No force-push, main merge, original-player overwrite, gameplay changes or art approval.
