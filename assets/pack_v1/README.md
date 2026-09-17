@@ -1,61 +1,68 @@
 # Official Asset Pack v1
 
-**Current regular-alien candidates: runner 84 frames, spitter 108, charger 124, brute 112 — 428 total. The owner's exact 43-cell HumanReview appearance is locked separately. Candidate coverage is not final art approval or a finished game release.**
+**All five enemy families now have first-pass animation candidates: runner 84, spitter 108, charger 124, brute 112, Brood Warden 240 — 668 frames total. The exact selected 43-cell HumanReview appearance remains locked. Structural coverage is not final art approval or a finished release.**
 
-Read `player_visual_lock.json` first, then `SPEC.md`, `pack.json` and `BATCH_001.md`. The selected human overrides the obsolete robot/visor proposals. Do not regenerate, recolour, rescale or replace that body to accommodate weapon or animation defects.
+Read `player_visual_lock.json` first, then `SPEC.md`, `pack.json` and `BATCH_001.md`. The human lock overrides old robot/visor proposals. Do not regenerate, recolour, rescale or replace the selected person to accommodate weapon or animation defects.
 
 ## Current families
 
-| Family | Current source | Candidate coverage | Approval |
+| Family | Current source | Coverage | Approval |
 | --- | --- | --- | --- |
 | Selected human | Exact HumanReview ZIP/atlas hashes in `player_visual_lock.json` | 43 preserved cells | Appearance locked; firing/full action coverage separate |
 | Runner | `source/runner_family.py`, `families/runner/` | 84 frames, five actions, four views | Pending |
 | Spitter | `source/spitter_family.py`, `families/spitter/` | 108 frames, seven actions, four views | Pending |
 | Charger | `source/charger_family.py`, `families/charger/` | 124 frames, seven actions, four views | Pending |
 | Brute | `source/brute_family.py`, `families/brute/` | 112 frames, seven actions, four views | Pending |
+| Brood Warden | `source/warden_family.py`, `families/brood_warden/` | 240 frames, ten actions, four views | Pending |
 
-Each current family contains individual PNGs, editable mesh/pose source, recipe, source/frame hashes, review atlas and normal/half-speed previews. Shared renderer settings keep the camera/light/scale consistent. No unrelated image is silently promoted as a production frame. GLBs carry editable geometry and locomotion; other actions remain in each family's pose source.
+Each family has individual RGBA PNGs, one editable mesh/pose source, recipe, source/frame hashes, review atlas and normal/half-speed previews. Shared rendering settings keep the camera/light/scale consistent. GLBs carry editable geometry and movement tracks; other action poses remain in the Python source. These are not ten-action skinned production armatures or independently generated still sheets.
 
-## Latest delivery: brute
+## Latest delivery: Brood Warden
 
-Asset commit **a9f2c3e851599ed6b4a6b5f78109c908d9636fdc**; publication run **35213874096** passed 13 real-image/model checks plus contract checks. The body has an independent broad thorax, heavy four-limb footprint and layered charcoal keratin shell. Fixed 160x160 cells, pivot 80,136. It is not just a larger runner.
+Actual asset commit **7087d5ed437ad3ddedaeadf5996d3344a7e122a3**. Publication run **35217222740** passed 15 real-image/model checks plus existing contract checks before committing the boss family only. Prior family and human-lock trees were preserved.
 
-Integration: draft **PR #7**, `feat/brute-animation`, tested commit **b602e5a2cc6a7a047fbe1a319b9cba3f20d0fc59**. Run https://github.com/Dystx/Alien-Survivor/actions/runs/35214395321 passed Godot 4.7.2 import/compilation and **394 assertions**: 74 gameplay, 27 human, 64 firing, 48 runner, 58 spitter, 64 charger, 59 brute. Negative control and all creature/firing/finale scene checks passed; brute combat/reviewer also executed with software OpenGL. Actual viewer captures show move, attack and death.
+The master has a broad thorax, dorsal crown, four heavy limbs and two articulated secondary tendrils. Ten actions: idle, move, charge preparation, charge, acid attack, pulse attack, recovery, hit, phase transition, death. Fixed 256x256 cells and pivot 128,204; five 1820x1820 atlases respect the 2048 limit. No frame is resized independently.
 
-The four regular-alien atlases were real committed PNG files. Human/scenery/effect images in automated game checks were explicit fixtures, not the selected person's pixels. Fixtures are excluded from the complete conversation game package. No full-Mac-scene, sound, physical-input, phone, performance, exported-build or aesthetic approval is implied.
+Integration: draft **PR #8**, branch `feat/warden-animation`, final tested commit **5a9d18b50943e74a01df4de9a6c50cf574f55b01**.
+Run https://github.com/Dystx/Alien-Survivor/actions/runs/35218624039 passed Godot 4.7.2 import/compilation and **489 assertions**: 74 gameplay, 27 human, 64 firing, 48 runner, 58 spitter, 64 charger, 59 brute, 95 boss. The intentional failure control and all scene checks passed. Warden combat/review ran headlessly and with software OpenGL; five actual-art captures cover charge, acid, phase, death and a native pulse view.
 
-The complete `Alien_Survivor_Brute_Pass.zip` is supplied in the project conversation. It preserves 487 selected inherited image/model/core-script files, including the exact human and prior controllers; all 24 corresponding runtime GDScript canonical hashes match the successful engine run. All 112 brute PNGs match the committed/engine-tested images. Import its root `project.godot`, then **Diagnostics → Brute Animations** or **Two Brutes**. Extra target health is diagnostic-only.
+The boss presentation reads existing attack timers, locked aim and movement distance. It never causes damage. Warnings/dashes/releases take priority over hit and phase poses. The cosmetic phase display waits for a stationary non-attacking interval and can be deferred or interrupted; actual phase-two rules start immediately, without new invulnerability. Simulation victory settles immediately on death, while only the results panel waits for the 1.25-second fall. The living human stays alive; simultaneous death remains defeat. A deferred GUI-focus error exposed by rapid results/menu rebuilding was corrected without weakening the error checks.
 
-The brute's existing continuous-contact damage and 20% armour reduction remain unchanged. Attack/recovery gestures are cosmetic. **Wind-up is reviewer-only**, not a newly telegraphed slam, safe contact window, stun or animation-driven damage event. Gait follows actual displacement; deaths hold their final pose with bounded cleanup.
+The successful CI run used actual committed images for all five aliens. Human/scenery/effect textures in automated game checks were explicit fixtures, not the selected human's pixels. Fixtures are excluded from the complete conversation package. Actual Warden reviewer captures are engine images, not mockups. No full-scene Mac aesthetics, audio, physical inputs, mobile, performance, exported-build or final-art approval is implied.
 
-## What remains
+The complete `Alien_Survivor_Warden_Pass.zip` is supplied in the project conversation. All 240 boss PNGs match the committed/tested files; 606 inherited protected image/model/core-script files are unchanged, including the human and existing controllers. All 26 corresponding runtime script hashes match the successful run. Import the ZIP's root `project.godot`, then **Diagnostics → Warden Animations** or **Boss Test**. Review all four views or each native direction, pause, half speed, frame scrub, replay and backgrounds. Existing preview loadout and normal combat balance are unchanged.
 
-1. **Boss family:** replace earlier Warden still/prototype artwork with coherent movement, attack, transition and death animations; retain existing battle rules unless separately changed.
-2. **Visual completion and review:** refine/approve all four alien candidates; accept or revise firing; resolve remaining player aiming/strafe/reverse/idle/death coverage without redesigning the locked human. More frame files are not automatically better animation.
-3. **Environment, effects and UI:** unify floors/walls/props, infestation, pickups/icons and attack effects. Complete spitter mouth-to-projectile attachment and effect timing. Use the existing small game's needs, not new content for its own sake.
-4. **Repository consolidation:** publish the exact selected human/scenery binaries and assemble one directly runnable real-art Godot checkout. Review/merge the integration chain deliberately; remove obsolete robot/current-source ambiguity and fixture staging from the runnable tree. This is still unfinished, not solved by another ZIP.
-5. **Release pass:** end-to-end playtests with actual full-scene artwork, input/audio/menu polish, balance and performance testing, save/restart checks, and tested desktop exports/Steam packaging. Mobile comes later, not before the initial desktop release.
+## Next priority: one real-art repository checkout
 
-Next bounded art task is the boss; then consolidate the actual game checkout before expanding the catalogue. Do not add more monsters, maps, systems or planning layers to inflate progress.
+The asset branch contains actual current alien binaries and source. The integration branches still contain patches and verification setup; the conversation ZIP supplies the whole art-equipped game. The selected human/scenery binaries are not yet fully consolidated in a directly runnable repository game checkout. This is a concrete remaining task, not solved by another ZIP or another plan.
 
-## Earlier evidence
+Next work should assemble the existing actual selected-human, scenery and five alien packs with tested gameplay in one reviewed, directly runnable checkout. Preserve the human's exact hashes. Do not include CI fixture pixels, silently merge a staging branch, substitute a different procedural human, or leave several competing current masters. Review the integration chain deliberately; do not change main without the owner's merge instruction.
 
-Runner asset `b6203e225bb34b1a30efc5d0a13d85e1e4803506`; standalone viewer `art_reviews/runner_lab/project.godot`; actual PNG/resource run `35175038064` passed 45 viewer checks and captured actual art.
-Spitter asset `3a4d3b6acce17cf45deb14ff282f5daaf7f25c37`; integration PR #5/run `35177460586`. Mouth sockets exist, dedicated acid-emission attachment remains pending.
-Charger asset `271ea45aa42e497dc323e808aa8e6d07a906bac4`; integration PR #6/run `35212057317` passed 335 assertions before the brute addition.
-The selected-human firing correction is on `fix/locked-human-firing`; run `35172540277` verified its source using fixtures. Visual approval is pending; its owning `firing_review/README.md` records the exact scope.
+After consolidation: visual refinement and approval of all alien candidates/firing, final attached mouth/pulse/acid effects, coherent environment/pickup/UI polish, remaining player action coverage without redesigning the locked body, and end-to-end real-art playtests. Then test desktop exports/Steam packaging. Mobile comes later. Do not add more monsters, maps or systems merely to inflate progress.
 
-## Authority, contract and checks
+## Earlier evidence and timing distinctions
 
-The obsolete player-rendering automation is disabled. Older procedural-player files still visible here are superseded experiments, not the approved person. The exact selected human still resides in its conversation-delivered project, bound by `player_visual_lock.json`; do not claim another procedural model's larger frame inventory fulfills that lock.
+Runner asset `b6203e225bb34b1a30efc5d0a13d85e1e4803506`; standalone viewer `art_reviews/runner_lab/project.godot`; actual-art run `35175038064` passed 45 viewer checks and produced captures.
 
-The official catalogue remains 91 entries / 1,134 planned frame slots. These are requirements, not completion percentages. Structural audits may count obsolete unapproved drafts; this is not artistic approval. Keep one current source/frame/delivery per family, with history in Git rather than parallel final/archive/rejected masters.
+Spitter asset `3a4d3b6acce17cf45deb14ff282f5daaf7f25c37`; PR #5/run `35177460586`. Mouth sockets exist, but final attached acid emission remains pending.
+
+Charger asset `271ea45aa42e497dc323e808aa8e6d07a906bac4`; PR #6/run `35212057317`. Existing simulation owns warning/dash/recovery and locked attack direction.
+
+Brute asset `a9f2c3e851599ed6b4a6b5f78109c908d9636fdc`; PR #7/run `35214395321`. Continuous contact damage and 20% armour reduction remain unchanged. Its wind-up is reviewer-only, not a newly telegraphed slam or safe window. Contact gestures are cosmetic.
+
+Human firing correction: `fix/locked-human-firing`; run `35172540277` verified its source with fixtures. Visual approval remains pending; see its owning `firing_review/README.md`.
+
+## Authority and approval gates
+
+The obsolete automatic player renderer remains disabled. Older procedural-player files still visible here are superseded experiments, not the approved person. The exact selected human lives in its identified conversation package, bound by `player_visual_lock.json`. More frame slots in a different model do not fulfill that lock.
+
+The catalogue remains 91 entries / 1,134 planned frame slots. These are requirements, not completion percentages. Audits may count obsolete unapproved drafts; a green test is not artistic approval. Keep one current source/frame/delivery per family, with history in Git rather than parallel final/archive/rejected masters.
 
 ```sh
 python3 -m pip install -r tools/requirements-artpack.txt
 python3 -m unittest discover -s tests -p 'test_artpack*.py' -v
 python3 tools/artpack.py audit
-python3 tools/artpack.py check-family brute
+python3 tools/artpack.py check-family brood_warden
 ```
 
-The approved-only exporter remains gated on complete families, actual owner review and source permission. No command fabricates approval. Hashes establish byte identity, not quality or legal ownership. No fonts, restricted stock source, credentials or signing files belong in the public pack. Do not merge a fixture-staging branch as the complete art-equipped game.
+The production exporter requires complete families, explicit owner approval and source permission. No command fabricates approval. Hashes establish byte identity, not quality or legal ownership. No fonts, restricted stock source, credentials or signing files belong in the public pack. Never present a fixture-staging checkout as the complete real-art game.
