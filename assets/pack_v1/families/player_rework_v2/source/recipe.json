@@ -1,0 +1,97 @@
+{
+  "asset_id": "player_rework_v2",
+  "cell": [
+    128,
+    128
+  ],
+  "pivot": [
+    64,
+    110
+  ],
+  "physical_scale": 0.84,
+  "clip": "walk",
+  "frames": 8,
+  "fps": 12,
+  "materials": {
+    "shirt": {
+      "hex": "303936",
+      "wear": 0.2,
+      "specular": 0.025
+    },
+    "cloth_edge": {
+      "hex": "49514A",
+      "wear": 0.17,
+      "specular": 0.025
+    },
+    "vest": {
+      "hex": "4A5140",
+      "wear": 0.24,
+      "specular": 0.025
+    },
+    "webbing": {
+      "hex": "77705A",
+      "wear": 0.18,
+      "specular": 0.025
+    },
+    "pants": {
+      "hex": "4C5140",
+      "wear": 0.23,
+      "specular": 0.025
+    },
+    "crease": {
+      "hex": "343B31",
+      "wear": 0.16,
+      "specular": 0.02
+    },
+    "skin": {
+      "hex": "A87551",
+      "wear": 0.1,
+      "specular": 0.045
+    },
+    "skin_light": {
+      "hex": "BA8B62",
+      "wear": 0.07,
+      "specular": 0.04
+    },
+    "skin_dark": {
+      "hex": "694A36",
+      "wear": 0.08,
+      "specular": 0.02
+    },
+    "hair": {
+      "hex": "302A24",
+      "wear": 0.13,
+      "specular": 0.03
+    },
+    "hair_edge": {
+      "hex": "48392C",
+      "wear": 0.16,
+      "specular": 0.04
+    },
+    "eye": {
+      "hex": "241E19",
+      "wear": 0.0,
+      "specular": 0.1
+    },
+    "boot": {
+      "hex": "272D28",
+      "wear": 0.2,
+      "specular": 0.02
+    },
+    "metal": {
+      "hex": "4C5351",
+      "wear": 0.2,
+      "specular": 0.12
+    },
+    "gun": {
+      "hex": "272D2C",
+      "wear": 0.14,
+      "specular": 0.085
+    },
+    "gun_edge": {
+      "hex": "69716B",
+      "wear": 0.15,
+      "specular": 0.1
+    }
+  }
+}

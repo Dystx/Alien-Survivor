@@ -1,0 +1,40 @@
+{
+  "status": "review",
+  "owner_approval": null,
+  "frame_count": 128,
+  "directions": 8,
+  "clips": {
+    "ready": {
+      "frames": 4,
+      "fps": 6,
+      "loop": true
+    },
+    "walk": {
+      "frames": 8,
+      "fps": 12,
+      "loop": true
+    },
+    "fire": {
+      "frames": 4,
+      "fps": 18,
+      "loop": false
+    }
+  },
+  "source_sha256": "3b3d1d737f35e8393a2f8b77840fa5db5ddbbb76fcb4552206b55b68b987e6a9",
+  "renderer_sha256": "cf0ef91863b5cbfafc677064f95018df6406cf4fb66e87ec02ae8e2dfda7be84",
+  "source_revision": "0dacf9577308723f9ce83271096ee2154075d477",
+  "tests": {
+    "actual_pixel_model_tests": 15,
+    "actual_godot_viewer_checks": 62,
+    "captured_frames": 10
+  },
+  "not_established": [
+    "Owner identity/visual approval",
+    "Final painted finish",
+    "Complete gameplay integration",
+    "Hit/death/strafe/reverse/walk-fire coverage",
+    "Mac/mobile input, audio or performance"
+  ],
+  "source_model": "source/master.glb stores named geometry and a walk track; other poses are in the shared authoring Python.",
+  "previous_character": "Original approved player and running game are unchanged."
+}

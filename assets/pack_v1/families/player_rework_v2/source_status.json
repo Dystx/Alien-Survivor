@@ -1,21 +1,49 @@
 {
   "asset_id": "player_rework_v2",
-  "status": "review_source_only",
+  "status": "rendered_review_candidate",
   "branch": "art/player-rework-v2",
   "current_source_commit": "027abe63308146e52421647d5011410421794b62",
-  "directions": ["e", "se", "s", "sw", "w", "nw", "n", "ne"],
+  "directions": [
+    "e",
+    "se",
+    "s",
+    "sw",
+    "w",
+    "nw",
+    "n",
+    "ne"
+  ],
   "clips": {
-    "ready": {"frames": 4, "fps": 6, "loop": true},
-    "walk": {"frames": 8, "fps": 12, "loop": true},
-    "fire": {"frames": 4, "fps": 18, "loop": false}
+    "ready": {
+      "frames": 4,
+      "fps": 6,
+      "loop": true
+    },
+    "walk": {
+      "frames": 8,
+      "fps": 12,
+      "loop": true
+    },
+    "fire": {
+      "frames": 4,
+      "fps": 18,
+      "loop": false
+    }
   },
-  "missing_before_integration": ["hit", "death", "strafe", "reverse", "owner_art_review"],
+  "missing_before_integration": [
+    "hit",
+    "death",
+    "strafe",
+    "reverse",
+    "owner_art_review"
+  ],
   "gameplay_fallback": "selected HumanReview player remains unchanged",
   "full_family_approval": false,
   "full_pack_approval": false,
   "notes": [
-    "Rifle and hands share one shoulder-mounted rig.",
-    "Muzzle/stock/trigger/support/shoulder/eye sockets are authored in source.",
-    "Rendered output is not yet published by this status file and is not implied to be approved."
-  ]
+    "Current execution evidence and approval state are in delivery.json.",
+    "This first rendered batch is not integrated into the survival game and is not owner-approved."
+  ],
+  "delivery_record": "delivery.json",
+  "frame_count": 128
 }
