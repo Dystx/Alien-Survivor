@@ -8,7 +8,7 @@ root=Path(__file__).resolve().parents[1]
 game=root/'game';here=root/'runner_review';engine=sys.argv[1]
 ART='b6203e225bb34b1a30efc5d0a13d85e1e4803506'
 previous=root/'firing_review/verify.py'
-staging=previous.read_text().split('commands=[',1)[0]
+staging=previous.read_text().split('\ncommands=[',1)[0]
 exec(compile(staging,str(previous),'exec'),{'__file__':str(previous),'__name__':'runner_staging'})
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def canonical(s):return '\n'.join(l.rstrip() for l in s.splitlines() if l.strip() and not l.lstrip().startswith('#'))
