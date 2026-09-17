@@ -1,0 +1,34 @@
+name: Warden integration checks
+on:
+  push:
+    branches: ['feat/warden-animation']
+    paths:
+      - 'warden_review/**'
+      - '.github/workflows/warden-integration.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Fetch exact public source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install existing pinned checksum-verified engine
+        run: python3 tools/install_ci_godot.py /tmp/warden-godot
+      - name: Verify boss timings, final results and all previous regressions
+        run: python3 warden_review/verify.py /tmp/warden-godot/godot
+      - name: Attach actual Warden art and evidence without fixture images
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: warden-evidence
+          path: warden_evidence/
+          retention-days: 14
+          if-no-files-found: error
+# Read-only checks. No merges, releases, approvals or normal-run balance changes.
