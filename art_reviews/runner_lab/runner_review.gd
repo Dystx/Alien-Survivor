@@ -35,7 +35,7 @@ func _load_art() -> bool:
 	var data: Dictionary = parsed
 	if data.get("asset_id") != "runner" or data.get("status") != "review":
 		return _fail("Expected the runner review candidate, not another asset.")
-	if data.get("cell") != [96, 96] or data.get("pivot") != [48, 78]:
+	if not _matches_pair(data.get("cell"), CELL) or not _matches_pair(data.get("pivot"), PIVOT):
 		return _fail("Runner frame size or pivot differs from the current contract.")
 	clips = data.get("clips", {})
 	for name in CLIPS:
@@ -66,6 +66,14 @@ func _load_art() -> bool:
 		if sequence.has(null):
 			return _fail("Incomplete runner sequence.")
 	return frames_total == 84
+
+static func _matches_pair(value: Variant, expected: Vector2) -> bool:
+	# JSON numbers deserialize as floats; normalize values, not Array types.
+	if not value is Array or value.size() != 2:
+		return false
+	if not (value[0] is int or value[0] is float) or not (value[1] is int or value[1] is float):
+		return false
+	return Vector2(float(value[0]), float(value[1])) == expected
 
 func _fail(message: String) -> bool:
 	status.text = message
