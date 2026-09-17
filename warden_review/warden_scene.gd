@@ -57,6 +57,10 @@ func _process(_dt: float) -> bool:
 	if ticks == 240:
 		require(not scene.view.warden.waiting_for_death() and not scene.hud.waiting_for_death and scene.hud.overlay.visible, "Victory panel did not follow completed fall")
 		require(scene.sim.elapsed == frozen and not scene.view.human.dead, "Result animation advanced gameplay or killed human")
+	if ticks == 242:
+		# Exercise deferred focus on controls abandoned by a rapid overlay rebuild.
+		scene.hud.refresh(true)
+		scene.hud.refresh(true)
 	if ticks == 250:
 		scene._on_action("warden_review")
 		scene = null

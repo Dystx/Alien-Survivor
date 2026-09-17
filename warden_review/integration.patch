@@ -123,11 +123,22 @@
  		"brute_test":
 --- a/scripts/hud.gd
 +++ b/scripts/hud.gd
-@@ -209,7 +209,13 @@
+@@ -165,7 +165,7 @@
+ 	var button := _button(text, action)
+ 	box.add_child(button)
+ 	if focus:
+-		button.grab_focus.call_deferred()
++		_focus_current.call_deferred(weakref(button))
+ 	return button
+ func refresh(force: bool = false) -> void:
+ 	var current := "%s/%s/%s/%s" % [sim.phase, sim.level, screen_override, waiting_for_death]
+@@ -208,8 +208,14 @@
+ 			button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
  			benchmark_row.add_child(button)
  			if count == 25:
- 				button.grab_focus.call_deferred()
+-				button.grab_focus.call_deferred()
 -		_add_button(box, "BOSS TEST  /  UPGRADED LOADOUT", "boss_test")
++				_focus_current.call_deferred(weakref(button))
 +		var boss_row := HBoxContainer.new()
 +		boss_row.add_theme_constant_override("separation", 8)
 +		box.add_child(boss_row)
@@ -138,3 +149,23 @@
  		for species: String in ["spitter", "charger", "brute"]:
  			var test_row := HBoxContainer.new()
  			test_row.add_theme_constant_override("separation", 8)
+@@ -262,7 +268,7 @@
+ 				button.pressed.connect(func() -> void: upgrade_requested.emit(id))
+ 				box.add_child(button)
+ 				if index == 0:
+-					button.grab_focus.call_deferred()
++					_focus_current.call_deferred(weakref(button))
+ 		Simulation.Phase.RESULTS:
+ 			_text(box, "RUN COMPLETE", 13, ACCENT)
+ 			_text(box, sim.result, 32)
+@@ -294,3 +300,10 @@
+ 	if debug_visible:
+ 		debug_label.text = "PROTOTYPE / NO BENCHMARK GUARANTEE\nGodot %s | %s\nSeed %d  |  %.1f FPS\nFrame %.2f ms  |  Simulation %.2f ms\nAliens %d  /  Bullets %d  /  XP objects %d\nShots %d  |  %.2f active seconds" % [Engine.get_version_info().string, OS.get_name(), sim.seed_value, Engine.get_frames_per_second(), frame_ms, step_ms, sim.enemies.size(), sim.bullets.size(), sim.pickups.size(), sim.shot_count, sim.elapsed]
+ 	refresh()
++
++func _focus_current(reference: WeakRef) -> void:
++	# Overlay rebuilds detach queued controls before deferred focus runs.
++	# Skip obsolete controls rather than focusing a removed result/menu button.
++	var control := reference.get_ref() as Control
++	if is_inside_tree() and is_instance_valid(control) and control.is_inside_tree() and control.is_visible_in_tree() and not control.is_queued_for_deletion():
++		control.grab_focus()
