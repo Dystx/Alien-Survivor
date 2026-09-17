@@ -1,0 +1,7759 @@
+{
+  "asset_id": "brood_warden",
+  "status": "review",
+  "cell": [
+    256,
+    256
+  ],
+  "pivot": [
+    128,
+    204
+  ],
+  "directions": [
+    "e",
+    "s",
+    "w",
+    "n"
+  ],
+  "clips": {
+    "idle": {
+      "frames": 4,
+      "fps": 6,
+      "loop": true
+    },
+    "move": {
+      "frames": 6,
+      "fps": 8,
+      "loop": true
+    },
+    "charge_windup": {
+      "frames": 8,
+      "fps": 10,
+      "loop": false
+    },
+    "charge": {
+      "frames": 6,
+      "fps": 14,
+      "loop": true
+    },
+    "acid_attack": {
+      "frames": 6,
+      "fps": 10,
+      "loop": false
+    },
+    "pulse_attack": {
+      "frames": 8,
+      "fps": 12,
+      "loop": false
+    },
+    "recovery": {
+      "frames": 4,
+      "fps": 8,
+      "loop": false
+    },
+    "hit": {
+      "frames": 2,
+      "fps": 10,
+      "loop": false
+    },
+    "phase_transition": {
+      "frames": 6,
+      "fps": 10,
+      "loop": false
+    },
+    "death": {
+      "frames": 10,
+      "fps": 8,
+      "loop": false
+    }
+  },
+  "frames": [
+    {
+      "clip": "idle",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/idle/e/000.png",
+      "sha256": "b349bbcfc4fece9d057c164227e7844f2f2b46c2f096c2ffcfdd2e9bc03e3cd3",
+      "sockets": {
+        "mouth": [
+          195.27,
+          161.9404
+        ],
+        "pulse": [
+          140.2188,
+          146.8583
+        ],
+        "tendril_l": [
+          134.7382,
+          87.6551
+        ],
+        "tendril_r": [
+          134.7382,
+          190.7354
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        2,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/idle/e/001.png",
+      "sha256": "6e6b8d7dba35ae91856db9cc2b9176a3be76855751edda0baf5ff20dfee43139",
+      "sockets": {
+        "mouth": [
+          195.3095,
+          161.6583
+        ],
+        "pulse": [
+          140.2188,
+          146.435
+        ],
+        "tendril_l": [
+          139.8298,
+          85.0804
+        ],
+        "tendril_r": [
+          127.8469,
+          188.1289
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        262,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/idle/e/002.png",
+      "sha256": "b349bbcfc4fece9d057c164227e7844f2f2b46c2f096c2ffcfdd2e9bc03e3cd3",
+      "sockets": {
+        "mouth": [
+          195.27,
+          161.9404
+        ],
+        "pulse": [
+          140.2188,
+          146.8583
+        ],
+        "tendril_l": [
+          134.7382,
+          87.6551
+        ],
+        "tendril_r": [
+          134.7382,
+          190.7354
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        522,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/idle/e/003.png",
+      "sha256": "e9b7193dd65d584c02ffe0b30d6ee4e3a718f9851d0a29e1a8d04027d7a2b2fb",
+      "sockets": {
+        "mouth": [
+          195.2293,
+          162.2223
+        ],
+        "pulse": [
+          140.2188,
+          147.2816
+        ],
+        "tendril_l": [
+          129.3341,
+          90.5352
+        ],
+        "tendril_r": [
+          141.1954,
+          192.9094
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        782,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/idle/s/000.png",
+      "sha256": "30f663754fc8f98572f04379795f55c134c8b61d14f446e0ff67a43b0e1cf2b6",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.5754
+        ],
+        "pulse": [
+          128.0,
+          152.9677
+        ],
+        "tendril_l": [
+          231.0803,
+          142.5644
+        ],
+        "tendril_r": [
+          24.9197,
+          142.5644
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1042,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/idle/s/001.png",
+      "sha256": "047c776665ef1b1e1130c0734dacdbeb924c85409adcc81d71702f457287900e",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.3131
+        ],
+        "pulse": [
+          128.0,
+          152.5444
+        ],
+        "tendril_l": [
+          228.0958,
+          141.0432
+        ],
+        "tendril_r": [
+          21.9987,
+          135.0517
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1302,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/idle/s/002.png",
+      "sha256": "30f663754fc8f98572f04379795f55c134c8b61d14f446e0ff67a43b0e1cf2b6",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.5754
+        ],
+        "pulse": [
+          128.0,
+          152.9677
+        ],
+        "tendril_l": [
+          231.0803,
+          142.5644
+        ],
+        "tendril_r": [
+          24.9197,
+          142.5644
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1562,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/idle/s/003.png",
+      "sha256": "983e7f8932f46f15d93db61e92437c6485fd6693431ba0b89b7950e6beaaed9d",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.8369
+        ],
+        "pulse": [
+          128.0,
+          153.391
+        ],
+        "tendril_l": [
+          233.4557,
+          143.9301
+        ],
+        "tendril_r": [
+          28.7072,
+          149.8607
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        2,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/idle/w/000.png",
+      "sha256": "2b4ac819db10a3d169ca7e4c226193c4ae29a7fbfe8a1d2de47ba616f8523e8f",
+      "sockets": {
+        "mouth": [
+          60.73,
+          161.9404
+        ],
+        "pulse": [
+          115.7812,
+          146.8583
+        ],
+        "tendril_l": [
+          121.2618,
+          190.7354
+        ],
+        "tendril_r": [
+          121.2618,
+          87.6551
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        262,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/idle/w/001.png",
+      "sha256": "c44ed9979a8b3ce689ca28c3b9be9aac058960b9a85ca21ffd92c4bcfdd64c86",
+      "sockets": {
+        "mouth": [
+          60.6905,
+          161.6583
+        ],
+        "pulse": [
+          115.7812,
+          146.435
+        ],
+        "tendril_l": [
+          116.1702,
+          185.1762
+        ],
+        "tendril_r": [
+          128.1531,
+          82.1276
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        522,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/idle/w/002.png",
+      "sha256": "2b4ac819db10a3d169ca7e4c226193c4ae29a7fbfe8a1d2de47ba616f8523e8f",
+      "sockets": {
+        "mouth": [
+          60.73,
+          161.9404
+        ],
+        "pulse": [
+          115.7812,
+          146.8583
+        ],
+        "tendril_l": [
+          121.2618,
+          190.7354
+        ],
+        "tendril_r": [
+          121.2618,
+          87.6551
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        782,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/idle/w/003.png",
+      "sha256": "008a608451e51c55040f8f2c343f789e3d29d0ef47f28b272fb9413cea6d0470",
+      "sockets": {
+        "mouth": [
+          60.7707,
+          162.2223
+        ],
+        "pulse": [
+          115.7812,
+          147.2816
+        ],
+        "tendril_l": [
+          126.6659,
+          195.9909
+        ],
+        "tendril_r": [
+          114.8046,
+          93.6166
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1042,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/idle/n/000.png",
+      "sha256": "f86e48325631b0f5c516678f2cbf74db0fff6494d1f3f5c693e810f07c829a36",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.3054
+        ],
+        "pulse": [
+          128.0,
+          140.7489
+        ],
+        "tendril_l": [
+          24.9197,
+          135.8261
+        ],
+        "tendril_r": [
+          231.0803,
+          135.8261
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1302,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/idle/n/001.png",
+      "sha256": "1f45960af407a21a5ecb1611c8f2e40fb5b775dd6234f2f76d8188dc074f1c4d",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.0036
+        ],
+        "pulse": [
+          128.0,
+          140.3256
+        ],
+        "tendril_l": [
+          27.9042,
+          129.2134
+        ],
+        "tendril_r": [
+          234.0013,
+          135.2048
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1562,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/idle/n/002.png",
+      "sha256": "f86e48325631b0f5c516678f2cbf74db0fff6494d1f3f5c693e810f07c829a36",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.3054
+        ],
+        "pulse": [
+          128.0,
+          140.7489
+        ],
+        "tendril_l": [
+          24.9197,
+          135.8261
+        ],
+        "tendril_r": [
+          231.0803,
+          135.8261
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        2,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/idle/n/003.png",
+      "sha256": "5fdec33e678169e82d740be6b7396047702e7695e8c656de8dbb48be8a415ad6",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.6076
+        ],
+        "pulse": [
+          128.0,
+          141.1722
+        ],
+        "tendril_l": [
+          22.5443,
+          142.596
+        ],
+        "tendril_r": [
+          227.2928,
+          136.6653
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        262,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/move/e/000.png",
+      "sha256": "4fd2642f86e6a46588b83bbb564ccc231b097966bdf43e54d35d91189241ba99",
+      "sockets": {
+        "mouth": [
+          195.278,
+          161.9687
+        ],
+        "pulse": [
+          140.2188,
+          146.8583
+        ],
+        "tendril_l": [
+          134.7382,
+          87.6551
+        ],
+        "tendril_r": [
+          134.7382,
+          190.7354
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        522,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/move/e/001.png",
+      "sha256": "fe97aed8317cf9b63fbd0f6a9e3ba274c54dcf5aeaff488095db1f5503575539",
+      "sockets": {
+        "mouth": [
+          195.278,
+          161.2979
+        ],
+        "pulse": [
+          140.2188,
+          146.3176
+        ],
+        "tendril_l": [
+          139.1688,
+          84.0507
+        ],
+        "tendril_r": [
+          128.7908,
+          189.7642
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        782,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/move/e/002.png",
+      "sha256": "4b01404724033a1478d0eeab3ab0076085e25b5a6d5cede6575516b8edbcab2c",
+      "sockets": {
+        "mouth": [
+          195.278,
+          162.3975
+        ],
+        "pulse": [
+          140.2188,
+          147.4173
+        ],
+        "tendril_l": [
+          139.1688,
+          85.1504
+        ],
+        "tendril_r": [
+          128.7908,
+          190.8639
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1042,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/move/e/003.png",
+      "sha256": "593cd2c78f9f92163462cb99e831e6de26bc596f5c57a9c779ccf17a773907a3",
+      "sockets": {
+        "mouth": [
+          195.278,
+          161.9687
+        ],
+        "pulse": [
+          140.2188,
+          146.8583
+        ],
+        "tendril_l": [
+          134.7382,
+          87.6551
+        ],
+        "tendril_r": [
+          134.7382,
+          190.7354
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1302,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 4,
+      "path": "frames/move/e/004.png",
+      "sha256": "5cb25c109bc73de997a5e8462122e2ef589c0a88f00bcf961386d9724c35e3f8",
+      "sockets": {
+        "mouth": [
+          195.278,
+          161.5367
+        ],
+        "pulse": [
+          140.2188,
+          146.2996
+        ],
+        "tendril_l": [
+          130.0732,
+          90.5148
+        ],
+        "tendril_r": [
+          140.3598,
+          190.4009
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1562,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 5,
+      "path": "frames/move/e/005.png",
+      "sha256": "42a6b4d6e5d9717399b6e234b949d106d68dcbfc3952c153b0281a8a6c121742",
+      "sockets": {
+        "mouth": [
+          195.278,
+          162.6364
+        ],
+        "pulse": [
+          140.2188,
+          147.3993
+        ],
+        "tendril_l": [
+          130.0732,
+          91.6145
+        ],
+        "tendril_r": [
+          140.3598,
+          191.5006
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        2,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/move/s/000.png",
+      "sha256": "65ca487a23310593daf587327419014165c02d0edf000d31a58937c7a114ca78",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.6077
+        ],
+        "pulse": [
+          128.0,
+          152.9677
+        ],
+        "tendril_l": [
+          231.0803,
+          142.5644
+        ],
+        "tendril_r": [
+          24.9197,
+          142.5644
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        262,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/move/s/001.png",
+      "sha256": "8f33f73de97fa82dfbf75ecbbd434943f60387515401dbbf93dc8e1184d05c98",
+      "sockets": {
+        "mouth": [
+          128.2389,
+          195.0563
+        ],
+        "pulse": [
+          127.982,
+          152.418
+        ],
+        "tendril_l": [
+          228.3166,
+          139.7934
+        ],
+        "tendril_r": [
+          22.1472,
+          137.2333
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        522,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/move/s/002.png",
+      "sha256": "7acca3592d2343622a4c0fc486ff3d4bab8e3165a2e7e198b8ffc08075a70411",
+      "sockets": {
+        "mouth": [
+          128.2389,
+          196.156
+        ],
+        "pulse": [
+          127.982,
+          153.5177
+        ],
+        "tendril_l": [
+          228.3166,
+          140.8931
+        ],
+        "tendril_r": [
+          22.1472,
+          138.333
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        782,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/move/s/003.png",
+      "sha256": "24b5f12e0015aeecc9e8b9c199d03b7503c82d9e0d8bacba82f3659dfc38addc",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.6077
+        ],
+        "pulse": [
+          128.0,
+          152.9677
+        ],
+        "tendril_l": [
+          231.0803,
+          142.5644
+        ],
+        "tendril_r": [
+          24.9197,
+          142.5644
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1042,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 4,
+      "path": "frames/move/s/004.png",
+      "sha256": "347e9ebadbe34de4d41333904de5fe52aa81cc35ed2c3383bc28766422fa32e5",
+      "sockets": {
+        "mouth": [
+          127.7611,
+          195.0563
+        ],
+        "pulse": [
+          128.018,
+          152.418
+        ],
+        "tendril_l": [
+          233.2574,
+          144.1801
+        ],
+        "tendril_r": [
+          28.2573,
+          146.7095
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1302,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 5,
+      "path": "frames/move/s/005.png",
+      "sha256": "039760cbccf2a01b8cd2b19b72b400fa1b1aaf015605b3f88b8b2640b2597906",
+      "sockets": {
+        "mouth": [
+          127.7611,
+          196.156
+        ],
+        "pulse": [
+          128.018,
+          153.5177
+        ],
+        "tendril_l": [
+          233.2574,
+          145.2798
+        ],
+        "tendril_r": [
+          28.2573,
+          147.8092
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1562,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/move/w/000.png",
+      "sha256": "d2d21e53eaf5246ba9d0cfea9960e198704a317460f8532d99598a9c3d135791",
+      "sockets": {
+        "mouth": [
+          60.722,
+          161.9687
+        ],
+        "pulse": [
+          115.7812,
+          146.8583
+        ],
+        "tendril_l": [
+          121.2618,
+          190.7354
+        ],
+        "tendril_r": [
+          121.2618,
+          87.6551
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        2,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/move/w/001.png",
+      "sha256": "aa34ac82599b36e534dc52e82fc93a9dfb6d30fe7b5e05a180db9a22d536e6ed",
+      "sockets": {
+        "mouth": [
+          60.722,
+          161.5367
+        ],
+        "pulse": [
+          115.7812,
+          146.2996
+        ],
+        "tendril_l": [
+          116.8312,
+          184.3673
+        ],
+        "tendril_r": [
+          127.2092,
+          83.9115
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        262,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/move/w/002.png",
+      "sha256": "daaba4de3a461bf6ac722917db6d366825a746238581bd71a2102e205b03e0ae",
+      "sockets": {
+        "mouth": [
+          60.722,
+          162.6364
+        ],
+        "pulse": [
+          115.7812,
+          147.3993
+        ],
+        "tendril_l": [
+          116.8312,
+          185.467
+        ],
+        "tendril_r": [
+          127.2092,
+          85.0112
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        522,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/move/w/003.png",
+      "sha256": "92237270bb0e9c0251337754890669962801b8824c27c33fe2a7d55e6340694c",
+      "sockets": {
+        "mouth": [
+          60.722,
+          161.9687
+        ],
+        "pulse": [
+          115.7812,
+          146.8583
+        ],
+        "tendril_l": [
+          121.2618,
+          190.7354
+        ],
+        "tendril_r": [
+          121.2618,
+          87.6551
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        782,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 4,
+      "path": "frames/move/w/004.png",
+      "sha256": "bca1a8c7eac91f2b69d6aa2e1879643c7f7b7a4093f06d56b658b6e02518a669",
+      "sockets": {
+        "mouth": [
+          60.722,
+          161.2979
+        ],
+        "pulse": [
+          115.7812,
+          146.3176
+        ],
+        "tendril_l": [
+          125.9268,
+          195.7722
+        ],
+        "tendril_r": [
+          115.6402,
+          90.6582
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1042,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 5,
+      "path": "frames/move/w/005.png",
+      "sha256": "68cb95eb6a0e17e4805af986751340b54caf8deb2b90849b331ef7b2f9782fd0",
+      "sockets": {
+        "mouth": [
+          60.722,
+          162.3975
+        ],
+        "pulse": [
+          115.7812,
+          147.4173
+        ],
+        "tendril_l": [
+          125.9268,
+          196.8719
+        ],
+        "tendril_r": [
+          115.6402,
+          91.7579
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1302,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/move/n/000.png",
+      "sha256": "923b01518f8073d725e26e5db84da3a81c70368dace7211fa0a10cd6ae861ca8",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.3297
+        ],
+        "pulse": [
+          128.0,
+          140.7489
+        ],
+        "tendril_l": [
+          24.9197,
+          135.8261
+        ],
+        "tendril_r": [
+          231.0803,
+          135.8261
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1562,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/move/n/001.png",
+      "sha256": "6ecef896a40d2ba0aecb712663c6e80c58f512c83c67221b6fe16d5e7cb6f2fc",
+      "sockets": {
+        "mouth": [
+          127.7611,
+          127.7783
+        ],
+        "pulse": [
+          128.018,
+          140.1992
+        ],
+        "tendril_l": [
+          27.6834,
+          128.6246
+        ],
+        "tendril_r": [
+          233.8528,
+          136.4424
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        2,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/move/n/002.png",
+      "sha256": "9b7713b7c667214cfe9d56f83d8a26fddb4f6029246e65deb86611f94788daaf",
+      "sockets": {
+        "mouth": [
+          127.7611,
+          128.878
+        ],
+        "pulse": [
+          128.018,
+          141.2989
+        ],
+        "tendril_l": [
+          27.6834,
+          129.7243
+        ],
+        "tendril_r": [
+          233.8528,
+          137.5421
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        262,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/move/n/003.png",
+      "sha256": "13c51a91899064ee9c89a5f7700ec93898e7f47f19f08aac8e77277c5c4dfcdb",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.3297
+        ],
+        "pulse": [
+          128.0,
+          140.7489
+        ],
+        "tendril_l": [
+          24.9197,
+          135.8261
+        ],
+        "tendril_r": [
+          231.0803,
+          135.8261
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        522,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 4,
+      "path": "frames/move/n/004.png",
+      "sha256": "1970c0cc6420d2220fc86457eacbb918bcc41ccc9cde1c60dae74aec44d174dc",
+      "sockets": {
+        "mouth": [
+          128.2389,
+          127.7783
+        ],
+        "pulse": [
+          127.982,
+          140.1992
+        ],
+        "tendril_l": [
+          22.7426,
+          142.1069
+        ],
+        "tendril_r": [
+          227.7427,
+          134.3497
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        782,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 5,
+      "path": "frames/move/n/005.png",
+      "sha256": "4e5db6aff2b8982a68d1a729f6aafc1ac94cbb6b6ac6f477836e8484e5eff997",
+      "sockets": {
+        "mouth": [
+          128.2389,
+          128.878
+        ],
+        "pulse": [
+          127.982,
+          141.2989
+        ],
+        "tendril_l": [
+          22.7426,
+          143.2066
+        ],
+        "tendril_r": [
+          227.7427,
+          135.4494
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1042,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/charge_windup/e/000.png",
+      "sha256": "b349bbcfc4fece9d057c164227e7844f2f2b46c2f096c2ffcfdd2e9bc03e3cd3",
+      "sockets": {
+        "mouth": [
+          195.27,
+          161.9404
+        ],
+        "pulse": [
+          140.2188,
+          146.8583
+        ],
+        "tendril_l": [
+          134.7382,
+          87.6551
+        ],
+        "tendril_r": [
+          134.7382,
+          190.7354
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1302,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/charge_windup/e/001.png",
+      "sha256": "6a2a2ac976e6ba7770c4dcc2863a1846cb0a52006690efce51ed8f3e0444d9a7",
+      "sockets": {
+        "mouth": [
+          195.1216,
+          162.1764
+        ],
+        "pulse": [
+          140.0699,
+          147.0928
+        ],
+        "tendril_l": [
+          134.4853,
+          87.7243
+        ],
+        "tendril_r": [
+          134.4322,
+          190.8694
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1562,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/charge_windup/e/002.png",
+      "sha256": "c758b1e0d2659a4eee534e8b685ffcad74d3b52e23387af96d4106b6bc3b4262",
+      "sockets": {
+        "mouth": [
+          194.7387,
+          162.7851
+        ],
+        "pulse": [
+          139.6859,
+          147.6974
+        ],
+        "tendril_l": [
+          133.8319,
+          87.9038
+        ],
+        "tendril_r": [
+          133.6416,
+          191.2135
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        2,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/charge_windup/e/003.png",
+      "sha256": "dfc22ae114516dfd5a025c3018dc0f82f520bf651af190f0a34460de053d1933",
+      "sockets": {
+        "mouth": [
+          194.2152,
+          163.6175
+        ],
+        "pulse": [
+          139.1608,
+          148.5242
+        ],
+        "tendril_l": [
+          132.9361,
+          88.1516
+        ],
+        "tendril_r": [
+          132.557,
+          191.6806
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        262,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "e",
+      "frame": 4,
+      "path": "frames/charge_windup/e/004.png",
+      "sha256": "64c8446f24ab2b66bbde2edce16b5042c7990c584505f6c8f55ee00ccdeaa7ce",
+      "sockets": {
+        "mouth": [
+          193.6447,
+          164.5243
+        ],
+        "pulse": [
+          138.5887,
+          149.4251
+        ],
+        "tendril_l": [
+          131.957,
+          88.425
+        ],
+        "tendril_r": [
+          131.371,
+          192.1848
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        522,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "e",
+      "frame": 5,
+      "path": "frames/charge_windup/e/005.png",
+      "sha256": "b38f2d2a236010e7c10a13285f3ab3382bf80a1f18150a83a510bd02a5d3d86a",
+      "sockets": {
+        "mouth": [
+          193.1212,
+          165.3566
+        ],
+        "pulse": [
+          138.0636,
+          150.2519
+        ],
+        "tendril_l": [
+          131.0557,
+          88.6789
+        ],
+        "tendril_r": [
+          130.2786,
+          192.6434
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        782,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "e",
+      "frame": 6,
+      "path": "frames/charge_windup/e/006.png",
+      "sha256": "e55368e7afbcff90a374965ce6baad83fb8ed5cd494a26f4ba807372d02ebc8a",
+      "sockets": {
+        "mouth": [
+          192.7383,
+          165.9653
+        ],
+        "pulse": [
+          137.6796,
+          150.8566
+        ],
+        "tendril_l": [
+          130.395,
+          88.8664
+        ],
+        "tendril_r": [
+          129.4774,
+          192.9762
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1042,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "e",
+      "frame": 7,
+      "path": "frames/charge_windup/e/007.png",
+      "sha256": "4cb048f08cc6ad00b2423497b1bebf778f16d3ddc870a3b58583dfbed4a8e261",
+      "sockets": {
+        "mouth": [
+          192.5899,
+          166.2014
+        ],
+        "pulse": [
+          137.5307,
+          151.091
+        ],
+        "tendril_l": [
+          130.1384,
+          88.9396
+        ],
+        "tendril_r": [
+          129.1663,
+          193.1047
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1302,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/charge_windup/s/000.png",
+      "sha256": "30f663754fc8f98572f04379795f55c134c8b61d14f446e0ff67a43b0e1cf2b6",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.5754
+        ],
+        "pulse": [
+          128.0,
+          152.9677
+        ],
+        "tendril_l": [
+          231.0803,
+          142.5644
+        ],
+        "tendril_r": [
+          24.9197,
+          142.5644
+        ]
+      },
+      "atlas": "atlas_0.png",
+      "region": [
+        1562,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/charge_windup/s/001.png",
+      "sha256": "535dfb6bd59c6216e1bceb8ecd7c787299f622d5421e19003b95f0c4f7bd7646",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.7372
+        ],
+        "pulse": [
+          128.0,
+          153.1277
+        ],
+        "tendril_l": [
+          231.1317,
+          142.5328
+        ],
+        "tendril_r": [
+          24.8415,
+          142.5063
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        2,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/charge_windup/s/002.png",
+      "sha256": "8587692bec5c8f8bff573028c933b8333b0b70c273c2814acc3703874714c9f0",
+      "sockets": {
+        "mouth": [
+          128.0,
+          196.1545
+        ],
+        "pulse": [
+          128.0,
+          153.5404
+        ],
+        "tendril_l": [
+          231.2624,
+          142.4509
+        ],
+        "tendril_r": [
+          24.6429,
+          142.3558
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        262,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/charge_windup/s/003.png",
+      "sha256": "d331ec3f15102b948c62ece1349673d642abe1676a755b29e3028a07b0bd9709",
+      "sockets": {
+        "mouth": [
+          128.0,
+          196.725
+        ],
+        "pulse": [
+          128.0,
+          154.1046
+        ],
+        "tendril_l": [
+          231.4363,
+          142.3378
+        ],
+        "tendril_r": [
+          24.3784,
+          142.1483
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        522,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "s",
+      "frame": 4,
+      "path": "frames/charge_windup/s/004.png",
+      "sha256": "bba60e606f5725413758d804a1ff687fd2031d3f04b8dc99b18e56b16c3b2cd8",
+      "sockets": {
+        "mouth": [
+          128.0,
+          197.3467
+        ],
+        "pulse": [
+          128.0,
+          154.7194
+        ],
+        "tendril_l": [
+          231.6194,
+          142.2132
+        ],
+        "tendril_r": [
+          24.0996,
+          141.9202
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        782,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "s",
+      "frame": 5,
+      "path": "frames/charge_windup/s/005.png",
+      "sha256": "9c99bcc1a5439ba55ce7905f49df70e99860cc16b21c277b7713cd96485ef4a7",
+      "sockets": {
+        "mouth": [
+          128.0,
+          197.9172
+        ],
+        "pulse": [
+          128.0,
+          155.2837
+        ],
+        "tendril_l": [
+          231.7815,
+          142.0975
+        ],
+        "tendril_r": [
+          23.8524,
+          141.709
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1042,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "s",
+      "frame": 6,
+      "path": "frames/charge_windup/s/006.png",
+      "sha256": "3a91e187ac80d9d4e263a8a282246cf9ef94581ae0ebeb27a0b8a64b51cadfb0",
+      "sockets": {
+        "mouth": [
+          128.0,
+          198.3345
+        ],
+        "pulse": [
+          128.0,
+          155.6963
+        ],
+        "tendril_l": [
+          231.8965,
+          142.0122
+        ],
+        "tendril_r": [
+          23.6769,
+          141.5534
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1302,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "s",
+      "frame": 7,
+      "path": "frames/charge_windup/s/007.png",
+      "sha256": "d06a6ef91896954dd17c7d7c792b0083a40bf670468ec6e83015162a0f30a657",
+      "sockets": {
+        "mouth": [
+          128.0,
+          198.4963
+        ],
+        "pulse": [
+          128.0,
+          155.8564
+        ],
+        "tendril_l": [
+          231.9403,
+          141.9789
+        ],
+        "tendril_r": [
+          23.6101,
+          141.4929
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1562,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/charge_windup/w/000.png",
+      "sha256": "2b4ac819db10a3d169ca7e4c226193c4ae29a7fbfe8a1d2de47ba616f8523e8f",
+      "sockets": {
+        "mouth": [
+          60.73,
+          161.9404
+        ],
+        "pulse": [
+          115.7812,
+          146.8583
+        ],
+        "tendril_l": [
+          121.2618,
+          190.7354
+        ],
+        "tendril_r": [
+          121.2618,
+          87.6551
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        2,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/charge_windup/w/001.png",
+      "sha256": "125e72447c51769087a77391b80769c6add4fb3bcd0a6a4bb95b326b6a130388",
+      "sockets": {
+        "mouth": [
+          60.8784,
+          162.1764
+        ],
+        "pulse": [
+          115.9301,
+          147.0928
+        ],
+        "tendril_l": [
+          121.5147,
+          190.8561
+        ],
+        "tendril_r": [
+          121.5678,
+          87.711
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        262,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/charge_windup/w/002.png",
+      "sha256": "ca29e4a3816951902e752d66b16f69478e2881f710f0439a0b7a88a7c63756b5",
+      "sockets": {
+        "mouth": [
+          61.2613,
+          162.7851
+        ],
+        "pulse": [
+          116.3141,
+          147.6974
+        ],
+        "tendril_l": [
+          122.1681,
+          191.1662
+        ],
+        "tendril_r": [
+          122.3584,
+          87.8565
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        522,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/charge_windup/w/003.png",
+      "sha256": "b079fdaa274d4e68dbf218f1409e05ffe0ee0864e107c88498f98c0063b696c8",
+      "sockets": {
+        "mouth": [
+          61.7848,
+          163.6175
+        ],
+        "pulse": [
+          116.8392,
+          148.5242
+        ],
+        "tendril_l": [
+          123.0639,
+          191.588
+        ],
+        "tendril_r": [
+          123.443,
+          88.059
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        782,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "w",
+      "frame": 4,
+      "path": "frames/charge_windup/w/004.png",
+      "sha256": "19821672da8d94373431ecd0b066474456b33dbfb9b0640471c93885409444e8",
+      "sockets": {
+        "mouth": [
+          62.3553,
+          164.5243
+        ],
+        "pulse": [
+          117.4113,
+          149.4251
+        ],
+        "tendril_l": [
+          124.043,
+          192.0444
+        ],
+        "tendril_r": [
+          124.629,
+          88.2845
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1042,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "w",
+      "frame": 5,
+      "path": "frames/charge_windup/w/005.png",
+      "sha256": "bf8536f2c810e48b800d07b0ecc9ae8bcd22726016c989a87a70b04c745199a8",
+      "sockets": {
+        "mouth": [
+          62.8788,
+          165.3566
+        ],
+        "pulse": [
+          117.9364,
+          150.2519
+        ],
+        "tendril_l": [
+          124.9443,
+          192.4604
+        ],
+        "tendril_r": [
+          125.7214,
+          88.4959
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1302,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "w",
+      "frame": 6,
+      "path": "frames/charge_windup/w/006.png",
+      "sha256": "f8c3b659675235ac03fd61e851b79b3d46d591b5de1e240e22a72c00bbd51cf3",
+      "sockets": {
+        "mouth": [
+          63.2617,
+          165.9653
+        ],
+        "pulse": [
+          118.3204,
+          150.8566
+        ],
+        "tendril_l": [
+          125.605,
+          192.763
+        ],
+        "tendril_r": [
+          126.5226,
+          88.6532
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1562,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "w",
+      "frame": 7,
+      "path": "frames/charge_windup/w/007.png",
+      "sha256": "efa4a4721a3d20f7a9cea55de55ecb84721cc98370ac19d20f0735b1fa2160c8",
+      "sockets": {
+        "mouth": [
+          63.4101,
+          166.2014
+        ],
+        "pulse": [
+          118.4693,
+          151.091
+        ],
+        "tendril_l": [
+          125.8616,
+          192.8799
+        ],
+        "tendril_r": [
+          126.8337,
+          88.7148
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        2,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/charge_windup/n/000.png",
+      "sha256": "f86e48325631b0f5c516678f2cbf74db0fff6494d1f3f5c693e810f07c829a36",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.3054
+        ],
+        "pulse": [
+          128.0,
+          140.7489
+        ],
+        "tendril_l": [
+          24.9197,
+          135.8261
+        ],
+        "tendril_r": [
+          231.0803,
+          135.8261
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        262,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/charge_windup/n/001.png",
+      "sha256": "b1d01a0e51f6f29231b48faff4e6506176ae4f3b6963ddf26c2e2b12e4bce3d9",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.6157
+        ],
+        "pulse": [
+          128.0,
+          141.0578
+        ],
+        "tendril_l": [
+          24.8683,
+          136.0475
+        ],
+        "tendril_r": [
+          231.1585,
+          136.0741
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        522,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/charge_windup/n/002.png",
+      "sha256": "bcf486e2764f7c71d70d0feb6e1b56ac15bdc577ca11b3ee8c9a4963179df878",
+      "sockets": {
+        "mouth": [
+          128.0,
+          129.4158
+        ],
+        "pulse": [
+          128.0,
+          141.8545
+        ],
+        "tendril_l": [
+          24.7376,
+          136.6191
+        ],
+        "tendril_r": [
+          231.3571,
+          136.7142
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        782,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/charge_windup/n/003.png",
+      "sha256": "6c4bdd79b97f11c93622ee3c1c33a5d76e91c6e99dae6f2dd2a9506694e714d8",
+      "sockets": {
+        "mouth": [
+          128.0,
+          130.5099
+        ],
+        "pulse": [
+          128.0,
+          142.9438
+        ],
+        "tendril_l": [
+          24.5637,
+          137.4018
+        ],
+        "tendril_r": [
+          231.6216,
+          137.5913
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1042,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "n",
+      "frame": 4,
+      "path": "frames/charge_windup/n/004.png",
+      "sha256": "c74242ab2b432bd39c9de7d77cb7725707b5b2f9b23ec7ecc0c328d250f032d1",
+      "sockets": {
+        "mouth": [
+          128.0,
+          131.7019
+        ],
+        "pulse": [
+          128.0,
+          144.1307
+        ],
+        "tendril_l": [
+          24.3806,
+          138.2562
+        ],
+        "tendril_r": [
+          231.9004,
+          138.5491
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1302,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "n",
+      "frame": 5,
+      "path": "frames/charge_windup/n/005.png",
+      "sha256": "e5d77a3e8b5174cde161590af8c3476dd065623b7c763b1619139c9b680d045f",
+      "sockets": {
+        "mouth": [
+          128.0,
+          132.796
+        ],
+        "pulse": [
+          128.0,
+          145.2201
+        ],
+        "tendril_l": [
+          24.2185,
+          139.0418
+        ],
+        "tendril_r": [
+          232.1476,
+          139.4303
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1562,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "n",
+      "frame": 6,
+      "path": "frames/charge_windup/n/006.png",
+      "sha256": "4873612a8f0dd11393e9656650541d46adbc4af610c860d8f3532a7f45027203",
+      "sockets": {
+        "mouth": [
+          128.0,
+          133.5962
+        ],
+        "pulse": [
+          128.0,
+          146.0168
+        ],
+        "tendril_l": [
+          24.1035,
+          139.6172
+        ],
+        "tendril_r": [
+          232.3231,
+          140.076
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        2,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge_windup",
+      "direction": "n",
+      "frame": 7,
+      "path": "frames/charge_windup/n/007.png",
+      "sha256": "7848715f5577bb431a139d165685db8a8f89cba5d4ecbca55d8078e3183c889b",
+      "sockets": {
+        "mouth": [
+          128.0,
+          133.9064
+        ],
+        "pulse": [
+          128.0,
+          146.3257
+        ],
+        "tendril_l": [
+          24.0597,
+          139.8405
+        ],
+        "tendril_r": [
+          232.3899,
+          140.3266
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        262,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/charge/e/000.png",
+      "sha256": "a0f6c2af266738177160ffe4f07b723f2ece549484e1dc75ee875ebe707b1efd",
+      "sockets": {
+        "mouth": [
+          195.278,
+          166.2014
+        ],
+        "pulse": [
+          140.2188,
+          151.091
+        ],
+        "tendril_l": [
+          132.4043,
+          89.1252
+        ],
+        "tendril_r": [
+          132.4043,
+          193.2772
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        522,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/charge/e/001.png",
+      "sha256": "a6662d75693e103284ae6b0bc157f742f9164c0c7e3f47a32cd21f2df7481919",
+      "sockets": {
+        "mouth": [
+          195.278,
+          165.5306
+        ],
+        "pulse": [
+          140.2188,
+          150.5503
+        ],
+        "tendril_l": [
+          136.8599,
+          85.502
+        ],
+        "tendril_r": [
+          126.3348,
+          192.1817
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        782,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/charge/e/002.png",
+      "sha256": "9ecbca23165bc5528c5ee93cad366d33561ee7892450df9a78421caed89b6896",
+      "sockets": {
+        "mouth": [
+          195.278,
+          166.6303
+        ],
+        "pulse": [
+          140.2188,
+          151.65
+        ],
+        "tendril_l": [
+          136.8599,
+          86.6017
+        ],
+        "tendril_r": [
+          126.3348,
+          193.2814
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1042,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/charge/e/003.png",
+      "sha256": "b4dd37e254c36fb1c8ea7b25f11a41cd5d819a650375ec3eca66d500a39fbed5",
+      "sockets": {
+        "mouth": [
+          195.278,
+          166.2014
+        ],
+        "pulse": [
+          140.2188,
+          151.091
+        ],
+        "tendril_l": [
+          132.4043,
+          89.1252
+        ],
+        "tendril_r": [
+          132.4043,
+          193.2772
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1302,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 4,
+      "path": "frames/charge/e/004.png",
+      "sha256": "c051e8e9adff9f9f3eff7970d60cdea971b85fc0756bb9b17aa3456034ea6276",
+      "sockets": {
+        "mouth": [
+          195.278,
+          165.7695
+        ],
+        "pulse": [
+          140.2188,
+          150.5323
+        ],
+        "tendril_l": [
+          127.7141,
+          92.0078
+        ],
+        "tendril_r": [
+          138.1869,
+          193.0556
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1562,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 5,
+      "path": "frames/charge/e/005.png",
+      "sha256": "31874923a4e4b30f546c0af8f35c053e502eab5539b54356a1948491c86e3d9b",
+      "sockets": {
+        "mouth": [
+          195.278,
+          166.8691
+        ],
+        "pulse": [
+          140.2188,
+          151.632
+        ],
+        "tendril_l": [
+          127.7141,
+          93.1075
+        ],
+        "tendril_r": [
+          138.1869,
+          194.1553
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        2,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/charge/s/000.png",
+      "sha256": "f8cadc6f7bff3527b5f184b2385620dba7da33f7608d278e29320c1116be200e",
+      "sockets": {
+        "mouth": [
+          128.0,
+          199.8404
+        ],
+        "pulse": [
+          128.0,
+          157.2004
+        ],
+        "tendril_l": [
+          232.152,
+          143.4033
+        ],
+        "tendril_r": [
+          23.848,
+          143.4033
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        262,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/charge/s/001.png",
+      "sha256": "ea76e42e726ecb23f067c72a26c0542fbd839f49dcbd5ba94cfe38ab99eba128",
+      "sockets": {
+        "mouth": [
+          128.2389,
+          199.289
+        ],
+        "pulse": [
+          127.982,
+          156.6507
+        ],
+        "tendril_l": [
+          229.407,
+          140.6355
+        ],
+        "tendril_r": [
+          21.3533,
+          138.0258
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        522,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/charge/s/002.png",
+      "sha256": "5692f71687682ae4403e00123b4fa81e5c2b69a23c45aa768fe431f67c94fde1",
+      "sockets": {
+        "mouth": [
+          128.2389,
+          200.3887
+        ],
+        "pulse": [
+          127.982,
+          157.7504
+        ],
+        "tendril_l": [
+          229.407,
+          141.7351
+        ],
+        "tendril_r": [
+          21.3533,
+          139.1255
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        782,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/charge/s/003.png",
+      "sha256": "49143a8c86ed93727badcae9733f33fc817e43fb481efff3778becafc3a0cbb2",
+      "sockets": {
+        "mouth": [
+          128.0,
+          199.8404
+        ],
+        "pulse": [
+          128.0,
+          157.2004
+        ],
+        "tendril_l": [
+          232.152,
+          143.4033
+        ],
+        "tendril_r": [
+          23.848,
+          143.4033
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1042,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 4,
+      "path": "frames/charge/s/004.png",
+      "sha256": "1661b12782163e25617c62ddb97a1308082c5f71783abdcc6105ccc201f8b703",
+      "sockets": {
+        "mouth": [
+          127.7611,
+          199.289
+        ],
+        "pulse": [
+          128.018,
+          156.6507
+        ],
+        "tendril_l": [
+          234.3104,
+          145.02
+        ],
+        "tendril_r": [
+          26.9261,
+          147.6121
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1302,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 5,
+      "path": "frames/charge/s/005.png",
+      "sha256": "4164278b886c441c45da27869168aa8dedfc8e380e25de2d8c2371f6cfa5fc61",
+      "sockets": {
+        "mouth": [
+          127.7611,
+          200.3887
+        ],
+        "pulse": [
+          128.018,
+          157.7504
+        ],
+        "tendril_l": [
+          234.3104,
+          146.1197
+        ],
+        "tendril_r": [
+          26.9261,
+          148.7118
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1562,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/charge/w/000.png",
+      "sha256": "0814bec206bd73072b802b162f65448c11bf3e94061287927bd6f4f757fb66b1",
+      "sockets": {
+        "mouth": [
+          60.722,
+          166.2014
+        ],
+        "pulse": [
+          115.7812,
+          151.091
+        ],
+        "tendril_l": [
+          123.5957,
+          193.2772
+        ],
+        "tendril_r": [
+          123.5957,
+          89.1252
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        2,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/charge/w/001.png",
+      "sha256": "d15a9be5716894e13f7b0fb8d11b56f10b4a1e888a58cb3bca975eec15582719",
+      "sockets": {
+        "mouth": [
+          60.722,
+          165.7695
+        ],
+        "pulse": [
+          115.7812,
+          150.5323
+        ],
+        "tendril_l": [
+          119.1401,
+          186.909
+        ],
+        "tendril_r": [
+          129.6652,
+          85.535
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        262,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/charge/w/002.png",
+      "sha256": "ced7c5f984749a5dd21e867b96b83cce3053dc285ce25e9a3a95dd736af1f71c",
+      "sockets": {
+        "mouth": [
+          60.722,
+          166.8691
+        ],
+        "pulse": [
+          115.7812,
+          151.632
+        ],
+        "tendril_l": [
+          119.1401,
+          188.0087
+        ],
+        "tendril_r": [
+          129.6652,
+          86.6347
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        522,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/charge/w/003.png",
+      "sha256": "f4295efa2096fa9ad7d525b97fcf35a2f88a3208bfb80aa87f337d3c520b62a6",
+      "sockets": {
+        "mouth": [
+          60.722,
+          166.2014
+        ],
+        "pulse": [
+          115.7812,
+          151.091
+        ],
+        "tendril_l": [
+          123.5957,
+          193.2772
+        ],
+        "tendril_r": [
+          123.5957,
+          89.1252
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        782,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 4,
+      "path": "frames/charge/w/004.png",
+      "sha256": "6433228c1af7adaafe6f33d1b98e9f37d37e4cb74c192e0fe30c907213179b30",
+      "sockets": {
+        "mouth": [
+          60.722,
+          165.5306
+        ],
+        "pulse": [
+          115.7812,
+          150.5503
+        ],
+        "tendril_l": [
+          128.2859,
+          198.3182
+        ],
+        "tendril_r": [
+          117.8131,
+          91.9817
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1042,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 5,
+      "path": "frames/charge/w/005.png",
+      "sha256": "7f5bdb3aad34241fc1c6ba88f0bb8122d711b84137cfcc2ba442b373f8b4fb53",
+      "sockets": {
+        "mouth": [
+          60.722,
+          166.6303
+        ],
+        "pulse": [
+          115.7812,
+          151.65
+        ],
+        "tendril_l": [
+          128.2859,
+          199.4179
+        ],
+        "tendril_r": [
+          117.8131,
+          93.0814
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1302,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/charge/n/000.png",
+      "sha256": "0395df0c283be28ad45cc9f02767eed730c5ce2da975c991dc6666845387b36d",
+      "sockets": {
+        "mouth": [
+          128.0,
+          132.5624
+        ],
+        "pulse": [
+          128.0,
+          144.9816
+        ],
+        "tendril_l": [
+          23.848,
+          138.999
+        ],
+        "tendril_r": [
+          232.152,
+          138.999
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1562,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/charge/n/001.png",
+      "sha256": "5ca4003a92a23a4bc3f1cbf74426c8358f92de7e25bad9ca768b53d102c559ec",
+      "sockets": {
+        "mouth": [
+          127.7611,
+          132.011
+        ],
+        "pulse": [
+          128.018,
+          144.4319
+        ],
+        "tendril_l": [
+          26.593,
+          131.7756
+        ],
+        "tendril_r": [
+          234.6467,
+          139.691
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        2,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/charge/n/002.png",
+      "sha256": "83d05fe41b50326e5ce63281de79d6748050841ff18f70b1acdb1d57b33b9291",
+      "sockets": {
+        "mouth": [
+          127.7611,
+          133.1107
+        ],
+        "pulse": [
+          128.018,
+          145.5316
+        ],
+        "tendril_l": [
+          26.593,
+          132.8752
+        ],
+        "tendril_r": [
+          234.6467,
+          140.7907
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        262,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/charge/n/003.png",
+      "sha256": "0b997fe897d2940ae9a7e6f22e30182f2a31dd0528c40d39b8c6d390201796a8",
+      "sockets": {
+        "mouth": [
+          128.0,
+          132.5624
+        ],
+        "pulse": [
+          128.0,
+          144.9816
+        ],
+        "tendril_l": [
+          23.848,
+          138.999
+        ],
+        "tendril_r": [
+          232.152,
+          138.999
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        522,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 4,
+      "path": "frames/charge/n/004.png",
+      "sha256": "2dbfcb59c8acf054ab2e34390d3ec1b61ac33a5c2827d15ab5a7b96e6d738522",
+      "sockets": {
+        "mouth": [
+          128.2389,
+          132.011
+        ],
+        "pulse": [
+          127.982,
+          144.4319
+        ],
+        "tendril_l": [
+          21.6896,
+          145.3059
+        ],
+        "tendril_r": [
+          229.0739,
+          137.4252
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        782,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 5,
+      "path": "frames/charge/n/005.png",
+      "sha256": "8dbcbf73dde0b0783b1a6eb7755c25ce3e4fa7d40ebdf76f2c75bb5d967ed872",
+      "sockets": {
+        "mouth": [
+          128.2389,
+          133.1107
+        ],
+        "pulse": [
+          127.982,
+          145.5316
+        ],
+        "tendril_l": [
+          21.6896,
+          146.4056
+        ],
+        "tendril_r": [
+          229.0739,
+          138.5249
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1042,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/acid_attack/e/000.png",
+      "sha256": "095fdf76c0399057fd12f4ed3f0836923ef232bc9df229f7cc650a245b658188",
+      "sockets": {
+        "mouth": [
+          195.1888,
+          161.9848
+        ],
+        "pulse": [
+          140.1376,
+          146.9027
+        ],
+        "tendril_l": [
+          134.5641,
+          87.5499
+        ],
+        "tendril_r": [
+          134.5139,
+          190.6888
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1302,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/acid_attack/e/001.png",
+      "sha256": "a51e3c1efd5a49fcde007c17bd00e09590cb30b9f2332e0ffc4bde52483e9bc4",
+      "sockets": {
+        "mouth": [
+          194.6166,
+          165.2802
+        ],
+        "pulse": [
+          139.0174,
+          147.5154
+        ],
+        "tendril_l": [
+          132.1457,
+          86.1185
+        ],
+        "tendril_r": [
+          131.394,
+          190.0189
+        ]
+      },
+      "atlas": "atlas_1.png",
+      "region": [
+        1562,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/acid_attack/e/002.png",
+      "sha256": "6df39f8a0101fbaf3739352b1ecc0cc3ccb5db25db67580cc245e512fafa0c5e",
+      "sockets": {
+        "mouth": [
+          193.595,
+          168.4543
+        ],
+        "pulse": [
+          137.8972,
+          148.1281
+        ],
+        "tendril_l": [
+          129.6954,
+          84.7237
+        ],
+        "tendril_r": [
+          128.2284,
+          189.2977
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        2,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/acid_attack/e/003.png",
+      "sha256": "ae18315ff5902809b31068d518716ee955d5faedf3f6fc42021994d4dac10ab2",
+      "sockets": {
+        "mouth": [
+          194.3806,
+          166.1659
+        ],
+        "pulse": [
+          138.7098,
+          147.6837
+        ],
+        "tendril_l": [
+          131.4759,
+          85.7317
+        ],
+        "tendril_r": [
+          130.529,
+          189.826
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        262,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "e",
+      "frame": 4,
+      "path": "frames/acid_attack/e/004.png",
+      "sha256": "1f441185bc8c14e6e5cc0a07b997beb4d94ce8eff47e75976c3c1677d6d16647",
+      "sockets": {
+        "mouth": [
+          195.1207,
+          162.5721
+        ],
+        "pulse": [
+          139.9402,
+          147.0107
+        ],
+        "tendril_l": [
+          134.1405,
+          87.2952
+        ],
+        "tendril_r": [
+          133.9678,
+          190.5745
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        522,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "e",
+      "frame": 5,
+      "path": "frames/acid_attack/e/005.png",
+      "sha256": "e617a70429d932b562e848c49a67514659e3eb305353643deabed63842f4cd99",
+      "sockets": {
+        "mouth": [
+          195.1545,
+          162.296
+        ],
+        "pulse": [
+          140.0331,
+          146.9599
+        ],
+        "tendril_l": [
+          134.34,
+          87.4149
+        ],
+        "tendril_r": [
+          134.225,
+          190.6285
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        782,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/acid_attack/s/000.png",
+      "sha256": "0f818841dd95ca530b18aa4c30e8c2cb1660ee206438b1d02ba49b9c5016ced7",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.5792
+        ],
+        "pulse": [
+          128.0,
+          152.9715
+        ],
+        "tendril_l": [
+          231.1262,
+          142.3951
+        ],
+        "tendril_r": [
+          24.8485,
+          142.3699
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1042,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/acid_attack/s/001.png",
+      "sha256": "5e2c4a467f7ea57cd1d05bc09e328e227caad6fd78dc6a0729293c2719448f89",
+      "sockets": {
+        "mouth": [
+          128.0,
+          198.5884
+        ],
+        "pulse": [
+          128.0,
+          153.0241
+        ],
+        "tendril_l": [
+          231.7224,
+          140.0525
+        ],
+        "tendril_r": [
+          23.9216,
+          139.6767
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1302,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/acid_attack/s/002.png",
+      "sha256": "eaa70b67a557f50a33e96da20aeae30af100478f728cdf108fdd7be4777e8d81",
+      "sockets": {
+        "mouth": [
+          128.0,
+          201.2518
+        ],
+        "pulse": [
+          128.0,
+          153.0767
+        ],
+        "tendril_l": [
+          232.2483,
+          137.6955
+        ],
+        "tendril_r": [
+          23.1001,
+          136.962
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1562,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/acid_attack/s/003.png",
+      "sha256": "1cb0a8d595ba5ff85bbe8d3f33f2dcf69ce29b1f58bfdc9f7e3eced8c109b128",
+      "sockets": {
+        "mouth": [
+          128.0,
+          199.3562
+        ],
+        "pulse": [
+          128.0,
+          153.0386
+        ],
+        "tendril_l": [
+          231.8738,
+          139.4066
+        ],
+        "tendril_r": [
+          23.6854,
+          138.9332
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        2,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "s",
+      "frame": 4,
+      "path": "frames/acid_attack/s/004.png",
+      "sha256": "cc236e8d238dec0634360a9ef3983440d6a03d1fc295e3c34e3ec6c7edc98079",
+      "sockets": {
+        "mouth": [
+          128.0,
+          196.1324
+        ],
+        "pulse": [
+          128.0,
+          152.9808
+        ],
+        "tendril_l": [
+          231.2363,
+          141.9835
+        ],
+        "tendril_r": [
+          24.6776,
+          141.8972
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        262,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "s",
+      "frame": 5,
+      "path": "frames/acid_attack/s/005.png",
+      "sha256": "52465c3e84c2b55c617fe3ee4d4986ad52c032b884f33333a70b94597720f3d5",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.8733
+        ],
+        "pulse": [
+          128.0,
+          152.9764
+        ],
+        "tendril_l": [
+          231.1848,
+          142.1773
+        ],
+        "tendril_r": [
+          24.7576,
+          142.1198
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        522,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/acid_attack/w/000.png",
+      "sha256": "a53cfd004b6cb898eedbb27bc0986c19935e85eadacee5a25ec49e092e4c4687",
+      "sockets": {
+        "mouth": [
+          60.8112,
+          161.9848
+        ],
+        "pulse": [
+          115.8624,
+          146.9027
+        ],
+        "tendril_l": [
+          121.4359,
+          190.6761
+        ],
+        "tendril_r": [
+          121.4861,
+          87.5372
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        782,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/acid_attack/w/001.png",
+      "sha256": "c0b74a90fad76e75954b4fb9da4e8f5e64dff0938eb38f12715be8d1f872eff8",
+      "sockets": {
+        "mouth": [
+          61.3834,
+          165.2802
+        ],
+        "pulse": [
+          116.9826,
+          147.5154
+        ],
+        "tendril_l": [
+          123.8543,
+          189.8409
+        ],
+        "tendril_r": [
+          124.606,
+          85.9405
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1042,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/acid_attack/w/002.png",
+      "sha256": "02f0c38fef5eb50aba069df290ce11d51cc67efed632c14cd1ff73034e6fd1bd",
+      "sockets": {
+        "mouth": [
+          62.405,
+          168.4543
+        ],
+        "pulse": [
+          118.1028,
+          148.1281
+        ],
+        "tendril_l": [
+          126.3046,
+          188.972
+        ],
+        "tendril_r": [
+          127.7716,
+          84.3979
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1302,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/acid_attack/w/003.png",
+      "sha256": "afe01d00e7aa219906f576e71ef6535548339467eb7a9ddb03f80572df44625e",
+      "sockets": {
+        "mouth": [
+          61.6194,
+          166.1659
+        ],
+        "pulse": [
+          117.2902,
+          147.6837
+        ],
+        "tendril_l": [
+          124.5241,
+          189.6056
+        ],
+        "tendril_r": [
+          125.471,
+          85.5114
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1562,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "w",
+      "frame": 4,
+      "path": "frames/acid_attack/w/004.png",
+      "sha256": "5b30907b724150c460b38e49569ba8c2f99a83f2e642ef1fda827df984a24848",
+      "sockets": {
+        "mouth": [
+          60.8793,
+          162.5721
+        ],
+        "pulse": [
+          116.0598,
+          147.0107
+        ],
+        "tendril_l": [
+          121.8595,
+          190.5314
+        ],
+        "tendril_r": [
+          122.0322,
+          87.2521
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        2,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "w",
+      "frame": 5,
+      "path": "frames/acid_attack/w/005.png",
+      "sha256": "dcecb0dc39d5635e273c5d1077cf8a79f8a743ff1749363d68dee10604387e4d",
+      "sockets": {
+        "mouth": [
+          60.8455,
+          162.296
+        ],
+        "pulse": [
+          115.9669,
+          146.9599
+        ],
+        "tendril_l": [
+          121.66,
+          190.5997
+        ],
+        "tendril_r": [
+          121.775,
+          87.3861
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        262,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/acid_attack/n/000.png",
+      "sha256": "a7cef1fb375d1b5f9ee904dc43d1c491d01ef6cb5a74ee3545893c99feb5aac8",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.3905
+        ],
+        "pulse": [
+          128.0,
+          140.834
+        ],
+        "tendril_l": [
+          24.8738,
+          135.831
+        ],
+        "tendril_r": [
+          231.1515,
+          135.8561
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        522,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/acid_attack/n/001.png",
+      "sha256": "bfef6bd8061ed30c11d73db1d935138f509d027b43867ab2e7a33a4752736aa3",
+      "sockets": {
+        "mouth": [
+          128.0,
+          131.9719
+        ],
+        "pulse": [
+          128.0,
+          142.0067
+        ],
+        "tendril_l": [
+          24.2776,
+          135.9068
+        ],
+        "tendril_r": [
+          232.0784,
+          136.2827
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        782,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/acid_attack/n/002.png",
+      "sha256": "9dbf02cac0651b581f65b3a9ba33796819b08c3946ba3af510764c21c41a7b14",
+      "sockets": {
+        "mouth": [
+          128.0,
+          135.6568
+        ],
+        "pulse": [
+          128.0,
+          143.1795
+        ],
+        "tendril_l": [
+          23.7517,
+          136.0001
+        ],
+        "tendril_r": [
+          232.8999,
+          136.7336
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1042,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/acid_attack/n/003.png",
+      "sha256": "d769c33571088597bd012917ddd85865aaf61f1b44d4359075ac00854717bc71",
+      "sockets": {
+        "mouth": [
+          128.0,
+          132.9756
+        ],
+        "pulse": [
+          128.0,
+          142.3288
+        ],
+        "tendril_l": [
+          24.1262,
+          135.9307
+        ],
+        "tendril_r": [
+          232.3146,
+          136.4041
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1302,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "n",
+      "frame": 4,
+      "path": "frames/acid_attack/n/004.png",
+      "sha256": "d3d76e1c4193c78f0b1fcf10bcba6b05ba1810592a339dd9e8dd45dcb0fa7780",
+      "sockets": {
+        "mouth": [
+          128.0,
+          129.0117
+        ],
+        "pulse": [
+          128.0,
+          141.0406
+        ],
+        "tendril_l": [
+          24.7637,
+          135.8431
+        ],
+        "tendril_r": [
+          231.3224,
+          135.9294
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1562,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "acid_attack",
+      "direction": "n",
+      "frame": 5,
+      "path": "frames/acid_attack/n/005.png",
+      "sha256": "4f0c04aa39db71603911cfbcd7b3dd23734f4ac34607df207b27172ef0c5c50e",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.7188
+        ],
+        "pulse": [
+          128.0,
+          140.9433
+        ],
+        "tendril_l": [
+          24.8152,
+          135.8373
+        ],
+        "tendril_r": [
+          231.2424,
+          135.8948
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        2,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/pulse_attack/e/000.png",
+      "sha256": "b349bbcfc4fece9d057c164227e7844f2f2b46c2f096c2ffcfdd2e9bc03e3cd3",
+      "sockets": {
+        "mouth": [
+          195.27,
+          161.9404
+        ],
+        "pulse": [
+          140.2188,
+          146.8583
+        ],
+        "tendril_l": [
+          134.7382,
+          87.6551
+        ],
+        "tendril_r": [
+          134.7382,
+          190.7354
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        262,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/pulse_attack/e/001.png",
+      "sha256": "52499038aef8a7d4a0d3964d58ef9384b5bba65ca4a971d8e77cbfb12af50fc2",
+      "sockets": {
+        "mouth": [
+          195.4575,
+          163.6061
+        ],
+        "pulse": [
+          140.2188,
+          147.8107
+        ],
+        "tendril_l": [
+          123.3942,
+          76.0819
+        ],
+        "tendril_r": [
+          122.7214,
+          182.8192
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        522,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/pulse_attack/e/002.png",
+      "sha256": "193c4c175cc73889033448662b6b8a7a3f0eb0042f66bc632f992fa81edc080a",
+      "sockets": {
+        "mouth": [
+          195.6139,
+          165.2658
+        ],
+        "pulse": [
+          140.2188,
+          148.763
+        ],
+        "tendril_l": [
+          111.3888,
+          66.6616
+        ],
+        "tendril_r": [
+          110.0467,
+          173.2147
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        782,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/pulse_attack/e/003.png",
+      "sha256": "8fe76996f1d19a573483e7eb11696dfe2f87dcedd522ecf9ff45606a666c1a22",
+      "sockets": {
+        "mouth": [
+          195.7393,
+          166.9188
+        ],
+        "pulse": [
+          140.2188,
+          149.7154
+        ],
+        "tendril_l": [
+          99.809,
+          59.6855
+        ],
+        "tendril_r": [
+          97.9124,
+          162.1915
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1042,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "e",
+      "frame": 4,
+      "path": "frames/pulse_attack/e/004.png",
+      "sha256": "103ee7c733b98051594ea88a71c17fdea310d159badf5e631750b1c665c9a368",
+      "sockets": {
+        "mouth": [
+          195.683,
+          166.1263
+        ],
+        "pulse": [
+          140.2188,
+          149.2583
+        ],
+        "tendril_l": [
+          105.2459,
+          62.7174
+        ],
+        "tendril_r": [
+          103.5944,
+          167.636
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1302,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "e",
+      "frame": 5,
+      "path": "frames/pulse_attack/e/005.png",
+      "sha256": "f4d9f5a023186568d67193ffa244bb0c783e4cf2ca33e39ef7f08d196901810a",
+      "sockets": {
+        "mouth": [
+          195.5763,
+          164.8349
+        ],
+        "pulse": [
+          140.2188,
+          148.5154
+        ],
+        "tendril_l": [
+          114.5132,
+          68.8845
+        ],
+        "tendril_r": [
+          113.3386,
+          175.8622
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1562,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "e",
+      "frame": 6,
+      "path": "frames/pulse_attack/e/006.png",
+      "sha256": "1d88dd3bf0af6c5d881a03816991e1d69d684174883cd5df92a453728b57279f",
+      "sockets": {
+        "mouth": [
+          195.4506,
+          163.5396
+        ],
+        "pulse": [
+          140.2188,
+          147.7726
+        ],
+        "tendril_l": [
+          123.8678,
+          76.506
+        ],
+        "tendril_r": [
+          123.2226,
+          183.1695
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        2,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "e",
+      "frame": 7,
+      "path": "frames/pulse_attack/e/007.png",
+      "sha256": "d17ba151580c722984e7ea6844836ec115e5a891549ea6cf79f5a465742231cf",
+      "sockets": {
+        "mouth": [
+          195.3061,
+          162.2406
+        ],
+        "pulse": [
+          140.2188,
+          147.0297
+        ],
+        "tendril_l": [
+          132.7927,
+          85.4314
+        ],
+        "tendril_r": [
+          132.6764,
+          189.4418
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        262,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/pulse_attack/s/000.png",
+      "sha256": "30f663754fc8f98572f04379795f55c134c8b61d14f446e0ff67a43b0e1cf2b6",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.5754
+        ],
+        "pulse": [
+          128.0,
+          152.9677
+        ],
+        "tendril_l": [
+          231.0803,
+          142.5644
+        ],
+        "tendril_r": [
+          24.9197,
+          142.5644
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        522,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/pulse_attack/s/001.png",
+      "sha256": "6d20cdb0f2aeea6e213db22bf774f951a6c022ccb11f0cb96270856820b3b870",
+      "sockets": {
+        "mouth": [
+          128.0,
+          197.3348
+        ],
+        "pulse": [
+          128.0,
+          153.9201
+        ],
+        "tendril_l": [
+          234.632,
+          127.095
+        ],
+        "tendril_r": [
+          21.1574,
+          126.7586
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        782,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/pulse_attack/s/002.png",
+      "sha256": "8ba4bd7b0d7ab4558abe86606ae292a95b94b5a3d39474103acf2d7d9047fb4c",
+      "sockets": {
+        "mouth": [
+          128.0,
+          199.0728
+        ],
+        "pulse": [
+          128.0,
+          154.8724
+        ],
+        "tendril_l": [
+          234.461,
+          111.5864
+        ],
+        "tendril_r": [
+          21.3547,
+          110.9154
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1042,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/pulse_attack/s/003.png",
+      "sha256": "f6e1a72895259a5cb7a9a755a5808fcfe6a03c1a46b7a28a97ee8484c238d3fd",
+      "sockets": {
+        "mouth": [
+          128.0,
+          200.7884
+        ],
+        "pulse": [
+          128.0,
+          155.8248
+        ],
+        "tendril_l": [
+          230.5385,
+          96.8593
+        ],
+        "tendril_r": [
+          25.5265,
+          95.911
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1302,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "s",
+      "frame": 4,
+      "path": "frames/pulse_attack/s/004.png",
+      "sha256": "c56c626b1e2dc8319752786b43cc0306a986afb92ea5ce5d80031ef1bbd1d8b6",
+      "sockets": {
+        "mouth": [
+          128.0,
+          199.9678
+        ],
+        "pulse": [
+          128.0,
+          155.3677
+        ],
+        "tendril_l": [
+          232.8787,
+          103.7796
+        ],
+        "tendril_r": [
+          23.0415,
+          102.9539
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1562,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "s",
+      "frame": 5,
+      "path": "frames/pulse_attack/s/005.png",
+      "sha256": "2717e019dc4f06fdc8b03d01b133c3e4159dd798c8ea20a6f05530aeacb167db",
+      "sockets": {
+        "mouth": [
+          128.0,
+          198.6231
+        ],
+        "pulse": [
+          128.0,
+          154.6248
+        ],
+        "tendril_l": [
+          234.8708,
+          115.5765
+        ],
+        "tendril_r": [
+          20.9153,
+          114.9891
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        2,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "s",
+      "frame": 6,
+      "path": "frames/pulse_attack/s/006.png",
+      "sha256": "f2cfd9d66fd2326811c2eaebe842fe7e0cf5d23ac294884893ce8085ecf8faeb",
+      "sockets": {
+        "mouth": [
+          128.0,
+          197.2649
+        ],
+        "pulse": [
+          128.0,
+          153.882
+        ],
+        "tendril_l": [
+          234.5601,
+          127.72
+        ],
+        "tendril_r": [
+          21.2332,
+          127.3974
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        262,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "s",
+      "frame": 7,
+      "path": "frames/pulse_attack/s/007.png",
+      "sha256": "f30f34ceb8269d7f449ce0d8d10a64e1e36c1826bdbd7bbbe61a8d2f83fad69c",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.8937
+        ],
+        "pulse": [
+          128.0,
+          153.1391
+        ],
+        "tendril_l": [
+          231.9831,
+          139.8193
+        ],
+        "tendril_r": [
+          23.9623,
+          139.7611
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        522,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/pulse_attack/w/000.png",
+      "sha256": "2b4ac819db10a3d169ca7e4c226193c4ae29a7fbfe8a1d2de47ba616f8523e8f",
+      "sockets": {
+        "mouth": [
+          60.73,
+          161.9404
+        ],
+        "pulse": [
+          115.7812,
+          146.8583
+        ],
+        "tendril_l": [
+          121.2618,
+          190.7354
+        ],
+        "tendril_r": [
+          121.2618,
+          87.6551
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        782,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/pulse_attack/w/001.png",
+      "sha256": "d106794ddd146eec7e53fe6ce38ea6ae9f8ab8721ea1b21763cfce86796190c8",
+      "sockets": {
+        "mouth": [
+          60.5425,
+          163.6061
+        ],
+        "pulse": [
+          115.7812,
+          147.8107
+        ],
+        "tendril_l": [
+          132.6058,
+          182.7139
+        ],
+        "tendril_r": [
+          133.2786,
+          75.9766
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1042,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/pulse_attack/w/002.png",
+      "sha256": "fa4e4826c4049426b540ec5f4896520e06adb8bd0b975542164a421f126af299",
+      "sockets": {
+        "mouth": [
+          60.3861,
+          165.2658
+        ],
+        "pulse": [
+          115.7812,
+          148.763
+        ],
+        "tendril_l": [
+          144.6112,
+          173.1226
+        ],
+        "tendril_r": [
+          145.9533,
+          66.5694
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1302,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/pulse_attack/w/003.png",
+      "sha256": "6b545b0571a7edb9462c1cedb2a872d2bb48616a881b12603d8498ef76951233",
+      "sockets": {
+        "mouth": [
+          60.2607,
+          166.9188
+        ],
+        "pulse": [
+          115.7812,
+          149.7154
+        ],
+        "tendril_l": [
+          156.191,
+          162.224
+        ],
+        "tendril_r": [
+          158.0876,
+          59.718
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1562,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "w",
+      "frame": 4,
+      "path": "frames/pulse_attack/w/004.png",
+      "sha256": "ae83ec253f519dbc2a3e0f929d623511d5923255106a2a4c4f44179515467cc3",
+      "sockets": {
+        "mouth": [
+          60.317,
+          166.1263
+        ],
+        "pulse": [
+          115.7812,
+          149.2583
+        ],
+        "tendril_l": [
+          150.7541,
+          167.596
+        ],
+        "tendril_r": [
+          152.4056,
+          62.6774
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        2,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "w",
+      "frame": 5,
+      "path": "frames/pulse_attack/w/005.png",
+      "sha256": "83e69cc1329e07e5c20b24744cb881f53316ea30ed01e6dadf16f046b36ee098",
+      "sockets": {
+        "mouth": [
+          60.4237,
+          164.8349
+        ],
+        "pulse": [
+          115.7812,
+          148.5154
+        ],
+        "tendril_l": [
+          141.4868,
+          175.7553
+        ],
+        "tendril_r": [
+          142.6614,
+          68.7775
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        262,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "w",
+      "frame": 6,
+      "path": "frames/pulse_attack/w/006.png",
+      "sha256": "509448d4e3fc821dc866515e1512da6f6fa948104b7b539963e0cf237fae3f4c",
+      "sockets": {
+        "mouth": [
+          60.5494,
+          163.5396
+        ],
+        "pulse": [
+          115.7812,
+          147.7726
+        ],
+        "tendril_l": [
+          132.1322,
+          183.0661
+        ],
+        "tendril_r": [
+          132.7774,
+          76.4027
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        522,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "w",
+      "frame": 7,
+      "path": "frames/pulse_attack/w/007.png",
+      "sha256": "bc97b590fbb32774ef44de558001e01a48f0ccbd910f440426880fbf170a33d8",
+      "sockets": {
+        "mouth": [
+          60.6939,
+          162.2406
+        ],
+        "pulse": [
+          115.7812,
+          147.0297
+        ],
+        "tendril_l": [
+          123.2073,
+          189.4144
+        ],
+        "tendril_r": [
+          123.3236,
+          85.4041
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        782,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/pulse_attack/n/000.png",
+      "sha256": "f86e48325631b0f5c516678f2cbf74db0fff6494d1f3f5c693e810f07c829a36",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.3054
+        ],
+        "pulse": [
+          128.0,
+          140.7489
+        ],
+        "tendril_l": [
+          24.9197,
+          135.8261
+        ],
+        "tendril_r": [
+          231.0803,
+          135.8261
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1042,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/pulse_attack/n/001.png",
+      "sha256": "8d73764f1ea2704e26a84b7a3fdba896dac88c48bea93786c28020c127665189",
+      "sockets": {
+        "mouth": [
+          128.0,
+          129.8773
+        ],
+        "pulse": [
+          128.0,
+          141.7013
+        ],
+        "tendril_l": [
+          21.368,
+          131.7008
+        ],
+        "tendril_r": [
+          234.8426,
+          132.0372
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1302,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/pulse_attack/n/002.png",
+      "sha256": "5c33753e76b8e1b1530d53a53ec1940ec6cbe0878022ed4fc568f9cb641df364",
+      "sockets": {
+        "mouth": [
+          128.0,
+          131.4589
+        ],
+        "pulse": [
+          128.0,
+          142.6536
+        ],
+        "tendril_l": [
+          21.539,
+          128.1977
+        ],
+        "tendril_r": [
+          234.6453,
+          128.8687
+        ]
+      },
+      "atlas": "atlas_2.png",
+      "region": [
+        1562,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/pulse_attack/n/003.png",
+      "sha256": "9741483524d24968ba72f69a6dc9fa08b55935a629e8b657343819b17bccf1bc",
+      "sockets": {
+        "mouth": [
+          128.0,
+          133.0491
+        ],
+        "pulse": [
+          128.0,
+          143.606
+        ],
+        "tendril_l": [
+          25.4615,
+          125.0503
+        ],
+        "tendril_r": [
+          230.4735,
+          125.9986
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        2,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "n",
+      "frame": 4,
+      "path": "frames/pulse_attack/n/004.png",
+      "sha256": "4a0de23f3a905125c9e2a92fa37713b62a4797fe3c630f8403c01c49ebde574a",
+      "sockets": {
+        "mouth": [
+          128.0,
+          132.2848
+        ],
+        "pulse": [
+          128.0,
+          143.1489
+        ],
+        "tendril_l": [
+          23.1213,
+          126.5338
+        ],
+        "tendril_r": [
+          232.9585,
+          127.3595
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        262,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "n",
+      "frame": 5,
+      "path": "frames/pulse_attack/n/005.png",
+      "sha256": "9c4d4b9249089399b242892e94a10fe8a43d946ce80087005337fb4875dbec03",
+      "sockets": {
+        "mouth": [
+          128.0,
+          131.0468
+        ],
+        "pulse": [
+          128.0,
+          142.406
+        ],
+        "tendril_l": [
+          21.1292,
+          129.0633
+        ],
+        "tendril_r": [
+          235.0847,
+          129.6506
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        522,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "n",
+      "frame": 6,
+      "path": "frames/pulse_attack/n/006.png",
+      "sha256": "753f4a61065e81ae4366602fbc24ce28f9b92496444e6a436bd07a678e73a2af",
+      "sockets": {
+        "mouth": [
+          128.0,
+          129.8143
+        ],
+        "pulse": [
+          128.0,
+          141.6632
+        ],
+        "tendril_l": [
+          21.4399,
+          131.8522
+        ],
+        "tendril_r": [
+          234.7668,
+          132.1748
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        782,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "pulse_attack",
+      "direction": "n",
+      "frame": 7,
+      "path": "frames/pulse_attack/n/007.png",
+      "sha256": "d6ea5c3f28b06156358ed6023061094794a8f0e5e954f0e17dd2af73087a07e1",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.5876
+        ],
+        "pulse": [
+          128.0,
+          140.9203
+        ],
+        "tendril_l": [
+          24.0169,
+          135.0265
+        ],
+        "tendril_r": [
+          232.0377,
+          135.0847
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1042,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/recovery/e/000.png",
+      "sha256": "3160252ad149755f1d4e428cda638918404ce7d0c42361b48075adda5314c593",
+      "sockets": {
+        "mouth": [
+          195.27,
+          164.5859
+        ],
+        "pulse": [
+          140.2188,
+          149.5038
+        ],
+        "tendril_l": [
+          135.3674,
+          90.0265
+        ],
+        "tendril_r": [
+          133.9318,
+          193.1421
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1302,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/recovery/e/001.png",
+      "sha256": "6cbb285c110b364169b52cb3a5ce7a90435efda68fbf8bae19ab163cf634ab4f",
+      "sockets": {
+        "mouth": [
+          195.27,
+          163.9
+        ],
+        "pulse": [
+          140.2188,
+          148.8179
+        ],
+        "tendril_l": [
+          135.1582,
+          89.4315
+        ],
+        "tendril_r": [
+          134.2013,
+          192.5365
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1562,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/recovery/e/002.png",
+      "sha256": "a8a51875a6ff025f236452a4d77d8ed0e9bf79e83068d82cdefdd01213edec98",
+      "sockets": {
+        "mouth": [
+          195.27,
+          162.6263
+        ],
+        "pulse": [
+          140.2188,
+          147.5442
+        ],
+        "tendril_l": [
+          134.9485,
+          88.2491
+        ],
+        "tendril_r": [
+          134.4701,
+          191.3423
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        2,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/recovery/e/003.png",
+      "sha256": "b349bbcfc4fece9d057c164227e7844f2f2b46c2f096c2ffcfdd2e9bc03e3cd3",
+      "sockets": {
+        "mouth": [
+          195.27,
+          161.9404
+        ],
+        "pulse": [
+          140.2188,
+          146.8583
+        ],
+        "tendril_l": [
+          134.7382,
+          87.6551
+        ],
+        "tendril_r": [
+          134.7382,
+          190.7354
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        262,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/recovery/s/000.png",
+      "sha256": "eae0c9fa281df1238cb6fedf2d901654e9c6dc371c2456253e92778cab162342",
+      "sockets": {
+        "mouth": [
+          128.0,
+          198.2209
+        ],
+        "pulse": [
+          128.0,
+          155.6132
+        ],
+        "tendril_l": [
+          230.7534,
+          145.0869
+        ],
+        "tendril_r": [
+          24.5223,
+          144.3691
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        522,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/recovery/s/001.png",
+      "sha256": "4fc4b835ef7798c642d570f642c8bc11ee602c910c6bafc8a6db971839a13ff5",
+      "sockets": {
+        "mouth": [
+          128.0,
+          197.535
+        ],
+        "pulse": [
+          128.0,
+          154.9273
+        ],
+        "tendril_l": [
+          230.8634,
+          144.4423
+        ],
+        "tendril_r": [
+          24.6534,
+          143.9638
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        782,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/recovery/s/002.png",
+      "sha256": "83430202dd574388309a28fa5868cfe0ad2c82d0e40991218adba4671d3f169f",
+      "sockets": {
+        "mouth": [
+          128.0,
+          196.2613
+        ],
+        "pulse": [
+          128.0,
+          153.6536
+        ],
+        "tendril_l": [
+          230.9723,
+          143.2095
+        ],
+        "tendril_r": [
+          24.7859,
+          142.9703
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1042,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/recovery/s/003.png",
+      "sha256": "30f663754fc8f98572f04379795f55c134c8b61d14f446e0ff67a43b0e1cf2b6",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.5754
+        ],
+        "pulse": [
+          128.0,
+          152.9677
+        ],
+        "tendril_l": [
+          231.0803,
+          142.5644
+        ],
+        "tendril_r": [
+          24.9197,
+          142.5644
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1302,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/recovery/w/000.png",
+      "sha256": "a60d0edb5332fabf210938db14fdb50c082fb5f4a1e36505165249f5c95ca180",
+      "sockets": {
+        "mouth": [
+          60.73,
+          164.5859
+        ],
+        "pulse": [
+          115.7812,
+          149.5038
+        ],
+        "tendril_l": [
+          120.6326,
+          192.7799
+        ],
+        "tendril_r": [
+          122.0682,
+          89.6643
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1562,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/recovery/w/001.png",
+      "sha256": "4876a60c67f7e9568fc9aacac02e92590ed3173627c95a79542123ec3bff4597",
+      "sockets": {
+        "mouth": [
+          60.73,
+          163.9
+        ],
+        "pulse": [
+          115.7812,
+          148.8179
+        ],
+        "tendril_l": [
+          120.8418,
+          192.2948
+        ],
+        "tendril_r": [
+          121.7987,
+          89.1898
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        2,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/recovery/w/002.png",
+      "sha256": "389a98148fa77649134a5090fcd619fe1838c0e8e104d0ddac4469f41f995790",
+      "sockets": {
+        "mouth": [
+          60.73,
+          162.6263
+        ],
+        "pulse": [
+          115.7812,
+          147.5442
+        ],
+        "tendril_l": [
+          121.0515,
+          191.2214
+        ],
+        "tendril_r": [
+          121.5299,
+          88.1282
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        262,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/recovery/w/003.png",
+      "sha256": "2b4ac819db10a3d169ca7e4c226193c4ae29a7fbfe8a1d2de47ba616f8523e8f",
+      "sockets": {
+        "mouth": [
+          60.73,
+          161.9404
+        ],
+        "pulse": [
+          115.7812,
+          146.8583
+        ],
+        "tendril_l": [
+          121.2618,
+          190.7354
+        ],
+        "tendril_r": [
+          121.2618,
+          87.6551
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        522,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/recovery/n/000.png",
+      "sha256": "43b4f2bf2deac3f44fc87ca767f86cc3b9673e3ac68c75ae8d28db2bc85da50b",
+      "sockets": {
+        "mouth": [
+          128.0,
+          130.9508
+        ],
+        "pulse": [
+          128.0,
+          143.3943
+        ],
+        "tendril_l": [
+          25.2466,
+          137.7195
+        ],
+        "tendril_r": [
+          231.4777,
+          138.4373
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        782,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/recovery/n/001.png",
+      "sha256": "d752f95d633e35042d682a406878441f985c59cab05189b77394f4c97bd73f23",
+      "sockets": {
+        "mouth": [
+          128.0,
+          130.265
+        ],
+        "pulse": [
+          128.0,
+          142.7085
+        ],
+        "tendril_l": [
+          25.1366,
+          137.2841
+        ],
+        "tendril_r": [
+          231.3466,
+          137.7625
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1042,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/recovery/n/002.png",
+      "sha256": "e33d973000f437ccdbe51c9ba849759592f6fa04618495a658a23c40b6d06065",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.9912
+        ],
+        "pulse": [
+          128.0,
+          141.4348
+        ],
+        "tendril_l": [
+          25.0277,
+          136.261
+        ],
+        "tendril_r": [
+          231.2141,
+          136.5002
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1302,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/recovery/n/003.png",
+      "sha256": "f86e48325631b0f5c516678f2cbf74db0fff6494d1f3f5c693e810f07c829a36",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.3054
+        ],
+        "pulse": [
+          128.0,
+          140.7489
+        ],
+        "tendril_l": [
+          24.9197,
+          135.8261
+        ],
+        "tendril_r": [
+          231.0803,
+          135.8261
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1562,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/hit/e/000.png",
+      "sha256": "c8a223b685c90a80c73c3179eb000f67181e0f3c43deb27694a79a076d84eb66",
+      "sockets": {
+        "mouth": [
+          193.4921,
+          161.9296
+        ],
+        "pulse": [
+          138.386,
+          146.6499
+        ],
+        "tendril_l": [
+          131.8469,
+          87.9133
+        ],
+        "tendril_r": [
+          134.2355,
+          190.9111
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        2,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/hit/e/001.png",
+      "sha256": "1b4bb5e046c053f2e462076fdc0acedd0b644f0191f1e65b0846560a4de398fd",
+      "sockets": {
+        "mouth": [
+          194.9584,
+          162.0964
+        ],
+        "pulse": [
+          139.8522,
+          146.8166
+        ],
+        "tendril_l": [
+          134.161,
+          87.7058
+        ],
+        "tendril_r": [
+          134.6391,
+          190.7719
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        262,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/hit/s/000.png",
+      "sha256": "8f85a9301eca0055e6555c206e91a51818990e4f305363c5fbc4dcef01ef3b08",
+      "sockets": {
+        "mouth": [
+          130.3216,
+          195.8365
+        ],
+        "pulse": [
+          130.3216,
+          153.0037
+        ],
+        "tendril_l": [
+          233.927,
+          142.8003
+        ],
+        "tendril_r": [
+          27.9315,
+          143.9945
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        522,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/hit/s/001.png",
+      "sha256": "e06ecd21c20f4e4ff4f9799721f847b0de90f2d6cf78f964c6d61ce46235aa5a",
+      "sockets": {
+        "mouth": [
+          128.4643,
+          195.8077
+        ],
+        "pulse": [
+          128.4643,
+          152.9749
+        ],
+        "tendril_l": [
+          231.6516,
+          142.612
+        ],
+        "tendril_r": [
+          25.5193,
+          142.8511
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        782,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/hit/w/000.png",
+      "sha256": "422a1c15650e967cfbb4d5927693258a6ca6b830e6a9d040b5a10b9571b8977c",
+      "sockets": {
+        "mouth": [
+          62.5079,
+          164.2512
+        ],
+        "pulse": [
+          117.614,
+          148.9715
+        ],
+        "tendril_l": [
+          124.1531,
+          193.8403
+        ],
+        "tendril_r": [
+          121.7645,
+          90.8425
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1042,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/hit/w/001.png",
+      "sha256": "57419e39220cb4062bc2651b337a6b021fb903107adcad4a67911280d2516e92",
+      "sockets": {
+        "mouth": [
+          61.0416,
+          162.5607
+        ],
+        "pulse": [
+          116.1478,
+          147.2809
+        ],
+        "tendril_l": [
+          121.839,
+          191.3573
+        ],
+        "tendril_r": [
+          121.3609,
+          88.2912
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1302,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/hit/n/000.png",
+      "sha256": "9e6636071e4b5dcd8b8345836385c95b4cf057c90079a001807824ee87052f45",
+      "sockets": {
+        "mouth": [
+          125.6784,
+          130.3444
+        ],
+        "pulse": [
+          125.6784,
+          142.6177
+        ],
+        "tendril_l": [
+          22.073,
+          138.9533
+        ],
+        "tendril_r": [
+          228.0685,
+          137.7591
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1562,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/hit/n/001.png",
+      "sha256": "9336985730bddb4cf38779a2ba723ff721e93c14d95102385b9f4e38cc075a25",
+      "sockets": {
+        "mouth": [
+          127.5357,
+          128.8493
+        ],
+        "pulse": [
+          127.5357,
+          141.1227
+        ],
+        "tendril_l": [
+          24.3484,
+          136.4511
+        ],
+        "tendril_r": [
+          230.4807,
+          136.212
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        2,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/phase_transition/e/000.png",
+      "sha256": "b349bbcfc4fece9d057c164227e7844f2f2b46c2f096c2ffcfdd2e9bc03e3cd3",
+      "sockets": {
+        "mouth": [
+          195.27,
+          161.9404
+        ],
+        "pulse": [
+          140.2188,
+          146.8583
+        ],
+        "tendril_l": [
+          134.7382,
+          87.6551
+        ],
+        "tendril_r": [
+          134.7382,
+          190.7354
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        262,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/phase_transition/e/001.png",
+      "sha256": "020abd29b091c3470822d8cc8e44047babc965e24445374da756453b42373688",
+      "sockets": {
+        "mouth": [
+          194.8673,
+          162.443
+        ],
+        "pulse": [
+          139.357,
+          145.3033
+        ],
+        "tendril_l": [
+          116.0617,
+          66.1988
+        ],
+        "tendril_r": [
+          112.2152,
+          173.0539
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        522,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/phase_transition/e/002.png",
+      "sha256": "74b6b5a9388740f9ad0426e9741b08bb3f666d3d28b17dd60cd86f27bfd0341b",
+      "sockets": {
+        "mouth": [
+          194.4876,
+          162.7312
+        ],
+        "pulse": [
+          138.8243,
+          144.3423
+        ],
+        "tendril_l": [
+          102.4296,
+          56.5851
+        ],
+        "tendril_r": [
+          100.1424,
+          160.7897
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        782,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/phase_transition/e/003.png",
+      "sha256": "9426d554d62decd4a17f0b3198b6428c4b2970a3ff31616a11e371779a5902eb",
+      "sockets": {
+        "mouth": [
+          194.4894,
+          162.7527
+        ],
+        "pulse": [
+          138.8243,
+          144.3423
+        ],
+        "tendril_l": [
+          99.9163,
+          57.1448
+        ],
+        "tendril_r": [
+          102.2169,
+          161.7458
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1042,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "e",
+      "frame": 4,
+      "path": "frames/phase_transition/e/004.png",
+      "sha256": "6370465ab30126b89e65320f1778de25c69c9bc1287bdf2129e8dc7eba25aa71",
+      "sockets": {
+        "mouth": [
+          194.8778,
+          162.5091
+        ],
+        "pulse": [
+          139.357,
+          145.3033
+        ],
+        "tendril_l": [
+          111.043,
+          66.2859
+        ],
+        "tendril_r": [
+          114.9129,
+          173.5691
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1302,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "e",
+      "frame": 5,
+      "path": "frames/phase_transition/e/005.png",
+      "sha256": "4ec7e71dfee56ce3f35dbcc6252bcad66ae8c37497a5c60f1205f2b36fcdd638",
+      "sockets": {
+        "mouth": [
+          195.3017,
+          162.0534
+        ],
+        "pulse": [
+          140.2188,
+          146.8583
+        ],
+        "tendril_l": [
+          132.0652,
+          84.5043
+        ],
+        "tendril_r": [
+          132.0652,
+          188.7968
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1562,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/phase_transition/s/000.png",
+      "sha256": "30f663754fc8f98572f04379795f55c134c8b61d14f446e0ff67a43b0e1cf2b6",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.5754
+        ],
+        "pulse": [
+          128.0,
+          152.9677
+        ],
+        "tendril_l": [
+          231.0803,
+          142.5644
+        ],
+        "tendril_r": [
+          24.9197,
+          142.5644
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        2,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/phase_transition/s/001.png",
+      "sha256": "036378964daa628a8ebdc06c03532fb7546e260a09af8a45eedbd3f0f88b14b5",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.8767
+        ],
+        "pulse": [
+          128.0,
+          150.9818
+        ],
+        "tendril_l": [
+          234.4748,
+          113.4671
+        ],
+        "tendril_r": [
+          20.7646,
+          111.5438
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        262,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/phase_transition/s/002.png",
+      "sha256": "e72507bdbbb4246b72a3c5cb07d3709afd7d99e69f49538648c1ad4692176b4b",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.975
+        ],
+        "pulse": [
+          128.0,
+          149.7545
+        ],
+        "tendril_l": [
+          232.1781,
+          95.889
+        ],
+        "tendril_r": [
+          23.769,
+          94.7454
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        522,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/phase_transition/s/003.png",
+      "sha256": "104c7666d605510aa5e3ae528ab0b6ddaa97831a689de924e54bdeb8548c6ffa",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.9974
+        ],
+        "pulse": [
+          128.0,
+          149.7545
+        ],
+        "tendril_l": [
+          232.6238,
+          95.4148
+        ],
+        "tendril_r": [
+          23.4217,
+          96.5651
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        782,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "s",
+      "frame": 4,
+      "path": "frames/phase_transition/s/004.png",
+      "sha256": "9552fe5da740b7db8a0d283a9d7689cf7a972d7f71735210e0eb9b315ca8d773",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.948
+        ],
+        "pulse": [
+          128.0,
+          150.9818
+        ],
+        "tendril_l": [
+          235.6317,
+          111.6232
+        ],
+        "tendril_r": [
+          21.0653,
+          113.5582
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1042,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "s",
+      "frame": 5,
+      "path": "frames/phase_transition/s/005.png",
+      "sha256": "8a06b75ae49e5a11320d75648389572e11b65b1862b3e4bf56caf613489da581",
+      "sockets": {
+        "mouth": [
+          128.0,
+          195.7042
+        ],
+        "pulse": [
+          128.0,
+          152.9677
+        ],
+        "tendril_l": [
+          232.2925,
+          138.6831
+        ],
+        "tendril_r": [
+          23.7075,
+          138.6831
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1302,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/phase_transition/w/000.png",
+      "sha256": "2b4ac819db10a3d169ca7e4c226193c4ae29a7fbfe8a1d2de47ba616f8523e8f",
+      "sockets": {
+        "mouth": [
+          60.73,
+          161.9404
+        ],
+        "pulse": [
+          115.7812,
+          146.8583
+        ],
+        "tendril_l": [
+          121.2618,
+          190.7354
+        ],
+        "tendril_r": [
+          121.2618,
+          87.6551
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1562,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/phase_transition/w/001.png",
+      "sha256": "3b726c2e488de73654f503eb41ada065cee2ab691de0baa03c63a1056ece6a5d",
+      "sockets": {
+        "mouth": [
+          61.1327,
+          162.443
+        ],
+        "pulse": [
+          116.643,
+          145.3033
+        ],
+        "tendril_l": [
+          139.9383,
+          172.6736
+        ],
+        "tendril_r": [
+          143.7848,
+          65.8185
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        2,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/phase_transition/w/002.png",
+      "sha256": "ec9785131fedd83b5d354bf3accc17d4e3e2dff40e814c9ff136e3fef3dd3ba4",
+      "sockets": {
+        "mouth": [
+          61.5124,
+          162.7312
+        ],
+        "pulse": [
+          117.1757,
+          144.3423
+        ],
+        "tendril_l": [
+          153.5704,
+          160.7633
+        ],
+        "tendril_r": [
+          155.8576,
+          56.5587
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        262,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/phase_transition/w/003.png",
+      "sha256": "c83eb9be34a842cde72dca94985227aa7705fdfde768da556799f087b0fbfae1",
+      "sockets": {
+        "mouth": [
+          61.5106,
+          162.7527
+        ],
+        "pulse": [
+          117.1757,
+          144.3423
+        ],
+        "tendril_l": [
+          156.0837,
+          161.7686
+        ],
+        "tendril_r": [
+          153.7831,
+          57.1675
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        522,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "w",
+      "frame": 4,
+      "path": "frames/phase_transition/w/004.png",
+      "sha256": "c6ec679bab0144e91d6fa7d3f2b6c3707aeb77d0f8b9f90746b5aa978e2db8d2",
+      "sockets": {
+        "mouth": [
+          61.1222,
+          162.5091
+        ],
+        "pulse": [
+          116.643,
+          145.3033
+        ],
+        "tendril_l": [
+          144.957,
+          173.9176
+        ],
+        "tendril_r": [
+          141.0871,
+          66.6344
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        782,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "w",
+      "frame": 5,
+      "path": "frames/phase_transition/w/005.png",
+      "sha256": "5066c05aef688f3f4f69d32e82acc6ed450bcd078a073c47d178cf25b8e973b0",
+      "sockets": {
+        "mouth": [
+          60.6983,
+          162.0534
+        ],
+        "pulse": [
+          115.7812,
+          146.8583
+        ],
+        "tendril_l": [
+          123.9348,
+          188.7968
+        ],
+        "tendril_r": [
+          123.9348,
+          84.5043
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1042,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/phase_transition/n/000.png",
+      "sha256": "f86e48325631b0f5c516678f2cbf74db0fff6494d1f3f5c693e810f07c829a36",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.3054
+        ],
+        "pulse": [
+          128.0,
+          140.7489
+        ],
+        "tendril_l": [
+          24.9197,
+          135.8261
+        ],
+        "tendril_r": [
+          231.0803,
+          135.8261
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1302,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/phase_transition/n/001.png",
+      "sha256": "fa3bf49e0a86fa08ceb3b50a719efacc01c3d5a85d77aa88b555f55587d0535e",
+      "sockets": {
+        "mouth": [
+          128.0,
+          129.0094
+        ],
+        "pulse": [
+          128.0,
+          139.6249
+        ],
+        "tendril_l": [
+          21.5252,
+          125.4054
+        ],
+        "tendril_r": [
+          235.2354,
+          127.3286
+        ]
+      },
+      "atlas": "atlas_3.png",
+      "region": [
+        1562,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/phase_transition/n/002.png",
+      "sha256": "13d83e2bd5cbf0e03c0407a17e59be5aa86778edf97f11af4074ad8f7f7f2db2",
+      "sockets": {
+        "mouth": [
+          128.0,
+          129.4873
+        ],
+        "pulse": [
+          128.0,
+          138.9302
+        ],
+        "tendril_l": [
+          23.8219,
+          121.4594
+        ],
+        "tendril_r": [
+          232.231,
+          122.603
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        2,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/phase_transition/n/003.png",
+      "sha256": "4dfe1a3609570e7c90c187b6a0d7c894a5937046326805baed8e382035d5e2e5",
+      "sockets": {
+        "mouth": [
+          128.0,
+          129.508
+        ],
+        "pulse": [
+          128.0,
+          138.9302
+        ],
+        "tendril_l": [
+          23.3762,
+          123.4986
+        ],
+        "tendril_r": [
+          232.5783,
+          122.3483
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        262,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "n",
+      "frame": 4,
+      "path": "frames/phase_transition/n/004.png",
+      "sha256": "127f9e53be9f965e6aaacffdf091898e246a4c9e8965d85303df2484f6237597",
+      "sockets": {
+        "mouth": [
+          128.0,
+          129.0702
+        ],
+        "pulse": [
+          128.0,
+          139.6249
+        ],
+        "tendril_l": [
+          20.3683,
+          128.5803
+        ],
+        "tendril_r": [
+          234.9347,
+          126.6453
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        522,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "phase_transition",
+      "direction": "n",
+      "frame": 5,
+      "path": "frames/phase_transition/n/005.png",
+      "sha256": "16efb498edc631927ecb06610087c2c77edb1b4ff09b478074a382e735a79efe",
+      "sockets": {
+        "mouth": [
+          128.0,
+          128.4025
+        ],
+        "pulse": [
+          128.0,
+          140.7489
+        ],
+        "tendril_l": [
+          23.7075,
+          134.6179
+        ],
+        "tendril_r": [
+          232.2925,
+          134.6179
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        782,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/death/e/000.png",
+      "sha256": "ac014d837c1239373d7f6bb2408ab965aa84765a9a41b9f500c2390931b400b0",
+      "sockets": {
+        "mouth": [
+          195.27,
+          160.988
+        ],
+        "pulse": [
+          140.2188,
+          145.9059
+        ],
+        "tendril_l": [
+          135.0534,
+          86.5652
+        ],
+        "tendril_r": [
+          134.3358,
+          189.6644
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1042,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/death/e/001.png",
+      "sha256": "d5b40096f00d589061eeb11ad9df631f3297a480a97f36014d30d44ec3b48b6d",
+      "sockets": {
+        "mouth": [
+          195.27,
+          159.6455
+        ],
+        "pulse": [
+          140.2188,
+          144.9987
+        ],
+        "tendril_l": [
+          135.5133,
+          82.2464
+        ],
+        "tendril_r": [
+          134.8228,
+          193.5391
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1302,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/death/e/002.png",
+      "sha256": "47817dedf7905c729a5a0c9d838d0298a542663a8c8bfb09bc55b689a505484f",
+      "sockets": {
+        "mouth": [
+          195.27,
+          156.117
+        ],
+        "pulse": [
+          140.2188,
+          142.8002
+        ],
+        "tendril_l": [
+          136.7296,
+          71.6072
+        ],
+        "tendril_r": [
+          136.1112,
+          203.3161
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1562,
+        2,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/death/e/003.png",
+      "sha256": "53e74f12f2d1683e2d89497a9e9428fd2effed574bde438567c575068b90ceea",
+      "sockets": {
+        "mouth": [
+          195.27,
+          151.4966
+        ],
+        "pulse": [
+          140.2188,
+          140.4888
+        ],
+        "tendril_l": [
+          138.4457,
+          59.0485
+        ],
+        "tendril_r": [
+          137.9299,
+          215.7924
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        2,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 4,
+      "path": "frames/death/e/004.png",
+      "sha256": "8e051366c607ad6ded4ea8385035413238ca9a66e237d3568da4b359e003c6f3",
+      "sockets": {
+        "mouth": [
+          195.27,
+          146.7194
+        ],
+        "pulse": [
+          140.2188,
+          138.9352
+        ],
+        "tendril_l": [
+          140.4061,
+          48.6499
+        ],
+        "tendril_r": [
+          140.0087,
+          227.146
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        262,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 5,
+      "path": "frames/death/e/005.png",
+      "sha256": "16eaa21fdfbbf8796987fcd0abe2352cb88ae059232eaf7bb9203105654a79cc",
+      "sockets": {
+        "mouth": [
+          195.27,
+          142.0869
+        ],
+        "pulse": [
+          140.2188,
+          138.0995
+        ],
+        "tendril_l": [
+          142.3744,
+          42.6107
+        ],
+        "tendril_r": [
+          142.0972,
+          233.7798
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        522,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 6,
+      "path": "frames/death/e/006.png",
+      "sha256": "58bfd16b27cdf60255f7f795982431578ce1c2b0e996a495bc092ea853d60a9f",
+      "sockets": {
+        "mouth": [
+          195.27,
+          127.4661
+        ],
+        "pulse": [
+          140.2188,
+          127.2891
+        ],
+        "tendril_l": [
+          144.1482,
+          30.8083
+        ],
+        "tendril_r": [
+          143.9804,
+          223.9405
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        782,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 7,
+      "path": "frames/death/e/007.png",
+      "sha256": "b1fe8cb9e770d64da0f414368607561d5e1855df273ee133392c962ac7161fb2",
+      "sockets": {
+        "mouth": [
+          195.27,
+          118.8135
+        ],
+        "pulse": [
+          140.2188,
+          121.8649
+        ],
+        "tendril_l": [
+          145.566,
+          27.4572
+        ],
+        "tendril_r": [
+          145.4864,
+          214.7416
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1042,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 8,
+      "path": "frames/death/e/008.png",
+      "sha256": "9ceec555ca21aa23910860a8ab2b2952b58b22ebac047b10c3b84e1b1f39f890",
+      "sockets": {
+        "mouth": [
+          195.27,
+          114.9542
+        ],
+        "pulse": [
+          140.2188,
+          120.1805
+        ],
+        "tendril_l": [
+          146.5014,
+          28.6751
+        ],
+        "tendril_r": [
+          146.4802,
+          208.1267
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1302,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 9,
+      "path": "frames/death/e/009.png",
+      "sha256": "bf6616692b8939fd01657a495747391dac747935141ead2eb770d2d6979eeccf",
+      "sockets": {
+        "mouth": [
+          195.27,
+          113.9684
+        ],
+        "pulse": [
+          140.2188,
+          119.9859
+        ],
+        "tendril_l": [
+          146.841,
+          29.8548
+        ],
+        "tendril_r": [
+          146.841,
+          205.6358
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1562,
+        262,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/death/s/000.png",
+      "sha256": "425d03a584d474c16c904511080d8eb9c358376b5a5957f56ef3f27f28cd9997",
+      "sockets": {
+        "mouth": [
+          128.0,
+          194.6231
+        ],
+        "pulse": [
+          128.0,
+          152.0153
+        ],
+        "tendril_l": [
+          230.9179,
+          141.5508
+        ],
+        "tendril_r": [
+          24.7194,
+          141.192
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        2,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/death/s/001.png",
+      "sha256": "9b0c240665c1818465c96c898bb75be070baa7faca07b6459b32fc33384dad9d",
+      "sockets": {
+        "mouth": [
+          128.6852,
+          193.6231
+        ],
+        "pulse": [
+          127.8494,
+          151.0328
+        ],
+        "tendril_l": [
+          230.0034,
+          137.0048
+        ],
+        "tendril_r": [
+          24.5187,
+          145.2099
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        262,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/death/s/002.png",
+      "sha256": "bacbdc726a150bdcf5a3f900aa9d7b752e0049ac8e782430b790ec62db11dce7",
+      "sockets": {
+        "mouth": [
+          130.5159,
+          191.01
+        ],
+        "pulse": [
+          127.455,
+          148.6371
+        ],
+        "tendril_l": [
+          226.6384,
+          125.2913
+        ],
+        "tendril_r": [
+          25.44,
+          156.0917
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        522,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/death/s/003.png",
+      "sha256": "85dd86e89b98b60c33aa82ff894cade3a1d9002411a0b31e4a5c9b75f32a4a68",
+      "sockets": {
+        "mouth": [
+          133.1299,
+          187.6966
+        ],
+        "pulse": [
+          126.9466,
+          146.0715
+        ],
+        "tendril_l": [
+          219.5685,
+          110.0556
+        ],
+        "tendril_r": [
+          30.4715,
+          171.9931
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        782,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 4,
+      "path": "frames/death/s/004.png",
+      "sha256": "6ce95e9fdfc04b532d55cd1c53e12b7352e48c87b67d79a63e1478da56158a59",
+      "sockets": {
+        "mouth": [
+          136.1237,
+          184.4163
+        ],
+        "pulse": [
+          126.5242,
+          144.3067
+        ],
+        "tendril_l": [
+          208.2508,
+          94.9783
+        ],
+        "tendril_r": [
+          41.7626,
+          190.0317
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1042,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 5,
+      "path": "frames/death/s/005.png",
+      "sha256": "a424384a04624ce9df666721164fa9d66c1c60f7ae1daf6defbac987b5a256cf",
+      "sockets": {
+        "mouth": [
+          139.0871,
+          181.2655
+        ],
+        "pulse": [
+          126.3994,
+          143.4086
+        ],
+        "tendril_l": [
+          193.6165,
+          82.6061
+        ],
+        "tendril_r": [
+          59.0912,
+          206.374
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1302,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 6,
+      "path": "frames/death/s/006.png",
+      "sha256": "a31aa9c2333cbdb18f1e7f3d1272e634dd43fa7e55a1fdce9d2b4c8c59fdfae8",
+      "sockets": {
+        "mouth": [
+          141.6715,
+          167.9368
+        ],
+        "pulse": [
+          126.6786,
+          132.7378
+        ],
+        "tendril_l": [
+          177.9143,
+          63.8395
+        ],
+        "tendril_r": [
+          79.6487,
+          207.7551
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1562,
+        522,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 7,
+      "path": "frames/death/s/007.png",
+      "sha256": "c48e9679681c034b55d3cb9462b144c3068dcbd1ac00398f459d76117edbbfcc",
+      "sockets": {
+        "mouth": [
+          143.6439,
+          160.2705
+        ],
+        "pulse": [
+          127.2694,
+          127.609
+        ],
+        "tendril_l": [
+          163.9155,
+          54.1979
+        ],
+        "tendril_r": [
+          99.1382,
+          209.0539
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        2,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 8,
+      "path": "frames/death/s/008.png",
+      "sha256": "ae2a542c795c58ef7a22d251260036bf382647444d9e1f1130073dda36667e8a",
+      "sockets": {
+        "mouth": [
+          144.8852,
+          157.0318
+        ],
+        "pulse": [
+          127.8851,
+          126.2324
+        ],
+        "tendril_l": [
+          154.1155,
+          50.9835
+        ],
+        "tendril_r": [
+          113.2806,
+          210.0071
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        262,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 9,
+      "path": "frames/death/s/009.png",
+      "sha256": "6357e9dfb0207a016bafe50d4c7f9610952a311e2005d2d6d15b6f2d5708c121",
+      "sockets": {
+        "mouth": [
+          145.3219,
+          156.2644
+        ],
+        "pulse": [
+          128.16,
+          126.1753
+        ],
+        "tendril_l": [
+          150.4692,
+          50.5099
+        ],
+        "tendril_r": [
+          118.6313,
+          210.3719
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        522,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/death/w/000.png",
+      "sha256": "4db954a472b4f9ebe881168d1d0cd06a933780a8e4c90ea7192fe8a83b7bdefd",
+      "sockets": {
+        "mouth": [
+          60.73,
+          160.988
+        ],
+        "pulse": [
+          115.7812,
+          145.9059
+        ],
+        "tendril_l": [
+          120.9466,
+          189.4831
+        ],
+        "tendril_r": [
+          121.6642,
+          86.3838
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        782,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/death/w/001.png",
+      "sha256": "e702b4207d311d6ed1a24a94119c406b7aeba6a9007d460c962d853a6a1ad73a",
+      "sockets": {
+        "mouth": [
+          60.73,
+          160.3307
+        ],
+        "pulse": [
+          115.7812,
+          144.848
+        ],
+        "tendril_l": [
+          120.4867,
+          184.2498
+        ],
+        "tendril_r": [
+          121.1772,
+          90.0578
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1042,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/death/w/002.png",
+      "sha256": "9df12e08d8beaf6c7a2d250fa94b36b9d1b25dc9b37be7d06ff6d2e5446a7665",
+      "sockets": {
+        "mouth": [
+          60.73,
+          158.6329
+        ],
+        "pulse": [
+          115.7812,
+          142.2551
+        ],
+        "tendril_l": [
+          119.2704,
+          170.2457
+        ],
+        "tendril_r": [
+          119.8888,
+          100.7562
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1302,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/death/w/003.png",
+      "sha256": "b3c8810cd8dcb926a91b63b8fae7ffb11b04452a41bd486d81e8f542b622b5e0",
+      "sockets": {
+        "mouth": [
+          60.73,
+          156.6265
+        ],
+        "pulse": [
+          115.7812,
+          139.4354
+        ],
+        "tendril_l": [
+          117.5543,
+          150.617
+        ],
+        "tendril_r": [
+          118.0701,
+          118.2639
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1562,
+        782,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 4,
+      "path": "frames/death/w/004.png",
+      "sha256": "865ed2c36276411bd4acd4274f03bc22e7145e72d32543506f01b71ed075360b",
+      "sockets": {
+        "mouth": [
+          60.73,
+          154.8431
+        ],
+        "pulse": [
+          115.7812,
+          137.4594
+        ],
+        "tendril_l": [
+          115.5939,
+          128.9007
+        ],
+        "tendril_r": [
+          115.9913,
+          140.9086
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        2,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 5,
+      "path": "frames/death/w/005.png",
+      "sha256": "ef8ffb5a193fe9bb4f82e670f8482dc6c254b634f7106b014a9a9b6c211659b5",
+      "sockets": {
+        "mouth": [
+          60.73,
+          153.1741
+        ],
+        "pulse": [
+          115.7812,
+          136.4989
+        ],
+        "tendril_l": [
+          113.6256,
+          108.2272
+        ],
+        "tendril_r": [
+          113.9028,
+          164.871
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        262,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 6,
+      "path": "frames/death/w/006.png",
+      "sha256": "8b4b3ec56b824c12f46ee8d392633310159460262082782e0820d03163b25cec",
+      "sockets": {
+        "mouth": [
+          60.73,
+          141.1375
+        ],
+        "pulse": [
+          115.7812,
+          125.9677
+        ],
+        "tendril_l": [
+          111.8518,
+          80.7226
+        ],
+        "tendril_r": [
+          112.0196,
+          175.5893
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        522,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 7,
+      "path": "frames/death/w/007.png",
+      "sha256": "7ac30f1dcce4650c97076dbdc44c7b91a2d8ec3aeb053c873642603859e73f9c",
+      "sockets": {
+        "mouth": [
+          60.73,
+          134.4574
+        ],
+        "pulse": [
+          115.7812,
+          121.1343
+        ],
+        "tendril_l": [
+          110.434,
+          63.3727
+        ],
+        "tendril_r": [
+          110.5136,
+          185.8798
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        782,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 8,
+      "path": "frames/death/w/008.png",
+      "sha256": "9c9da9f99cd4b7a67c4625d40f51aaf25b05eab2d9627aa0ee50f20e0160f5c7",
+      "sockets": {
+        "mouth": [
+          60.73,
+          131.8394
+        ],
+        "pulse": [
+          115.7812,
+          120.0655
+        ],
+        "tendril_l": [
+          109.4986,
+          54.7906
+        ],
+        "tendril_r": [
+          109.5198,
+          193.4073
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1042,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 9,
+      "path": "frames/death/w/009.png",
+      "sha256": "48a60e37565ba3c6c757982d902ad9edf403aac1cc5f05707662289337ab58ea",
+      "sockets": {
+        "mouth": [
+          60.73,
+          131.2903
+        ],
+        "pulse": [
+          115.7812,
+          120.1459
+        ],
+        "tendril_l": [
+          109.159,
+          52.324
+        ],
+        "tendril_r": [
+          109.159,
+          196.267
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1302,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/death/n/000.png",
+      "sha256": "c592398749947125db871e358a2d8152f3bae5b60eb8d06f5b5d890740dcab9e",
+      "sockets": {
+        "mouth": [
+          128.0,
+          127.353
+        ],
+        "pulse": [
+          128.0,
+          139.7965
+        ],
+        "tendril_l": [
+          25.0821,
+          134.4974
+        ],
+        "tendril_r": [
+          231.2806,
+          134.8562
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1562,
+        1042,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/death/n/001.png",
+      "sha256": "7a23c2226f9e2b06b9aa866ab37b43dd23854c6d98b4f89a01d9ce59c88e44c4",
+      "sockets": {
+        "mouth": [
+          127.3148,
+          126.3531
+        ],
+        "pulse": [
+          128.1506,
+          138.814
+        ],
+        "tendril_l": [
+          25.9966,
+          129.4914
+        ],
+        "tendril_r": [
+          231.4813,
+          138.387
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        2,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/death/n/002.png",
+      "sha256": "c81474e1558e42fc0caf465463743d91ce1ba9556f0512b3b1d8b84b3fca07f0",
+      "sockets": {
+        "mouth": [
+          125.4841,
+          123.7399
+        ],
+        "pulse": [
+          128.545,
+          136.4182
+        ],
+        "tendril_l": [
+          29.3616,
+          116.5616
+        ],
+        "tendril_r": [
+          230.56,
+          147.9806
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        262,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/death/n/003.png",
+      "sha256": "4f4e9697e4587f922fb4df8fe91f90c4a3f8200892fe2efb25bdbe9c9ec32f91",
+      "sockets": {
+        "mouth": [
+          122.8701,
+          120.4266
+        ],
+        "pulse": [
+          129.0534,
+          133.8527
+        ],
+        "tendril_l": [
+          36.4315,
+          99.6099
+        ],
+        "tendril_r": [
+          225.5285,
+          162.0632
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        522,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 4,
+      "path": "frames/death/n/004.png",
+      "sha256": "f9ae2b16c4f8bcabedd9ede95988dde85c655750ba1bab73a4f57a5a0e993a5b",
+      "sockets": {
+        "mouth": [
+          119.8763,
+          117.1463
+        ],
+        "pulse": [
+          129.4758,
+          132.0879
+        ],
+        "tendril_l": [
+          47.7492,
+          82.5723
+        ],
+        "tendril_r": [
+          214.2374,
+          178.023
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        782,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 5,
+      "path": "frames/death/n/005.png",
+      "sha256": "55b95eb91eb6282a1245b7e42546c0f28afb06106b91e5a3cb6d0c6b599432b0",
+      "sockets": {
+        "mouth": [
+          116.9129,
+          113.9955
+        ],
+        "pulse": [
+          129.6006,
+          131.1898
+        ],
+        "tendril_l": [
+          62.3835,
+          68.2318
+        ],
+        "tendril_r": [
+          196.9088,
+          192.2768
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1042,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 6,
+      "path": "frames/death/n/006.png",
+      "sha256": "e2ad3a3c19d39dd862e81e55dd0b4f3dc6446b595c10d489fffe14f2baa06f12",
+      "sockets": {
+        "mouth": [
+          114.3285,
+          100.6668
+        ],
+        "pulse": [
+          129.3214,
+          120.519
+        ],
+        "tendril_l": [
+          78.0857,
+          47.6914
+        ],
+        "tendril_r": [
+          176.3513,
+          191.7747
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1302,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 7,
+      "path": "frames/death/n/007.png",
+      "sha256": "625a6e16e2debb0a727da7b90a0bb5edf61080937437209228fba00c04496c3b",
+      "sockets": {
+        "mouth": [
+          112.3561,
+          93.0004
+        ],
+        "pulse": [
+          128.7306,
+          115.3902
+        ],
+        "tendril_l": [
+          92.0845,
+          36.6319
+        ],
+        "tendril_r": [
+          156.8618,
+          191.5675
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        1562,
+        1302,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 8,
+      "path": "frames/death/n/008.png",
+      "sha256": "6c9c1fb82de670f63396ba645128b898ddde30a61c91297df555e174233b7047",
+      "sockets": {
+        "mouth": [
+          111.1148,
+          89.7618
+        ],
+        "pulse": [
+          128.1149,
+          114.0136
+        ],
+        "tendril_l": [
+          101.8845,
+          32.4821
+        ],
+        "tendril_r": [
+          142.7194,
+          191.5269
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        2,
+        1562,
+        256,
+        256
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 9,
+      "path": "frames/death/n/009.png",
+      "sha256": "beaabaaef2d83d663d3c2c7ffc902db316f545e86d0e0aab14cd8934874ae68a",
+      "sockets": {
+        "mouth": [
+          110.6781,
+          88.9943
+        ],
+        "pulse": [
+          127.84,
+          113.9565
+        ],
+        "tendril_l": [
+          105.5308,
+          31.6689
+        ],
+        "tendril_r": [
+          137.3687,
+          191.5309
+        ]
+      },
+      "atlas": "atlas_4.png",
+      "region": [
+        262,
+        1562,
+        256,
+        256
+      ]
+    }
+  ],
+  "move_distance_per_cycle_game_units": 46.08000000000001,
+  "charge_distance_per_cycle_game_units": 70.60645161290323,
+  "source": {
+    "warden_family.py": "6d99daecfef26d6e79d86391eb6f44b4c2efd2da7b25e8959943b598acaebb48",
+    "render_motion.py": "cf0ef91863b5cbfafc677064f95018df6406cf4fb66e87ec02ae8e2dfda7be84"
+  },
+  "owner_approval": null
+}
