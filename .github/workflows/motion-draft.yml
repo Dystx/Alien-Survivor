@@ -1,66 +1,11 @@
-name: Render first motion drafts
+name: Obsolete motion draft disabled
 on:
-  push:
-    branches: ['assets/official-pack-v1']
-    paths:
-      - '.github/workflows/motion-draft.yml'
-      - 'assets/pack_v1/source/**'
-      - 'assets/pack_v1/families/player/source/rig.json'
-      - 'assets/pack_v1/families/runner/source/rig.json'
+  workflow_dispatch:
 permissions:
   contents: read
-concurrency:
-  group: official-pack-motion-drafts
-  cancel-in-progress: false
 jobs:
-  render-review-drafts:
-    if: github.ref == 'refs/heads/assets/official-pack-v1'
+  preserve_locked_human:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
-    permissions:
-      contents: write
-    env:
-      LIBGL_ALWAYS_SOFTWARE: '1'
     steps:
-      - name: Read the exact source commit
-        shell: bash
-        run: |
-          set -euo pipefail
-          git init .
-          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
-          git fetch --no-tags --depth=1 origin "${GITHUB_SHA}"
-          git checkout --detach FETCH_HEAD
-      - name: Install pinned authoring dependencies
-        run: |
-          python3 -m venv /tmp/motion-venv
-          /tmp/motion-venv/bin/python -m pip install --disable-pip-version-check -r assets/pack_v1/source/requirements.txt
-      - name: Render real articulated models into PNG frames and editable GLBs
-        run: xvfb-run -a /tmp/motion-venv/bin/python assets/pack_v1/source/render_motion.py
-      - name: Record review-only deliveries and inspect actual generated frames
-        run: |
-          /tmp/motion-venv/bin/python assets/pack_v1/source/record_motion.py
-          /tmp/motion-venv/bin/python assets/pack_v1/source/test_motion.py
-          /tmp/motion-venv/bin/python -m unittest discover -s tests -p 'test_artpack*.py' -v
-          /tmp/motion-venv/bin/python tools/artpack.py audit
-      - name: Build offline motion review using the existing review gate
-        run: |
-          /tmp/motion-venv/bin/python tools/preview_artpack.py --asset player --clip walk --out /tmp/player_walk.html
-          /tmp/motion-venv/bin/python tools/preview_artpack.py --asset runner --clip move --out /tmp/runner_move.html
-          cp /tmp/player_walk.html /tmp/runner_move.html art_reviews/
-      - name: Commit generated drafts without merging or granting approval
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          target='assets/official-pack-v1'
-          current=$(git ls-remote origin "refs/heads/$target" | cut -f1)
-          test "$current" = "$GITHUB_SHA" || { echo 'Branch advanced; preserving concurrent changes, no push.'; exit 1; }
-          git add -- assets/pack_v1/families/player assets/pack_v1/families/runner art_reviews
-          if git diff --cached --quiet; then echo 'No rendered changes.'; exit 0; fi
-          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'art: add 56 review-only locomotion frames, editable masters and previews'
-          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
-          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" push origin "HEAD:refs/heads/$target"
-          echo "MOTION_DRAFT_COMMIT=$(git rev-parse HEAD)"
-# No pull-request write trigger, force-push, merge, approval or game export.
-# A render is draft artwork; passing tests does not approve visual quality.
+      - run: echo 'Disabled. The old procedural player is not the approved human. Use runner-only authoring for runner changes; preserve player_visual_lock.json and the locked HumanReview pixels.'
+# This workflow intentionally performs no rendering, asset writes or pushes.
