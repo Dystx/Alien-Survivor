@@ -1,0 +1,165 @@
+diff --git a/scripts/simulation.gd b/scripts/simulation.gd
+index e99a4ab..7072c64 100644
+--- a/scripts/simulation.gd
++++ b/scripts/simulation.gd
+@@ -39,6 +39,10 @@ class Enemy extends RefCounted:
+ 	var action_direction := Vector2.ZERO
+ 
+ class Bullet extends RefCounted:
++	# One immutable launch ray. No target reference survives the trigger.
++	var origin := Vector2.ZERO
++	var path_length: float = 450.0
++	var muzzle_launched: bool = false
+ 	var position := Vector2.ZERO
+ 	var previous := Vector2.ZERO
+ 	var velocity := Vector2.ZERO
+@@ -159,7 +163,7 @@ func resume() -> void:
+ 	if phase == Phase.PAUSED:
+ 		phase = return_phase
+ 
+-func step(dt: float, move: Vector2, manual_aim: Vector2 = Vector2.ZERO) -> void:
++func step(dt: float, move: Vector2, manual_aim: Vector2 = Vector2.ZERO, fire_geometry: Dictionary = {}) -> void:
+ 	events.clear()
+ 	if phase != Phase.RUNNING or dt <= 0.0:
+ 		return
+@@ -170,11 +174,13 @@ func step(dt: float, move: Vector2, manual_aim: Vector2 = Vector2.ZERO) -> void:
+ 	_move_enemies(dt)
+ 	grid.rebuild(enemies)
+ 	cooldown = maxf(0.0, cooldown - dt)
+-	var aim := manual_aim.normalized() if manual_aim.length_squared() > 0.01 else _auto_aim()
++	var manual := manual_aim.length_squared() > 0.01
++	var aim_point: Vector2 = fire_geometry.get("aim_point", Vector2.INF) if manual else _auto_target_point()
++	var aim := manual_aim.normalized() if manual else (player.direction_to(aim_point) if aim_point.is_finite() else Vector2.ZERO)
+ 	if aim != Vector2.ZERO:
+ 		facing = aim
+-		if cooldown <= 0.000001 and bullets.size() < balance.bullet_limit:
+-			_fire(aim)
++		if health > 0.0 and cooldown <= 0.000001 and bullets.size() < balance.bullet_limit:
++			_fire(aim, fire_geometry, aim_point)
+ 			cooldown = rifle_interval()
+ 	_update_bullets(dt)
+ 	_update_enemy_projectiles(dt)
+@@ -402,28 +408,86 @@ func start_boss_preview() -> void:
+ 	elapsed = time_limit
+ 	_begin_finale()
+ 
+-func _auto_aim() -> Vector2:
++func _auto_target_point() -> Vector2:
+ 	var nearest_sq := balance.rifle_range * balance.rifle_range
+-	var target := Vector2.ZERO
++	var target := Vector2.INF
+ 	for index in grid.query(player, balance.rifle_range):
+ 		var enemy: Enemy = enemies[index]
+ 		var distance_sq := player.distance_squared_to(enemy.position)
+ 		if distance_sq < nearest_sq and enemy.health > 0.0 and enemy.warning <= 0.0:
+ 			if arena.wall_hit_t(player, enemy.position, 2.0) > 1.0:
+ 				nearest_sq = distance_sq
+-				target = player.direction_to(enemy.position)
++				target = enemy.position
+ 	return target
+ 
+-func _fire(direction: Vector2) -> void:
++func _auto_aim() -> Vector2:
++	var point := _auto_target_point()
++	return player.direction_to(point) if point.is_finite() else Vector2.ZERO
++
++func _fire(direction: Vector2, geometry: Dictionary = {}, target_point: Vector2 = Vector2.INF) -> void:
++	if not direction.is_finite() or direction.length_squared() < 0.000001:
++		return
++	var offset := Vector2.ZERO
++	var mounted: bool = geometry.has("offsets") and geometry.has("basis")
++	if mounted:
++		# Geometry is a shot-time input from the locked sprite sockets, not an
++		# animation callback. No texture, target node or view object is stored here.
++		var basis: Transform2D = geometry.basis
++		var sector := posmod(roundi((basis * direction).angle() / (PI * 0.5)), 4)
++		var hurt_this_tick := false
++		for event in events:
++			hurt_this_tick = hurt_this_tick or event.type == "hurt"
++		var mounts: Array = geometry.get("hurt_offsets", geometry.offsets) if hurt_this_tick else geometry.offsets
++		if mounts.size() != 4 or not mounts[sector] is Vector2:
++			return
++		offset = mounts[sector]
++		if not offset.is_finite() or offset.length() > 128.0:
++			return
++	var launch := player + offset
++	var flight_direction := direction.normalized()
++	if mounted and target_point.is_finite() and launch.distance_squared_to(target_point) > 0.0001:
++		flight_direction = launch.direction_to(target_point)
++	shot_count += 1
++	events.append({"type": "shot", "position": player, "origin": launch, "direction": flight_direction, "mounted": mounted})
++	# Do not teleport a barrel through cover or past a touching alien. Check the
++	# short player-to-muzzle segment with the same swept collision as flight.
++	if mounted and offset.length_squared() > 0.0001:
++		var obstruction := _rifle_hit(player, launch)
++		if float(obstruction.t) <= 1.0:
++			_rifle_impact(player.lerp(launch, float(obstruction.t)), int(obstruction.enemy), flight_direction)
++			return
+ 	var bullet := Bullet.new()
+-	bullet.position = player
+-	bullet.previous = player
+-	bullet.velocity = direction * balance.bullet_speed
++	bullet.origin = launch
++	bullet.position = launch
++	bullet.previous = launch
++	bullet.velocity = flight_direction * balance.bullet_speed
+ 	bullet.damage = rifle_damage()
+ 	bullet.remaining = balance.rifle_range
++	bullet.path_length = balance.rifle_range
++	bullet.muzzle_launched = mounted
+ 	bullets.append(bullet)
+-	shot_count += 1
+-	events.append({"type": "shot", "position": player, "direction": direction})
++
++func _rifle_hit(start: Vector2, end: Vector2) -> Dictionary:
++	var closest := arena.wall_hit_t(start, end, 2.0)
++	var index_hit: int = -1
++	for index in grid.query((start + end) * 0.5, start.distance_to(end) * 0.5 + 35.0):
++		var enemy: Enemy = enemies[index]
++		if enemy.health <= 0.0 or enemy.warning > 0.0:
++			continue
++		var t := circle_hit_t(start, end, enemy.position, enemy.radius + 2.0)
++		if t < closest:
++			closest = t
++			index_hit = index
++	return {"t": closest, "enemy": index_hit}
++
++func _rifle_impact(point: Vector2, enemy_index: int, direction: Vector2, damage: float = -1.0) -> void:
++	if enemy_index >= 0:
++		damage_enemy(enemies[enemy_index], rifle_damage() if damage < 0.0 else damage)
++	else:
++		events.append({"type": "spark", "position": point})
++	# Exact physical contact point, not the target's centre. Rendering does not
++	# move the impact back toward a target after the projectile has arrived.
++	events.append({"type": "rifle_impact", "position": point, "direction": direction, "wall": enemy_index < 0})
+ 
+ static func circle_hit_t(a: Vector2, b: Vector2, center: Vector2, radius: float) -> float:
+ 	var offset := a - center
+@@ -446,23 +510,10 @@ func _update_bullets(dt: float) -> void:
+ 		bullet.previous = bullet.position
+ 		var travel := minf(bullet.remaining, bullet.velocity.length() * dt)
+ 		var end := bullet.position + bullet.velocity.normalized() * travel
+-		var closest_t := arena.wall_hit_t(bullet.position, end, 2.0)
+-		var hit_index: int = -1
+-		var center := (bullet.position + end) * 0.5
+-		for index in grid.query(center, travel * 0.5 + 35.0):
+-			var enemy: Enemy = enemies[index]
+-			if enemy.health <= 0.0 or enemy.warning > 0.0:
+-				continue
+-			var t := circle_hit_t(bullet.position, end, enemy.position, enemy.radius + 2.0)
+-			if t < closest_t:
+-				closest_t = t
+-				hit_index = index
+-		if closest_t <= 1.0:
+-			bullet.position = bullet.position.lerp(end, closest_t)
+-			if hit_index >= 0:
+-				damage_enemy(enemies[hit_index], bullet.damage)
+-			else:
+-				events.append({"type": "spark", "position": bullet.position})
++		var contact := _rifle_hit(bullet.position, end)
++		if float(contact.t) <= 1.0:
++			bullet.position = bullet.position.lerp(end, float(contact.t))
++			_rifle_impact(bullet.position, int(contact.enemy), bullet.velocity.normalized(), bullet.damage)
+ 			bullets.remove_at(bi)
+ 		else:
+ 			bullet.position = end
