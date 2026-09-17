@@ -1,0 +1,292 @@
+{
+  "asset_id": "player",
+  "status": "review",
+  "spec_sha256": "30ea02170c1ec5bc9a555dba998f9a90e5646cda06c2f39f79464be5c23bb9ea",
+  "sources": [
+    {
+      "path": "source/render_motion.py",
+      "sha256": "cf0ef91863b5cbfafc677064f95018df6406cf4fb66e87ec02ae8e2dfda7be84",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "source/record_motion.py",
+      "sha256": "5079984185ede152772591ce7e7cbc66b43e7ed989dc2251a59ecc4e1b941703",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "source/requirements.txt",
+      "sha256": "f45538c23287fe64164cf41b93e456b6c1c2fbcf2e9d18a673e8e3ba9c2c0020",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "source/README.md",
+      "sha256": "081190f08f7db19fa5b3c93bd2985d8043230c9ec44975657455614077f0109d",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "families/player/source/rig.json",
+      "sha256": "9ffbd269a74611309b7b3580233ac0966c27454185822182620014da3a5e597b",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "families/player/source/master.glb",
+      "sha256": "e7b095c6997ecf38679e6f7b24e3be3cd971751f9bd254ec21526774524ce3cb",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    },
+    {
+      "path": "families/player/source/sockets.json",
+      "sha256": "5048de7fcfdcec27aa22b99a39646f0134ae11625770bc913e1007a00c917cc6",
+      "provenance": "Original procedural mesh and articulated node-rig source authored in the Alien Survivor project conversation. No stock/ripped assets or earlier image sheets used as source. Approval/rights review pending."
+    }
+  ],
+  "frame_sha256": {
+    "families/player/frames/walk/e/000.png": "e92bd98e6a14eadb08a8aeda58489227b65bb19bdacd11f539aecedf5a15a53e",
+    "families/player/frames/walk/e/001.png": "97419b90dc9960e457c02e90c7570e9e4a6bfa9b98604a551f8cb610e8a43b6d",
+    "families/player/frames/walk/e/002.png": "5b19aaae0e2eca9bcab6ee0281f570de2932a490489697f6bb5bf785ee938f1f",
+    "families/player/frames/walk/e/003.png": "30b9f24790a55bb0e8c2a5d1838f6daeef8151f7a52ce6452f0c0eb0dbc9fbf8",
+    "families/player/frames/walk/e/004.png": "61ddc034c18b240beb5d2a4b6d2dbcc290d5dec387e23c81ab231310c69f6e89",
+    "families/player/frames/walk/e/005.png": "0138c9f14e075fcf74d9f4369a1b08e74395aa7daef52fd1f4a0f07bbd929508",
+    "families/player/frames/walk/e/006.png": "812fe92a4069220ed0328ad8a33d20f3e50a76d2e9927fd4cb4ce67a16f599ca",
+    "families/player/frames/walk/e/007.png": "49637d7a892ee7a763c3dff451dd66a1cb015f9fa0d8290d40f0b6977bc8e632",
+    "families/player/frames/walk/n/000.png": "2418e76ba1e4fcb7a5bd2d33e42b9120e7eb8ecb3baf5cd709f204955d648d27",
+    "families/player/frames/walk/n/001.png": "e7aeb6858d867cf8762bfadda42acbd034b98ad29a7c70b149a7d9031d0c9cf7",
+    "families/player/frames/walk/n/002.png": "c68c5c2ceb17f6e4543317a2a0ee74b3acd78bdc8f0fd3f786791adbb2086013",
+    "families/player/frames/walk/n/003.png": "6c4d5ea99e6f654532efa7c17bf22e3ba3ef1bc88162e68e883a54cc113616c8",
+    "families/player/frames/walk/n/004.png": "0452c5a796475db5aec32d0dbfa05403f6e00ee3d73f249baad70d60fbec89af",
+    "families/player/frames/walk/n/005.png": "3769721de9a691f2527e9c35d23c80e2a855b05191ad9cbf04a1ddf814c6ab3c",
+    "families/player/frames/walk/n/006.png": "4e8122b2470f86f002cbd34a825a65427249dca67f13da92cbee5d41470afcfa",
+    "families/player/frames/walk/n/007.png": "5bf3c4707052c39b89b2a4b930f18a768bd2abd3f16bb48e145e67a0edf82fea",
+    "families/player/frames/walk/s/000.png": "d2f22b690febad3653e4d9b48c21c51afc5d62c7be3b2ff743709daea8953664",
+    "families/player/frames/walk/s/001.png": "23efb25e41e913fe0d413d17dc2ad051db5c3bf31b66c8345871244004511ab9",
+    "families/player/frames/walk/s/002.png": "78b478132a80e3e896d3edc3591a73dffd89aae140b8fd2883c32d6bb7638943",
+    "families/player/frames/walk/s/003.png": "801b4698e575c0e7de1e379638fe009b87ed7a89b164d405ced277cd934ccc61",
+    "families/player/frames/walk/s/004.png": "39dd5d8c9523f9ffba026e463a6dca9033cf9f9521cef1b585b2159c65f4054f",
+    "families/player/frames/walk/s/005.png": "0be0892f961fcef06ad6875bd1b364ad84c0ae201daaec4db82da5b08ece75eb",
+    "families/player/frames/walk/s/006.png": "41a0861b123be530d3bb502799c055cef4b1ea8ab02a14525a9afbf401a9f264",
+    "families/player/frames/walk/s/007.png": "51369f0e6c83e0c517f6f3b6aa14730a7eed745d8b45c172ad8bb82adea5004f",
+    "families/player/frames/walk/w/000.png": "da6a1fe52956ed54900b642b617a048a01e421e124f053a7db2020895c079329",
+    "families/player/frames/walk/w/001.png": "06b02b86e81bffbeb60308f2805722c7d4a30614ecded7ddd6a314ef8713572f",
+    "families/player/frames/walk/w/002.png": "e352ce781ecf061b143382913b89f89bdc3a31dd2be46615d433f3c2bc5ed25d",
+    "families/player/frames/walk/w/003.png": "93fb1d394f89e8b095157191840a7198d2731b8304a585e7df95d2b5e4c00286",
+    "families/player/frames/walk/w/004.png": "1d8274760046adeda63568653d016a17c26cffb5bd4df5959e00b77fa04bd90a",
+    "families/player/frames/walk/w/005.png": "19381111e9f22d1e92c82c1253d3fd9947d52d7239c53ed7309db9bf1ddd914c",
+    "families/player/frames/walk/w/006.png": "9e0872adfceda22959065559e599d8719d913ac420bfe26f514d40fd436be4f3",
+    "families/player/frames/walk/w/007.png": "decdfc5fc3f2975889a01313cc453f757ff69a8a56ca0925dddad3d415bb5f3e"
+  },
+  "sockets": {
+    "families/player/frames/walk/e/000.png": {
+      "muzzle": [
+        119.3919,
+        45.7378
+      ]
+    },
+    "families/player/frames/walk/e/001.png": {
+      "muzzle": [
+        119.475,
+        45.81
+      ]
+    },
+    "families/player/frames/walk/e/002.png": {
+      "muzzle": [
+        119.5047,
+        46.1496
+      ]
+    },
+    "families/player/frames/walk/e/003.png": {
+      "muzzle": [
+        119.475,
+        45.81
+      ]
+    },
+    "families/player/frames/walk/e/004.png": {
+      "muzzle": [
+        119.3919,
+        45.7378
+      ]
+    },
+    "families/player/frames/walk/e/005.png": {
+      "muzzle": [
+        119.2927,
+        46.7231
+      ]
+    },
+    "families/player/frames/walk/e/006.png": {
+      "muzzle": [
+        119.2468,
+        47.4409
+      ]
+    },
+    "families/player/frames/walk/e/007.png": {
+      "muzzle": [
+        119.2927,
+        46.7231
+      ]
+    },
+    "families/player/frames/walk/s/000.png": {
+      "muzzle": [
+        58.8409,
+        70.8543
+      ]
+    },
+    "families/player/frames/walk/s/001.png": {
+      "muzzle": [
+        59.7549,
+        71.4249
+      ]
+    },
+    "families/player/frames/walk/s/002.png": {
+      "muzzle": [
+        60.1339,
+        71.9689
+      ]
+    },
+    "families/player/frames/walk/s/003.png": {
+      "muzzle": [
+        59.7549,
+        71.4249
+      ]
+    },
+    "families/player/frames/walk/s/004.png": {
+      "muzzle": [
+        58.8409,
+        70.8543
+      ]
+    },
+    "families/player/frames/walk/s/005.png": {
+      "muzzle": [
+        57.9286,
+        71.3337
+      ]
+    },
+    "families/player/frames/walk/s/006.png": {
+      "muzzle": [
+        57.5512,
+        71.8399
+      ]
+    },
+    "families/player/frames/walk/s/007.png": {
+      "muzzle": [
+        57.9286,
+        71.3337
+      ]
+    },
+    "families/player/frames/walk/w/000.png": {
+      "muzzle": [
+        8.6081,
+        40.5788
+      ]
+    },
+    "families/player/frames/walk/w/001.png": {
+      "muzzle": [
+        8.525,
+        41.5649
+      ]
+    },
+    "families/player/frames/walk/w/002.png": {
+      "muzzle": [
+        8.4953,
+        42.2834
+      ]
+    },
+    "families/player/frames/walk/w/003.png": {
+      "muzzle": [
+        8.525,
+        41.5649
+      ]
+    },
+    "families/player/frames/walk/w/004.png": {
+      "muzzle": [
+        8.6081,
+        40.5788
+      ]
+    },
+    "families/player/frames/walk/w/005.png": {
+      "muzzle": [
+        8.7073,
+        40.6517
+      ]
+    },
+    "families/player/frames/walk/w/006.png": {
+      "muzzle": [
+        8.7532,
+        40.9921
+      ]
+    },
+    "families/player/frames/walk/w/007.png": {
+      "muzzle": [
+        8.7073,
+        40.6517
+      ]
+    },
+    "families/player/frames/walk/n/000.png": {
+      "muzzle": [
+        69.1591,
+        15.4624
+      ]
+    },
+    "families/player/frames/walk/n/001.png": {
+      "muzzle": [
+        68.2451,
+        15.9499
+      ]
+    },
+    "families/player/frames/walk/n/002.png": {
+      "muzzle": [
+        67.8661,
+        16.4641
+      ]
+    },
+    "families/player/frames/walk/n/003.png": {
+      "muzzle": [
+        68.2451,
+        15.9499
+      ]
+    },
+    "families/player/frames/walk/n/004.png": {
+      "muzzle": [
+        69.1591,
+        15.4624
+      ]
+    },
+    "families/player/frames/walk/n/005.png": {
+      "muzzle": [
+        70.0714,
+        16.0411
+      ]
+    },
+    "families/player/frames/walk/n/006.png": {
+      "muzzle": [
+        70.4488,
+        16.5931
+      ]
+    },
+    "families/player/frames/walk/n/007.png": {
+      "muzzle": [
+        70.0714,
+        16.0411
+      ]
+    }
+  },
+  "review": {
+    "style": false,
+    "motion": false,
+    "alpha_edges": false,
+    "pivot_and_scale": false,
+    "direction_coverage": false,
+    "source_rights": false,
+    "aim_and_strafe": false
+  },
+  "public_source_permission": false,
+  "owner_approval": null,
+  "delivery_scope": "8 articulated walk frames per direction, four directions; incomplete family, NOT approved for runtime",
+  "remaining": [
+    "remaining base actions",
+    "full family validation and owner review",
+    "reverse and strafe/aim coverage"
+  ],
+  "technical_notes": [
+    "fixed cell/pivot and protected borders checked",
+    "genuine model-rotation views; not mirrored",
+    "image/rig checks do not constitute aesthetic approval"
+  ]
+}

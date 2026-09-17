@@ -1,0 +1,2420 @@
+{
+  "asset_id": "charger",
+  "status": "review",
+  "cell": [
+    128,
+    128
+  ],
+  "pivot": [
+    64,
+    104
+  ],
+  "directions": [
+    "e",
+    "s",
+    "w",
+    "n"
+  ],
+  "clips": {
+    "idle": {
+      "frames": 4,
+      "fps": 6,
+      "loop": true
+    },
+    "move": {
+      "frames": 6,
+      "fps": 12,
+      "loop": true
+    },
+    "windup": {
+      "frames": 4,
+      "fps": 8,
+      "loop": false
+    },
+    "charge": {
+      "frames": 6,
+      "fps": 16,
+      "loop": true
+    },
+    "recovery": {
+      "frames": 4,
+      "fps": 10,
+      "loop": false
+    },
+    "hit": {
+      "frames": 2,
+      "fps": 12,
+      "loop": false
+    },
+    "death": {
+      "frames": 5,
+      "fps": 10,
+      "loop": false
+    }
+  },
+  "frames": [
+    {
+      "clip": "idle",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/idle/e/000.png",
+      "sha256": "83aea06abb2b2ceb8101819a454276fcecb2f677ce6b6e0c734f8e779907f85d",
+      "sockets": {
+        "ram_tip": [
+          111.6343,
+          73.4656
+        ]
+      },
+      "region": [
+        2,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/idle/e/001.png",
+      "sha256": "69d6c2cdb3fe48f0369ea7ba7901203f182aafd63a20d39378f1698632675998",
+      "sockets": {
+        "ram_tip": [
+          111.6065,
+          72.9309
+        ]
+      },
+      "region": [
+        134,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/idle/e/002.png",
+      "sha256": "83aea06abb2b2ceb8101819a454276fcecb2f677ce6b6e0c734f8e779907f85d",
+      "sockets": {
+        "ram_tip": [
+          111.6343,
+          73.4656
+        ]
+      },
+      "region": [
+        266,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/idle/e/003.png",
+      "sha256": "05593a85637ad2bd78aec53f647f435dda38afee17954fad1664551d28c5c341",
+      "sockets": {
+        "ram_tip": [
+          111.6583,
+          74.0007
+        ]
+      },
+      "region": [
+        398,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/idle/s/000.png",
+      "sha256": "61349c9bce7b7301baeca7f5fdb4fb3e5f8db05827c8107a9d23f386f0f46abc",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          97.2828
+        ]
+      },
+      "region": [
+        530,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/idle/s/001.png",
+      "sha256": "f1c2108de2ffb2f1db227c2a090898e4834e3ba4f860e5fb710f652793380311",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          96.7341
+        ]
+      },
+      "region": [
+        662,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/idle/s/002.png",
+      "sha256": "61349c9bce7b7301baeca7f5fdb4fb3e5f8db05827c8107a9d23f386f0f46abc",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          97.2828
+        ]
+      },
+      "region": [
+        794,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/idle/s/003.png",
+      "sha256": "6ca4e040c06367a89223e1dd31268f8092bb18292cc26e94e63c9d86b99c4954",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          97.8298
+        ]
+      },
+      "region": [
+        926,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/idle/w/000.png",
+      "sha256": "45e25ef8f8daf3772e1019777d1bc1be8138c7471b95a625f2799cdfc6dd7154",
+      "sockets": {
+        "ram_tip": [
+          16.3657,
+          73.4656
+        ]
+      },
+      "region": [
+        1058,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/idle/w/001.png",
+      "sha256": "0bca4e6c38a374d0bf8e557da7dbef5354360dfbf53636ded746a3db67a33b4e",
+      "sockets": {
+        "ram_tip": [
+          16.3935,
+          72.9309
+        ]
+      },
+      "region": [
+        1190,
+        2,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/idle/w/002.png",
+      "sha256": "45e25ef8f8daf3772e1019777d1bc1be8138c7471b95a625f2799cdfc6dd7154",
+      "sockets": {
+        "ram_tip": [
+          16.3657,
+          73.4656
+        ]
+      },
+      "region": [
+        2,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/idle/w/003.png",
+      "sha256": "6d7422c04b7cb090d5696e1606274f3d119a1ad23f4048f7fb1900cd8974fc2d",
+      "sockets": {
+        "ram_tip": [
+          16.3417,
+          74.0007
+        ]
+      },
+      "region": [
+        134,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/idle/n/000.png",
+      "sha256": "839595798cc7e3b192009a2e7b9ed1b74d91198c284fab8754a5f49b81f42ba9",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          49.6485
+        ]
+      },
+      "region": [
+        266,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/idle/n/001.png",
+      "sha256": "73362f4c7dd4f73c149a785d49490862ce377fa6da7f5b0683fbe1044f873187",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          49.1276
+        ]
+      },
+      "region": [
+        398,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/idle/n/002.png",
+      "sha256": "839595798cc7e3b192009a2e7b9ed1b74d91198c284fab8754a5f49b81f42ba9",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          49.6485
+        ]
+      },
+      "region": [
+        530,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "idle",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/idle/n/003.png",
+      "sha256": "130a11283beccc694ea3e38b7dcc4c104890d4b6ff2f40b2a845f0ba53650bc4",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          50.1716
+        ]
+      },
+      "region": [
+        662,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/move/e/000.png",
+      "sha256": "84464d95e208a914f8e674ff10c3dcb72c290918141f5979abacbb40d474c5b2",
+      "sockets": {
+        "ram_tip": [
+          111.6343,
+          72.7802
+        ]
+      },
+      "region": [
+        794,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/move/e/001.png",
+      "sha256": "a9090d4393304031848ff71c7128fe68bed2b4dbb5f4a791e47d28862d427f21",
+      "sockets": {
+        "ram_tip": [
+          111.6317,
+          73.6586
+        ]
+      },
+      "region": [
+        926,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/move/e/002.png",
+      "sha256": "589bfdc5b65e679879d19272539a089a95f81d07273fbbb08471b2a41dc141e4",
+      "sockets": {
+        "ram_tip": [
+          111.6317,
+          73.6586
+        ]
+      },
+      "region": [
+        1058,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/move/e/003.png",
+      "sha256": "de63e21aa6326e5f39fbaf7657a182ed9d2af1796733a91ea4b327aa6ec19a12",
+      "sockets": {
+        "ram_tip": [
+          111.6343,
+          72.7802
+        ]
+      },
+      "region": [
+        1190,
+        134,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 4,
+      "path": "frames/move/e/004.png",
+      "sha256": "77bedc0c77cf18ae64eaf3cbad17c2acc9f0bfd3761a8abee5e7f9e659f7d74a",
+      "sockets": {
+        "ram_tip": [
+          111.6317,
+          73.9365
+        ]
+      },
+      "region": [
+        2,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "e",
+      "frame": 5,
+      "path": "frames/move/e/005.png",
+      "sha256": "0d5ed3cedde18c8c52e9ecee3ac229a9b84d1bf39090170b257fe2ff61b5c67f",
+      "sockets": {
+        "ram_tip": [
+          111.6317,
+          73.9365
+        ]
+      },
+      "region": [
+        134,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/move/s/000.png",
+      "sha256": "1075891b1d00b21d6b7bef9ec2a6747af94b43c53df483f82b32c24ae3c4777f",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          96.5973
+        ]
+      },
+      "region": [
+        266,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/move/s/001.png",
+      "sha256": "d49fa4bd05289b43adec7ac85d3f99bdef526c5d17de560f62f2f7c07f42bc16",
+      "sockets": {
+        "ram_tip": [
+          64.2779,
+          97.6134
+        ]
+      },
+      "region": [
+        398,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/move/s/002.png",
+      "sha256": "a37fa14a03bdf168c7b8a3fc2ca54af498635296028cc33a6bd718afc575840d",
+      "sockets": {
+        "ram_tip": [
+          64.2779,
+          97.6134
+        ]
+      },
+      "region": [
+        530,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/move/s/003.png",
+      "sha256": "e2d3d87346e5bb5f155d38f3174533e5c2892b48d2ae0945aebe503fb0bb5879",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          96.5973
+        ]
+      },
+      "region": [
+        662,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 4,
+      "path": "frames/move/s/004.png",
+      "sha256": "a16c13aff9996d295822483e72ae00ea0fccd2d0b59506e6e040175df1af0d16",
+      "sockets": {
+        "ram_tip": [
+          63.7221,
+          97.6134
+        ]
+      },
+      "region": [
+        794,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "s",
+      "frame": 5,
+      "path": "frames/move/s/005.png",
+      "sha256": "7eb88186259b5635b2e38295b8a1338b6f5e1b32b17530a892d668cf857f79ec",
+      "sockets": {
+        "ram_tip": [
+          63.7221,
+          97.6134
+        ]
+      },
+      "region": [
+        926,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/move/w/000.png",
+      "sha256": "b0cc744d6af40d989e712184d710d27e58f6653cd01a83ed2f89a8bd97c2f3dc",
+      "sockets": {
+        "ram_tip": [
+          16.3657,
+          72.7802
+        ]
+      },
+      "region": [
+        1058,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/move/w/001.png",
+      "sha256": "381398c0c6debc658153af8a9e22ea16c595dea843276804a5c21ad5c37fd094",
+      "sockets": {
+        "ram_tip": [
+          16.3683,
+          73.9365
+        ]
+      },
+      "region": [
+        1190,
+        266,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/move/w/002.png",
+      "sha256": "c4424c7b7abc47ab39c76bfab88e2f275172e664efedf0d8571d67ba27f77a4b",
+      "sockets": {
+        "ram_tip": [
+          16.3683,
+          73.9365
+        ]
+      },
+      "region": [
+        2,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/move/w/003.png",
+      "sha256": "083f8dca890b0df7f3bff65230a3e52f1d3d4ec5299da16119d36be088d2e711",
+      "sockets": {
+        "ram_tip": [
+          16.3657,
+          72.7802
+        ]
+      },
+      "region": [
+        134,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 4,
+      "path": "frames/move/w/004.png",
+      "sha256": "ca1d9d23a87b66dd5332079fa499ab53aa67fbfa5f0e3dcce5eddd0076b5668e",
+      "sockets": {
+        "ram_tip": [
+          16.3683,
+          73.6586
+        ]
+      },
+      "region": [
+        266,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "w",
+      "frame": 5,
+      "path": "frames/move/w/005.png",
+      "sha256": "8ca374b18735afe9c13708e5b29fa6050456c4d3b845314797016cb2c1afd88a",
+      "sockets": {
+        "ram_tip": [
+          16.3683,
+          73.6586
+        ]
+      },
+      "region": [
+        398,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/move/n/000.png",
+      "sha256": "fe729787539c3810c9d1a68d8daeca8b9f79af81ad5b8489ba1ca35e02516482",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          48.963
+        ]
+      },
+      "region": [
+        530,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/move/n/001.png",
+      "sha256": "01e5376efc95305e85b846c67e5963b79036ed9c12839eb0e9fc457bd04bac1f",
+      "sockets": {
+        "ram_tip": [
+          63.7221,
+          49.9817
+        ]
+      },
+      "region": [
+        662,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/move/n/002.png",
+      "sha256": "a03b8f553da6c548d9cc285e9cd1f5b7ebf54ed899f47e24debf8d3fa3be49fb",
+      "sockets": {
+        "ram_tip": [
+          63.7221,
+          49.9817
+        ]
+      },
+      "region": [
+        794,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/move/n/003.png",
+      "sha256": "0c6871073e325a928e0f509e0a4be6549c9afbe66f36b51d12d7ad2ca7431424",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          48.963
+        ]
+      },
+      "region": [
+        926,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 4,
+      "path": "frames/move/n/004.png",
+      "sha256": "645e876157d43a929872334be367ed88449a1f6635cf7b87d33d047c10e66f66",
+      "sockets": {
+        "ram_tip": [
+          64.2779,
+          49.9817
+        ]
+      },
+      "region": [
+        1058,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "move",
+      "direction": "n",
+      "frame": 5,
+      "path": "frames/move/n/005.png",
+      "sha256": "d4c427cc2560ef979731fb274d5dd17529f7635df4e1623680b40f2fbcb26fb6",
+      "sockets": {
+        "ram_tip": [
+          64.2779,
+          49.9817
+        ]
+      },
+      "region": [
+        1190,
+        398,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/windup/e/000.png",
+      "sha256": "83aea06abb2b2ceb8101819a454276fcecb2f677ce6b6e0c734f8e779907f85d",
+      "sockets": {
+        "ram_tip": [
+          111.6343,
+          73.4656
+        ]
+      },
+      "region": [
+        2,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/windup/e/001.png",
+      "sha256": "16cd85716d7bd41f2e29a2014996143ef448a1b71811a0ff2f78ca38bd49d5e9",
+      "sockets": {
+        "ram_tip": [
+          111.2936,
+          76.1104
+        ]
+      },
+      "region": [
+        134,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/windup/e/002.png",
+      "sha256": "15f538731215999dd7c07ec3d5a8131f443c69405563807577223613b36f0646",
+      "sockets": {
+        "ram_tip": [
+          110.3971,
+          81.0241
+        ]
+      },
+      "region": [
+        266,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/windup/e/003.png",
+      "sha256": "17cc5d93bc4c4da0261fcc1587e7c4a319e669964ab1fd17b16b4308694932db",
+      "sockets": {
+        "ram_tip": [
+          109.7725,
+          83.6627
+        ]
+      },
+      "region": [
+        398,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/windup/s/000.png",
+      "sha256": "61349c9bce7b7301baeca7f5fdb4fb3e5f8db05827c8107a9d23f386f0f46abc",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          97.2828
+        ]
+      },
+      "region": [
+        530,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/windup/s/001.png",
+      "sha256": "2fd08ac710aed90eafc496a30e3f9bd0d0b44896257b825bb5eaccac9be52c7a",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          99.7572
+        ]
+      },
+      "region": [
+        662,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/windup/s/002.png",
+      "sha256": "d760be07c34a3943dd6d4de5fe90a1746810a2cac201e62be0ed89edd3df5d9c",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          104.2227
+        ]
+      },
+      "region": [
+        794,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/windup/s/003.png",
+      "sha256": "bf85c263cc582ab436ab49735c489df795d4cc22a79af89d3c086f3de453acdb",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          106.549
+        ]
+      },
+      "region": [
+        926,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/windup/w/000.png",
+      "sha256": "45e25ef8f8daf3772e1019777d1bc1be8138c7471b95a625f2799cdfc6dd7154",
+      "sockets": {
+        "ram_tip": [
+          16.3657,
+          73.4656
+        ]
+      },
+      "region": [
+        1058,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/windup/w/001.png",
+      "sha256": "31dad08b0c4f6cde596516dd00aab468b36030a8128eccf3e851ba0f76e5a958",
+      "sockets": {
+        "ram_tip": [
+          16.7064,
+          76.1104
+        ]
+      },
+      "region": [
+        1190,
+        530,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/windup/w/002.png",
+      "sha256": "29e690b8ca4ebc35d8e53ebc8450e6d028d2eacc33c6301d404c04c1c4d59986",
+      "sockets": {
+        "ram_tip": [
+          17.6029,
+          81.0241
+        ]
+      },
+      "region": [
+        2,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/windup/w/003.png",
+      "sha256": "d93f1b55b0b6bc9117a08bb9a915a20bbfc380eaca3a43da9bf3120227ea8a88",
+      "sockets": {
+        "ram_tip": [
+          18.2275,
+          83.6627
+        ]
+      },
+      "region": [
+        134,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/windup/n/000.png",
+      "sha256": "839595798cc7e3b192009a2e7b9ed1b74d91198c284fab8754a5f49b81f42ba9",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          49.6485
+        ]
+      },
+      "region": [
+        266,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/windup/n/001.png",
+      "sha256": "641c16e78ea008522f7fac7855419218df4a1fc7cd26af01c6bf2e99bf5d210a",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          52.4635
+        ]
+      },
+      "region": [
+        398,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/windup/n/002.png",
+      "sha256": "5fed01af1022d091385bf5805befff2ca18a981e2ba3d87019e5d1a9e1dbfd28",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          57.8256
+        ]
+      },
+      "region": [
+        530,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "windup",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/windup/n/003.png",
+      "sha256": "2a22064357d40e00d2198fd49de8a8d52cbccc4e650bb70f8c6a663b65064286",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          60.7764
+        ]
+      },
+      "region": [
+        662,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/charge/e/000.png",
+      "sha256": "ea8a531a6e5b4bd71458487d20bfb05c79e523aa58c6c3d92539509addf9734b",
+      "sockets": {
+        "ram_tip": [
+          109.7725,
+          83.6627
+        ]
+      },
+      "region": [
+        794,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/charge/e/001.png",
+      "sha256": "ea94504f9e13f65e7c47c318094be1aa2a697160b03f9162eec97600de8a253b",
+      "sockets": {
+        "ram_tip": [
+          109.8356,
+          83.0576
+        ]
+      },
+      "region": [
+        926,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/charge/e/002.png",
+      "sha256": "eca5445095760858bb955a380ea8c365df4009dd24a4557ebec033aed4d80e28",
+      "sockets": {
+        "ram_tip": [
+          109.8356,
+          83.0576
+        ]
+      },
+      "region": [
+        1058,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/charge/e/003.png",
+      "sha256": "418a5d54a427a62e44749dfa06119fc5f59dbcf1bc3df1619f7c5053829b9439",
+      "sockets": {
+        "ram_tip": [
+          109.7725,
+          83.6627
+        ]
+      },
+      "region": [
+        1190,
+        662,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 4,
+      "path": "frames/charge/e/004.png",
+      "sha256": "452c9b265c88b57236394905824b2c0f696acbfcb8d6eb93445e8310015e053d",
+      "sockets": {
+        "ram_tip": [
+          109.8356,
+          83.0576
+        ]
+      },
+      "region": [
+        2,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "e",
+      "frame": 5,
+      "path": "frames/charge/e/005.png",
+      "sha256": "5bb331d524213b50699e10c04878a956332a9eb8c1c8d61e7a53e300a62f1dd3",
+      "sockets": {
+        "ram_tip": [
+          109.8356,
+          83.0576
+        ]
+      },
+      "region": [
+        134,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/charge/s/000.png",
+      "sha256": "cff8874b91ebec7bdc8a5c2565c0a991204df13003128d680770ef0a60dee2ba",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          106.549
+        ]
+      },
+      "region": [
+        266,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/charge/s/001.png",
+      "sha256": "f832a00cf1bc94170dd70aaad0936de441304e06fa7db50a70c62842c0bb19dc",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          105.9754
+        ]
+      },
+      "region": [
+        398,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/charge/s/002.png",
+      "sha256": "8181ae01e21ba27d7719ed158485779c443163792d68b82f850fb6001c6bfd8d",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          105.9754
+        ]
+      },
+      "region": [
+        530,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/charge/s/003.png",
+      "sha256": "3d50bf370773b9dbffe806dd9187cddc23e83a84e689b9e5fd8ce9b348cf2aaa",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          106.549
+        ]
+      },
+      "region": [
+        662,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 4,
+      "path": "frames/charge/s/004.png",
+      "sha256": "4939f3d0f1ceeccb81d61b926ebc198f0d1660f1d706e753ef56918d7bce3470",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          105.9754
+        ]
+      },
+      "region": [
+        794,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "s",
+      "frame": 5,
+      "path": "frames/charge/s/005.png",
+      "sha256": "328bee1e544b67f577be507fcbd506dc04b962f820492f2425d93e6a30f6c505",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          105.9754
+        ]
+      },
+      "region": [
+        926,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/charge/w/000.png",
+      "sha256": "e72a8dfc02bfbc2c770439a06bb21331f3f0e1c74cb54249beee25f07e88814c",
+      "sockets": {
+        "ram_tip": [
+          18.2275,
+          83.6627
+        ]
+      },
+      "region": [
+        1058,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/charge/w/001.png",
+      "sha256": "104a87b70b523282a363858f4c1c87d31865629dfb6d9ffec710ff3e08eecb19",
+      "sockets": {
+        "ram_tip": [
+          18.1644,
+          83.0576
+        ]
+      },
+      "region": [
+        1190,
+        794,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/charge/w/002.png",
+      "sha256": "d256d6d16e4d8082e83bc84f0075eb0e4aabd987a961c4cb3a83593869a22305",
+      "sockets": {
+        "ram_tip": [
+          18.1644,
+          83.0576
+        ]
+      },
+      "region": [
+        2,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/charge/w/003.png",
+      "sha256": "7ec41f1253806c87aa20cfef883d030a84c56b0384b592f7960864fa5a6a769a",
+      "sockets": {
+        "ram_tip": [
+          18.2275,
+          83.6627
+        ]
+      },
+      "region": [
+        134,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 4,
+      "path": "frames/charge/w/004.png",
+      "sha256": "10990931fb0160716bcac8dd0b9b9045ded5d5516a7f9174c378ccee9b46ecb6",
+      "sockets": {
+        "ram_tip": [
+          18.1644,
+          83.0576
+        ]
+      },
+      "region": [
+        266,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "w",
+      "frame": 5,
+      "path": "frames/charge/w/005.png",
+      "sha256": "626d222207f743226e5dc85cdb5a56bdeebca72d0d2f3a473eafd75a663e4eec",
+      "sockets": {
+        "ram_tip": [
+          18.1644,
+          83.0576
+        ]
+      },
+      "region": [
+        398,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/charge/n/000.png",
+      "sha256": "21c7b6a95245606ccc107a6e305c79c6712acd3cbb3b1b6c74cd05f26ca10713",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          60.7764
+        ]
+      },
+      "region": [
+        530,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/charge/n/001.png",
+      "sha256": "32367136737ffbf5c32b893b66998fc79d57c97e7372c2639b2d42ca258cb6b7",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          60.1398
+        ]
+      },
+      "region": [
+        662,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/charge/n/002.png",
+      "sha256": "97b27dd44ea4a37ff4ccfeebb89a9d67d8e422eef95bddb018adcf7bf1d1b79c",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          60.1398
+        ]
+      },
+      "region": [
+        794,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/charge/n/003.png",
+      "sha256": "f471bc3e67dda12b35c695767e17ef0b024186feb1ca5b82f921dc60ff017ccc",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          60.7764
+        ]
+      },
+      "region": [
+        926,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 4,
+      "path": "frames/charge/n/004.png",
+      "sha256": "72bd79ccffff28430a0e81a5ecfe9f2479854ab2530f416be8ba2b9d20d0c6e8",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          60.1398
+        ]
+      },
+      "region": [
+        1058,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "charge",
+      "direction": "n",
+      "frame": 5,
+      "path": "frames/charge/n/005.png",
+      "sha256": "ef85a4bd0c739ebcf97ef595834ca8492eb96f5a9193f0b36c16fe31119f2af5",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          60.1398
+        ]
+      },
+      "region": [
+        1190,
+        926,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/recovery/e/000.png",
+      "sha256": "17cc5d93bc4c4da0261fcc1587e7c4a319e669964ab1fd17b16b4308694932db",
+      "sockets": {
+        "ram_tip": [
+          109.7725,
+          83.6627
+        ]
+      },
+      "region": [
+        2,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/recovery/e/001.png",
+      "sha256": "15f538731215999dd7c07ec3d5a8131f443c69405563807577223613b36f0646",
+      "sockets": {
+        "ram_tip": [
+          110.3971,
+          81.0241
+        ]
+      },
+      "region": [
+        134,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/recovery/e/002.png",
+      "sha256": "16cd85716d7bd41f2e29a2014996143ef448a1b71811a0ff2f78ca38bd49d5e9",
+      "sockets": {
+        "ram_tip": [
+          111.2936,
+          76.1104
+        ]
+      },
+      "region": [
+        266,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/recovery/e/003.png",
+      "sha256": "83aea06abb2b2ceb8101819a454276fcecb2f677ce6b6e0c734f8e779907f85d",
+      "sockets": {
+        "ram_tip": [
+          111.6343,
+          73.4656
+        ]
+      },
+      "region": [
+        398,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/recovery/s/000.png",
+      "sha256": "bf85c263cc582ab436ab49735c489df795d4cc22a79af89d3c086f3de453acdb",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          106.549
+        ]
+      },
+      "region": [
+        530,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/recovery/s/001.png",
+      "sha256": "d760be07c34a3943dd6d4de5fe90a1746810a2cac201e62be0ed89edd3df5d9c",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          104.2227
+        ]
+      },
+      "region": [
+        662,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/recovery/s/002.png",
+      "sha256": "2fd08ac710aed90eafc496a30e3f9bd0d0b44896257b825bb5eaccac9be52c7a",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          99.7572
+        ]
+      },
+      "region": [
+        794,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/recovery/s/003.png",
+      "sha256": "61349c9bce7b7301baeca7f5fdb4fb3e5f8db05827c8107a9d23f386f0f46abc",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          97.2828
+        ]
+      },
+      "region": [
+        926,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/recovery/w/000.png",
+      "sha256": "d93f1b55b0b6bc9117a08bb9a915a20bbfc380eaca3a43da9bf3120227ea8a88",
+      "sockets": {
+        "ram_tip": [
+          18.2275,
+          83.6627
+        ]
+      },
+      "region": [
+        1058,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/recovery/w/001.png",
+      "sha256": "29e690b8ca4ebc35d8e53ebc8450e6d028d2eacc33c6301d404c04c1c4d59986",
+      "sockets": {
+        "ram_tip": [
+          17.6029,
+          81.0241
+        ]
+      },
+      "region": [
+        1190,
+        1058,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/recovery/w/002.png",
+      "sha256": "31dad08b0c4f6cde596516dd00aab468b36030a8128eccf3e851ba0f76e5a958",
+      "sockets": {
+        "ram_tip": [
+          16.7064,
+          76.1104
+        ]
+      },
+      "region": [
+        2,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/recovery/w/003.png",
+      "sha256": "45e25ef8f8daf3772e1019777d1bc1be8138c7471b95a625f2799cdfc6dd7154",
+      "sockets": {
+        "ram_tip": [
+          16.3657,
+          73.4656
+        ]
+      },
+      "region": [
+        134,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/recovery/n/000.png",
+      "sha256": "2a22064357d40e00d2198fd49de8a8d52cbccc4e650bb70f8c6a663b65064286",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          60.7764
+        ]
+      },
+      "region": [
+        266,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/recovery/n/001.png",
+      "sha256": "5fed01af1022d091385bf5805befff2ca18a981e2ba3d87019e5d1a9e1dbfd28",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          57.8256
+        ]
+      },
+      "region": [
+        398,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/recovery/n/002.png",
+      "sha256": "641c16e78ea008522f7fac7855419218df4a1fc7cd26af01c6bf2e99bf5d210a",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          52.4635
+        ]
+      },
+      "region": [
+        530,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "recovery",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/recovery/n/003.png",
+      "sha256": "839595798cc7e3b192009a2e7b9ed1b74d91198c284fab8754a5f49b81f42ba9",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          49.6485
+        ]
+      },
+      "region": [
+        662,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/hit/e/000.png",
+      "sha256": "f256b8f878732dd6f46b729298dc4cf440f005367a6d97935500212197c5f290",
+      "sockets": {
+        "ram_tip": [
+          110.0513,
+          73.5431
+        ]
+      },
+      "region": [
+        794,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/hit/e/001.png",
+      "sha256": "6465dd3d796392e9ec0902cc49248286d38b8f965dde1c1bbed6006dc557ec13",
+      "sockets": {
+        "ram_tip": [
+          111.3177,
+          74.2762
+        ]
+      },
+      "region": [
+        926,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/hit/s/000.png",
+      "sha256": "588ed2e701f55e4b2300b845208fa40dd51cfe90c9e4329263f5caec810953b4",
+      "sockets": {
+        "ram_tip": [
+          65.8702,
+          97.5039
+        ]
+      },
+      "region": [
+        1058,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/hit/s/001.png",
+      "sha256": "5039b7509bd9e0d5f462bbd696f84e25c1c4bf2b8a1f18d5c22d88098c9a2955",
+      "sockets": {
+        "ram_tip": [
+          64.3742,
+          98.1222
+        ]
+      },
+      "region": [
+        1190,
+        1190,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/hit/w/000.png",
+      "sha256": "b67a5dc4d661dc80df29441c19c1688d55a5465d70a9e3e0effc6ea1ab009546",
+      "sockets": {
+        "ram_tip": [
+          17.9487,
+          75.4134
+        ]
+      },
+      "region": [
+        2,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/hit/w/001.png",
+      "sha256": "89e24d26847d03a0a902bf4c533fb1a65a1ad7aed1f8c7ef11c7eb2a51fcc8e0",
+      "sockets": {
+        "ram_tip": [
+          16.6823,
+          74.6504
+        ]
+      },
+      "region": [
+        134,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/hit/n/000.png",
+      "sha256": "1fcf05eedf57c2a17176a047e82bd5130e99087fb5fe5dcbe314fd2581cc0a96",
+      "sockets": {
+        "ram_tip": [
+          62.1298,
+          51.4526
+        ]
+      },
+      "region": [
+        266,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "hit",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/hit/n/001.png",
+      "sha256": "9edb4d944c1d6dec399b5369ba681c2b3d851b964734858b11ddd61bf1dd6793",
+      "sockets": {
+        "ram_tip": [
+          63.6258,
+          50.8044
+        ]
+      },
+      "region": [
+        398,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 0,
+      "path": "frames/death/e/000.png",
+      "sha256": "7d6e2a0b11dfffb7c41bc25d50b8c5b1350765c3b35c987c0b8cc3545bda7145",
+      "sockets": {
+        "ram_tip": [
+          111.6343,
+          73.1541
+        ]
+      },
+      "region": [
+        530,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 1,
+      "path": "frames/death/e/001.png",
+      "sha256": "89d78b1ccbab06f87ad8c3f61ea316038310efc14093a8e6bb5e16ab318f2c62",
+      "sockets": {
+        "ram_tip": [
+          111.6343,
+          73.716
+        ]
+      },
+      "region": [
+        662,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 2,
+      "path": "frames/death/e/002.png",
+      "sha256": "11c21636ef00934ea940c36ebd170cdd67849d9319c70531152d499d46ebbc63",
+      "sockets": {
+        "ram_tip": [
+          111.6343,
+          76.2782
+        ]
+      },
+      "region": [
+        794,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 3,
+      "path": "frames/death/e/003.png",
+      "sha256": "7ff299785bb4980e22be914f313c75322435531fd5c6f630824e03d7dd0a5f61",
+      "sockets": {
+        "ram_tip": [
+          111.6343,
+          74.1523
+        ]
+      },
+      "region": [
+        926,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "e",
+      "frame": 4,
+      "path": "frames/death/e/004.png",
+      "sha256": "fa01ad146a7d99ef9237c11eb32580d0b27f6b4f2e99472dcf9c217c69cd1b14",
+      "sockets": {
+        "ram_tip": [
+          111.6343,
+          72.8114
+        ]
+      },
+      "region": [
+        1058,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 0,
+      "path": "frames/death/s/000.png",
+      "sha256": "981e6a5c9d69fbbd2eb6b3394e8162b88675bf30fc4150c2a31e5f953397cd40",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          96.9712
+        ]
+      },
+      "region": [
+        1190,
+        1322,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 1,
+      "path": "frames/death/s/001.png",
+      "sha256": "b11561ec4fd4919d309e06a4fe09bf56b5be9e8266c4a7893f08416bf0f3b337",
+      "sockets": {
+        "ram_tip": [
+          62.8008,
+          96.9336
+        ]
+      },
+      "region": [
+        2,
+        1454,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 2,
+      "path": "frames/death/s/002.png",
+      "sha256": "2e65277de0a57212357b0e4da2f4538bdfd7cdb299e469fd4ec8b3748b0287ce",
+      "sockets": {
+        "ram_tip": [
+          60.5961,
+          98.3934
+        ]
+      },
+      "region": [
+        134,
+        1454,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 3,
+      "path": "frames/death/s/003.png",
+      "sha256": "12b2e30c5f2d9975e09768c33dc815ed2da3d2e4695ba441eb164a79a62a3264",
+      "sockets": {
+        "ram_tip": [
+          59.655,
+          95.797
+        ]
+      },
+      "region": [
+        266,
+        1454,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "s",
+      "frame": 4,
+      "path": "frames/death/s/004.png",
+      "sha256": "d32b4dd41695f4ffe4608a78c07b110367e458222b1700ddc59b8c1dd064c9cb",
+      "sockets": {
+        "ram_tip": [
+          59.8083,
+          94.5328
+        ]
+      },
+      "region": [
+        398,
+        1454,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 0,
+      "path": "frames/death/w/000.png",
+      "sha256": "d2371ce517999812a9511bd756eeb72fa3f8340f4a4397529a3b7ebb17bd6d8a",
+      "sockets": {
+        "ram_tip": [
+          16.3657,
+          73.1541
+        ]
+      },
+      "region": [
+        530,
+        1454,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 1,
+      "path": "frames/death/w/001.png",
+      "sha256": "dc112fd606b14e9483175a28ef44c1b5fc31f751582a8bcb0798803c884e75d0",
+      "sockets": {
+        "ram_tip": [
+          16.3657,
+          72.5168
+        ]
+      },
+      "region": [
+        662,
+        1454,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 2,
+      "path": "frames/death/w/002.png",
+      "sha256": "09cb5b4c6aaecc45b91d1d21a863ab2d11665c39100243ec372b963949c76e98",
+      "sockets": {
+        "ram_tip": [
+          16.3657,
+          72.8743
+        ]
+      },
+      "region": [
+        794,
+        1454,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 3,
+      "path": "frames/death/w/003.png",
+      "sha256": "981a0029d7eeebb48f762d5e9e7aab2a561469788b04d4d3850b95f3c880783e",
+      "sockets": {
+        "ram_tip": [
+          16.3657,
+          69.8073
+        ]
+      },
+      "region": [
+        926,
+        1454,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "w",
+      "frame": 4,
+      "path": "frames/death/w/004.png",
+      "sha256": "5759a622ad2aa297b0480592e41f17ac71ad28f02929fff09534df9d1dd21a1a",
+      "sockets": {
+        "ram_tip": [
+          16.3657,
+          68.6198
+        ]
+      },
+      "region": [
+        1058,
+        1454,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 0,
+      "path": "frames/death/n/000.png",
+      "sha256": "8adf69f3c2b70cec274a89663d9009e4a202a7279bb264efab95e4bf24ab5f68",
+      "sockets": {
+        "ram_tip": [
+          64.0,
+          49.3369
+        ]
+      },
+      "region": [
+        1190,
+        1454,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 1,
+      "path": "frames/death/n/001.png",
+      "sha256": "a740fdb0461090a5e970f88faaf179a4785796deb49a5415f8dec53ab5916468",
+      "sockets": {
+        "ram_tip": [
+          65.1992,
+          49.2992
+        ]
+      },
+      "region": [
+        2,
+        1586,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 2,
+      "path": "frames/death/n/002.png",
+      "sha256": "5cfb7f32ef4ac6fad37e47b7a52b3caa7084e9541baddee6b0c7fb3716b84e9e",
+      "sockets": {
+        "ram_tip": [
+          67.4039,
+          50.7591
+        ]
+      },
+      "region": [
+        134,
+        1586,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 3,
+      "path": "frames/death/n/003.png",
+      "sha256": "481808421a86e910a6b521ed10d0ecd42573220d78a77440c725c4fb502bdb71",
+      "sockets": {
+        "ram_tip": [
+          68.345,
+          48.1627
+        ]
+      },
+      "region": [
+        266,
+        1586,
+        128,
+        128
+      ]
+    },
+    {
+      "clip": "death",
+      "direction": "n",
+      "frame": 4,
+      "path": "frames/death/n/004.png",
+      "sha256": "ed569e96845cb87d04bccba122482b238b3bfa8e469bb83b78ac853697c46912",
+      "sockets": {
+        "ram_tip": [
+          68.1917,
+          46.8984
+        ]
+      },
+      "region": [
+        398,
+        1586,
+        128,
+        128
+      ]
+    }
+  ],
+  "source": {
+    "charger_family.py": "310e81529a66d6aa477420b8b9f80a9f2413bd757e5fc47a46d8acc00523a167",
+    "render_motion.py": "cf0ef91863b5cbfafc677064f95018df6406cf4fb66e87ec02ae8e2dfda7be84"
+  },
+  "move_distance_per_cycle_game_units": 25.713548387096775,
+  "charge_distance_per_cycle_game_units": 38.29677419354839,
+  "owner_approval": null
+}

@@ -1,0 +1,70 @@
+{
+  "asset_id": "runner",
+  "clip": "move",
+  "frames": 6,
+  "fps": 12,
+  "cell": [
+    96,
+    96
+  ],
+  "pivot": [
+    48,
+    78
+  ],
+  "physical_scale": 0.91,
+  "gait": {
+    "stride": 0.24,
+    "lift": 0.061
+  },
+  "materials": {
+    "flesh": {
+      "hex": "704036",
+      "wear": 0.24,
+      "specular": 0.07
+    },
+    "muscle": {
+      "hex": "91503E",
+      "wear": 0.21,
+      "specular": 0.08
+    },
+    "dark_flesh": {
+      "hex": "392328",
+      "wear": 0.2,
+      "specular": 0.06
+    },
+    "tendon": {
+      "hex": "8A6E56",
+      "wear": 0.2,
+      "specular": 0.07
+    },
+    "ridge": {
+      "hex": "674B40",
+      "wear": 0.24,
+      "specular": 0.05
+    },
+    "ivory": {
+      "hex": "BAA483",
+      "wear": 0.22,
+      "specular": 0.08
+    },
+    "claw": {
+      "hex": "AA967A",
+      "wear": 0.2,
+      "specular": 0.11
+    },
+    "mouth": {
+      "hex": "180F15",
+      "wear": 0.1,
+      "specular": 0.03
+    },
+    "eye": {
+      "hex": "C69651",
+      "wear": 0.04,
+      "specular": 0.15
+    }
+  },
+  "source": "runner_family.py with the project render_motion.py mesh/render library",
+  "source_lineage": "Refinement of the original runner master, not an unrelated image sheet",
+  "approval": "review_pending",
+  "move_distance_per_cycle_game_units": 22.544516129032257
+}

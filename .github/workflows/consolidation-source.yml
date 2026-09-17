@@ -1,0 +1,40 @@
+name: Consolidation source snapshot
+on:
+  push:
+    branches: ['feat/consolidated-game']
+    paths: ['.github/workflows/consolidation-source.yml']
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Read exact public source without credentials in the checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags --depth=1 origin "$GITHUB_SHA"
+          git checkout -b feat/consolidated-game FETCH_HEAD
+          git fetch --no-tags --depth=1 origin 5a9d18b50943e74a01df4de9a6c50cf574f55b01
+          git update-ref refs/remotes/origin/warden-source FETCH_HEAD
+      - name: Package public source objects and the existing pinned engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/install_ci_godot.py /tmp/consolidation-godot
+          mkdir -p /tmp/consolidation-source
+          tar -czf /tmp/consolidation-source/source.tgz --exclude=.git/FETCH_HEAD --exclude=.git/logs .
+          cp /tmp/consolidation-godot/godot /tmp/consolidation-source/godot
+          cd /tmp/consolidation-source
+          sha256sum source.tgz godot > SHA256SUMS
+      - name: Attach source snapshot for this consolidation task
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: consolidation-source
+          path: /tmp/consolidation-source/
+          retention-days: 3
+          if-no-files-found: error
+# Read-only. No environment dump, secrets, player regeneration, merges or publication.

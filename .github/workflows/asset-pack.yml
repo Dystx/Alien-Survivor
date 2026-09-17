@@ -1,0 +1,43 @@
+name: Official asset contract checks
+on:
+  push:
+    paths:
+      - 'assets/pack_v1/**'
+      - 'tools/artpack.py'
+      - 'tools/preview_artpack.py'
+      - 'tools/requirements-artpack.txt'
+      - 'tests/test_artpack*.py'
+      - '.github/workflows/asset-pack.yml'
+  pull_request:
+    paths:
+      - 'assets/pack_v1/**'
+      - 'tools/artpack.py'
+      - 'tools/preview_artpack.py'
+      - 'tools/requirements-artpack.txt'
+      - 'tests/test_artpack*.py'
+      - '.github/workflows/asset-pack.yml'
+permissions:
+  contents: read
+jobs:
+  contract-and-tools:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Fetch this exact public-repository commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install the pinned tooling dependency
+        run: |
+          python3 -m venv /tmp/asset-pack-venv
+          /tmp/asset-pack-venv/bin/python -m pip install --disable-pip-version-check -r tools/requirements-artpack.txt
+      - name: Exercise validation, approved-only export and motion reviews on fixtures
+        run: /tmp/asset-pack-venv/bin/python -m unittest discover -s tests -p 'test_artpack*.py' -v
+      - name: Report actual pack completeness separately
+        run: /tmp/asset-pack-venv/bin/python tools/artpack.py audit
+# A green contract/tools job is not final art, animation, Godot or device approval.
+# This workflow neither generates character artwork nor publishes runtime assets.

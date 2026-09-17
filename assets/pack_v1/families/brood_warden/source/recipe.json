@@ -1,0 +1,102 @@
+{
+  "asset_id": "brood_warden",
+  "cell": [
+    256,
+    256
+  ],
+  "pivot": [
+    128,
+    204
+  ],
+  "clip": "move",
+  "frames": 6,
+  "fps": 8,
+  "physical_scale": 1.8,
+  "gait": {
+    "stride": 0.28,
+    "lift": 0.06,
+    "stance": 0.7
+  },
+  "move_distance_per_cycle_game_units": 46.08000000000001,
+  "charge_distance_per_cycle_game_units": 70.60645161290323,
+  "materials": {
+    "flesh": {
+      "hex": "634237",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "muscle": {
+      "hex": "895540",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "dark_flesh": {
+      "hex": "31232A",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "tendon": {
+      "hex": "9B7657",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "ridge": {
+      "hex": "574837",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "ivory": {
+      "hex": "BDAC8E",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "claw": {
+      "hex": "B4A087",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "mouth": {
+      "hex": "160E16",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "eye": {
+      "hex": "C39950",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "shell": {
+      "hex": "333B3B",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "edge": {
+      "hex": "777869",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "groove": {
+      "hex": "1F2727",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "acid": {
+      "hex": "77823B",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "core": {
+      "hex": "B2B761",
+      "wear": 0.27,
+      "specular": 0.05
+    },
+    "amber": {
+      "hex": "B08143",
+      "wear": 0.27,
+      "specular": 0.05
+    }
+  },
+  "source": "warden_family.py plus existing render_motion.py",
+  "design": "Broad anchored thorax, crown scutes, four limbs, two articulated tendrils, ventral acid throat. No new player art.",
+  "approval": "review_pending"
+}

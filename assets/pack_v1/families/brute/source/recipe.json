@@ -1,0 +1,91 @@
+{
+  "asset_id": "brute",
+  "cell": [
+    160,
+    160
+  ],
+  "pivot": [
+    80,
+    136
+  ],
+  "clip": "move",
+  "frames": 6,
+  "fps": 8,
+  "physical_scale": 1.27,
+  "gait": {
+    "stride": 0.22,
+    "lift": 0.053,
+    "stance": 0.7
+  },
+  "move_distance_per_cycle_game_units": 25.54514285714286,
+  "materials": {
+    "flesh": {
+      "hex": "55403B",
+      "wear": 0.26,
+      "specular": 0.04
+    },
+    "muscle": {
+      "hex": "78523F",
+      "wear": 0.27,
+      "specular": 0.04
+    },
+    "dark_flesh": {
+      "hex": "30242A",
+      "wear": 0.25,
+      "specular": 0.03
+    },
+    "tendon": {
+      "hex": "88664C",
+      "wear": 0.2,
+      "specular": 0.04
+    },
+    "ridge": {
+      "hex": "51473B",
+      "wear": 0.27,
+      "specular": 0.035
+    },
+    "ivory": {
+      "hex": "A99475",
+      "wear": 0.25,
+      "specular": 0.05
+    },
+    "claw": {
+      "hex": "A18F77",
+      "wear": 0.22,
+      "specular": 0.07
+    },
+    "mouth": {
+      "hex": "170F15",
+      "wear": 0.11,
+      "specular": 0.02
+    },
+    "eye": {
+      "hex": "BE9048",
+      "wear": 0.05,
+      "specular": 0.11
+    },
+    "shell": {
+      "hex": "383D3D",
+      "wear": 0.35,
+      "specular": 0.035
+    },
+    "shell_edge": {
+      "hex": "727466",
+      "wear": 0.29,
+      "specular": 0.04
+    },
+    "shell_dark": {
+      "hex": "252D2D",
+      "wear": 0.29,
+      "specular": 0.02
+    },
+    "amber": {
+      "hex": "A87C40",
+      "wear": 0.2,
+      "specular": 0.05
+    }
+  },
+  "source": "brute_family.py with the existing render_motion.py mesh/render library",
+  "source_lineage": "Four-limbed lineage, independent wide thorax, short skull, heavy forelimbs and segmented keratin shell; no enlarged runner substitute.",
+  "approval": "review_pending"
+}

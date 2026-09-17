@@ -1,0 +1,63 @@
+name: Spitter candidate
+on:
+  push:
+    branches: ['assets/official-pack-v1']
+    paths:
+      - 'assets/pack_v1/source/spitter_family.py'
+      - 'assets/pack_v1/source/check_spitter.py'
+      - 'assets/pack_v1/source/record_spitter.py'
+      - '.github/workflows/spitter-candidate.yml'
+permissions:
+  contents: read
+concurrency:
+  group: spitter-candidate-only
+  cancel-in-progress: false
+jobs:
+  render:
+    if: github.ref == 'refs/heads/assets/official-pack-v1'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      LIBGL_ALWAYS_SOFTWARE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - name: Fetch exact source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+          git ls-tree -r HEAD -- assets/pack_v1/families/player assets/pack_v1/families/runner assets/pack_v1/player_visual_lock.json > /tmp/protected-before
+      - name: Install existing pinned renderer dependencies
+        run: |
+          python3 -m venv /tmp/spitter-venv
+          /tmp/spitter-venv/bin/python -m pip install -r assets/pack_v1/source/requirements.txt
+      - name: Render only the spitter
+        run: xvfb-run -a /tmp/spitter-venv/bin/python assets/pack_v1/source/spitter_family.py --out /tmp/spitter-candidate
+      - name: Test actual images, record draft and check pack contract
+        run: |
+          /tmp/spitter-venv/bin/python assets/pack_v1/source/check_spitter.py /tmp/spitter-candidate
+          /tmp/spitter-venv/bin/python assets/pack_v1/source/record_spitter.py /tmp/spitter-candidate
+          /tmp/spitter-venv/bin/python tools/artpack.py audit
+          /tmp/spitter-venv/bin/python tools/artpack.py check-family spitter
+          /tmp/spitter-venv/bin/python -m unittest discover -s tests -p 'test_artpack*.py' -v
+      - name: Commit candidate binaries only, preserve concurrent changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          target='assets/official-pack-v1'
+          test "$(git ls-remote origin "refs/heads/$target" | cut -f1)" = "$GITHUB_SHA" || { echo 'Concurrent changes: no push'; exit 1; }
+          git add -- assets/pack_v1/families/spitter
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'art: publish spitter candidate, 108 real frames and current source'
+          git ls-tree -r HEAD -- assets/pack_v1/families/player assets/pack_v1/families/runner assets/pack_v1/player_visual_lock.json > /tmp/protected-after
+          cmp /tmp/protected-before /tmp/protected-after
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" push origin "HEAD:refs/heads/$target"
+          echo "SPITTER_COMMIT=$(git rev-parse HEAD)"
+# No force-push, merge, human regeneration, approval or release publication.
