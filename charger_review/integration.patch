@@ -1,0 +1,128 @@
+--- a/scripts/arena_view.gd
++++ b/scripts/arena_view.gd
+@@ -12,6 +12,8 @@
+ var runners := Runner.new()
+ const Spitter = preload("res://scripts/spitter_animation.gd")
+ var spitters := Spitter.new()
++const Charger = preload("res://scripts/charger_animation.gd")
++var chargers := Charger.new()
+ var sim: Simulation
+ var sprites: Sprites
+ var camera := Vector2.ZERO
+@@ -34,6 +36,7 @@
+ 	firing.reset()
+ 	runners.reset()
+ 	spitters.reset()
++	chargers.reset()
+ 	fx.clear()
+ 	corpses.clear()
+ 	shake = 0.0
+@@ -50,6 +53,7 @@
+ 	moving_now = moving
+ 	runners.advance(dt, sim.enemies, events, sim.player, gore)
+ 	spitters.advance(dt, sim.enemies, events, gore)
++	chargers.advance(dt, sim.enemies, events, gore)
+ 	var hurt: bool = false
+ 	var fired: bool = false
+ 	for event in events:
+@@ -64,7 +68,7 @@
+ 	for event in events:
+ 		var type: String = event.type
+ 		if type == "death":
+-			if gore and event.get("kind", "") not in ["runner", "spitter"]:
++			if gore and event.get("kind", "") not in ["runner", "spitter", "charger"]:
+ 				corpses.append({"position": event.position, "variant": cosmetic_rng.randi_range(0, 2), "boss": event.get("kind", "") == "boss"})
+ 				if corpses.size() > 70:
+ 					corpses.pop_front()
+@@ -102,6 +106,9 @@
+ 	for body in spitters.deaths:
+ 		if float(body.age) >= Spitter.DEATH_DURATION:
+ 			_draw_spitter_body(body)
++	for body in chargers.deaths:
++		if float(body.age) >= Charger.DEATH_DURATION:
++			_draw_charger_body(body)
+ 	for h in sim.hazards:
+ 		var color := Color(0.45, 0.95, 0.18, 0.38) if h.kind == "acid" else Color(1, 0.47, 0.16, 0.30)
+ 		_ground_circle(h.position, float(h.radius), color, true)
+@@ -132,6 +139,9 @@
+ 	for body in spitters.deaths:
+ 		if float(body.age) < Spitter.DEATH_DURATION:
+ 			actors.append({"depth": IsoProjection.project(body.position).y, "spitter_body": body})
++	for body in chargers.deaths:
++		if float(body.age) < Charger.DEATH_DURATION:
++			actors.append({"depth": IsoProjection.project(body.position).y, "charger_body": body})
+ 	actors.append({"depth": IsoProjection.project(sim.player).y, "player": true})
+ 	actors.sort_custom(func(a: Dictionary, b: Dictionary) -> bool: return float(a.depth) < float(b.depth))
+ 	for actor in actors:
+@@ -141,6 +151,8 @@
+ 			_draw_runner_body(actor.runner_body)
+ 		elif actor.has("spitter_body"):
+ 			_draw_spitter_body(actor.spitter_body)
++		elif actor.has("charger_body"):
++			_draw_charger_body(actor.charger_body)
+ 		elif actor.has("enemy"):
+ 			_draw_enemy(actor.enemy)
+ 		else:
+@@ -228,6 +240,8 @@
+ 		draw_texture_rect(runners.for_enemy(enemy), Rect2(p - Runner.PIVOT, Runner.CELL), false, tint)
+ 	elif enemy.kind == "spitter":
+ 		draw_texture_rect(spitters.for_enemy(enemy), Rect2(p - Spitter.PIVOT, Spitter.CELL), false, tint)
++	elif enemy.kind == "charger":
++		draw_texture_rect(chargers.for_enemy(enemy), Rect2(p - Charger.PIVOT, Charger.CELL), false, tint)
+ 	else:
+ 		_foot(sprites.enemy_frame(enemy.kind, IsoProjection.project(enemy.direction)), p, scale, tint)
+ 	if enemy.kind == "spitter":
+@@ -305,3 +319,9 @@
+ 		return
+ 	var tint := Color(0.77, 0.73, 0.70) if float(body.age) >= Spitter.DEATH_DURATION else Color.WHITE
+ 	draw_texture_rect(Spitter.texture("death", body.direction, float(body.age)), Rect2(p - Spitter.PIVOT, Spitter.CELL), false, tint)
++func _draw_charger_body(body: Dictionary) -> void:
++	var p := screen(body.position)
++	if not Rect2(-128, -150, 1216, 840).has_point(p):
++		return
++	var tint := Color(0.77, 0.73, 0.70) if float(body.age) >= Charger.DEATH_DURATION else Color.WHITE
++	draw_texture_rect(Charger.texture("death", body.direction, float(body.age)), Rect2(p - Charger.PIVOT, Charger.CELL), false, tint)
+--- a/scripts/main.gd
++++ b/scripts/main.gd
+@@ -132,6 +132,17 @@
+ 	match action:
+ 		"start":
+ 			_start_run()
++		"charger_review":
++			get_tree().change_scene_to_file("res://scenes/charger_review.tscn")
++		"charger_test":
++			_start_run()
++			sim.spawning_enabled = false
++			sim.finale_enabled = false
++			for pos: Vector2 in [Vector2(1040, 660), Vector2(760, 700)]:
++				if sim.arena.is_clear(pos, 22.0):
++					var enemy = sim.add_enemy(pos, 1.0, "charger")
++					enemy.health = 400.0
++					enemy.max_health = 400.0
+ 		"spitter_review":
+ 			get_tree().change_scene_to_file("res://scenes/spitter_review.tscn")
+ 		"spitter_test":
+--- a/scripts/hud.gd
++++ b/scripts/hud.gd
+@@ -199,12 +199,18 @@
+ 		return
+ 	if screen_override == "diagnostics":
+ 		_text(box, "REPEATABLE COMBAT TEST", 27)
+-		_text(box, "Fixed seed 1709. F3 toggles counters. Spitter test uses two tough targets.", 14, MUTED)
++		_text(box, "Fixed seed 1709. F3 toggles counters. Creature tests use two tough targets.", 14, MUTED)
+ 		for count in [25, 50, 100]:
+ 			_add_button(box, "START WITH %d ALIENS" % count, "benchmark_%d" % count, count == 25)
+ 		_add_button(box, "BOSS TEST  /  UPGRADED LOADOUT", "boss_test")
+-		_add_button(box, "SPITTER ANIMATION REVIEW", "spitter_review")
+-		_add_button(box, "SPITTER TEST  /  TWO TARGETS", "spitter_test")
++		for species: String in ["spitter", "charger"]:
++			var test_row := HBoxContainer.new()
++			test_row.add_theme_constant_override("separation", 8)
++			box.add_child(test_row)
++			for entry in [[species.to_upper() + " ANIMATIONS", species + "_review"], ["TWO " + species.to_upper() + "S", species + "_test"]]:
++				var test_button := _button(entry[0], entry[1])
++				test_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
++				test_row.add_child(test_button)
+ 		_add_button(box, "BACK", "back")
+ 		return
+ 	match sim.phase:
