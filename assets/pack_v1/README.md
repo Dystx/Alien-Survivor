@@ -1,81 +1,65 @@
 # Official Asset Pack v1
 
-**Current artwork: 56 actual locomotion PNG frames, two editable articulated masters, and moving reviews. These are review drafts, not approved runtime families.** The specification, catalogue, validator and approved-only exporter remain the authority.
+**Current work: the runner has 84 review-candidate frames and a working native Godot viewer. The exact conversation-delivered human is visually locked by the owner; the robot-like procedural draft is not that approved human. The whole pack is not finished or approved.**
 
-Read [SPEC.md](SPEC.md), [pack.json](pack.json), then [BATCH_001.md](BATCH_001.md).
+Read `player_visual_lock.json`, then `SPEC.md`, `pack.json` and `BATCH_001.md`. The latest explicit human approval overrides the old armoured/visor character proposal. It does not approve firing, new player redraws, the runner or the complete animation catalogue.
 
-The previous generated sheets and prototype ZIP artwork are not the final pack. They are not automatically approved, copied into this tree, or counted as completed frames. The playable project remains unchanged.
+## Current runner family
 
-## First real motion delivery
+One current editable source and frame set, not independent generated sheets:
 
-- Player: `families/player/frames/walk/{e,s,w,n}/` — 8 frames per direction, 32 total, 128x128 cells, pivot 64,110.
-- Runner: `families/runner/frames/move/{e,s,w,n}/` — 6 frames per direction, 24 total, 96x96 cells, pivot 48,78.
-- Editable source: family `source/rig.json` plus shared [source/render_motion.py](source/render_motion.py). Each family includes a generated `source/master.glb` with meshes and articulated transform animation, not a skinned armature.
-- [Player moving GIF](../../art_reviews/player_walk.gif) and [runner moving GIF](../../art_reviews/runner_move.gif).
-- Offline review pages: `art_reviews/player_walk.html` and `art_reviews/runner_move.html` at repository root. Open a local copy in a browser; GitHub displays HTML source rather than executing it.
-- [Source and rebuild notes](source/README.md).
+- `families/runner/frames/`: idle (4), move (6), attack (4), hit (2), death (5), each in e/s/w/n. Total **84 PNGs**, fixed 96x96 cells and pivot 48,78.
+- `source/runner_family.py`: refinement of the original runner mesh with articulated pose functions and fixed camera/lighting. `source/render_motion.py` provides shared mesh/render support.
+- `families/runner/source/`: current recipe, editable mesh/node-rig GLB and mouth sockets. The GLB contains its movement track; other action poses remain in the source script. It is not a skinned production armature.
+- `families/runner/review_runtime/`: atlas, SpriteFrames and exact frame/pivot metadata for review. This is not an approved runtime export.
+- `families/runner/delivery.json`: source/frame hashes; status `review`, owner approval unset.
+- `art_reviews/runner_*.gif` at repository root: the five moving action previews.
 
-The character models are constructed once and genuinely articulated; lighting/camera stay fixed across actual model rotations. These are initial geometry-based motion studies. Armour, creature anatomy/surface detail, weight, foot contact and the four-direction aiming compromise need visual review before final art lock. No approval was fabricated, and no game integration was performed.
+Runner binaries were published at `b6203e225bb34b1a30efc5d0a13d85e1e4803506`. Its finish still needs artistic review against the detailed gritty target; structural completeness is not visual approval.
 
-The actual first render passed 12 motion/mesh checks plus the 36 existing asset-tool tests in workflow run 35150051887. The official audit reported **56 present / 1,134 required; 0 approved families**. Rendered files were committed at `83a0fff9c8421ccebc938f525330e35078dbbab5`. Passing these checks does not establish final animation quality, Godot runtime behavior, Blender editing or mobile performance.
+## Native runner review
 
-## Scope
+Open `art_reviews/runner_lab/project.godot` at repository root in Godot 4.7.2 standard and Run. This is a separate asset viewer, not the survival game. It uses the actual current runner atlas and shows all four views at native and 2x scale, with clip selection, pause, half speed, frame scrubbing, pivot markers and light/dark backgrounds. Non-looping attacks and deaths hold their final frame.
 
-91 named asset entries / 1,134 required frame slots. Six character families: player, runner, spitter, charger, brute and Brood Warden. One industrial biome, props, four weapon presentations, three support modules, combat effects and UI.
+The viewer's three runtime asset files are exact copies of `families/runner/review_runtime`, not another source master. Its verifier checks that equality before engine execution. Rerendering the source requires deliberately refreshing the review copy; drift is a failed check.
 
-Batch 001 is the player's complete base actions plus runner: **212 frame slots**. Player aiming/strafe coverage is an additional production requirement before that family can enter runtime. Actual present/approved counts come from the audit, not this planning total.
+Verified code revision: `f0109fc70f0fa623daf4ff3255c9f883f3b6ef1a`.
 
-## Local checks
+Actual run: https://github.com/Dystx/Alien-Survivor/actions/runs/35175038064
 
-Python 3.10+ and Pillow are used for image checks and atlas packing. Dependency version tested for this tool is in `tools/requirements-artpack.txt`.
+Godot 4.7.2 imported the **actual runner PNG and SpriteFrames**, passed **45 viewer/resource/playback assertions**, and captured move/attack/death with software OpenGL. Unlike earlier gameplay fixture checks, this isolated viewer used no substitute artwork. The workflow artifact includes its tested project, engine log, hashes and three actual screenshots. This proves resource loading and the exercised presentation paths, not final aesthetic quality, Mac/mobile/controller performance, or gameplay integration.
+
+## Preserve the approved human
+
+`player_visual_lock.json` binds the approved 43-cell HumanReview appearance to exact hashes. Do not redraw, recolour, rescale or replace it, and do not treat another human model with more frame slots as approved.
+
+The older procedural player files/previews still visible in this art branch are superseded experiments, **not** the locked body or approved production assets. The old automatic motion renderer is disabled so it cannot regenerate them as the chosen player. The actual approved human PNG package is still supplied through the conversation, not fully published in this official tree. That publication gap remains explicit.
+
+The separate `fix/locked-human-firing` branch contains the firing correction around those exact human pixels. Its completed engine run `35172540277` passed 74 gameplay, 27 human and 64 firing checks with synthetic textures; consult its owning `firing_review/README.md` for that distinct validation scope. It does not modify the runner or grant firing approval.
+
+## Full catalogue and checks
+
+The catalogue has 91 named entries and 1,134 planned frame slots. Its first base player/runner batch plans 212 slots, with additional player aim coverage required before complete player export. Numbers are requirements, not finished artwork. No full family has final owner approval.
 
 ```sh
 python3 -m pip install -r tools/requirements-artpack.txt
 python3 -m unittest discover -s tests -p 'test_artpack*.py' -v
 python3 tools/artpack.py audit
-```
-
-A successful audit means the contract and existing deliveries are structurally valid. It can still print **ART INCOMPLETE / NOT RELEASE-READY**. A valid incomplete catalogue is not a completed art pack.
-
-After a complete family is delivered:
-
-```sh
 python3 tools/artpack.py check-family runner
 ```
 
-After that exact family has real owner approval and recorded source permission:
+A passing structural audit can still report `ART INCOMPLETE / NOT RELEASE-READY`. It can count old unapproved draft files; that is not approval of the rejected player's appearance. Current full-pack completion must not be inferred from a green CI badge or from one complete runner candidate.
+
+After a complete family has actual owner approval and recorded source permission:
 
 ```sh
 python3 tools/artpack.py export --asset runner --out art_build/pack_v1
 ```
 
-With no `--asset`, the exporter requires the entire catalogue. It refuses incomplete/unapproved production and refuses to overwrite an existing family output. Source and runtime folders stay separate. No command fabricates approval.
+The production exporter refuses incomplete or unapproved families and existing outputs. It creates PNG atlases, metadata, SpriteFrames and a sprite scene. Gameplay integration is a separate reviewed change. No command fabricates owner approval.
 
-## Runtime handoff
+## Further production
 
-The exporter creates `atlas_*.png`, `atlas.json`, `sprite_frames.tres` and `sprite.tscn` per family. Resource paths expect those exports beneath `game/assets/pack_v1/<asset_id>/` in the game repository. Copying/integrating them is a separate reviewed task, not an automatic side effect.
+Keep the runner's current source until its visual review is resolved; next work is the spitter family under the same camera/material/scale contract. Do not expand content or alter human art merely to populate more frame slots.
 
-PNG pixels and frame regions can be tested with Python. Godot resource import, intended animation playback, actual art quality, touch visibility and hardware performance require their own tests. This setup does not claim those production checks have already passed.
-
-## Source and approval records
-
-Use one current `families/<id>/source/` and `frames/` tree, with `delivery.json` as shown in Batch 001. Keep version history in Git rather than parallel final/archive/rejected folders. Approval binds the owner evidence, spec hash, source hashes and frame hashes. Hashes detect changes; they do not prove animation quality or legal ownership.
-
-No font files, paid stock assets, signing files or credentials belong in this initial package.
-
-## Motion review before approval
-
-After producing all directions of one actual clip and its current draft delivery record, generate an offline review page:
-
-```sh
-python3 tools/preview_artpack.py --asset runner --clip move --out art_build/reviews/runner_move.html
-python3 tools/preview_artpack.py --asset player --clip walk --out art_build/reviews/player_walk.html
-```
-
-Open the HTML in a browser. All frame images are embedded; no server, external JavaScript, game project, or online account is required. The viewer provides normal/half-speed playback, pause/step/scrub, direction selection, 1x-4x scale, light/dark/checker backgrounds, the declared ground pivot and muzzle socket when recorded.
-
-The helper reuses the existing contract/delivery validator and does not change the inventory, dimensions, direction rules or source/approval format. A partial family may be reviewed, but the requested clip must contain every declared frame in every declared direction. Missing artwork produces a blocked result, not fabricated frames.
-
-Additional checks reject translated copies of a still presented as a motion cycle, repeated/translated loop endpoints, and the same footage relabelled as different directions. These checks do not detect every kind of false motion or decide visual quality. Inspect foot planting, body/weapon continuity, rear views and loop joins yourself.
-
-A review page is **not** approval or a runtime export. It never modifies the source tree or live game. Use a new output filename for each review; the helper refuses to overwrite an existing page.
+Use one current source/frame/delivery tree per family, with history in Git. No parallel final/rejected/archive master folders. Review real loops, native size, alpha, pivots, anatomy, facing, contact and attack timing. Checksums cannot establish artistic quality or source rights. Do not bundle font files, restricted stock sources, receipts, credentials or signing files.
