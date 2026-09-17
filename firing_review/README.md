@@ -1,42 +1,59 @@
 # Locked-human firing correction
 
-The firing correction source is implemented on `fix/locked-human-firing`. This is a review patch, not an engine-verified release or a new approved asset family.
+Firing correction source on `fix/locked-human-firing`. Its code is now engine-tested with explicit synthetic texture fixtures. This is still pending visual review, not approval of a new animation family or a finished game release.
 
 ## Exact approved human
 
-This work targets `Alien_Survivor_Human_Review.zip` with package SHA-256 `3adf0acdb9d5c7ddf12b072e7cb98bc187227a920913682c92b293ed44d93af6` and human atlas SHA-256 `e77d10fbeda8fa5ee3532e3e1b5618ce4f0e3084458af4c4745ed1f49ed9ba2c`. It does not promote the different procedural human/robot models on other branches. All 43 human cells, scale, ground pivot and locomotion pixels remain unchanged.
+Input: `Alien_Survivor_Human_Review.zip`, SHA-256 `3adf0acdb9d5c7ddf12b072e7cb98bc187227a920913682c92b293ed44d93af6`.
+
+Locked human atlas: `e77d10fbeda8fa5ee3532e3e1b5618ce4f0e3084458af4c4745ed1f49ed9ba2c`.
+
+All 43 cells, body appearance, scale, ground pivot and locomotion pixels remain unchanged. The different procedural human/robot models on other branches are not approved substitutes.
 
 ## Implemented
 
-- Per-facing/per-hit-pose muzzle coordinates calibrated against the locked cells.
-- Flash attached at its emission root rather than its centre, with the dark barrel fragment excluded from the effect crop.
-- A short 55ms flash that follows the current muzzle while moving, disappears on direction changes/death, and draws behind the body for the rear view.
-- Removal of whole-body recoil translation; feet stay at the original ground anchor.
-- Per-projectile visual attachment captured once outside drawing, bounded lifecycle cleanup, and no tracer tail behind the barrel at spawn.
-- A native Firing Attachment Review screen using the same presentation class as gameplay: standing/walking, turns, hit poses, pause, half speed and socket markers.
+- Per-facing and per-hit-pose muzzle coordinates calibrated against the locked cells.
+- Flash attached at its emission root, not centred over the barrel; the dark barrel fragment is excluded from the effect crop.
+- Short 55ms flash follows movement, disappears on facing changes/death, and draws behind the body for the rear view.
+- No whole-body recoil translation; feet remain at the original ground anchor.
+- Per-projectile visual origin captured outside drawing, bounded cleanup, and no backwards initial tracer tail.
+- Native Firing Attachment Review: standing/walking, turns, hit poses, pause, half speed and socket markers, using the gameplay presentation class.
 
-Simulation, damage, targeting, cooldowns, input and balance are unchanged. Four fixed gun views remain a visual limitation; free gameplay aiming is not quantized to hide it. This does not claim new authored shoot/strafe animations.
-
-## Files
-
-`firing_presentation.gd`, `firing_review.gd`, `firing_tests.gd`, `firing.patch`, `apply.py` and `verify.py`. The patch changes only the existing arena presentation, menu action and HUD button. `apply.py` reconstructs the scene and copies the new scripts into a fresh copy.
+Simulation, damage, targeting, cooldowns, input and balance are unchanged. Four fixed gun views remain a visual limitation. No free gameplay aiming is quantized to hide it. Authored shooting/strafe coverage and the rest of the production pack are not completed by this change.
 
 ## Apply safely
 
-Use the exact previously delivered HumanReview project as input and a new, separate output directory:
+The correction is in `firing_presentation.gd`, `firing_review.gd`, `firing_tests.gd`, `firing.patch`, `apply.py` and `verify.py`.
+
+Use the exact HumanReview input and a separate, nonexistent destination:
 
 ```sh
 python3 firing_review/apply.py --source /path/to/AlienSurvivor-HumanReview --out /path/to/AlienSurvivor-FiringFix
 ```
 
-The installer verifies the locked atlas and expected source hashes, rejects symlinks and existing/nested outputs, checks protected bytes and never modifies the input. Python and the `patch` command are required. A complete art-equipped source ZIP is also supplied in the project conversation. That ZIP includes the original human/scenery pixels; this branch does not publish the full artwork binaries.
+The installer verifies the atlas and expected source hashes, rejects symlinks and existing/nested outputs, checks protected bytes and does not modify the input. Python and `patch` are required. This branch contains the correction source and test setup, not the complete human/scenery image package. The complete art-equipped source ZIP is supplied in the conversation.
 
-## Validation actually performed
+## Validation now completed
 
-Eleven existing Python real-image/resource tests passed and seven local installer-safety tests passed. Static resource checks resolve 24 references, and all 92 existing runtime art checksums pass. All 155 protected source/art files match the input baseline. A zero-fuzz application on a clean extraction was successful and produced the same new GDScript code as the delivered package. These are file/image/installer checks, not a GDScript parser or runtime proof.
+Verified GitHub Actions run: https://github.com/Dystx/Alien-Survivor/actions/runs/35172540277
 
-The new engine tests have NOT run. Godot was unavailable locally, and the attempted new CI workflow write was blocked. It was not retried through a different publishing route. The supplied verification runner is executable test source, not a passing CI result. Earlier engine results belong to the parent build, not these changed scripts. The additional local installer test file was also not committed after its write was blocked; its seven executed tests are supplied in the conversation package.
+Tested commit: `9be8cc5942f5d74c0fca4cfb28ce342a0f2af6cc`; job `105047087099`.
 
-Before export, run Godot 4.7.2 import, the existing gameplay/human tests and `res://tests/firing_tests.gd`, then inspect the real Firing Attachment Review screen. The Python animated preview uses actual sprite pixels and the new attachment math but is not a Godot capture. Mac/controller/touch, sound, performance and exports are unverified.
+Godot `4.7.2.stable.official.ed1daf0bf`, Ubuntu 24.04.5; software drawing used Compatibility OpenGL with Mesa llvmpipe under Xvfb.
 
-Main and the existing playable branches remain unchanged. Firing approval is pending. The remaining alien, environment and effects families are not being represented as newly completed in this correction.
+- Project import / GDScript compilation passed.
+- 74 gameplay/settings assertions passed.
+- 27 human-animation assertions passed.
+- 64 firing assertions passed.
+- Intentional failing test correctly failed.
+- Human, finale and firing scene checks passed headlessly; the firing review scene also ran successfully with software OpenGL.
+
+**All textures in this engine job were explicit synthetic fixtures.** It proves code execution and drawing paths, not the appearance of the actual human/effect pixels, Mac/controller/touch behavior, audible sound, performance or an exported game.
+
+Separate local checks verified the delivered FiringFix's seven relevant canonical GDScript hashes against that successful job. The locked atlas hash also matches. Canonicalization removes blank/full-line-comment lines and trailing whitespace, not code or indentation.
+
+Earlier local image/package checks remain separate: 11 image/resource and 7 installer-safety checks passed; 155 protected source/art files and 92 original runtime images matched their baseline hashes; a clean zero-fuzz patch reproduced the delivered code. Python composition previews use actual sprites but are not Godot captures.
+
+The earlier workflow-writing blocker is superseded by the recorded successful run above. It must not be mistaken for approval of the artwork. Open the actual source ZIP in the pinned editor and review **Firing Attachment Review** before accepting its visual result.
+
+Main and the existing playable branches remain unchanged. Firing approval is pending; no new family or full-pack approval was granted.
