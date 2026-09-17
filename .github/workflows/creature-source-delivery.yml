@@ -1,0 +1,34 @@
+name: Exact published creature source
+on:
+  push:
+    branches: ['polish/creature-surfaces']
+    paths: ['.github/workflows/creature-source-delivery.yml']
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Read the already validated asset publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin c3a65bdcde88b4b58d131c31d50fcd1857a173d6
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = c3a65bdcde88b4b58d131c31d50fcd1857a173d6
+          mkdir -p /tmp/exact-creatures
+          git archive --format=tar.gz --output=/tmp/exact-creatures/creatures.tar.gz HEAD -- assets/pack_v1/families/runner assets/pack_v1/families/spitter assets/pack_v1/families/charger assets/pack_v1/families/brute assets/pack_v1/families/brood_warden assets/pack_v1/source/creature_surface.py assets/pack_v1/source/refine_creatures.py assets/pack_v1/source/render_motion.py
+          git rev-parse HEAD > /tmp/exact-creatures/ASSET_COMMIT.txt
+          cd /tmp/exact-creatures
+          sha256sum creatures.tar.gz > SHA256SUMS
+      - name: Attach existing canonical source, not a rerender or modified artwork
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: exact-creature-source
+          path: /tmp/exact-creatures/
+          if-no-files-found: error
+          retention-days: 14
+# Read only; no asset generation, repository writes, human changes or approval.
