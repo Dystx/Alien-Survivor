@@ -1,0 +1,37 @@
+name: Runner real-art review
+on:
+  push:
+    branches: ['assets/official-pack-v1']
+    paths:
+      - 'art_reviews/runner_lab/**'
+      - '.github/workflows/runner-lab.yml'
+permissions:
+  contents: read
+jobs:
+  actual-art:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Fetch this exact public repository commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install the existing pinned and checksum-verified engine
+        run: python3 tools/install_ci_godot.py /tmp/runner-lab-godot
+      - name: Import and exercise the real runner images
+        run: python3 art_reviews/runner_lab/verify.py /tmp/runner-lab-godot/godot
+      - name: Attach review project and actual engine captures
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: runner-animation-review
+          path: |
+            art_reviews/runner_lab/Runner_Animation_Review.zip
+            art_reviews/runner_lab/captures/
+            art_reviews/runner_lab/verification/
+          retention-days: 14
+          if-no-files-found: error
+# Read-only verification. No push, merge, human changes or final-art approval.

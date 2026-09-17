@@ -1,0 +1,11 @@
+name: Obsolete motion draft disabled
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preserve_locked_human:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo 'Disabled. The old procedural player is not the approved human. Use runner-only authoring for runner changes; preserve player_visual_lock.json and the locked HumanReview pixels.'
+# This workflow intentionally performs no rendering, asset writes or pushes.

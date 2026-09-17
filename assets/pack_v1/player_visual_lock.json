@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "asset_id": "player",
+  "decision_id": "human_body_lock_2026_09_17",
+  "status": "owner_approved_visual_baseline",
+  "owner_evidence": {
+    "date": "2026-09-17",
+    "source": "Alien Survivor project conversation, after Human Sprite Review delivery",
+    "exact_statement": "ok the human asset is good but the firing animation that connects to the human is bad. lock human in"
+  },
+  "scope": {
+    "approved": "Current human character appearance",
+    "preserve": ["visible human head and face", "hair, skin, clothing and vest", "body proportions, palette, scale and silhouette", "current body sprite pixels and existing locomotion baseline"],
+    "not_approved": ["firing attachment", "muzzle alignment and muzzle flash", "procedural shot recoil", "new shoot or walk-fire animations", "complete player family or full asset pack"],
+    "preservation_is_not_quality_approval": "Existing hit/death frames are retained to avoid regressions; no new claim that their animation coverage is complete or approved."
+  },
+  "baseline": {
+    "package": "Alien_Survivor_Human_Review.zip",
+    "package_sha256": "3adf0acdb9d5c7ddf12b072e7cb98bc187227a920913682c92b293ed44d93af6",
+    "root": "AlienSurvivor-HumanReview",
+    "conversation_file_id": "file_000000004b7c824391e1db34448ee701",
+    "atlas": {"path": "assets/human_survivor/human_atlas.png", "sha256": "e77d10fbeda8fa5ee3532e3e1b5618ce4f0e3084458af4c4745ed1f49ed9ba2c"},
+    "source_reference_sha256": "a016a73bbcf166a19d2cc061a2d9c75558e45d1a6bc2bc6ff5f193c96fc54e74",
+    "preview_sha256": "3355d38ff93163f05701a500cda6108670a05c74935b1141baf8d75f363b04ec",
+    "cell": [128, 128],
+    "pivot": [64, 110],
+    "frame_count": 43,
+    "coverage": {"idle": 4, "walk": 24, "hit": 8, "common_death": 7},
+    "frame_set_sha256": "f9c9bc0ef65f33599707545ddde4f84fb9999a96eb16ee389aa4d3bc8c4a9af2",
+    "frame_set_hash_method": "SHA-256 of sorted relative path + TAB + file SHA-256 + LF for all 43 frames; paths are relative to the project root"
+  },
+  "firing_revision": {
+    "status": "needs_revision",
+    "editable_without_body_redesign": ["muzzle socket coordinates", "flash attachment transform", "effect pivot and scale", "shot timing and recoil controller", "bullet visual origin"],
+    "constraints": [
+      "Do not regenerate, repaint, recolour or rescale the human to hide a weapon alignment defect.",
+      "Keep the character ground pivot and feet stable; no whole-body recoil slide.",
+      "Bind the flash origin to the visible weapon muzzle using the same facing/scale/position as the human.",
+      "Check shooting while standing, walking and changing direction, including recoil and hit states.",
+      "Keep free gameplay aim unchanged; do not quantize damage or targeting to conceal four-view art limits.",
+      "Further body or locomotion edits require a new explicit owner decision."
+    ]
+  },
+  "full_family_approval": false,
+  "full_pack_approval": false,
+  "publication": {
+    "record": "This file freezes the exact conversation-delivered HumanReview baseline; it does not claim its PNGs have been uploaded into every repository branch.",
+    "alternate_procedural_models": "Not promoted by this approval. Do not select an older robot or another human model because it fills more planned frame slots."
+  }
+}

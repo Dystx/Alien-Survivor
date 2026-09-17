@@ -1,0 +1,15 @@
+{
+  "asset_id":"player", "clip":"walk", "frames":8, "fps":12,
+  "cell":[128,128], "pivot":[64,110], "physical_scale":1.0,
+  "gait":{"stride":0.39,"lift":0.105},
+  "materials":{
+    "cloth":{"hex":"383E36","wear":0.12,"specular":0.04},
+    "steel":{"hex":"485157","wear":0.19,"specular":0.23,"shine":28,"metallic":0.5},
+    "plate":{"hex":"68706F","wear":0.13,"specular":0.27,"shine":32,"metallic":0.5},
+    "edge":{"hex":"89928F","wear":0.17,"specular":0.29,"shine":36,"metallic":0.6},
+    "black":{"hex":"1C2326","wear":0.12,"specular":0.09},
+    "pouch":{"hex":"494A3B","wear":0.14,"specular":0.04},
+    "amber":{"hex":"D9A24A","wear":0.09,"specular":0.08},
+    "visor":{"hex":"E6A932","wear":0.05,"specular":0.38,"shine":40,"emissive":true}
+  }
+}

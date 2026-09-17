@@ -1,63 +1,35 @@
 # Alien Survivor
 
-A Steam-first, flat-retro alien horde survival roguelite, designed for a later Android/iOS release from the same Godot project.
+A Steam-first alien horde-survival roguelite with a flat, gritty, pre-rendered-looking 2.5D presentation and later Android/iOS adaptation. The runtime remains 2D.
 
-**Status: pre-production. This repository currently contains planning documents, not a playable game.** No gameplay, exports, benchmarks, final artwork, or store integrations have been implemented or verified.
+## This branch: official asset production
 
-## Direction
+`assets/official-pack-v1` establishes one coherent asset contract before more visual integration. It contains the **specification, complete inventory, first-batch brief, validation tests and approved-only atlas/Godot resource exporter**. It does not yet contain newly completed animation families or a replacement playable build.
 
-Capture the readable, gritty, sprite-based feeling of classic isometric alien shooters, with the short runs, escalating hordes, and build combinations of a survivors-style roguelite. Create an independent game using original or appropriately licensed assets.
+Start at **[Official Asset Pack v1](assets/pack_v1/README.md)**, then read:
 
-The game is genuinely 2D at runtime. Optional 3D modeling is an asset-production tool for rendering flat sprites, not a change to the visual direction.
+1. [Specification](assets/pack_v1/SPEC.md): camera, palette, density, pivots, directions, animation and review rules.
+2. [Inventory](assets/pack_v1/pack.json): exact named assets and frame requirements.
+3. [Batch 001](assets/pack_v1/BATCH_001.md): base player and runner animation families.
 
-## Read in this order
+The current inventory contains 91 asset entries / 1,134 required frame slots. Batch 001 covers 212 player/runner base slots. These are planned production counts, not completed artwork. Audit output reports what is actually present and approved.
 
-1. [Game design](docs/GAME_DESIGN.md): experience, controls, runs, weapons, enemies, progression, scope, and competing games.
-2. [Technical plan](docs/TECHNICAL_PLAN.md): engine, architecture, rendering, performance, saves, mobile, testing, and proposed project layout.
-3. [Art and asset plan](docs/ART_AND_ASSETS.md): the flat-retro art contract, production alternatives, asset list, licensing, and memory budgets.
-4. Production roadmap: supplied in the companion planning pack from the project conversation. Its GitHub write did not complete, so `docs/PRODUCTION_PLAN.md` is not currently committed. It covers milestones, acceptance gates, backlog, costs, release preparation, and open decisions.
-5. [Agent instructions](AGENTS.md): boundaries and implementation workflow.
-6. [First implementation brief](prompts/FIRST_BUILD.md): the next bounded coding task.
+## Verify the production tools
 
-The missing roadmap upload does not block M0: the first implementation brief is self-contained and the core plans above are available here. Do not assume the roadmap is already a repository file.
+```sh
+python3 -m pip install -r tools/requirements-artpack.txt
+python3 -m unittest discover -s tests -p 'test_artpack.py' -v
+python3 tools/artpack.py audit
+```
 
-## User-established constraints
+A green contract/tools check is not final-art approval. The exporter refuses missing or unapproved families. Source hashes and frame hashes bind approval to exact reviewed content. There is no automatic approval command.
 
-- Alien-shooter horde combat with survivors-style replayability, rather than an authored campaign.
-- Flat, retro sprite presentation, not a modern real-time 3D look.
-- Steam first; mobile later, with mobile-friendly foundations from the beginning.
-- Small content catalogue. Systems and combinations must earn replayability.
-- Repository: `Dystx/Alien-Survivor`.
+No command in this branch modifies the gameplay project. No previous generated sheet is silently relabelled final. No font files, restricted stock assets or credentials are bundled.
 
-## Recommended implementation baseline
+## Gameplay and previous prototypes
 
-- Godot 4.7.2 stable, standard build, with matching export templates.
-- Typed GDScript and Godot's Compatibility renderer.
-- One shared gameplay implementation, platform-specific input and service adapters.
-- Windows first, Steam Deck testing, Android tests during the prototype, early iOS feasibility check when Mac/device access is available.
-- Landscape presentation; automatic fire with optional manual aim, available across platforms.
-- Local/offline play. No account, server, advertising SDK, multiplayer, or cloud backend required to start.
+The playable source work is on `feat/first-playable`. Later art/finale packages were delivered separately in the project conversation; `verify/finale-logic` is a verification branch, not the complete art-equipped release. This branch does not merge or overwrite those projects, and it does not change `main`.
 
-These are implementation recommendations, not a claim that every new design detail has been individually approved by the project owner. Numbers, costs, and performance budgets in the documents are planning targets, not measurements or commitments.
+Existing game context remains in [game design](docs/GAME_DESIGN.md), [technical plan](docs/TECHNICAL_PLAN.md) and the root [agent instructions](AGENTS.md). The old [M0 brief](prompts/FIRST_BUILD.md) describes prior implementation work, not the current art-production task. The companion production roadmap remains a conversation artifact; it is not assumed to be committed here.
 
-## First-release content ceiling
-
-One player appearance with three loadouts; four primary guns; three support modules; twelve passive upgrade families; four weapon breakthroughs; four regular alien families; two elite modifiers; one boss; one industrial biome with three tested layouts.
-
-One primary gun plus up to two support modules can be equipped in a run. Do not silently turn this into a six-weapon-per-character game or a campaign.
-
-## Current next step
-
-Implement **M0: bootable combat prototype** from `prompts/FIRST_BUILD.md`. Start with one player, one gun, one enemy, one small arena, restart, instrumentation, and a basic touch-input path. All visuals may be explicitly marked original placeholders.
-
-## Repository handling
-
-This repository was public when inspected on 2026-09-16. Do not commit marketplace source assets, signing keys, passwords, purchase receipts, personal device identifiers, or restricted SDK files. A licence to distribute an asset inside a game is not necessarily permission to publish its source files in a public repository.
-
-No open-source licence for the project's own code or art has been selected. Preserve third-party licence notices separately; do not automatically apply an MIT licence to the entire project.
-
-## Plan authority
-
-The latest explicit owner decisions take precedence. Keep one current version of each planning document, and update the owning document when a decision changes. Do not create parallel master plans or reintroduce the superseded browser/3D/campaign plan. Git history supplies version history.
-
-Prepared: 2026-09-16.
+Latest explicit owner decisions take precedence. Keep one current asset source and frame set per family, with history in Git rather than parallel approved/final/archive trees. Artwork becomes eligible for runtime only after a complete family passes technical checks and actual owner review.

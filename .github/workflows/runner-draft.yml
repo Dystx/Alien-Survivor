@@ -1,0 +1,65 @@
+name: Runner animation candidate
+on:
+  push:
+    branches: ['assets/official-pack-v1']
+    paths:
+      - 'assets/pack_v1/source/runner_family.py'
+      - 'assets/pack_v1/source/check_runner.py'
+      - 'assets/pack_v1/source/record_runner.py'
+      - '.github/workflows/runner-draft.yml'
+permissions:
+  contents: read
+concurrency:
+  group: runner-candidate-only
+  cancel-in-progress: false
+jobs:
+  runner:
+    if: github.ref == 'refs/heads/assets/official-pack-v1'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      LIBGL_ALWAYS_SOFTWARE: '1'
+    steps:
+      - name: Read the exact public source revision
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+          git ls-tree -r HEAD -- assets/pack_v1/families/player assets/pack_v1/player_visual_lock.json > /tmp/human-tree-before.txt
+      - name: Install existing authoring dependencies
+        run: |
+          python3 -m venv /tmp/runner-venv
+          /tmp/runner-venv/bin/python -m pip install -r assets/pack_v1/source/requirements.txt
+      - name: Render only the runner from its stable master
+        run: xvfb-run -a /tmp/runner-venv/bin/python assets/pack_v1/source/runner_family.py --out /tmp/runner-candidate
+      - name: Check actual images and record review status
+        run: |
+          /tmp/runner-venv/bin/python assets/pack_v1/source/check_runner.py /tmp/runner-candidate
+          /tmp/runner-venv/bin/python assets/pack_v1/source/record_runner.py /tmp/runner-candidate
+          /tmp/runner-venv/bin/python tools/artpack.py audit
+          /tmp/runner-venv/bin/python tools/artpack.py check-family runner
+          /tmp/runner-venv/bin/python -m unittest discover -s tests -p 'test_artpack*.py' -v
+      - name: Publish runner binaries without changing human or gameplay
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          target='assets/official-pack-v1'
+          test "$(git ls-remote origin "refs/heads/$target" | cut -f1)" = "$GITHUB_SHA" || { echo 'Concurrent edit; refusing push.'; exit 1; }
+          git diff --exit-code -- assets/pack_v1/families/player assets/pack_v1/player_visual_lock.json
+          git add -- assets/pack_v1/families/runner art_reviews/runner_*
+          if git diff --cached --quiet; then exit 0; fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'art: publish 84 runner candidate frames and current editable source'
+          git ls-tree -r HEAD -- assets/pack_v1/families/player assets/pack_v1/player_visual_lock.json > /tmp/human-tree-after.txt
+          cmp /tmp/human-tree-before.txt /tmp/human-tree-after.txt
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" push origin "HEAD:refs/heads/$target"
+          echo "RUNNER_CANDIDATE_COMMIT=$(git rev-parse HEAD)"
+# No force push, merge, human rendering, production approval or release submission.

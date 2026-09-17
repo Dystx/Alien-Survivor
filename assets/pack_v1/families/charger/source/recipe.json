@@ -1,0 +1,85 @@
+{
+  "asset_id": "charger",
+  "clip": "move",
+  "frames": 6,
+  "fps": 12,
+  "cell": [
+    128,
+    128
+  ],
+  "pivot": [
+    64,
+    104
+  ],
+  "physical_scale": 1.06,
+  "gait": {
+    "stride": 0.235,
+    "lift": 0.056
+  },
+  "charge_gait": {
+    "stride": 0.35,
+    "lift": 0.105
+  },
+  "materials": {
+    "flesh": {
+      "hex": "704337",
+      "wear": 0.25,
+      "specular": 0.04
+    },
+    "muscle": {
+      "hex": "92553D",
+      "wear": 0.22,
+      "specular": 0.045
+    },
+    "dark_flesh": {
+      "hex": "382329",
+      "wear": 0.22,
+      "specular": 0.025
+    },
+    "tendon": {
+      "hex": "9C785A",
+      "wear": 0.18,
+      "specular": 0.035
+    },
+    "ridge": {
+      "hex": "765342",
+      "wear": 0.25,
+      "specular": 0.035
+    },
+    "ivory": {
+      "hex": "B4A086",
+      "wear": 0.24,
+      "specular": 0.065
+    },
+    "ivory_light": {
+      "hex": "D0B99B",
+      "wear": 0.18,
+      "specular": 0.05
+    },
+    "claw": {
+      "hex": "B2A18B",
+      "wear": 0.19,
+      "specular": 0.08
+    },
+    "mouth": {
+      "hex": "1C1218",
+      "wear": 0.1,
+      "specular": 0.02
+    },
+    "eye": {
+      "hex": "C48F47",
+      "wear": 0.045,
+      "specular": 0.12
+    },
+    "ember": {
+      "hex": "A86435",
+      "wear": 0.17,
+      "specular": 0.04
+    }
+  },
+  "source_lineage": "Four-limbed runner lineage, heavy forward thorax and keratin wedge skull. No acid sacs or robot parts.",
+  "source": "charger_family.py plus existing render_motion.py",
+  "move_distance_per_cycle_game_units": 25.713548387096775,
+  "charge_distance_per_cycle_game_units": 38.29677419354839,
+  "approval": "review_pending"
+}

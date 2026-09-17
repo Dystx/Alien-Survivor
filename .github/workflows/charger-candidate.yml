@@ -1,0 +1,62 @@
+name: Charger candidate
+on:
+  push:
+    branches: ['assets/official-pack-v1']
+    paths:
+      - 'assets/pack_v1/source/charger_family.py'
+      - 'assets/pack_v1/source/check_charger.py'
+      - '.github/workflows/charger-candidate.yml'
+permissions:
+  contents: read
+concurrency:
+  group: charger-candidate-only
+  cancel-in-progress: false
+jobs:
+  render:
+    if: github.ref == 'refs/heads/assets/official-pack-v1'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      LIBGL_ALWAYS_SOFTWARE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - name: Fetch exact public source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+          git ls-tree -r HEAD -- assets/pack_v1/families/player assets/pack_v1/families/runner assets/pack_v1/families/spitter assets/pack_v1/player_visual_lock.json > /tmp/protected-before
+      - name: Install the existing authoring dependencies
+        run: |
+          python3 -m venv /tmp/charger-venv
+          /tmp/charger-venv/bin/python -m pip install -r assets/pack_v1/source/requirements.txt
+      - name: Render only the charger
+        run: xvfb-run -a /tmp/charger-venv/bin/python assets/pack_v1/source/charger_family.py --out /tmp/charger-candidate
+      - name: Check real frames, record candidate and check the contract
+        run: |
+          /tmp/charger-venv/bin/python assets/pack_v1/source/check_charger.py /tmp/charger-candidate
+          /tmp/charger-venv/bin/python assets/pack_v1/source/charger_family.py --record /tmp/charger-candidate
+          /tmp/charger-venv/bin/python tools/artpack.py check-family charger
+          /tmp/charger-venv/bin/python tools/artpack.py audit
+          /tmp/charger-venv/bin/python -m unittest discover -s tests -p 'test_artpack*.py' -v
+      - name: Commit only charger binaries without merging or approving
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          target='assets/official-pack-v1'
+          test "$(git ls-remote origin "refs/heads/$target" | cut -f1)" = "$GITHUB_SHA" || { echo 'Concurrent edit: no push'; exit 1; }
+          git add -- assets/pack_v1/families/charger
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'art: publish 124 charger candidate frames and current editable source'
+          git ls-tree -r HEAD -- assets/pack_v1/families/player assets/pack_v1/families/runner assets/pack_v1/families/spitter assets/pack_v1/player_visual_lock.json > /tmp/protected-after
+          cmp /tmp/protected-before /tmp/protected-after
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" push origin "HEAD:refs/heads/$target"
+          echo "CHARGER_COMMIT=$(git rev-parse HEAD)"
+# No force-push, merges, human rendering, production approval or release publication.
