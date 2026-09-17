@@ -1,26 +1,506 @@
 {
-  "families/runner/frames/move/e/000.png": {},
-  "families/runner/frames/move/e/001.png": {},
-  "families/runner/frames/move/e/002.png": {},
-  "families/runner/frames/move/e/003.png": {},
-  "families/runner/frames/move/e/004.png": {},
-  "families/runner/frames/move/e/005.png": {},
-  "families/runner/frames/move/s/000.png": {},
-  "families/runner/frames/move/s/001.png": {},
-  "families/runner/frames/move/s/002.png": {},
-  "families/runner/frames/move/s/003.png": {},
-  "families/runner/frames/move/s/004.png": {},
-  "families/runner/frames/move/s/005.png": {},
-  "families/runner/frames/move/w/000.png": {},
-  "families/runner/frames/move/w/001.png": {},
-  "families/runner/frames/move/w/002.png": {},
-  "families/runner/frames/move/w/003.png": {},
-  "families/runner/frames/move/w/004.png": {},
-  "families/runner/frames/move/w/005.png": {},
-  "families/runner/frames/move/n/000.png": {},
-  "families/runner/frames/move/n/001.png": {},
-  "families/runner/frames/move/n/002.png": {},
-  "families/runner/frames/move/n/003.png": {},
-  "families/runner/frames/move/n/004.png": {},
-  "families/runner/frames/move/n/005.png": {}
+  "frames/idle/e/000.png": {
+    "mouth": [
+      81.9769,
+      56.4789
+    ]
+  },
+  "frames/idle/e/001.png": {
+    "mouth": [
+      81.9464,
+      56.5011
+    ]
+  },
+  "frames/idle/e/002.png": {
+    "mouth": [
+      81.9769,
+      56.5373
+    ]
+  },
+  "frames/idle/e/003.png": {
+    "mouth": [
+      81.9833,
+      56.5157
+    ]
+  },
+  "frames/idle/s/000.png": {
+    "mouth": [
+      48.3352,
+      73.6349
+    ]
+  },
+  "frames/idle/s/001.png": {
+    "mouth": [
+      48.6367,
+      73.7926
+    ]
+  },
+  "frames/idle/s/002.png": {
+    "mouth": [
+      48.2301,
+      73.6408
+    ]
+  },
+  "frames/idle/s/003.png": {
+    "mouth": [
+      47.9277,
+      73.4712
+    ]
+  },
+  "frames/idle/w/000.png": {
+    "mouth": [
+      14.0231,
+      56.8141
+    ]
+  },
+  "frames/idle/w/001.png": {
+    "mouth": [
+      14.0536,
+      57.1378
+    ]
+  },
+  "frames/idle/w/002.png": {
+    "mouth": [
+      14.0231,
+      56.7674
+    ]
+  },
+  "frames/idle/w/003.png": {
+    "mouth": [
+      14.0167,
+      56.4434
+    ]
+  },
+  "frames/idle/n/000.png": {
+    "mouth": [
+      47.6648,
+      39.658
+    ]
+  },
+  "frames/idle/n/001.png": {
+    "mouth": [
+      47.3633,
+      39.8462
+    ]
+  },
+  "frames/idle/n/002.png": {
+    "mouth": [
+      47.7699,
+      39.6639
+    ]
+  },
+  "frames/idle/n/003.png": {
+    "mouth": [
+      48.0723,
+      39.4879
+    ]
+  },
+  "frames/move/e/000.png": {
+    "mouth": [
+      81.9814,
+      55.9918
+    ]
+  },
+  "frames/move/e/001.png": {
+    "mouth": [
+      81.9652,
+      57.0214
+    ]
+  },
+  "frames/move/e/002.png": {
+    "mouth": [
+      81.9652,
+      57.0214
+    ]
+  },
+  "frames/move/e/003.png": {
+    "mouth": [
+      81.9814,
+      55.9918
+    ]
+  },
+  "frames/move/e/004.png": {
+    "mouth": [
+      81.9825,
+      56.6931
+    ]
+  },
+  "frames/move/e/005.png": {
+    "mouth": [
+      81.9825,
+      56.6931
+    ]
+  },
+  "frames/move/s/000.png": {
+    "mouth": [
+      48.0,
+      72.9824
+    ]
+  },
+  "frames/move/s/001.png": {
+    "mouth": [
+      48.3677,
+      74.1879
+    ]
+  },
+  "frames/move/s/002.png": {
+    "mouth": [
+      48.3677,
+      74.1879
+    ]
+  },
+  "frames/move/s/003.png": {
+    "mouth": [
+      48.0,
+      72.9824
+    ]
+  },
+  "frames/move/s/004.png": {
+    "mouth": [
+      47.6627,
+      73.5157
+    ]
+  },
+  "frames/move/s/005.png": {
+    "mouth": [
+      47.6627,
+      73.5157
+    ]
+  },
+  "frames/move/w/000.png": {
+    "mouth": [
+      14.0186,
+      55.9918
+    ]
+  },
+  "frames/move/w/001.png": {
+    "mouth": [
+      14.0348,
+      57.3891
+    ]
+  },
+  "frames/move/w/002.png": {
+    "mouth": [
+      14.0348,
+      57.3891
+    ]
+  },
+  "frames/move/w/003.png": {
+    "mouth": [
+      14.0186,
+      55.9918
+    ]
+  },
+  "frames/move/w/004.png": {
+    "mouth": [
+      14.0175,
+      56.3559
+    ]
+  },
+  "frames/move/w/005.png": {
+    "mouth": [
+      14.0175,
+      56.3559
+    ]
+  },
+  "frames/move/n/000.png": {
+    "mouth": [
+      48.0,
+      39.0011
+    ]
+  },
+  "frames/move/n/001.png": {
+    "mouth": [
+      47.6323,
+      40.2226
+    ]
+  },
+  "frames/move/n/002.png": {
+    "mouth": [
+      47.6323,
+      40.2226
+    ]
+  },
+  "frames/move/n/003.png": {
+    "mouth": [
+      48.0,
+      39.0011
+    ]
+  },
+  "frames/move/n/004.png": {
+    "mouth": [
+      48.3373,
+      39.5332
+    ]
+  },
+  "frames/move/n/005.png": {
+    "mouth": [
+      48.3373,
+      39.5332
+    ]
+  },
+  "frames/attack/e/000.png": {
+    "mouth": [
+      80.8541,
+      56.2475
+    ]
+  },
+  "frames/attack/e/001.png": {
+    "mouth": [
+      79.483,
+      58.4184
+    ]
+  },
+  "frames/attack/e/002.png": {
+    "mouth": [
+      85.3514,
+      59.208
+    ]
+  },
+  "frames/attack/e/003.png": {
+    "mouth": [
+      82.2749,
+      56.1961
+    ]
+  },
+  "frames/attack/s/000.png": {
+    "mouth": [
+      48.2906,
+      72.8198
+    ]
+  },
+  "frames/attack/s/001.png": {
+    "mouth": [
+      48.3968,
+      74.3582
+    ]
+  },
+  "frames/attack/s/002.png": {
+    "mouth": [
+      48.3968,
+      78.0821
+    ]
+  },
+  "frames/attack/s/003.png": {
+    "mouth": [
+      48.2906,
+      73.4788
+    ]
+  },
+  "frames/attack/w/000.png": {
+    "mouth": [
+      15.1459,
+      56.538
+    ]
+  },
+  "frames/attack/w/001.png": {
+    "mouth": [
+      16.517,
+      58.8152
+    ]
+  },
+  "frames/attack/w/002.png": {
+    "mouth": [
+      10.6486,
+      59.6048
+    ]
+  },
+  "frames/attack/w/003.png": {
+    "mouth": [
+      13.7251,
+      56.4867
+    ]
+  },
+  "frames/attack/n/000.png": {
+    "mouth": [
+      47.7094,
+      39.9657
+    ]
+  },
+  "frames/attack/n/001.png": {
+    "mouth": [
+      47.6032,
+      42.8753
+    ]
+  },
+  "frames/attack/n/002.png": {
+    "mouth": [
+      47.6032,
+      40.7307
+    ]
+  },
+  "frames/attack/n/003.png": {
+    "mouth": [
+      47.7094,
+      39.204
+    ]
+  },
+  "frames/hit/e/000.png": {
+    "mouth": [
+      80.9815,
+      57.1305
+    ]
+  },
+  "frames/hit/e/001.png": {
+    "mouth": [
+      81.7524,
+      56.7738
+    ]
+  },
+  "frames/hit/s/000.png": {
+    "mouth": [
+      48.7288,
+      73.9856
+    ]
+  },
+  "frames/hit/s/001.png": {
+    "mouth": [
+      48.3852,
+      73.8426
+    ]
+  },
+  "frames/hit/w/000.png": {
+    "mouth": [
+      15.0185,
+      57.8593
+    ]
+  },
+  "frames/hit/w/001.png": {
+    "mouth": [
+      14.2476,
+      57.159
+    ]
+  },
+  "frames/hit/n/000.png": {
+    "mouth": [
+      47.2712,
+      41.0041
+    ]
+  },
+  "frames/hit/n/001.png": {
+    "mouth": [
+      47.6148,
+      40.0902
+    ]
+  },
+  "frames/death/e/000.png": {
+    "mouth": [
+      81.9699,
+      56.3948
+    ]
+  },
+  "frames/death/e/001.png": {
+    "mouth": [
+      81.9509,
+      56.2638
+    ]
+  },
+  "frames/death/e/002.png": {
+    "mouth": [
+      81.8808,
+      56.0055
+    ]
+  },
+  "frames/death/e/003.png": {
+    "mouth": [
+      81.7717,
+      50.5554
+    ]
+  },
+  "frames/death/e/004.png": {
+    "mouth": [
+      81.7094,
+      47.5448
+    ]
+  },
+  "frames/death/s/000.png": {
+    "mouth": [
+      48.2882,
+      73.5239
+    ]
+  },
+  "frames/death/s/001.png": {
+    "mouth": [
+      48.751,
+      73.6148
+    ]
+  },
+  "frames/death/s/002.png": {
+    "mouth": [
+      50.262,
+      74.0769
+    ]
+  },
+  "frames/death/s/003.png": {
+    "mouth": [
+      52.3706,
+      69.6265
+    ]
+  },
+  "frames/death/s/004.png": {
+    "mouth": [
+      53.4524,
+      67.1257
+    ]
+  },
+  "frames/death/w/000.png": {
+    "mouth": [
+      14.0301,
+      56.683
+    ]
+  },
+  "frames/death/w/001.png": {
+    "mouth": [
+      14.0491,
+      57.0149
+    ]
+  },
+  "frames/death/w/002.png": {
+    "mouth": [
+      14.1192,
+      58.2674
+    ]
+  },
+  "frames/death/w/003.png": {
+    "mouth": [
+      14.2283,
+      54.926
+    ]
+  },
+  "frames/death/w/004.png": {
+    "mouth": [
+      14.2906,
+      52.9972
+    ]
+  },
+  "frames/death/n/000.png": {
+    "mouth": [
+      47.7118,
+      39.554
+    ]
+  },
+  "frames/death/n/001.png": {
+    "mouth": [
+      47.249,
+      39.6639
+    ]
+  },
+  "frames/death/n/002.png": {
+    "mouth": [
+      45.738,
+      40.1961
+    ]
+  },
+  "frames/death/n/003.png": {
+    "mouth": [
+      43.6294,
+      35.8548
+    ]
+  },
+  "frames/death/n/004.png": {
+    "mouth": [
+      42.5476,
+      33.4163
+    ]
+  }
 }
