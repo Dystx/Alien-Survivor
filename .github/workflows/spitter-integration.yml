@@ -1,0 +1,34 @@
+name: Spitter integration checks
+on:
+  push:
+    branches: ['feat/spitter-animation']
+    paths:
+      - 'spitter_review/**'
+      - '.github/workflows/spitter-integration.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Fetch the exact public commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install pinned checksum-verified engine
+        run: python3 tools/install_ci_godot.py /tmp/spitter-godot
+      - name: Test real spitter art and unchanged human/firing behavior
+        run: python3 spitter_review/verify.py /tmp/spitter-godot/godot
+      - name: Attach actual spitter files and engine evidence, never fixture artwork
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: spitter-evidence
+          path: spitter_evidence/
+          retention-days: 14
+          if-no-files-found: error
+# Read-only checks. No merges, approvals, releases, or gameplay balance changes.
